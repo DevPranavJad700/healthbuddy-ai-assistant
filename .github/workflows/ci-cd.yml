@@ -35,15 +35,15 @@ jobs:
 
       - name: Lint gate
         run: |
-          ruff check app tests --select E9,F63,F7,F82
+          python -m ruff check app tests --select E9,F63,F7,F82
 
       - name: Run tests
         run: |
-          pytest -q
+          python -m pytest tests -v
 
       - name: Security scan (Bandit)
         run: |
-          bandit -r app -x tests -ll
+          python -m bandit -r app -x tests -ll
 
       - name: Dependency vulnerability scan
         continue-on-error: true
@@ -149,4 +149,4 @@ jobs:
         env:
           RUN_E2E: "1"
         run: |
-          pytest -q tests/test_e2e_browser.py
+          python -m pytest -v tests/test_e2e_browser.py
