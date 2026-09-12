@@ -250,8 +250,6 @@ class VectorStoreService:
         )
         return lang_results[:k]
 
-    def delete_by_doc_id(self, doc_id: str) -> int:
-        """Delete all chunks belonging to a document ID."""
     @property
     def store_type(self) -> str:
         """Return the active vector store type ('chroma' or 'pgvector')."""
