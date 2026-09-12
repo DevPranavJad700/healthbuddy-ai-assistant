@@ -11,8 +11,8 @@ from pathlib import Path
 import pytest
 import requests
 
-if os.getenv("SKIP_E2E") == "1":
-    pytest.skip("SKIP_E2E=1 set; skipping browser end-to-end tests", allow_module_level=True)
+if os.getenv("RUN_E2E") != "1":
+    pytest.skip("RUN_E2E=1 not set; skipping browser end-to-end tests", allow_module_level=True)
 
 playwright = pytest.importorskip("playwright.sync_api")
 

@@ -21,7 +21,7 @@ protobuf==6.33.6
 # --- LangChain RAG Pipeline ---
 langchain==0.3.17
 langchain-community==0.3.16
-langchain-chroma==1.1.0
+langchain-chroma>=0.1.4,<0.3.0
 langchain-huggingface==0.1.2
 langchain-openai==0.3.35
 langchain-groq==0.3.8
@@ -45,7 +45,7 @@ aiofiles==25.1.0
 jinja2==3.1.6
 passlib[bcrypt]==1.7.4
 PyJWT==2.12.1
-redis==6.4.0
+redis>=5.0.0,<6.0.0
 
 # --- Database ---
 sqlalchemy==2.0.49

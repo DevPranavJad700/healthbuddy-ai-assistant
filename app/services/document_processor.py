@@ -152,7 +152,7 @@ class DocumentProcessor:
     @staticmethod
     def _generate_doc_id(file_path: str) -> str:
         """Generate a deterministic document ID from file path."""
-        return hashlib.md5(file_path.encode()).hexdigest()[:12]
+        return hashlib.md5(file_path.encode(), usedforsecurity=False).hexdigest()[:12]
 
     @staticmethod
     def _detect_language_from_filename(filename: str) -> str:

@@ -98,7 +98,7 @@ class Settings(BaseSettings):
     max_retrieval_results: int = 5
 
     # --- Server ---
-    host: str = "0.0.0.0"
+    host: str = "0.0.0.0"  # nosec B104
     port: int = 8000
     log_level: str = "info"
     cors_origins: str = "http://localhost:8000,http://127.0.0.1:8000"

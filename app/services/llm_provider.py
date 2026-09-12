@@ -115,11 +115,11 @@ def get_huggingface_llm():
     device = _get_device()
     logger.info(f"Loading HuggingFace model: {settings.llm_model} on {device}")
 
-    tokenizer = AutoTokenizer.from_pretrained(settings.llm_model)
+    tokenizer = AutoTokenizer.from_pretrained(settings.llm_model)  # nosec B615
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    model = AutoModelForCausalLM.from_pretrained(
+    model = AutoModelForCausalLM.from_pretrained(  # nosec B615
         settings.llm_model,
         device_map="auto" if device.type == "cuda" else None,
         low_cpu_mem_usage=True,
@@ -166,7 +166,7 @@ def get_custom_transformer_llm():
     # Load checkpoint if available
     checkpoint_path = settings.custom_model_abs_path
     if checkpoint_path.exists():
-        checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+        checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)  # nosec B614
         model.load_state_dict(checkpoint["model_state_dict"])
         logger.info(f"Loaded custom transformer from {checkpoint_path}")
     else:

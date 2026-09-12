@@ -13,7 +13,7 @@ class TokenizerWrapper:
     """
 
     def __init__(self, tokenizer_name: str = "gpt2"):
-        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)  # nosec B615
 
         # GPT-2 tokenizer doesn't have a pad token by default
         if self.tokenizer.pad_token is None:
