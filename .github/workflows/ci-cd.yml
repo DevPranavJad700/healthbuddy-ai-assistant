@@ -39,7 +39,10 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m pytest tests -v
+          python -m pytest tests -v --tb=short 2>&1 | tee test_results.log || {
+            echo "::error::$(grep -E '(FAILED|ERROR|AssertionError)' -A 3 test_results.log | tr '\n' ' ')"
+            exit 1
+          }
 
       - name: Security scan (Bandit)
         run: |
