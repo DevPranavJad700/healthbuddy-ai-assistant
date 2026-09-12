@@ -12,20 +12,24 @@ Falls back gracefully to None if Redis is unavailable,
 allowing in-memory fallbacks in each service.
 """
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
+
 from app.core.config import settings
 from app.core.logging_config import logger
 
-_redis_client: redis.Redis | None = None
+_redis_client = None
 
 
-def get_redis() -> redis.Redis | None:
+def get_redis():
     """Return the singleton Redis client, or None if unavailable."""
     global _redis_client
+    if redis is None or not settings.redis_url:
+        return None
     if _redis_client is not None:
         return _redis_client
-
-    if not settings.redis_url:
         logger.info("REDIS_URL not set — all Redis features using in-memory fallback")
         return None
 

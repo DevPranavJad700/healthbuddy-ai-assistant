@@ -109,44 +109,48 @@ def get_huggingface_llm():
     """
     Initialize a HuggingFace Transformers pipeline as LangChain LLM.
     """
-    from langchain_huggingface import HuggingFacePipeline
-    from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig, pipeline
+    try:
+        from langchain_huggingface import HuggingFacePipeline
+        from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig, pipeline
 
-    device = _get_device()
-    logger.info(f"Loading HuggingFace model: {settings.llm_model} on {device}")
+        device = _get_device()
+        logger.info(f"Loading HuggingFace model: {settings.llm_model} on {device}")
 
-    tokenizer = AutoTokenizer.from_pretrained(settings.llm_model)  # nosec B615
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
+        tokenizer = AutoTokenizer.from_pretrained(settings.llm_model)  # nosec B615
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
 
-    model = AutoModelForCausalLM.from_pretrained(  # nosec B615
-        settings.llm_model,
-        device_map="auto" if device.type == "cuda" else None,
-        low_cpu_mem_usage=True,
-    )
+        model = AutoModelForCausalLM.from_pretrained(  # nosec B615
+            settings.llm_model,
+            device_map="auto" if device.type == "cuda" else None,
+            low_cpu_mem_usage=True,
+        )
 
-    # Avoid generation-config conflicts by overriding generation params explicitly.
-    generation_cfg = GenerationConfig.from_model_config(model.config)
-    generation_cfg.max_new_tokens = settings.max_new_tokens
-    generation_cfg.do_sample = True
-    generation_cfg.temperature = 0.7
-    generation_cfg.top_p = 0.9
-    generation_cfg.repetition_penalty = 1.1
-    model.generation_config = generation_cfg
+        # Avoid generation-config conflicts by overriding generation params explicitly.
+        generation_cfg = GenerationConfig.from_model_config(model.config)
+        generation_cfg.max_new_tokens = settings.max_new_tokens
+        generation_cfg.do_sample = True
+        generation_cfg.temperature = 0.7
+        generation_cfg.top_p = 0.9
+        generation_cfg.repetition_penalty = 1.1
+        model.generation_config = generation_cfg
 
-    if device.type != "cuda":
-        model = model.to(device)
+        if device.type != "cuda":
+            model = model.to(device)
 
-    pipe = pipeline(
-        "text-generation",
-        model=model,
-        tokenizer=tokenizer,
-        return_full_text=False,
-    )
+        pipe = pipeline(
+            "text-generation",
+            model=model,
+            tokenizer=tokenizer,
+            return_full_text=False,
+        )
 
-    llm = HuggingFacePipeline(pipeline=pipe)
-    logger.info(f"HuggingFace model loaded successfully: {settings.llm_model}")
-    return llm
+        llm = HuggingFacePipeline(pipeline=pipe)
+        logger.info(f"HuggingFace model loaded successfully: {settings.llm_model}")
+        return llm
+    except Exception as e:
+        logger.warning(f"Could not initialize HuggingFace model ({e}), using FallbackLLM")
+        return FallbackLLM()
 
 
 def get_custom_transformer_llm():

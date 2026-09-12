@@ -268,7 +268,7 @@ export function wireFeedbackBox(feedbackBox) {
 }
 
 function ensureFeedbackControlsAfterStream(sessionId, responseText) {
-  if (!sessionId) return false;
+  const sid = sessionId || state.currentSessionId || "default_session";
   const messagesList = document.getElementById("messagesList");
   if (!messagesList) return false;
   const lastBotMsg = messagesList.querySelector(".message.bot:last-child .message-content");
@@ -280,7 +280,7 @@ function ensureFeedbackControlsAfterStream(sessionId, responseText) {
   const encodedResponse = encodeURIComponent(String(responseText || "").slice(0, 1200));
   const wrapper = document.createElement("div");
   wrapper.className = "stream-feedback-fallback";
-  wrapper.innerHTML = `<div class="feedback-box" data-session-id="${esc(sessionId)}" data-response="${encodedResponse}">
+  wrapper.innerHTML = `<div class="feedback-box" data-session-id="${esc(sid)}" data-response="${encodedResponse}">
       <span class="feedback-label">Was this helpful?</span>
       <button class="feedback-btn" type="button" data-helpful="true">👍</button>
       <button class="feedback-btn" type="button" data-helpful="false">👎</button>
@@ -644,6 +644,15 @@ export async function sendMessage(msgOverride = null) {
     ensureFeedbackControlsAfterStream(
       state.currentSessionId || data.session_id,
       data.response
+    );
+
+    window.dispatchEvent(
+      new CustomEvent("healthbuddy:chat-stream-complete", {
+        detail: {
+          sessionId: state.currentSessionId || data.session_id,
+          response: data.response,
+        },
+      })
     );
   } catch (err) {
     typing.remove();
