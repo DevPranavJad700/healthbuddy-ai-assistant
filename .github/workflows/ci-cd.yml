@@ -99,15 +99,7 @@ jobs:
       - name: Start API
         run: |
           uvicorn app.main:app --host 127.0.0.1 --port 8000 --app-dir . &
-          python -c "import time, urllib.request
-for _ in range(45):
-    try:
-        if urllib.request.urlopen('http://127.0.0.1:8000/api/live', timeout=2).getcode() == 200:
-            print('API is live and ready')
-            break
-    except Exception:
-        time.sleep(1)
-"
+          for i in $(seq 1 30); do curl -s -f http://127.0.0.1:8000/api/live && break || sleep 1; done
 
       - name: Smoke checks (health/chat/auth)
         run: |
