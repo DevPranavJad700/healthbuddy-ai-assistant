@@ -39,10 +39,15 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m pytest tests -v --tb=short 2>&1 | tee test_results.log || {
-            echo "::error::$(grep -E '(FAILED|ERROR|AssertionError)' -A 3 test_results.log | tr '\n' ' ')"
-            exit 1
-          }
+          python -m pytest tests -v --tb=short 2>&1 | tee test_results.log
+
+      - name: Report test failure
+        if: failure()
+        run: |
+          echo "### Pytest Failure Log" >> $GITHUB_STEP_SUMMARY
+          echo '```text' >> $GITHUB_STEP_SUMMARY
+          tail -n 120 test_results.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
 
       - name: Security scan (Bandit)
         run: |
