@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Arabic request: kayf uhassin alnawm?",
+    "answer": "thabbit waqt alistiqaz, qallil alkafiin masaaan, wabtacid an alshashat qabl alnawm.",
+    "expected_triage": "self_care",
+    "preferred_language": "Arabic",
+    "required_terms_any": ["alnawm", "alkafiin", "alshashat"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "Arabic request: ma hiya aarad alssukari almubakira?",
+    "answer": "tabawwul mutakarrir, atash zayed, taab, tashawush alruya, wabut tahassun aljuruh.",
+    "expected_triage": "self_care",
+    "preferred_language": "Arabic",
+    "required_terms_any": ["aarad", "atash", "taab"],
+    "use_rag": true,
+    "max_words": 130,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "Arabic request: alam alsadr wa dayq alnafas.",
+    "answer": "hadihi alamat tawari. ittasel bikhadamat altawari fawran.",
+    "expected_triage": "emergency",
+    "preferred_language": "Arabic",
+    "required_terms_any": ["tawari", "fawran", "alsadr"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  }
+]

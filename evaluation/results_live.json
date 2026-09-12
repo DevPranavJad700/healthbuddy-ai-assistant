@@ -1,0 +1,101 @@
+{
+  "num_samples": 10,
+  "average_scores": {
+    "bleu_1": 0.23599540025109494,
+    "bleu_2": 0.1765923952604064,
+    "bleu_3": 0.1373500843627962,
+    "bleu_4": 0.10898030641755882
+  },
+  "per_sample": [
+    {
+      "question": "What are the main macronutrients?",
+      "reference": "The three main macronutrients are proteins, carbohydrates, and fats. Proteins support muscle repair ...",
+      "hypothesis": "The main macronutrients are the three essential components that provide energy and support various b...",
+      "bleu_1": 0.24427480916030533,
+      "bleu_2": 0.15629293303291272,
+      "bleu_3": 0.09819431063822885,
+      "bleu_4": 0.06201828474520984
+    },
+    {
+      "question": "How much water should a person drink daily?",
+      "reference": "The general recommendation is about 8 glasses or 2 liters of water daily. Individual needs vary base...",
+      "hypothesis": "The general recommendation is to drink at least 8 glasses (2 liters) of water daily. However, this c...",
+      "bleu_1": 0.38961038961038963,
+      "bleu_2": 0.31209389196617965,
+      "bleu_3": 0.24978336210987337,
+      "bleu_4": 0.20259895317286816
+    },
+    {
+      "question": "What exercise is recommended for adults?",
+      "reference": "Adults should aim for 150-300 minutes of moderate-intensity aerobic activity per week, plus muscle-s...",
+      "hypothesis": "For adults aged 18-64, it's recommended to do 150-300 minutes of moderate-intensity aerobic activity...",
+      "bleu_1": 0.2268041237113402,
+      "bleu_2": 0.18186698813850316,
+      "bleu_3": 0.15645601931061184,
+      "bleu_4": 0.1383798550093966
+    },
+    {
+      "question": "What are the symptoms of high blood pressure?",
+      "reference": "Hypertension is often called the silent killer because it usually has no symptoms. It can only be de...",
+      "hypothesis": "You're taking proactive steps to manage your health, and that's wonderful. When it comes to high blo...",
+      "bleu_1": 0.1447368421052632,
+      "bleu_2": 0.08756812813563793,
+      "bleu_3": 0.04676026420995043,
+      "bleu_4": 0.016184942103594377
+    },
+    {
+      "question": "How can someone improve their sleep?",
+      "reference": "Improve sleep by maintaining a consistent schedule, creating a dark and cool environment, avoiding s...",
+      "hypothesis": "Improving sleep quality is definitely achievable with a few simple changes to your daily routine. \n\n...",
+      "bleu_1": 0.14,
+      "bleu_2": 0.09563330300275152,
+      "bleu_3": 0.06519807760734772,
+      "bleu_4": 0.04870511063738701
+    },
+    {
+      "question": "What is the RICE method?",
+      "reference": "RICE stands for Rest, Ice, Compression, and Elevation. It is used for treating sprains, strains, and...",
+      "hypothesis": "The RICE method is a helpful way to treat sprains and strains. It stands for Rest, Ice, Compression,...",
+      "bleu_1": 0.21666666666666667,
+      "bleu_2": 0.16526017175879945,
+      "bleu_3": 0.13654706169182235,
+      "bleu_4": 0.11829759930604407
+    },
+    {
+      "question": "Why is Vitamin D important?",
+      "reference": "Vitamin D is critical for bone health, immune function, and mood regulation. It is produced through ...",
+      "hypothesis": "Vitamin D is a critical nutrient that plays a significant role in maintaining our overall health. It...",
+      "bleu_1": 0.15217391304347827,
+      "bleu_2": 0.09989302902982107,
+      "bleu_3": 0.06903193955083138,
+      "bleu_4": 0.04366419038661989
+    },
+    {
+      "question": "What is the Mediterranean diet?",
+      "reference": "The Mediterranean diet emphasizes fruits, vegetables, whole grains, legumes, nuts, olive oil, and fi...",
+      "hypothesis": "The Mediterranean diet is a healthy eating pattern that emphasizes consuming a variety of whole food...",
+      "bleu_1": 0.35051546391752575,
+      "bleu_2": 0.3253995693375852,
+      "bleu_3": 0.3031680639625559,
+      "bleu_4": 0.2841752786781151
+    },
+    {
+      "question": "How do you perform the Heimlich maneuver?",
+      "reference": "Stand behind the choking person, place your fist between their navel and ribcage, grasp with your ot...",
+      "hypothesis": "If someone is choking and needs help, you can perform the Heimlich maneuver on them. To do this, sta...",
+      "bleu_1": 0.26229508196721313,
+      "bleu_2": 0.19196711997740232,
+      "bleu_3": 0.14535305057335896,
+      "bleu_4": 0.10657954795559801
+    },
+    {
+      "question": "What are the warning signs of a heart attack?",
+      "reference": "Warning signs include chest pain or pressure, pain radiating to arm jaw or back, shortness of breath...",
+      "hypothesis": "EMERGENCY ALERT: You may be experiencing a cardiac emergency.\n\nPlease CALL EMERGENCY SERVICES (911/1...",
+      "bleu_1": 0.23287671232876714,
+      "bleu_2": 0.14994881822447098,
+      "bleu_3": 0.10300869397338121,
+      "bleu_4": 0.069199302180755
+    }
+  ]
+}

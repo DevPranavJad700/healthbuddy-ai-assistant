@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-04-19T14:01:01.220364+00:00",
+  "limit": 10,
+  "action_prefix": "compliance.",
+  "consents": [
+    {
+      "id": 3,
+      "user_id": 63,
+      "session_id": null,
+      "consent_type": "personalization",
+      "policy_version": "2026.04",
+      "granted": true,
+      "scope": "personalization",
+      "source": "api",
+      "metadata_json": {},
+      "created_at": "2026-04-19T13:54:11.061954"
+    },
+    {
+      "id": 2,
+      "user_id": 63,
+      "session_id": null,
+      "consent_type": "ai_guidance",
+      "policy_version": "2026.04",
+      "granted": true,
+      "scope": "chat",
+      "source": "api",
+      "metadata_json": {},
+      "created_at": "2026-04-19T13:54:11.029514"
+    },
+    {
+      "id": 1,
+      "user_id": 62,
+      "session_id": "governance_demo",
+      "consent_type": "ai_guidance",
+      "policy_version": "2026.04",
+      "granted": true,
+      "scope": "chat",
+      "source": "api",
+      "metadata_json": {
+        "channel": "web"
+      },
+      "created_at": "2026-04-18T18:35:01.873130"
+    }
+  ],
+  "audit_events": [
+    {
+      "id": 29,
+      "action": "compliance.audit_export",
+      "status": "success",
+      "user_id": 1,
+      "details": {
+        "action_prefix": "compliance.",
+        "result_counts": {
+          "consents": 3,
+          "audit_events": 4
+        }
+      },
+      "created_at": "2026-04-19T13:56:49.006867"
+    },
+    {
+      "id": 25,
+      "action": "compliance.consent.record",
+      "status": "success",
+      "user_id": 63,
+      "details": {
+        "consent_type": "personalization",
+        "policy_version": "2026.04",
+        "granted": true,
+        "scope": "personalization"
+      },
+      "created_at": "2026-04-19T13:54:11.068902"
+    },
+    {
+      "id": 24,
+      "action": "compliance.consent.record",
+      "status": "success",
+      "user_id": 63,
+      "details": {
+        "consent_type": "ai_guidance",
+        "policy_version": "2026.04",
+        "granted": true,
+        "scope": "chat"
+      },
+      "created_at": "2026-04-19T13:54:11.037268"
+    },
+    {
+      "id": 22,
+      "action": "compliance.audit_export",
+      "status": "success",
+      "user_id": 1,
+      "details": {
+        "action_prefix": "compliance.",
+        "result_counts": {
+          "consents": 1,
+          "audit_events": 1
+        }
+      },
+      "created_at": "2026-04-18T18:35:01.995479"
+    },
+    {
+      "id": 21,
+      "action": "compliance.consent.record",
+      "status": "success",
+      "user_id": 62,
+      "details": {
+        "consent_type": "ai_guidance",
+        "policy_version": "2026.04",
+        "granted": true,
+        "scope": "chat",
+        "session_id": "governance_demo"
+      },
+      "created_at": "2026-04-18T18:35:01.891300"
+    }
+  ],
+  "snapshot_signature": {
+    "snapshot_created_at": "2026-04-19T14:01:01.220500+00:00",
+    "signature_alg": "HMAC-SHA256",
+    "signature": "06b1f9f9982c7c65ded53a807f8d37ade635e3c0514b5f91c9c929df27f12ab0"
+  }
+}

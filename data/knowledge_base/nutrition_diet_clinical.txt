@@ -1,0 +1,117 @@
+TOPIC: Nutrition, Diet, and Weight Management
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Nutrition / Dietetics / Preventive Medicine
+
+=== MACRONUTRIENTS ===
+
+Carbohydrates (45–65% of total calories):
+- Simple vs Complex: Complex carbs (whole grains, legumes, vegetables) → slower glucose release, more fibre
+- Glycaemic Index (GI): Low GI foods cause smaller blood sugar spikes (oats, legumes, most vegetables)
+- Fibre: 25–38g/day recommended. Benefits: lowers cholesterol, improves glycaemic control, feeds gut microbiome
+- Refined carbs (white bread, sugary drinks): associated with obesity, T2DM, metabolic syndrome
+
+Protein (0.8 g/kg/day minimum; 1.2–2.0 g/kg/day for athletes or older adults):
+- Complete proteins (all essential amino acids): meat, fish, eggs, dairy, soy, quinoa
+- Incomplete proteins (plant sources): beans, lentils, nuts — combine to get all amino acids
+- Benefits: Satiety, muscle preservation, metabolic boost (thermic effect)
+- Excess protein: No proven harm in healthy adults but monitor in CKD
+
+Fats (20–35% of total calories):
+- Unsaturated (healthy): olive oil, avocado, nuts, fatty fish (omega-3)
+- Saturated (limit): red meat, butter, full-fat dairy → raises LDL
+- Trans fats (eliminate): partially hydrogenated oils → raises LDL, lowers HDL, highly atherogenic
+- Omega-3 fatty acids: EPA/DHA from fatty fish (salmon, sardines, mackerel) reduce triglycerides, inflammation; ALA from flaxseed/walnuts
+
+=== DIETARY PATTERNS WITH STRONG EVIDENCE ===
+
+Mediterranean Diet:
+- High: olive oil, vegetables, fruits, whole grains, legumes, fish
+- Moderate: poultry, eggs, dairy
+- Low: red meat, sugar, processed foods
+- Benefits: CV disease ↓29%, dementia risk ↓, T2DM ↓, all-cause mortality ↓
+- PREDIMED trial: 30% reduction in major cardiovascular events vs low-fat diet
+
+DASH Diet (Dietary Approaches to Stop Hypertension):
+- High: vegetables, fruits, whole grains, low-fat dairy, lean protein
+- Low: sodium (<2,300mg/day), red meat, sweets, saturated fat
+- Reduces SBP by 8–14 mmHg, effective for hypertension management
+
+Plant-Based Diet:
+- Well-planned vegan/vegetarian diets are nutritionally complete
+- Monitor: Vitamin B12 (must supplement), iron, calcium, zinc, omega-3 (algae-based DHA), iodine
+- Associated with lower BMI, lower CVD risk, lower T2DM risk
+
+=== MICRONUTRIENTS — KEY DEFICIENCIES ===
+
+Vitamin D:
+- Deficiency extremely common (>1 billion worldwide)
+- Symptoms of severe deficiency: bone pain, muscle weakness, frequent infections
+- Sources: sunlight (15–30 min/day, UV index dependent), fatty fish, fortified foods
+- Supplementation: 1,000–2,000 IU/day for most adults; test serum 25-OH-D to guide dosing
+- Target: 40–60 ng/mL (100–150 nmol/L)
+
+Vitamin B12:
+- Deficiency in: vegans, elderly, metformin users, those with pernicious anaemia
+- Symptoms: fatigue, peripheral neuropathy, megaloblastic anaemia, cognitive decline
+- Food sources: meat, fish, eggs, dairy; not found in plant foods
+- Supplement: 25–100 mcg/day or 1000 mcg 3x/week
+
+Iron:
+- Iron deficiency anaemia: most common nutritional deficiency globally
+- Symptoms: fatigue, pallor, pica, cold intolerance, brittle nails
+- Sources: haem iron (red meat, poultry — well absorbed); non-haem (legumes, spinach — absorb better with Vitamin C)
+- Avoid: tea/coffee with iron-rich meals (polyphenols inhibit absorption)
+- Supplementation: 150–200 mg elemental iron/day in divided doses
+
+Calcium:
+- Recommended: 1,000 mg/day (adults), 1,200 mg/day (women >51, men >71)
+- Sources: dairy, fortified plant milks, tofu, broccoli, kale, sardines
+- Calcium carbonate: take with food; calcium citrate: can take anytime
+- Avoid high-dose supplements (>1,500 mg) — may increase cardiovascular risk
+
+Folate (Vitamin B9):
+- Critical in pregnancy: 400–800 mcg/day before conception and during first trimester (prevents neural tube defects)
+- Sources: leafy greens, legumes, fortified cereals, liver
+
+=== WEIGHT MANAGEMENT ===
+
+BMI Classification:
+- Underweight: < 18.5
+- Normal: 18.5–24.9
+- Overweight: 25–29.9
+- Obesity Class I: 30–34.9; Class II: 35–39.9; Class III (Severe): ≥ 40
+- Note: BMI does not account for muscle mass or fat distribution; waist circumference also important
+  - High risk: Waist > 102cm (men), > 88cm (women)
+
+Caloric deficit for weight loss:
+- 500 kcal/day deficit → ~0.5 kg/week weight loss (safe and sustainable)
+- Very low calorie diets (<800 kcal/day): medical supervision required
+- Crash diets: cause muscle loss, metabolic adaptation, nutritional deficiencies
+
+Evidence-based strategies:
+1. Track food intake (calorie counting apps) — awareness drives behaviour change
+2. Increase protein (satiety effect, preserves muscle during weight loss)
+3. Reduce ultra-processed foods (engineered to override satiety signals)
+4. Intermittent fasting (16:8 or 5:2): effective for weight loss, equivalent to daily calorie restriction
+5. Mindful eating: eat slowly, without distraction; recognise hunger vs habit
+6. Regular exercise: primarily benefits health (cardiovascular, mental), modest direct weight loss effect
+7. Sleep: sleep deprivation raises ghrelin (hunger hormone), lowers leptin (satiety hormone)
+8. Stress management: cortisol promotes fat storage (especially visceral)
+
+Anti-obesity medications (when appropriate):
+- Semaglutide (Wegovy): GLP-1 agonist, 15–20% body weight loss in trials — most effective currently
+- Liraglutide (Saxenda): 5–10% body weight loss
+- Orlistat: Blocks fat absorption — GI side effects; less effective
+- Phentermine/topiramate: Appetite suppression — not for long-term use
+
+=== FOOD SAFETY & HYDRATION ===
+
+Hydration:
+- General guideline: 8 cups (2L) water/day; more in heat, exercise, illness
+- Better indicator: pale yellow urine = well hydrated; dark yellow = dehydrated
+- Coffee/tea count toward fluid intake (mild diuretic effect negligible at moderate intake)
+
+Food safety:
+- Safe internal temperatures: poultry 74°C, ground meat 71°C, whole meat 63°C, fish 63°C
+- Refrigerate perishables within 2 hours (1 hour if >32°C ambient)
+- Danger zone: 4°C–60°C (bacteria multiply rapidly)

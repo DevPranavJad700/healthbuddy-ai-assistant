@@ -1,0 +1,6 @@
+{
+  "correctness_proxy_avg": 0.45,
+  "safety_pass_rate": 1.0,
+  "hallucination_pass_rate": 0.8,
+  "triage_pass_rate": 0.65
+}

@@ -1,0 +1,130 @@
+TOPIC: Pediatrics — Child Health and Development
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Paediatrics / Child Health
+
+=== DEVELOPMENTAL MILESTONES ===
+
+2 months: Social smile, tracks objects, coos, lifts head briefly when prone
+4 months: Laughs, bears weight on legs, reaches for objects
+6 months: Sits with support, transfers objects, babbles consonants
+9 months: Sits independently, crawls, pincer grasp developing, waves bye-bye
+12 months: Pulls to stand, first words (mama, dada specifically), follows simple commands
+18 months: Walks independently, 10+ words, uses spoon, points to body parts
+2 years: 2-word phrases, runs, kicks ball, climbs stairs
+3 years: 3-word sentences, pedals tricycle, dresses with help
+5 years: Complete sentences, copies geometric shapes, counts to 10, fully toilet-trained
+
+Red flag developmental delays requiring evaluation:
+- No social smile by 3 months
+- No babbling by 12 months
+- No words by 16 months
+- Loss of previously acquired language or social skills at any age
+- Not walking by 18 months
+
+=== VACCINATION SCHEDULE (UK / India Commonalities) ===
+
+UK Routine Schedule (approximate):
+- 8 weeks: 6-in-1 (DTaP/IPV/Hib/HepB), MenB, Rotavirus
+- 12 weeks: 6-in-1 (dose 2), PCV (pneumococcal), Rotavirus (dose 2)
+- 16 weeks: 6-in-1 (dose 3), MenB (dose 2)
+- 1 year: MMR, MenB (dose 3), PCV (booster), Hib/MenC
+- 2–6 years: Annual influenza (nasal spray)
+- 12–13 years: HPV vaccine (2 doses)
+- 14 years: Td/IPV (tetanus booster), MenACWY
+
+India Universal Immunisation Programme:
+- Birth: BCG, OPV dose 0, Hepatitis B
+- 6 weeks: Pentavalent (DTP+Hib+HepB), IPV, OPV, Rotavirus, PCV
+- 14 weeks: Pentavalent, IPV, OPV, Rotavirus, PCV
+- 9–12 months: MR/MMR, JE vaccine (endemic areas), Vitamin A
+
+Fever post-vaccination: Common, expected; treat with paracetamol; usually resolves in 24–48h
+Anaphylaxis post-vaccination: Extremely rare (1–3 per million doses); remains in clinic for 15 min observation
+
+=== COMMON CHILDHOOD ILLNESSES ===
+
+Fever Management:
+- Definition in children: Temperature >38°C (rectal) or >37.5°C (axillary)
+- Infants <3 months with fever ≥38°C: Always seek medical evaluation (risk of serious bacterial infection)
+- Infants 3–6 months with fever >38°C: Seek evaluation same day
+- 6+ months: Assess well-being; paracetamol/ibuprofen for discomfort; seek care if fever >5 days, rash, very unwell
+
+Febrile Seizures:
+- Occur in 2–5% of children aged 6 months–5 years
+- Simple: Generalised, <15 min, once in 24h, child recovers fully
+- Management: Safety during seizure (do not restrain); call ambulance if >5 min; paracetamol for fever; reassure parents (rarely causes brain damage)
+- Recurrence risk: 30%; increased in: age <18 months, close family history, fever <38.9°C at onset, short duration from fever onset
+
+Croup (Laryngotracheobronchitis):
+- Viral (parainfluenza); barking seal-like cough, inspiratory stridor, hoarse voice; worst at night
+- Mild: Cool mist air, calm child; single dose of dexamethasone 0.15 mg/kg
+- Moderate-severe: Nebulised adrenaline, observation; if severe stridor at rest or cyanosis → A&E
+
+Bronchiolitis:
+- RSV most common; peak winter; infants under 2 years
+- Wheeze, tachypnoea, feeding difficulty, crackles
+- Treatment: Supportive — maintain hydration, upright position, saline nasal drops; antibiotics NOT indicated
+- Hospitalise if: SpO2 <92%, poor feeding (<50% of normal intake), breathing difficulty at rest
+
+Hand Foot and Mouth Disease (HFMD):
+- Coxsackie A16, Enterovirus 71; under 5 years
+- Painful oral ulcers, vesicular rash on hands, feet, buttocks; mild fever
+- Highly contagious; self-limiting 7–10 days; paracetamol, cold fluids, good hygiene
+
+=== GROWTH AND NUTRITION IN CHILDREN ===
+
+Breastfeeding:
+- WHO recommends exclusive breastfeeding for 6 months, continued with complementary foods to 2+ years
+- Benefits: Optimal nutrition, immune protection (IgA), reduced SIDS risk, bonding, reduced obesity/T2DM in later life
+- Formula: Complete nutrition alternative; follow preparation instructions exactly (hygiene critical)
+
+Weaning / Complementary Feeding (from 6 months):
+- Introduce single foods first; puree → mashed → soft lumps → family foods by 12 months
+- Start: vegetables, fruits, cereals, meat/pulses; avoid honey (botulism risk) until 12 months; no salt/sugar added
+- Iron-rich foods critical (6–12 months): meat, pulses, fortified cereals
+- Allergens (peanuts, eggs, dairy, wheat): Introduce early (6–12 months) to reduce allergy risk
+- Avoid: cow's milk as main drink until 12 months; no fruit juice; no added salt/sugar
+
+Childhood obesity:
+- BMI centile charts (not adult BMI) used in children
+- Intervention: Family-based lifestyle modification; avoid labelling or shaming child
+- Screen time: <1h/day 2–5 years; discourage for <18 months (except video calling)
+- 60 min/day physical activity recommended
+
+=== CHILD SAFETY AND INJURY PREVENTION ===
+
+Safe sleep (infants, to prevent SIDS):
+- Back to sleep always (supine)
+- Firm flat mattress in own sleep space
+- No loose bedding, pillows, bumpers in cot
+- No smoking in home
+- Room-sharing (not bed-sharing) for first 6 months
+- Avoid overheating; head uncovered during sleep
+
+Car seat safety: Rear-facing until 2 years (recommended); forward-facing to 4 years with harness; booster seat until 10–12 years or 57 inches tall
+
+Choking prevention:
+- Cut food into small pieces for under 4s
+- Avoid: whole grapes, nuts, raw carrots, popcorn, hard candy in under 4s
+- Choking child (conscious): 5 back blows, 5 abdominal thrusts (Heimlich); infants: 5 back blows, 5 chest thrusts
+
+Burns:
+- Hot liquids most common in children; never leave hot drinks near babies
+- Cool with cool (not cold) running water for 20 minutes; no butter or toothpaste
+
+=== AUTISM SPECTRUM DISORDER (ASD) ===
+Neurodevelopmental condition; affects social communication and behaviour; wide spectrum
+
+Early signs (12–24 months):
+- Limited eye contact, no pointing by 12 months
+- Not responding to name
+- Limited pretend play
+- Unusual sensory responses (over/under-sensitivity)
+- Rigidity, repetitive behaviours
+
+Diagnosis: Specialist assessment (paediatrician, SALT, psychologist); ADOS-2, ADI-R tools
+No single blood test or scan diagnoses ASD
+
+Management: Intensive early behavioural intervention (ABA, EIBI) most evidence-based
+Speech and language therapy, occupational therapy, PECS for non-verbal children
+Medications: For comorbidities (ADHD, anxiety, challenging behaviours) — not for core ASD

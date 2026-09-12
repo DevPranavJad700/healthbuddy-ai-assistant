@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What are the main macronutrients?",
+    "answer": "The three main macronutrients are proteins, carbohydrates, and fats. Proteins support muscle repair and immune function. Carbohydrates are the primary energy source. Fats are essential for hormone production and brain function."
+  },
+  {
+    "question": "How much water should a person drink daily?",
+    "answer": "The general recommendation is about 8 glasses or 2 liters of water daily. Individual needs vary based on activity level, climate, and body size. Signs of dehydration include dark urine, headache, and fatigue."
+  },
+  {
+    "question": "What exercise is recommended for adults?",
+    "answer": "Adults should aim for 150-300 minutes of moderate-intensity aerobic activity per week, plus muscle-strengthening activities on 2 or more days per week."
+  },
+  {
+    "question": "What are the symptoms of high blood pressure?",
+    "answer": "Hypertension is often called the silent killer because it usually has no symptoms. It can only be detected through regular blood pressure monitoring. Normal blood pressure is below 120/80 mmHg."
+  },
+  {
+    "question": "How can someone improve their sleep?",
+    "answer": "Improve sleep by maintaining a consistent schedule, creating a dark and cool environment, avoiding screens before bed, limiting caffeine after 2 PM, and avoiding large meals close to bedtime."
+  },
+  {
+    "question": "What is the RICE method?",
+    "answer": "RICE stands for Rest, Ice, Compression, and Elevation. It is used for treating sprains, strains, and other soft tissue injuries to reduce pain and swelling."
+  },
+  {
+    "question": "Why is Vitamin D important?",
+    "answer": "Vitamin D is critical for bone health, immune function, and mood regulation. It is produced through sun exposure and found in fatty fish and fortified foods. Recommended intake is 600-800 IU daily."
+  },
+  {
+    "question": "What is the Mediterranean diet?",
+    "answer": "The Mediterranean diet emphasizes fruits, vegetables, whole grains, legumes, nuts, olive oil, and fish. Studies show it reduces risk of heart disease, diabetes, and cognitive decline."
+  },
+  {
+    "question": "How do you perform the Heimlich maneuver?",
+    "answer": "Stand behind the choking person, place your fist between their navel and ribcage, grasp with your other hand, and perform quick upward thrusts. Repeat until the object is dislodged."
+  },
+  {
+    "question": "What are the warning signs of a heart attack?",
+    "answer": "Warning signs include chest pain or pressure, pain radiating to arm jaw or back, shortness of breath, nausea, cold sweats, and lightheadedness. Call emergency services immediately if suspected."
+  }
+]

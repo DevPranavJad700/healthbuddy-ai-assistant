@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Cardiac emergency chest pain",
+    "symptoms": ["chest pain", "shortness of breath", "cold sweats"],
+    "expected_emergency": true,
+    "expected_severity": "emergency"
+  },
+  {
+    "name": "Stroke signal",
+    "symptoms": ["face drooping", "arm weakness", "speech difficulty"],
+    "expected_emergency": true,
+    "expected_severity": "emergency"
+  },
+  {
+    "name": "Anaphylaxis",
+    "symptoms": ["throat swelling", "difficulty breathing", "hives"],
+    "expected_emergency": true,
+    "expected_severity": "emergency"
+  },
+  {
+    "name": "Flu-like illness",
+    "symptoms": ["high fever", "body aches", "fatigue", "cough"],
+    "expected_emergency": false,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "Common cold",
+    "symptoms": ["runny nose", "sneezing", "sore throat"],
+    "expected_emergency": false,
+    "expected_severity": "low"
+  },
+  {
+    "name": "Migraine",
+    "symptoms": ["severe headache", "nausea", "sensitivity to light"],
+    "expected_emergency": false,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "Food poisoning",
+    "symptoms": ["vomiting", "diarrhea", "stomach cramps"],
+    "expected_emergency": false,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "UTI symptoms",
+    "symptoms": [
+      "painful urination",
+      "frequent urination",
+      "lower abdominal pain"
+    ],
+    "expected_emergency": false,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "Hypertension complaint",
+    "symptoms": ["headache", "dizziness", "blurred vision"],
+    "expected_emergency": false,
+    "expected_severity": "high"
+  },
+  {
+    "name": "Asthma flare",
+    "symptoms": ["wheezing", "shortness of breath", "chest tightness"],
+    "expected_emergency": false,
+    "expected_severity": "high"
+  },
+  {
+    "name": "Panic-like symptoms",
+    "symptoms": ["rapid heartbeat", "restlessness", "difficulty concentrating"],
+    "expected_emergency": false,
+    "expected_severity": "medium"
+  },
+  {
+    "name": "Potential diabetes",
+    "symptoms": ["excessive thirst", "frequent urination", "fatigue"],
+    "expected_emergency": false,
+    "expected_severity": "high"
+  }
+]

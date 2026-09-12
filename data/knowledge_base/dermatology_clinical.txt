@@ -1,0 +1,109 @@
+TOPIC: Dermatology — Skin Conditions and Skin Health
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Dermatology / Skin Health
+
+=== ECZEMA (ATOPIC DERMATITIS) ===
+Chronic inflammatory skin condition; affects 10–20% of children, 1–3% of adults
+Associated with asthma and allergic rhinitis (atopic triad)
+
+Symptoms: Dry, intensely itchy, red/inflamed skin; vesicles that ooze and crust; chronic: lichenified (thickened) plaques
+Distribution: Infants — face, scalp, extensor surfaces; children/adults — flexural creases (antecubital, popliteal fossae)
+
+Triggers: Soap/detergents, synthetic fabrics, sweat, stress, food allergens (eggs, milk, nuts in young children), aeroallergens (dust mites, pet dander)
+
+Management:
+1. Emollients (moisturisers): Most important step — apply within 3 min of bathing (seal moisture); thick creams better than lotions; apply liberally and frequently
+2. Topical corticosteroids: Step up during flares; use appropriate potency for area (mild for face, moderate-strong for body); apply once or twice daily; finger-tip unit guides dosing
+3. Topical calcineurin inhibitors (tacrolimus, pimecrolimus): Steroid-sparing; safe for face and sensitive areas; especially for maintenance
+4. Wet wraps: For severe flares — apply emollient/TCS then wet bandage over dry outer layer
+5. Antihistamines: Sedating (promethazine) for sleep only; non-sedating antihistamines not effective for itch
+6. Phototherapy: Narrowband UVB — effective for moderate-severe chronic eczema
+7. Systemic: Dupilumab (biologic — IL-4/IL-13 inhibitor) — most effective for moderate-severe; excellent safety
+8. Infection: Eczema herpeticum (HSV superinfection) — medical emergency; eczema skin colonised with Staph aureus — mupirocin/dilute bleach baths
+
+=== PSORIASIS ===
+Chronic immune-mediated inflammatory skin disease; affects 2–3% of population
+
+Types:
+- Plaque psoriasis (80%): Well-demarcated, silvery-scaled, erythematous plaques; scalp, elbows, knees, lower back, umbilicus
+- Guttate psoriasis: Small teardrop-shaped lesions; triggered by streptococcal throat infection
+- Inverse/flexural: Smooth red plaques in skin folds
+- Pustular: Generalised or localised white pustules (sterile); may be triggered by stopping steroids
+- Erythrodermic: Generalised redness covering >90% body surface; medical emergency
+
+Triggers: Stress, trauma (Koebner phenomenon), throat infection, medications (lithium, beta-blockers, antimalarials), smoking, alcohol
+
+Management:
+Mild: Topical corticosteroids, Vitamin D analogues (calcipotriol), coal tar
+Moderate: Phototherapy (PUVA or NB-UVB)
+Severe/Moderate: Methotrexate, ciclosporin, acitretin
+Biologics: TNF-alpha inhibitors (adalimumab, etanercept), IL-17 inhibitors (secukinumab, ixekizumab), IL-23 inhibitors (guselkumab, risankizumab) — highly effective for moderate-severe
+
+Psoriatic arthritis: Occurs in 30% of psoriasis patients; treat with DMARDs or biologics; NSAIDs for mild joint disease
+
+=== ACNE VULGARIS ===
+Chronic pilosebaceous follicle disorder; affects 85% of adolescents; continues into adulthood in 40%
+
+Pathophysiology: Sebum overproduction + follicular hyperkeratinisation + Cutibacterium acnes proliferation + inflammation
+
+Severity:
+- Mild: Comedones (blackheads, whiteheads) ± few inflammatory papules
+- Moderate: Multiple inflammatory papules and pustules
+- Severe: Nodules, cysts, risk of scarring
+
+Treatment (step-up):
+Step 1: Topical retinoid (tretinoin, adapalene) alone or + benzoyl peroxide for mild
+Step 2: Add topical antibiotic (clindamycin) — always combine with BP to prevent resistance
+Step 3: Oral antibiotics (doxycycline or lymecycline) for moderate — 12-week course; combine with topical retinoid
+Step 4: Oral isotretinoin (Accutane/Roaccutane) for severe/scarring/treatment-resistant
+  - Highly effective (single course 70% achieve remission)
+  - Monitoring: LFTs, lipids monthly; strict teratogenicity (2 forms of contraception in women)
+  - Side effects: Dryness (lips, skin, eyes), initially worse acne, mood changes (controversial)
+Step 5 (women): Combined OCP (ethinylestradiol + cyproterone, drospirenone) — anti-androgenic effect
+
+Skincare advice:
+- Wash face twice daily with gentle pH-balanced cleanser; no scrubbing
+- Non-comedogenic moisturiser and sunscreen
+- Avoid picking/squeezing — increases scarring and infection
+- Dietary evidence: High glycaemic index foods and dairy may worsen acne (modest evidence)
+
+=== SKIN CANCER ===
+
+Melanoma:
+- Most dangerous skin cancer; arises from melanocytes
+- ABCDE rule: Asymmetry, Border irregularity, Colour variation, Diameter >6mm, Evolution (change)
+- Risk factors: UV exposure, fair skin, multiple naevi (moles), family history, tanning beds
+- Staging determines prognosis; thin melanoma (<1mm Breslow thickness) — excellent prognosis with wide local excision
+- Treatment: Wide excision; sentinel lymph node biopsy; immunotherapy (pembrolizumab, ipilimumab) for advanced
+
+Basal Cell Carcinoma (BCC):
+- Most common skin cancer; locally invasive, rarely metastasises
+- Pearly/translucent papule with rolled border, telangiectasia, often on face/head
+- Treatment: Surgical excision, Mohs surgery (face), radiotherapy, imiquimod cream (superficial BCC)
+
+Squamous Cell Carcinoma (SCC):
+- Second most common; can metastasise (especially lip, ear, immunocompromised)
+- Crusted, indurated papule or plaque; often on sun-exposed areas
+- Actinic keratoses: precursor lesion — treat with cryotherapy, 5-FU cream, photodynamic therapy
+
+Sun protection (primary prevention):
+- SPF 30+ broad-spectrum sunscreen (UVA + UVB); reapply every 2h when outdoors
+- Protective clothing, wide-brimmed hat
+- Avoid sun 10am–4pm when UV index highest
+- No tanning beds (increase melanoma risk by 75% if used before age 35)
+
+=== COMMON RASHES — QUICK REFERENCE ===
+
+Non-blanching rash + fever: MENINGOCOCCAL DISEASE — emergency (call 999/112) until proven otherwise
+  Glass test: Press glass against rash; if does not fade → non-blanching → meningococcal septicaemia
+
+Chickenpox (varicella): Itchy crops of vesicles at different stages; highly contagious; calamine, antihistamines for itch; aciclovir for immunocompromised or severe
+
+Shingles (herpes zoster): Dermatomal (follows nerve distribution); painful prodrome before rash; treat with aciclovir within 72h; post-herpetic neuralgia may persist months
+
+Urticaria (hives): Raised, itchy, blanchable welts; transient (hours); antihistamines; if angioedema or breathing difficulty → anaphylaxis protocol
+Chronic spontaneous urticaria: >6 weeks; non-sedating antihistamines 2nd-gen; specialist referral
+
+Cellulitis: Spreading red, warm, tender skin infection; usually unilateral; treat with antibiotics (flucloxacillin, co-amoxiclav); mark border to monitor spread; hospitalise if systemically unwell
+
+Contact dermatitis: Allergic (delayed hypersensitivity — nickel, latex, fragrance) or irritant (soap, detergents); patch testing for allergen; avoidance, topical steroids

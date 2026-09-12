@@ -1,0 +1,108 @@
+TOPIC: Sleep Medicine — Sleep Disorders and Sleep Hygiene
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Sleep Medicine / Neurology
+
+=== SLEEP PHYSIOLOGY ===
+Normal sleep architecture cycles every 90 minutes:
+- NREM Stage 1 (5%): Light sleep, hypnic jerks common
+- NREM Stage 2 (50%): Sleep spindles, K-complexes; body temperature drops
+- NREM Stage 3 (20%): Deep/slow-wave sleep; most restorative; growth hormone released
+- REM (25%): Dreaming; memory consolidation; muscle atonia
+
+Sleep needs by age:
+- Newborns (0–3 months): 14–17 hours
+- Toddlers (1–2 years): 11–14 hours
+- School age (6–12 years): 9–12 hours
+- Teenagers (13–18 years): 8–10 hours
+- Adults (18–64 years): 7–9 hours
+- Older adults (≥65 years): 7–8 hours
+
+=== INSOMNIA ===
+Prevalence: 30–35% experience insomnia symptoms; 10–15% chronic insomnia disorder
+
+Types:
+- Sleep onset insomnia: Difficulty falling asleep (>30 min to sleep onset)
+- Sleep maintenance insomnia: Waking during night, difficulty returning to sleep
+- Early morning awakening: Waking ≥30 min before intended time
+
+Chronic insomnia: ≥3 nights/week for ≥3 months, with daytime impairment
+
+Causes:
+- Primary: Hyperarousal (racing mind), conditioned arousal
+- Secondary: Depression (early morning awakening classic), anxiety, chronic pain, sleep apnoea, medications (stimulants, SSRIs, steroids, beta-blockers), substance use
+
+First-line treatment: CBT for Insomnia (CBT-I) — superior to medication long-term
+CBT-I components:
+1. Sleep restriction: Restrict time in bed to actual sleep time (initially may be 5–6h) → builds sleep pressure
+2. Stimulus control: Bed only for sleep and sex; get up if not asleep in 20 min
+3. Sleep hygiene (see below)
+4. Relaxation techniques
+5. Cognitive restructuring (challenging catastrophic thoughts about sleep)
+
+Medications (short-term use only):
+- Melatonin receptor agonists (ramelteon, melatonin): safest, best for circadian rhythm issues
+- Z-drugs (zolpidem, zopiclone): risk of dependence, sleep-walking, next-day sedation; avoid in elderly
+- Benzodiazepines: high dependence risk; not recommended for chronic use
+- Doxepin (low dose): FDA-approved for sleep maintenance
+- Antihistamines (diphenhydramine): OTC; rapid tolerance, anticholinergic effects — not recommended
+
+=== OBSTRUCTIVE SLEEP APNOEA (OSA) ===
+Upper airway collapses during sleep → apnoeic episodes → fragmented sleep, hypoxaemia
+
+Risk factors: Obesity (BMI >30), male sex, age >40, large neck circumference (>40cm women, >43cm men), retrognathia, smoking, alcohol
+
+Symptoms:
+- Witnessed apnoeas / snoring (partner report important)
+- Excessive daytime sleepiness (Epworth Sleepiness Scale ≥10 = significant)
+- Non-restorative sleep, morning headaches, nocturia, cognitive impairment, mood changes
+- In children: snoring, behavioural problems, hyperactivity, bedwetting
+
+Diagnosis: Home sleep apnoea test (HSAT) or polysomnography (PSG)
+AHI (Apnoea-Hypopnoea Index): Mild 5–15, Moderate 15–30, Severe >30 events/hour
+
+Treatment:
+- CPAP (continuous positive airway pressure): gold standard; adherence is key challenge (chin strap, heated humidifier help)
+- Mandibular advancement device (MAD): for mild-moderate OSA, less effective than CPAP but better tolerated
+- Weight loss: 10% weight reduction reduces AHI by ~26%
+- Positional therapy: For positional OSA (AHI worse supine): tennis ball trick, positional alarms
+- Surgery: UPPP, tonsillectomy (mainly in children), hypoglossal nerve stimulator (Inspire)
+- Lifestyle: avoid alcohol/sedatives within 3h of sleep, side sleeping
+
+Untreated OSA consequences: Hypertension, CAD, stroke, T2DM, cognitive impairment, motor vehicle accidents
+
+=== CIRCADIAN RHYTHM DISORDERS ===
+
+Delayed Sleep Phase Disorder (DSPD):
+- "Night owl" extreme; unable to fall asleep before 2–4am; difficulty waking for conventional schedules
+- Treatment: Morning bright light therapy (10,000 lux, 30 min), evening melatonin (0.5–1mg 5–6h before desired sleep time), gradual schedule advancement
+
+Shift Work Sleep Disorder:
+- Insomnia when trying to sleep, excessive sleepiness during waking hours
+- Strategies: consistent sleep schedule on off-days, blackout curtains, modafinil (promotes wakefulness)
+
+Jet Lag:
+- East travel harder than west
+- Recovery: ~1 day per time zone crossed
+- Strategies: Adjust meal/sleep times to destination before travel; melatonin (0.5–5mg at destination bedtime); morning light exposure on arrival
+
+=== SLEEP HYGIENE — EVIDENCE-BASED RECOMMENDATIONS ===
+1. Consistent wake time: Most important anchor; wake at same time 7 days/week regardless of sleep quality
+2. No screens 60 min before bed: Blue light suppresses melatonin production
+3. Cool room: Optimal temperature 16–19°C (60–67°F) for sleep initiation
+4. Dark room: Blackout curtains or sleep mask; even dim light impairs sleep quality
+5. Quiet environment: Earplugs or white noise if noise is unavoidable
+6. No caffeine after 2pm: Caffeine half-life 5–6 hours; affects sleep even if you can fall asleep
+7. No alcohol: May help initiation but fragments second half of sleep, suppresses REM
+8. No exercise within 2 hours of bed: Raises core temperature and adrenaline
+9. Reserve bed for sleep: Do not work, watch TV, or scroll in bed
+10. Avoid naps after 3pm or longer than 20–30 min
+
+=== RESTLESS LEGS SYNDROME (RLS) ===
+Irresistible urge to move legs, worse at rest, relieved by movement, worse in evening/night
+Affects 5–10% of adults; often genetic; worsened by pregnancy, iron deficiency, renal failure
+
+Treatment:
+- Iron supplementation if ferritin <75 mcg/L
+- Dopamine agonists (pramipexole, ropinirole) — first-line pharmacological
+- Gabapentin/pregabalin — especially if pain component
+- Avoid aggravating factors: antihistamines, antipsychotics, SSRIs, caffeine, alcohol

@@ -1,0 +1,20 @@
+{
+  "generated_at": "1970-01-01T00:00:00Z",
+  "summary": {
+    "num_cases": 0,
+    "num_passed_http": 0,
+    "quality": {
+      "correctness_proxy_avg": 0.0,
+      "brevity_pass_rate": 0.0,
+      "safety_pass_rate": 0.0,
+      "grounding_pass_rate": 0.0,
+      "hallucination_pass_rate": 0.0
+    },
+    "latency_ms": {
+      "p50": 0.0,
+      "avg": 0.0,
+      "max": 0.0
+    }
+  },
+  "cases": []
+}

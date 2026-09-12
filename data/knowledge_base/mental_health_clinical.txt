@@ -1,0 +1,89 @@
+TOPIC: Mental Health — Depression, Anxiety, and Stress Management
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Psychiatry / Mental Health
+
+=== MAJOR DEPRESSIVE DISORDER (MDD) ===
+
+Diagnostic Criteria (DSM-5): ≥5 of the following for ≥2 weeks, with at least one being depressed mood or anhedonia:
+1. Depressed mood most of the day
+2. Markedly diminished interest or pleasure in activities (anhedonia)
+3. Significant weight change or appetite disturbance
+4. Insomnia or hypersomnia
+5. Psychomotor agitation or retardation (observable by others)
+6. Fatigue or loss of energy
+7. Feelings of worthlessness or excessive guilt
+8. Difficulty concentrating or making decisions
+9. Recurrent thoughts of death or suicidal ideation
+
+Severity: Mild (5 symptoms, minor impairment) → Moderate → Severe (with psychotic features)
+
+Treatment:
+- Mild-Moderate: Psychotherapy (CBT or IPT) ± SSRI/SNRI
+- Moderate-Severe: Antidepressants + psychotherapy combined
+- Antidepressants take 4–8 weeks for full effect; do not stop abruptly
+- First-line SSRIs: sertraline, escitalopram, fluoxetine
+- SNRIs: venlafaxine, duloxetine (especially useful when pain is comorbid)
+- Psychotherapy: Cognitive Behavioural Therapy (CBT) — gold standard; restructures negative thought patterns
+- Treatment-resistant: augmentation strategies, ketamine, TMS, ECT
+
+When to seek emergency care: Active suicidal ideation with plan or intent → call emergency services or crisis line immediately
+
+=== GENERALISED ANXIETY DISORDER (GAD) ===
+
+Core features: Excessive, uncontrollable worry about multiple domains (health, finances, relationships) for ≥6 months, with ≥3 somatic symptoms (restlessness, fatigue, concentration difficulty, irritability, muscle tension, sleep disturbance)
+
+Physical symptoms: Palpitations, sweating, trembling, GI upset, frequent headaches
+
+Treatment:
+- First-line: CBT (worry exposure + cognitive restructuring)
+- SSRIs/SNRIs (escitalopram, venlafaxine) — takes 2–4 weeks
+- Buspirone: non-addictive anxiolytic, good for long-term use
+- Benzodiazepines: only short-term (risk of dependence)
+- Lifestyle: regular exercise reduces anxiety by ~40% in controlled trials
+
+=== PANIC DISORDER ===
+
+Discrete episodes of intense fear peaking within 10 minutes:
+- Heart pounding, sweating, trembling
+- Shortness of breath, chest pain
+- Fear of dying or losing control
+- Depersonalisation/derealisation
+
+Rule out cardiac causes first. Panic attack ≠ heart attack (though symptoms overlap).
+
+Treatment: CBT (interoceptive exposure), SSRIs, avoid caffeine and alcohol
+
+=== STRESS MANAGEMENT — EVIDENCE-BASED STRATEGIES ===
+
+1. Diaphragmatic Breathing (4-7-8 technique):
+   Inhale 4 sec, hold 7 sec, exhale 8 sec. Activates parasympathetic system, reduces cortisol.
+
+2. Progressive Muscle Relaxation:
+   Tense and release muscle groups sequentially. 20 minutes daily reduces anxiety.
+
+3. Mindfulness-Based Stress Reduction (MBSR):
+   8-week structured programme. Reduces anxiety by 58% (JAMA Internal Medicine, 2014).
+
+4. Exercise:
+   150 min/week aerobic exercise reduces depression symptoms as effectively as antidepressants in mild-moderate cases (Blumenthal et al.)
+
+5. Sleep Hygiene:
+   Consistent schedule, dark cool room, no screens 1 hour before bed, avoid caffeine after 2pm
+
+6. Social Support:
+   Social connection is one of the strongest protective factors against mental illness.
+
+7. Journaling:
+   Expressive writing (15–20 min, 3 consecutive days) reduces intrusive thoughts.
+
+=== CRISIS RESOURCES ===
+- US Suicide & Crisis Lifeline: 988
+- Crisis Text Line: Text HOME to 741741
+- India iCall: 9152987821
+- India Vandrevala Foundation: 1860-2662-345
+- UK Samaritans: 116 123
+
+Any active suicidal ideation with intent or plan = medical emergency. Call emergency services.
+
+=== STIGMA & SEEKING HELP ===
+Mental illness is a medical condition, not a character weakness. Seeking help is a sign of strength. Depression and anxiety are among the most treatable conditions in medicine — 80%+ respond to treatment.

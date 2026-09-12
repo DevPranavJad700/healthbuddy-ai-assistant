@@ -1,0 +1,171 @@
+HEALTHBUDDY CORE TOPICS EXPANSION V1
+====================================
+
+Purpose
+- Expand practical, retrieval-friendly facts for high-demand user topics.
+- Keep guidance concise, action-oriented, and safety-aware.
+
+Medical Safety Reminder
+- Educational content only. Not a diagnosis.
+- Emergency warning signs (severe chest pain, trouble breathing, confusion, severe dehydration, fainting, or signs of stroke) need urgent in-person care.
+
+
+TOPIC 1: EXERCISE BENEFITS
+==========================
+
+Why exercise helps:
+- Improves heart and blood vessel function.
+- Increases insulin sensitivity and supports blood sugar control.
+- Improves mood by reducing stress and anxiety symptoms.
+- Improves sleep quality and daytime energy.
+- Helps preserve muscle and bone density.
+
+Baseline weekly targets for most adults:
+- Aerobic: 150 to 300 minutes moderate intensity, or 75 to 150 minutes vigorous intensity.
+- Strength: 2 or more days per week for major muscle groups.
+- Movement breaks: stand or walk every 30 to 60 minutes during long sitting periods.
+
+What counts as moderate intensity:
+- Brisk walking, easy cycling, swimming laps at comfortable pace, dancing.
+- Talk test: can talk in short sentences but cannot sing comfortably.
+
+Simple beginner plan (first 2 to 4 weeks):
+- 20 to 30 minutes brisk walking, 5 days per week.
+- 2 short strength sessions weekly (squats, wall push-ups, hip hinge, rows, core).
+- Gradually increase total time by 10 percent per week.
+
+When to pause and seek medical advice:
+- Chest pain, unusual breathlessness, dizziness, palpitations, or joint pain that worsens.
+
+
+TOPIC 2: BETTER SLEEP
+=====================
+
+Healthy sleep range:
+- Most adults do best with 7 to 9 hours nightly.
+
+High-impact sleep habits:
+- Keep the same wake-up time daily, including weekends.
+- Get morning daylight for 10 to 30 minutes.
+- Stop caffeine 8 to 10 hours before bedtime.
+- Keep bedroom cool, dark, and quiet.
+- Avoid heavy meals and alcohol near bedtime.
+- Reduce screen light 1 hour before sleep.
+
+If you cannot sleep after about 20 minutes:
+- Leave bed, do a calm low-light activity, return when sleepy.
+
+Short nap guidance:
+- 10 to 30 minutes before mid-afternoon to avoid night sleep disruption.
+
+Possible red flags:
+- Loud snoring with daytime sleepiness, witnessed pauses in breathing, or persistent insomnia over 3 months; consider clinical evaluation.
+
+
+TOPIC 3: ESSENTIAL VITAMINS
+===========================
+
+Core vitamins and what they do:
+- Vitamin D: bone, immune, and muscle function.
+- Vitamin B12: nerve function and red blood cell production.
+- Folate (B9): DNA synthesis and pregnancy neural tube support.
+- Vitamin C: collagen synthesis and antioxidant support.
+- Vitamin A: vision and immune support.
+- Vitamin K: blood clotting and bone metabolism.
+
+Food-first strategy:
+- Build meals around vegetables, fruits, legumes, whole grains, nuts, seeds, eggs, fish, and dairy or fortified alternatives.
+
+Common deficiency-risk groups:
+- Vitamin D: low sun exposure, darker skin, older adults.
+- B12: strict vegan diets, malabsorption states.
+- Folate: low leafy greens and legumes intake.
+
+Supplement caution:
+- More is not always better. Fat-soluble vitamins (A, D, E, K) can accumulate and become harmful at high doses.
+- Personalize supplements with clinician guidance and labs when possible.
+
+
+TOPIC 4: STRESS MANAGEMENT
+==========================
+
+Practical methods with strong day-to-day usability:
+- Controlled breathing: inhale 4 seconds, exhale 6 seconds for 3 to 5 minutes.
+- Brief movement: 5 to 10 minute walk to lower stress reactivity.
+- Cognitive reset: write the worry, define next smallest action.
+- Social regulation: short check-in with trusted person.
+- Boundary block: one protected, no-notification focus block daily.
+
+Daily stress buffer routine (10 to 15 minutes):
+- 3 minutes breathing.
+- 5 minutes light stretching.
+- 5 minutes planning top 3 tasks.
+
+When to seek support:
+- Stress causing persistent sleep issues, panic episodes, work impairment, or relationship strain.
+
+
+TOPIC 5: BALANCED DIET
+======================
+
+Simple plate model:
+- Half plate non-starchy vegetables.
+- Quarter plate protein (fish, eggs, poultry, tofu, legumes).
+- Quarter plate high-fiber carbohydrates (whole grains, beans, starchy vegetables).
+- Add healthy fat in moderate amount (olive oil, nuts, seeds, avocado).
+
+Useful dietary principles:
+- Prefer minimally processed foods most of the time.
+- Aim protein at each meal to improve satiety.
+- Pair carbohydrates with protein or fiber to reduce glucose spikes.
+- Hydrate regularly; avoid liquid sugar as a daily habit.
+
+Fiber and hydration:
+- Fiber target near 25 to 38 g per day depending on age and sex.
+- Increase fiber gradually and drink enough water.
+
+Meal timing:
+- Consistent meal timing can help appetite and glucose control.
+- Late-night heavy meals can worsen reflux and sleep quality.
+
+
+TOPIC 6: DIABETES SYMPTOMS
+==========================
+
+Common symptoms that should prompt testing:
+- Frequent urination.
+- Excessive thirst.
+- Unusual fatigue.
+- Blurred vision.
+- Unexplained weight loss.
+- Slow-healing cuts or frequent infections.
+- Tingling or numbness in feet or hands.
+
+Important context:
+- Type 2 diabetes can be present with few symptoms.
+- Screening is especially important with overweight, family history, prior gestational diabetes, hypertension, or age over 35 to 45 depending on guideline used.
+
+Urgent warning signs requiring prompt medical care:
+- Vomiting, dehydration, abdominal pain, fruity breath, rapid breathing, severe weakness, or confusion.
+
+Lifestyle support basics for diabetes risk reduction:
+- 150+ minutes weekly physical activity.
+- Weight reduction when overweight (even 5 to 10 percent can help).
+- Higher-fiber, lower-refined carbohydrate eating pattern.
+- Regular sleep and stress control.
+
+
+QUICK FAQ SNIPPETS FOR CHAT RETRIEVAL
+======================================
+
+Q: What are the fastest ways to improve sleep this week?
+A: Keep a fixed wake time, reduce evening caffeine, get morning sunlight, and stop screens one hour before bed.
+
+Q: Do I need vitamin supplements daily?
+A: Not always. Use a food-first approach and target supplements only for likely deficiencies or clinician-recommended needs.
+
+Q: What are early diabetes symptoms?
+A: Frequent urination, excessive thirst, fatigue, blurred vision, slow healing, and recurrent infections are common warning signs.
+
+Q: Is walking enough exercise to start?
+A: Yes. Brisk walking most days plus two short strength sessions weekly is an effective beginner plan.

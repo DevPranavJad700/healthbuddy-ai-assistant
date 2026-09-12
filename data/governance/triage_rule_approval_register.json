@@ -1,0 +1,28 @@
+{
+  "ruleset_version": "clinician-v1.1",
+  "last_approved_at": "2026-04-19T00:00:00Z",
+  "approval_board": [
+    {
+      "name": "Clinical Chair",
+      "role": "clinical_chair",
+      "status": "approved"
+    },
+    {
+      "name": "Safety Reviewer",
+      "role": "safety_reviewer",
+      "status": "approved"
+    },
+    {
+      "name": "Localization Reviewer",
+      "role": "localization_reviewer",
+      "status": "approved"
+    }
+  ],
+  "evidence": {
+    "benchmark_report": "evaluation/clinical_quality_report.json",
+    "policy_refs": [
+      "docs/CLINICAL_GOVERNANCE_WORKFLOW.md",
+      "docs/MEDICAL_CONTENT_LIFECYCLE.md"
+    ]
+  }
+}

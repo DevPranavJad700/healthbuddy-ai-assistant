@@ -1,0 +1,91 @@
+TOPIC: Hypertension (High Blood Pressure) — Clinical Overview
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Cardiology / Chronic Disease Management
+
+=== DEFINITION ===
+Hypertension is sustained elevation of blood pressure above 130/80 mmHg (ACC/AHA 2017 guidelines). It is the most common modifiable cardiovascular risk factor, affecting ~1.3 billion adults globally.
+
+Classification:
+- Normal: < 120/80 mmHg
+- Elevated: 120–129 / < 80 mmHg
+- Stage 1 HTN: 130–139 / 80–89 mmHg
+- Stage 2 HTN: ≥ 140 / ≥ 90 mmHg
+- Hypertensive crisis: > 180 / > 120 mmHg (seek emergency care)
+
+=== SYMPTOMS ===
+Known as the "silent killer" — most patients have NO symptoms.
+Symptoms when present: headache (especially occipital), blurred vision, chest pain, shortness of breath, nosebleeds
+Hypertensive emergency: severe headache, visual changes, confusion, chest pain → call emergency services
+
+=== CAUSES ===
+Primary (Essential) Hypertension (95%):
+- No single identified cause
+- Driven by: genetic factors, high sodium intake, obesity, physical inactivity, chronic stress, alcohol, ageing
+
+Secondary Hypertension (5%):
+- Renal artery stenosis
+- Primary hyperaldosteronism (Conn's syndrome)
+- Obstructive sleep apnoea
+- Chronic kidney disease
+- Pheochromocytoma
+- Thyroid disorders
+
+=== MEASUREMENT TECHNIQUE ===
+- Sit quietly for 5 minutes before measurement
+- Two readings, 1–2 min apart, average them
+- Use validated cuff, properly sized (small cuff → falsely high reading)
+- Confirm hypertension on at least 2 separate occasions
+- Home BP monitoring: target < 135/85 mmHg
+
+=== LIFESTYLE MODIFICATIONS (FIRST-LINE) ===
+DASH Diet: rich in fruits, vegetables, whole grains, low-fat dairy; reduces BP by 8–14 mmHg
+Sodium restriction: < 2,300 mg/day (ideally < 1,500 mg); reduces BP by 2–8 mmHg
+Weight loss: 1 mmHg per kg of weight lost
+Exercise: 150 min/week moderate aerobic activity; reduces BP by 4–9 mmHg
+Limit alcohol: ≤ 2 drinks/day (men), ≤ 1 drink/day (women)
+Quit smoking: does not lower BP directly but dramatically reduces cardiovascular risk
+Stress management: mindfulness, sleep hygiene
+
+=== PHARMACOTHERAPY ===
+First-line agents (any can be used; choice guided by comorbidities):
+
+ACE Inhibitors (e.g., lisinopril, enalapril):
+- Preferred in: diabetes with proteinuria, CKD, heart failure, post-MI
+- Side effect: dry persistent cough (switch to ARB if bothersome)
+- Avoid in pregnancy (teratogenic)
+
+ARBs (e.g., losartan, valsartan):
+- Same indications as ACE inhibitors; no cough
+- Avoid in pregnancy
+
+Calcium Channel Blockers (e.g., amlodipine, diltiazem):
+- Preferred in: elderly, isolated systolic HTN, Black patients
+- Side effects: peripheral oedema, flushing
+
+Thiazide Diuretics (e.g., hydrochlorothiazide, chlorthalidone):
+- Preferred in: elderly, isolated systolic HTN, edema
+- Side effects: hypokalaemia, hyperuricaemia
+
+Beta-Blockers (e.g., metoprolol, carvedilol):
+- Preferred when: heart failure, angina, post-MI, rate control
+- Avoid as first-line without compelling indication
+
+=== TARGET BP GOALS ===
+- General adults: < 130/80 mmHg
+- Elderly (≥65 years, non-institutionalised): < 130/80 mmHg
+- Diabetes: < 130/80 mmHg
+- CKD: < 130/80 mmHg (with proteinuria: < 125/75 mmHg)
+- Pregnancy: < 140/90 mmHg (avoid ACE/ARBs)
+
+=== MONITORING ===
+- Home BP log: morning + evening readings, 7 consecutive days before each appointment
+- Routine labs: BMP (electrolytes, creatinine), urinalysis, lipid panel, ECG
+- Check for end-organ damage: fundoscopy (retinopathy), LVH on ECG/echo, microalbuminuria
+
+=== COMPLICATIONS OF UNCONTROLLED HTN ===
+- Heart attack and heart failure
+- Stroke (haemorrhagic and ischaemic)
+- Chronic kidney disease
+- Hypertensive retinopathy → vision loss
+- Peripheral artery disease
+- Aortic aneurysm / dissection

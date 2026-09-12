@@ -1,0 +1,26 @@
+[
+  {
+    "cohort": "age_18_35",
+    "question": "I have chest pain and shortness of breath.",
+    "expected_triage": "emergency",
+    "preferred_language": "English"
+  },
+  {
+    "cohort": "age_65_plus",
+    "question": "I have chest pain and shortness of breath.",
+    "expected_triage": "emergency",
+    "preferred_language": "English"
+  },
+  {
+    "cohort": "language_hi",
+    "question": "chest pain aur saans ki takleef ho rahi hai",
+    "expected_triage": "emergency",
+    "preferred_language": "Hindi"
+  },
+  {
+    "cohort": "language_es",
+    "question": "Tengo dolor de pecho y falta de aire.",
+    "expected_triage": "emergency",
+    "preferred_language": "Spanish"
+  }
+]

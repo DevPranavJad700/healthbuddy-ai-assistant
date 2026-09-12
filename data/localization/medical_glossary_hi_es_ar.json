@@ -1,0 +1,17 @@
+{
+  "hindi": {
+    "emergency": ["emergency", "aapatkal", "turant"],
+    "diabetes": ["diabetes", "madhumeh", "sugar"],
+    "shortness_of_breath": ["saans ki takleef", "saans phoolna"]
+  },
+  "spanish": {
+    "emergency": ["emergencia", "urgente", "inmediata"],
+    "diabetes": ["diabetes", "glucosa", "azucar"],
+    "shortness_of_breath": ["falta de aire", "dificultad para respirar"]
+  },
+  "arabic_translit": {
+    "emergency": ["tawari", "fawran"],
+    "diabetes": ["alsukari", "glucose"],
+    "shortness_of_breath": ["dayq alnafas"]
+  }
+}

@@ -1,0 +1,153 @@
+HEALTHBUDDY CORE TOPICS EXPANSION V3
+====================================
+
+Purpose
+- Add condition-specific guidance variants.
+- Add beginner/intermediate/advanced plan variants.
+- Add multilingual keyword aliases for retrieval matching.
+
+Safety reminder
+- Educational guidance only; not a diagnosis.
+- Seek urgent care for severe chest pain, breathing difficulty, stroke signs, confusion, fainting, or severe dehydration.
+
+
+SECTION A: CONDITION-SPECIFIC VARIANTS
+======================================
+
+A1) Diabetes-focused adaptations
+- Exercise: prioritize post-meal walking (10 to 20 minutes), resistance work 2 to 3 times weekly, and reduced sedentary time.
+- Diet: pair carbohydrates with protein/fiber, prefer whole grains/legumes, minimize sugary drinks.
+- Sleep/stress: poor sleep and chronic stress can worsen glycemic control.
+- Monitoring: track glucose patterns as advised by clinician, especially after new meal or activity routines.
+
+A2) Hypertension-focused adaptations
+- Exercise: 150+ minutes moderate cardio weekly plus 2 strength sessions.
+- Diet: DASH-style pattern with vegetables, fruits, legumes, low-fat dairy, nuts; lower sodium intake.
+- Sleep/stress: stress and sleep deprivation can elevate blood pressure.
+- Caution: dizziness, severe headache, chest pain, or neurologic deficits need urgent evaluation.
+
+A3) Obesity/weight-management adaptations
+- Exercise: combine moderate cardio + progressive strength for fat loss and muscle retention.
+- Diet: energy deficit with high-fiber foods and protein at meals to improve satiety.
+- Sleep/stress: short sleep is associated with appetite dysregulation.
+- Goal framing: even 5 to 10 percent weight reduction can improve blood pressure and glucose markers.
+
+A4) PCOS-focused adaptations
+- Exercise: regular aerobic plus strength training supports insulin sensitivity.
+- Diet: emphasize low-glycemic, high-fiber meals with sufficient protein.
+- Sleep/stress: stress management and adequate sleep can support symptom control.
+- Clinical note: personalized treatment may include lifestyle plus medication.
+
+
+SECTION B: PROGRESSION PLANS BY LEVEL
+=====================================
+
+B1) Exercise progression
+Beginner (weeks 1 to 4):
+- 20 to 30 min brisk walk, 4 to 5 days weekly.
+- 2 short strength sessions: squat, push, hinge, pull, core.
+- Daily mobility 5 to 10 min.
+
+Intermediate (weeks 5 to 12):
+- 30 to 45 min cardio, 4 to 5 days weekly.
+- 2 to 3 strength sessions with gradual load progression.
+- 1 interval session weekly if tolerated.
+
+Advanced (maintenance/performance):
+- Periodized training with aerobic base + intervals + structured strength.
+- Include recovery days, deload weeks, and mobility/balance work.
+
+B2) Sleep improvement progression
+Beginner:
+- Fixed wake time and caffeine cutoff.
+- Screen-light reduction 60 min before bed.
+
+Intermediate:
+- Add pre-sleep routine (10 to 20 min): reading, breathing, stretching.
+- Optimize room temperature and noise control.
+
+Advanced:
+- Track sleep consistency and triggers.
+- Adapt routine for travel/shift changes while protecting anchor wake time.
+
+B3) Balanced diet progression
+Beginner:
+- Plate method: half vegetables, quarter protein, quarter high-fiber carbs.
+- Replace sugary drinks with water/unsweetened options.
+
+Intermediate:
+- Protein target at each meal.
+- Meal-prep 2 to 3 times weekly and portion consistency.
+
+Advanced:
+- Data-informed adjustments based on labs, energy, training load, and goals.
+- Fine-tune fiber quality, meal timing, and micronutrient adequacy.
+
+
+SECTION C: MULTILINGUAL KEYWORD ALIASES
+=======================================
+
+C1) Exercise benefits aliases
+- English: exercise benefits, workout benefits, physical activity benefits
+- Hindi/Urdu (romanized): exercise ke fayde, vyayam ke fayde, kasrat ke fayde
+- Bengali (romanized): byayamer upokarita
+- Tamil (romanized): udarpayirchi nanmaigal
+- Telugu (romanized): vyayamam prayojanalu
+- Spanish: beneficios del ejercicio
+- Arabic (romanized): fawaid alriyadah
+
+C2) Better sleep aliases
+- English: better sleep, sleep tips, sleep hygiene
+- Hindi/Urdu (romanized): behtar neend, neend behtar kaise karein
+- Bengali (romanized): bhalo ghum er upay
+- Tamil (romanized): nalla thookam kurippugal
+- Spanish: dormir mejor, higiene del sueno
+- Arabic (romanized): tahsin alnawm
+
+C3) Essential vitamins aliases
+- English: essential vitamins, vitamin deficiency, daily vitamins
+- Hindi/Urdu (romanized): zaroori vitamins, vitamin ki kami
+- Bengali (romanized): proyojonio vitamin
+- Tamil (romanized): mukkiya vitamins
+- Spanish: vitaminas esenciales
+- Arabic (romanized): fiitaminaat asasiyah
+
+C4) Stress management aliases
+- English: stress management, reduce stress, anxiety stress tips
+- Hindi/Urdu (romanized): tanav kam kaise karein, stress management tips
+- Bengali (romanized): stress komanor upay
+- Tamil (romanized): manazhutham kuraikka vazhigal
+- Spanish: manejo del estres
+- Arabic (romanized): idarat aldaght
+
+C5) Balanced diet aliases
+- English: balanced diet, healthy diet plan, diet chart
+- Hindi/Urdu (romanized): santulit aahar, healthy diet plan
+- Bengali (romanized): sushom khaddo talika
+- Tamil (romanized): samachir unavu
+- Spanish: dieta equilibrada
+- Arabic (romanized): ghitha mutawazin
+
+C6) Diabetes symptoms aliases
+- English: diabetes symptoms, sugar symptoms, early diabetes signs
+- Hindi/Urdu (romanized): diabetes ke lakshan, sugar ke lakshan
+- Bengali (romanized): diabetes er lokkhon
+- Tamil (romanized): neerizhivu arigurigal
+- Spanish: sintomas de diabetes
+- Arabic (romanized): aarad alssukari
+
+
+SECTION D: RETRIEVAL FAQ VARIANTS
+=================================
+
+Q: I have high blood pressure. What is one safe starting routine?
+A: Start with 25 to 30 minutes brisk walking most days, two light strength sessions weekly, and reduce sodium while monitoring blood pressure regularly.
+
+Q: I have prediabetes. What should I do this week?
+A: Do post-meal walks, switch sugary drinks to water, use high-fiber carbs with protein, and target consistent sleep.
+
+Q: Give an intermediate plan for fat loss without muscle loss.
+A: Use 4 to 5 cardio sessions weekly plus 2 to 3 progressive strength sessions and protein-focused meals with a moderate calorie deficit.
+
+Q: I work shifts and cannot sleep properly. First 3 fixes?
+A: Keep an anchor wake time, use blackout/light control, and follow a fixed pre-sleep routine with caffeine cutoff.

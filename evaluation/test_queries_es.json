@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Dame consejos breves para dormir mejor.",
+    "answer": "Mantener horario fijo, reducir cafeina por la tarde y evitar pantallas antes de dormir.",
+    "expected_triage": "self_care",
+    "preferred_language": "Spanish",
+    "required_terms_any": ["dormir", "cafeina", "pantallas"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "Cuales son sintomas tempranos de diabetes?",
+    "answer": "Miccion frecuente, sed excesiva, fatiga, vision borrosa y cicatrizacion lenta.",
+    "expected_triage": "self_care",
+    "preferred_language": "Spanish",
+    "required_terms_any": ["sintomas", "sed", "fatiga"],
+    "use_rag": true,
+    "max_words": 130,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "Tengo dolor de pecho y falta de aire.",
+    "answer": "Son senales de emergencia y requiere atencion inmediata.",
+    "expected_triage": "emergency",
+    "preferred_language": "Spanish",
+    "required_terms_any": ["emergencia", "inmediata", "pecho"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  }
+]

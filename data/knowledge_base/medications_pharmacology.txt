@@ -1,0 +1,104 @@
+TOPIC: Medications — Common Drugs, Side Effects, Interactions
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Pharmacology / Drug Safety
+
+=== PAIN RELIEF (ANALGESICS) ===
+
+Paracetamol / Acetaminophen (Tylenol):
+- Uses: Mild-moderate pain, fever
+- Safe dose: Adults — up to 1g per dose, max 4g/day (3g/day if alcohol use)
+- Overdose risk: Liver damage (even slight overdose). Never exceed the daily limit.
+- Interactions: Warfarin (enhanced effect), heavy alcohol (liver toxicity)
+- Safe in pregnancy and breastfeeding at recommended doses
+
+NSAIDs (Ibuprofen, Naproxen, Diclofenac):
+- Uses: Inflammatory pain, musculoskeletal pain, menstrual cramps, fever
+- Take with food to reduce GI upset
+- Avoid in: Peptic ulcer, CKD, heart failure, late pregnancy, before surgery
+- Side effects: GI bleeding, fluid retention, raised blood pressure, kidney impairment
+- COX-2 inhibitors (celecoxib): lower GI risk but same cardiovascular risk as NSAIDs
+- Interactions: Blood thinners (bleeding risk), ACE inhibitors (reduced efficacy), diuretics
+
+Opioids (Codeine, Tramadol, Morphine, Oxycodone):
+- Uses: Moderate-severe pain (acute or cancer-related); chronic pain only when other options exhausted
+- Risk: Physical dependence, respiratory depression, constipation, sedation
+- Never combine with alcohol, benzodiazepines, or other CNS depressants (risk of fatal respiratory depression)
+- Tramadol: also an SNRI — risk of serotonin syndrome; lowers seizure threshold
+
+=== ANTIBIOTICS ===
+General principles:
+- Complete the full course even if symptoms improve (prevents resistance)
+- Most upper respiratory infections (colds, flu) are viral — antibiotics DO NOT help
+- Common side effects: GI upset, diarrhoea, C. difficile colitis with prolonged use
+- Allergy: penicillin allergy (rash only) usually allows cephalosporins; anaphylaxis = avoid all beta-lactams
+
+Amoxicillin: Strep throat, ear infections, dental infections. Take with food.
+Azithromycin: Atypical pneumonia, STIs, traveller's diarrhoea. QT prolongation risk.
+Ciprofloxacin: UTI, GI infections. Avoid with antacids. Tendon rupture risk with steroids.
+Metronidazole: C. diff, bacterial vaginosis, H. pylori. Severe alcohol interaction (disulfiram-like reaction — avoid alcohol completely).
+Doxycycline: Malaria prophylaxis, Lyme disease, acne, atypical pneumonia. Photosensitivity — use sunscreen. Take with food.
+
+=== BLOOD THINNERS (ANTICOAGULANTS) ===
+
+Warfarin:
+- Requires INR monitoring (target range 2.0–3.0 for most indications)
+- Many drug and food interactions: Vitamin K-rich foods (leafy greens) reduce effect; NSAIDs, antibiotics may increase INR
+- Signs of over-anticoagulation: Unusual bruising, blood in urine/stool, prolonged bleeding
+
+DOACs (Apixaban, Rivaroxaban, Dabigatran, Edoxaban):
+- No routine monitoring needed
+- More predictable than warfarin, fewer food interactions
+- Rivaroxaban: take with food for full absorption
+- Dabigatran: antidote available (idarucizumab)
+- Do NOT miss doses or double up missed doses
+
+Aspirin (antiplatelet):
+- 75–100mg/day for secondary prevention (post-MI, stroke, CAD)
+- Primary prevention: benefits outweigh risk only in specific high-risk patients
+
+=== DIABETES MEDICATIONS ===
+Metformin:
+- Hold 48h before IV contrast (risk of lactic acidosis)
+- Take with food to reduce GI side effects
+- Safe, weight-neutral, first-line
+
+Insulin:
+- Keep refrigerated; discard vials open >28–30 days
+- Never skip insulin if sick (illness increases glucose needs)
+- Rotate injection sites to prevent lipohypertrophy
+
+SGLT2 inhibitors:
+- Genital mycotic infections common (especially in women)
+- Hold before major surgery (risk of euglycaemic DKA)
+- Drink adequate water to prevent UTIs
+
+=== MEDICATIONS TO AVOID IN SPECIFIC CONDITIONS ===
+
+In Pregnancy (Category D/X):
+- NSAIDs (third trimester): premature ductus closure
+- ACE inhibitors/ARBs: teratogenic (foetal renal damage)
+- Warfarin (first trimester): foetal warfarin syndrome
+- Tetracyclines/doxycycline: foetal bone/teeth effects
+- Statins: teratogenic
+- Methotrexate: highly teratogenic
+
+In Renal Impairment (CKD stage 3+):
+- Metformin: hold if eGFR < 30
+- NSAIDs: worsen kidney function, avoid
+- Gabapentin/pregabalin: reduce dose
+- DOAC dosing adjustment required
+
+In Elderly (Beers Criteria — avoid):
+- Benzodiazepines: fall risk, cognitive impairment
+- First-generation antihistamines (diphenhydramine): anticholinergic — confusion, urinary retention
+- Muscle relaxants (cyclobenzaprine): excessive sedation
+- Digoxin > 0.125mg: toxicity risk
+
+=== DANGEROUS DRUG INTERACTIONS ===
+1. Warfarin + NSAIDs = major bleeding risk
+2. Statins + clarithromycin/erythromycin = rhabdomyolysis
+3. SSRIs + tramadol = serotonin syndrome
+4. MAOIs + any serotonergic drug = serotonin syndrome (can be fatal)
+5. Metronidazole + alcohol = severe nausea/vomiting/flushing
+6. Quinolones + antacids = absorption failure (space 2 hours apart)
+7. Opioids + benzodiazepines = respiratory depression (leading cause of overdose deaths)

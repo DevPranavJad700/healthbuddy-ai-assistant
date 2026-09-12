@@ -1,0 +1,78 @@
+TOPIC: Cardiovascular Disease — Heart Attack, Heart Failure, Cholesterol
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Cardiology
+
+=== CORONARY ARTERY DISEASE (CAD) ===
+
+Pathophysiology: Atherosclerotic plaque builds in coronary arteries → narrows lumen → reduces oxygen delivery to myocardium.
+Stable angina: Chest pain/pressure on exertion, relieved by rest or nitroglycerin
+Acute Coronary Syndrome (ACS): Plaque rupture → thrombosis → myocardial infarction or unstable angina
+
+Risk factors:
+- Non-modifiable: Age (men ≥45, women ≥55), male sex, family history (first-degree relative with CAD <55M/<65F)
+- Modifiable: Hypertension, hypercholesterolaemia, diabetes, smoking, obesity, physical inactivity, chronic stress
+
+=== MYOCARDIAL INFARCTION (HEART ATTACK) ===
+
+Warning signs (may vary by individual):
+- Crushing or squeezing chest pain/pressure (may radiate to left arm, jaw, neck, back)
+- Shortness of breath
+- Cold sweat, nausea, lightheadedness
+- Atypical in women/elderly: fatigue, jaw pain, epigastric pain, no chest pain
+
+STEMI vs NSTEMI:
+- STEMI: Complete coronary occlusion, ST-elevation on ECG → requires immediate reperfusion (PCI within 90 min)
+- NSTEMI: Partial occlusion, troponin elevation without ST elevation
+
+Emergency action: Call 911/112 immediately. Chew aspirin 325mg if not allergic. Do NOT drive self to hospital.
+
+Treatment:
+- Acute: Aspirin + antiplatelet (clopidogrel/ticagrelor), anticoagulation, primary PCI or thrombolytics
+- Long-term: Dual antiplatelet therapy (DAPT) 12 months, statin, ACE inhibitor/ARB, beta-blocker, cardiac rehab
+
+=== HEART FAILURE ===
+
+Definition: Heart cannot pump sufficient blood to meet body's needs
+HFrEF (ejection fraction <40%): Systolic dysfunction — dilated, weak heart
+HFpEF (ejection fraction ≥50%): Diastolic dysfunction — stiff heart, cannot fill properly
+
+Symptoms: Dyspnoea on exertion → at rest → orthopnoea (lying flat), paroxysmal nocturnal dyspnoea
+Signs: Ankle oedema, raised JVP, crackles in lungs, S3 gallop
+NYHA Classification: I (no symptoms) → II (symptoms on moderate exertion) → III (symptoms on mild exertion) → IV (symptoms at rest)
+
+Treatment (HFrEF):
+- Cornerstone: ACE inhibitor/ARB/ARNI (sacubitril/valsartan), beta-blocker (carvedilol/metoprolol), MRA (spironolactone), SGLT2 inhibitor
+- Diuretics: For fluid overload (furosemide)
+- Device therapy: ICD (sudden death prevention in EF <35%), CRT (dyssynchrony)
+
+=== CHOLESTEROL & LIPIDS ===
+
+Targets (ACC/AHA 2019):
+- Very high risk (ASCVD or diabetes + risk factors): LDL < 55 mg/dL
+- High risk (ASCVD risk >20%): LDL < 70 mg/dL
+- Borderline risk: LDL < 100 mg/dL
+- Low risk: LDL < 130 mg/dL
+
+Optimal values:
+- Total cholesterol: < 200 mg/dL
+- HDL (good cholesterol): > 60 mg/dL (protective); < 40 mg/dL (men) / < 50 mg/dL (women) = risk factor
+- LDL (bad cholesterol): Lower is better for high-risk patients
+- Triglycerides: < 150 mg/dL; > 500 mg/dL = pancreatitis risk
+
+Statins (first-line):
+- High-intensity: atorvastatin 40–80mg, rosuvastatin 20–40mg (LDL reduction 50%)
+- Moderate-intensity: atorvastatin 10–20mg, simvastatin 20–40mg (LDL reduction 30–50%)
+- Side effects: myalgia (muscle pain), rarely rhabdomyolysis; check CK if severe muscle pain
+
+Non-statin options: Ezetimibe (add-on), PCSK9 inhibitors (for very high risk, extremely high LDL)
+
+Diet modifications:
+- Reduce saturated fat (red meat, full-fat dairy) and trans fats (processed foods)
+- Increase omega-3 fatty acids (fatty fish, walnuts, flaxseed)
+- Soluble fibre (oats, barley, psyllium) reduces LDL by 5–10%
+- Plant sterols/stanols (2g/day) reduce LDL by 10–15%
+
+=== CARDIAC REHABILITATION ===
+Structured programme post-MI or heart failure: supervised exercise, nutrition counselling, psychosocial support
+Reduces re-admission by 30%, all-cause mortality by 20%
+Recommended for all eligible post-MI and post-revascularisation patients

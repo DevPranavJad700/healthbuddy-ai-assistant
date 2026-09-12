@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "cases": 12,
+    "tp": 3,
+    "fp": 4,
+    "tn": 5,
+    "fn": 0,
+    "emergency_recall": 1.0,
+    "emergency_false_positive_rate": 0.444,
+    "severity_accuracy": 0.417,
+    "thresholds": {
+      "min_emergency_recall": 0.95,
+      "max_emergency_fpr": 0.25,
+      "min_severity_accuracy": 0.6
+    }
+  },
+  "cases": [
+    {
+      "name": "Cardiac emergency chest pain",
+      "expected_emergency": true,
+      "pred_emergency": true,
+      "expected_severity": "emergency",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Stroke signal",
+      "expected_emergency": true,
+      "pred_emergency": true,
+      "expected_severity": "emergency",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Anaphylaxis",
+      "expected_emergency": true,
+      "pred_emergency": true,
+      "expected_severity": "emergency",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Flu-like illness",
+      "expected_emergency": false,
+      "pred_emergency": true,
+      "expected_severity": "medium",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Common cold",
+      "expected_emergency": false,
+      "pred_emergency": false,
+      "expected_severity": "low",
+      "pred_severity": "medium",
+      "predictions_count": 5
+    },
+    {
+      "name": "Migraine",
+      "expected_emergency": false,
+      "pred_emergency": true,
+      "expected_severity": "medium",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Food poisoning",
+      "expected_emergency": false,
+      "pred_emergency": false,
+      "expected_severity": "medium",
+      "pred_severity": "medium",
+      "predictions_count": 5
+    },
+    {
+      "name": "UTI symptoms",
+      "expected_emergency": false,
+      "pred_emergency": false,
+      "expected_severity": "medium",
+      "pred_severity": "high",
+      "predictions_count": 5
+    },
+    {
+      "name": "Hypertension complaint",
+      "expected_emergency": false,
+      "pred_emergency": true,
+      "expected_severity": "high",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Asthma flare",
+      "expected_emergency": false,
+      "pred_emergency": true,
+      "expected_severity": "high",
+      "pred_severity": "emergency",
+      "predictions_count": 5
+    },
+    {
+      "name": "Panic-like symptoms",
+      "expected_emergency": false,
+      "pred_emergency": false,
+      "expected_severity": "medium",
+      "pred_severity": "emergency",
+      "predictions_count": 4
+    },
+    {
+      "name": "Potential diabetes",
+      "expected_emergency": false,
+      "pred_emergency": false,
+      "expected_severity": "high",
+      "pred_severity": "high",
+      "predictions_count": 5
+    }
+  ]
+}

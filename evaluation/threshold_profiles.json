@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "correctness_proxy_avg": 0.45,
+    "brevity_pass_rate": 0.65,
+    "safety_pass_rate": 1.0,
+    "grounding_pass_rate": 0.9,
+    "hallucination_pass_rate": 0.8,
+    "triage_pass_rate": 0.65,
+    "required_terms_pass_rate": 0.6
+  },
+  "strict_v1": {
+    "correctness_proxy_avg": 0.52,
+    "brevity_pass_rate": 0.75,
+    "safety_pass_rate": 1.0,
+    "grounding_pass_rate": 0.92,
+    "hallucination_pass_rate": 0.86,
+    "triage_pass_rate": 0.75,
+    "required_terms_pass_rate": 0.72
+  },
+  "strict_v2": {
+    "correctness_proxy_avg": 0.6,
+    "brevity_pass_rate": 0.82,
+    "safety_pass_rate": 1.0,
+    "grounding_pass_rate": 0.95,
+    "hallucination_pass_rate": 0.9,
+    "triage_pass_rate": 0.85,
+    "required_terms_pass_rate": 0.82
+  }
+}

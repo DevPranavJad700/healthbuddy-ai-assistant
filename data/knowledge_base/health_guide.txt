@@ -1,0 +1,403 @@
+COMPREHENSIVE HEALTH GUIDE — HEALTHBUDDY KNOWLEDGE BASE
+========================================================
+
+This document serves as the foundational knowledge base for the HealthBuddy AI chatbot.
+It covers essential health topics including nutrition, exercise, mental health, sleep,
+common conditions, preventive care, and first aid.
+
+DISCLAIMER: This information is for educational purposes only and should not replace
+professional medical advice, diagnosis, or treatment. Always consult a healthcare
+professional for medical decisions.
+
+
+SECTION 1: NUTRITION AND DIET
+==============================
+
+1.1 Macronutrients
+
+Proteins: Essential for muscle repair, immune function, and enzyme production. Adults need
+approximately 0.8 grams per kilogram of body weight daily. Good sources include lean meats,
+fish, eggs, dairy, legumes, tofu, and nuts. Athletes or people recovering from illness may
+need 1.2 to 2.0 grams per kilogram.
+
+Carbohydrates: The body's primary energy source. Complex carbohydrates (whole grains, brown
+rice, oats, sweet potatoes) provide sustained energy and fiber. Simple carbohydrates (sugar,
+white bread) cause rapid blood sugar spikes. Aim for 45-65% of daily calories from carbs,
+prioritizing complex sources.
+
+Fats: Essential for hormone production, nutrient absorption, and brain function. Healthy fats
+include monounsaturated (olive oil, avocados), polyunsaturated (salmon, walnuts, flaxseed),
+and omega-3 fatty acids. Limit saturated fats to less than 10% of daily calories. Avoid
+trans fats entirely.
+
+1.2 Micronutrients
+
+Vitamins:
+- Vitamin A: Supports vision, immune function, and skin health. Found in carrots, sweet
+  potatoes, spinach, and liver.
+- Vitamin B Complex: B1 (thiamine), B2 (riboflavin), B3 (niacin), B6, B12, and folate
+  support energy metabolism and nervous system function. Found in whole grains, meat, eggs,
+  and leafy greens.
+- Vitamin C: Powerful antioxidant, supports immune function and collagen production. Found
+  in citrus fruits, bell peppers, strawberries, and broccoli. Adults need 65-90mg daily.
+- Vitamin D: Critical for bone health, immune function, and mood regulation. Produced by
+  sun exposure. Found in fatty fish, fortified milk, and egg yolks. Many people are
+  deficient, especially in northern climates. Recommended 600-800 IU daily.
+- Vitamin E: Antioxidant that protects cells. Found in nuts, seeds, and vegetable oils.
+- Vitamin K: Essential for blood clotting and bone metabolism. Found in leafy greens.
+
+Minerals:
+- Calcium: Essential for bones and teeth. Adults need 1000-1200mg daily. Sources include
+  dairy, fortified plant milks, sardines, and leafy greens.
+- Iron: Crucial for oxygen transport in blood. Women need 18mg daily, men need 8mg. Found
+  in red meat, spinach, lentils, and fortified cereals. Vitamin C enhances iron absorption.
+- Magnesium: Involved in 300+ biochemical reactions. Supports muscle function, sleep, and
+  stress management. Found in nuts, seeds, dark chocolate, and leafy greens.
+- Zinc: Supports immune function and wound healing. Found in meat, shellfish, legumes,
+  and pumpkin seeds.
+- Potassium: Regulates blood pressure and fluid balance. Found in bananas, potatoes,
+  spinach, and avocados.
+
+1.3 Hydration
+
+Water is essential for every bodily function. General recommendation is 8 glasses (2 liters)
+daily, but individual needs vary based on activity level, climate, and body size. Signs of
+dehydration include dark urine, headache, fatigue, and dizziness. During exercise, drink
+water before, during, and after activity. Electrolytes (sodium, potassium) may be needed
+during prolonged intense exercise exceeding 60 minutes.
+
+1.4 Healthy Eating Patterns
+
+The Mediterranean diet is consistently ranked among the healthiest eating patterns. It
+emphasizes fruits, vegetables, whole grains, legumes, nuts, olive oil, fish, and moderate
+wine consumption. Studies show it reduces risk of heart disease, diabetes, and cognitive
+decline.
+
+Intermittent fasting involves cycling between periods of eating and fasting. Common patterns
+include 16:8 (16 hours fasting, 8 hours eating window) and 5:2 (normal eating 5 days, restricted
+calories 2 days). Research suggests benefits for weight management and metabolic health, but
+it is not suitable for everyone, particularly pregnant women, children, or those with eating
+disorders.
+
+
+SECTION 2: PHYSICAL EXERCISE AND FITNESS
+==========================================
+
+2.1 Types of Exercise
+
+Aerobic Exercise: Activities that increase heart rate and breathing. Includes walking, running,
+swimming, cycling, and dancing. Recommended 150 minutes of moderate-intensity or 75 minutes
+of vigorous-intensity aerobic activity per week. Improves cardiovascular health, reduces
+inflammation, and supports mental health.
+
+Strength Training: Exercises that build muscle mass and bone density. Includes weight lifting,
+bodyweight exercises (push-ups, squats), and resistance band workouts. Recommended 2-3 sessions
+per week targeting all major muscle groups. Each session should include 8-12 repetitions per
+exercise for 2-3 sets.
+
+Flexibility and Stretching: Essential for joint health and injury prevention. Includes static
+stretching, dynamic stretching, and yoga. Stretch after warming up, hold each stretch for
+15-30 seconds. Regular stretching improves range of motion and reduces muscle stiffness.
+
+Balance Training: Important especially for older adults to prevent falls. Includes single-leg
+stands, heel-to-toe walking, and tai chi. Recommended 3 times per week.
+
+2.2 Exercise Guidelines by Age
+
+Children (6-17): At least 60 minutes of moderate-to-vigorous physical activity daily,
+including muscle-strengthening and bone-strengthening activities 3 days per week.
+
+Adults (18-64): 150-300 minutes of moderate-intensity aerobic activity per week, plus
+muscle-strengthening activities 2 or more days per week.
+
+Older Adults (65+): Same as adults, with addition of balance training and fall prevention
+exercises. Modify intensity based on fitness level and chronic conditions.
+
+2.3 Common Exercise Injuries and Prevention
+
+Sprains and Strains: Caused by overstretching or tearing ligaments (sprains) or muscles
+(strains). Prevent by warming up properly, using correct form, and gradually increasing
+intensity. Treat with RICE method: Rest, Ice, Compression, Elevation.
+
+Shin Splints: Pain along the shinbone, common in runners. Caused by overuse or improper
+footwear. Prevent by gradually increasing running distance, wearing proper shoes, and
+strengthening lower leg muscles.
+
+Runner's Knee: Pain around the kneecap during running or climbing stairs. Caused by
+overuse, muscle imbalance, or poor alignment. Strengthen quadriceps and hip muscles.
+Use proper running shoes and avoid sudden increases in mileage.
+
+
+SECTION 3: MENTAL HEALTH
+==========================
+
+3.1 Stress Management
+
+Chronic stress affects both mental and physical health, increasing risk of heart disease,
+depression, and immune dysfunction. Effective stress management techniques include:
+
+- Deep Breathing: Practice diaphragmatic breathing for 5-10 minutes daily. Inhale through
+  nose for 4 counts, hold for 7, exhale through mouth for 8 counts (4-7-8 technique).
+- Progressive Muscle Relaxation: Systematically tense and release muscle groups from toes
+  to head. Helps identify and release physical tension.
+- Mindfulness Meditation: Focus on present moment awareness without judgment. Start with
+  5 minutes daily and gradually increase. Research shows regular meditation reduces cortisol
+  levels and improves emotional regulation.
+- Time Management: Prioritize tasks, set realistic goals, and learn to say no. Break large
+  tasks into smaller steps.
+- Social Connection: Maintain supportive relationships. Talking to friends, family, or a
+  therapist can significantly reduce stress.
+
+3.2 Anxiety
+
+Anxiety disorders are the most common mental health conditions, affecting approximately
+19% of adults. Types include generalized anxiety disorder (GAD), social anxiety, panic
+disorder, and specific phobias.
+
+Symptoms include excessive worry, restlessness, difficulty concentrating, muscle tension,
+sleep problems, and irritability. Physical symptoms may include rapid heartbeat, sweating,
+trembling, and shortness of breath.
+
+Treatment options include cognitive-behavioral therapy (CBT), which is highly effective,
+medication (SSRIs, SNRIs, buspirone), regular exercise, adequate sleep, and limiting
+caffeine and alcohol.
+
+3.3 Depression
+
+Depression is more than feeling sad. It is a medical condition that affects how you feel,
+think, and handle daily activities. Major depressive disorder requires at least 2 weeks of
+symptoms including persistent sadness, loss of interest in activities, changes in appetite
+or weight, sleep disturbances, fatigue, feelings of worthlessness, difficulty concentrating,
+or thoughts of death.
+
+Risk factors include genetics, brain chemistry, hormonal changes, chronic illness, trauma,
+and substance abuse. Treatment typically involves psychotherapy (CBT, interpersonal therapy),
+medication (antidepressants), lifestyle changes (exercise, sleep hygiene, social connection),
+or a combination.
+
+If you or someone you know is experiencing thoughts of suicide, please contact a mental
+health professional or crisis helpline immediately.
+
+3.4 Sleep and Mental Health
+
+Sleep and mental health are deeply interconnected. Poor sleep worsens anxiety and depression,
+while mental health conditions often disrupt sleep. Adults need 7-9 hours of quality sleep
+per night.
+
+Sleep Hygiene Tips:
+- Maintain a consistent sleep schedule, even on weekends
+- Create a dark, quiet, cool sleeping environment (60-67°F / 15-19°C)
+- Avoid screens (phones, computers, TV) at least 1 hour before bed
+- Limit caffeine intake after 2 PM
+- Avoid large meals close to bedtime
+- Regular exercise improves sleep quality, but avoid vigorous exercise within 3 hours of bedtime
+- Consider relaxation techniques before bed (reading, gentle stretching, meditation)
+
+
+SECTION 4: COMMON HEALTH CONDITIONS
+=====================================
+
+4.1 Diabetes
+
+Type 1 Diabetes: Autoimmune condition where the body doesn't produce insulin. Usually
+diagnosed in childhood. Requires lifelong insulin therapy. About 5-10% of diabetes cases.
+
+Type 2 Diabetes: Body doesn't use insulin effectively (insulin resistance). Most common form,
+accounting for 90-95% of cases. Risk factors include obesity, sedentary lifestyle, family
+history, and age over 45. Prevention includes maintaining healthy weight, regular exercise,
+and balanced diet.
+
+Warning Signs: Frequent urination, excessive thirst, unexplained weight loss, blurred vision,
+slow-healing sores, frequent infections, tingling in hands or feet.
+
+Management: Blood sugar monitoring, medication (metformin, insulin), healthy diet focusing on
+low glycemic index foods, regular physical activity, and regular medical check-ups.
+
+4.2 Hypertension (High Blood Pressure)
+
+Blood pressure measures the force of blood against artery walls. Normal is below 120/80 mmHg.
+Elevated is 120-129 systolic. Stage 1 hypertension is 130-139/80-89. Stage 2 is 140+/90+.
+Hypertensive crisis is above 180/120 requiring immediate medical attention.
+
+Risk factors include obesity, high sodium diet, physical inactivity, excessive alcohol, smoking,
+stress, age, and family history. Hypertension is called the "silent killer" because it often
+has no symptoms but significantly increases risk of heart attack, stroke, and kidney disease.
+
+Management: DASH diet (rich in fruits, vegetables, whole grains, lean protein), reduce sodium
+to less than 2300mg daily, regular exercise, maintain healthy weight, limit alcohol, manage
+stress, and take prescribed medications consistently.
+
+4.3 Heart Disease
+
+Cardiovascular disease is the leading cause of death worldwide. Risk factors include high
+blood pressure, high cholesterol, smoking, diabetes, obesity, physical inactivity, and
+family history.
+
+Warning Signs of Heart Attack: Chest pain or pressure, pain radiating to arm/jaw/back,
+shortness of breath, nausea, cold sweats, lightheadedness. If you suspect a heart attack,
+call emergency services (911/112) immediately.
+
+Prevention: Regular exercise, heart-healthy diet (Mediterranean diet), maintain healthy
+weight, manage blood pressure and cholesterol, don't smoke, limit alcohol, manage stress,
+and get regular check-ups.
+
+4.4 Common Cold and Flu
+
+The common cold is a viral infection of the upper respiratory tract. Symptoms include runny
+nose, sore throat, cough, congestion, mild body aches, and low-grade fever. Colds typically
+resolve in 7-10 days. No cure exists — treatment is symptomatic (rest, fluids, over-the-counter
+medications for symptom relief).
+
+Influenza (flu) is more severe, with sudden onset of high fever, severe body aches, fatigue,
+and respiratory symptoms. Flu can lead to complications like pneumonia, especially in elderly,
+young children, and immunocompromised individuals. Annual flu vaccination is recommended for
+everyone over 6 months of age.
+
+Prevention: Frequent handwashing, avoiding touching face, covering coughs and sneezes,
+staying home when sick, adequate sleep, and maintaining a healthy immune system.
+
+
+SECTION 5: PREVENTIVE HEALTHCARE
+==================================
+
+5.1 Recommended Health Screenings
+
+Adults should have regular check-ups including:
+- Blood pressure: At least every 2 years (yearly if elevated)
+- Cholesterol: Starting at age 20, every 4-6 years (more frequently if at risk)
+- Blood sugar: Starting at age 45, every 3 years (earlier if overweight or at risk)
+- Cancer screenings: Colon cancer starting at age 45, breast cancer (mammography) starting
+  at age 40-50, cervical cancer (Pap smear) starting at age 21
+- Eye exam: Every 2 years (annually after age 60 or if diabetic)
+- Dental check-up: Every 6 months
+- Skin check: Annual full-body skin exam, especially if fair-skinned
+
+5.2 Vaccinations
+
+Recommended adult vaccinations include:
+- Annual influenza vaccine
+- COVID-19 vaccine and boosters as recommended
+- Tdap/Td (tetanus, diphtheria, pertussis) every 10 years
+- Shingles vaccine at age 50+
+- Pneumococcal vaccine at age 65+
+- HPV vaccine up to age 26 (or 45 in some cases)
+
+5.3 Maintaining a Healthy Immune System
+
+- Eat a balanced diet rich in fruits, vegetables, and whole grains
+- Exercise regularly (moderate intensity)
+- Get adequate sleep (7-9 hours)
+- Manage stress effectively
+- Don't smoke
+- Limit alcohol consumption
+- Maintain a healthy weight
+- Stay up to date on vaccinations
+- Practice good hygiene (handwashing, food safety)
+
+
+SECTION 6: FIRST AID BASICS
+==============================
+
+6.1 Wound Care
+
+Minor cuts and scrapes: Clean with soap and water, apply antibiotic ointment, cover with
+sterile bandage. Change bandage daily. Seek medical attention if wound is deep, won't stop
+bleeding after 10 minutes of pressure, shows signs of infection (redness, warmth, swelling,
+pus), or was caused by a dirty or rusty object.
+
+6.2 Burns
+
+First-degree (superficial): Red, painful skin. Cool with running water for 10-20 minutes.
+Apply aloe vera or burn cream. Cover loosely. Usually heals in 3-5 days.
+
+Second-degree (partial thickness): Blisters, severe pain, red and wet appearance. Cool with
+water, do NOT pop blisters. Seek medical attention if larger than 3 inches or on face/hands/
+joints.
+
+Third-degree (full thickness): White/charred skin, may be painless due to nerve damage.
+Call emergency services immediately. Do not apply water or ointment.
+
+6.3 Choking
+
+For adults and children over 1: Perform abdominal thrusts (Heimlich maneuver). Stand behind
+the person, place fist between navel and ribcage, grasp with other hand, and perform quick
+upward thrusts. Repeat until object is dislodged or person becomes unconscious.
+
+For infants under 1: Alternate between 5 back blows (between shoulder blades) and 5 chest
+thrusts (center of breastbone).
+
+6.4 CPR Basics
+
+If someone is unresponsive and not breathing normally:
+1. Call emergency services (911/112)
+2. Begin chest compressions: Push hard and fast in the center of the chest, at least 2
+   inches deep, at a rate of 100-120 compressions per minute
+3. If trained, give 2 rescue breaths after every 30 compressions
+4. Continue until emergency services arrive or an AED is available
+5. If an AED is available, follow its voice instructions
+
+
+SECTION 7: WOMEN'S HEALTH
+===========================
+
+7.1 Menstrual Health
+
+Normal menstrual cycle ranges from 21-35 days. Average period lasts 3-7 days. Tracking your
+cycle helps identify irregularities. Common concerns include dysmenorrhea (painful periods),
+menorrhagia (heavy bleeding), amenorrhea (absent periods), and premenstrual syndrome (PMS).
+
+Seek medical attention for: periods lasting longer than 7 days, bleeding between periods,
+severe pain not relieved by OTC medications, periods suddenly becoming irregular, or absence
+of periods for 3+ months (if not pregnant).
+
+7.2 Pregnancy Nutrition
+
+Pregnant women need additional folic acid (400-800mcg daily, ideally starting before
+conception), iron (27mg daily), calcium (1000mg daily), and DHA omega-3 fatty acids.
+Avoid raw fish, unpasteurized dairy, excessive caffeine (limit to 200mg/day), alcohol,
+and certain high-mercury fish (shark, swordfish, king mackerel).
+
+
+SECTION 8: MEN'S HEALTH
+=========================
+
+8.1 Prostate Health
+
+Prostate cancer is the second most common cancer in men. Risk increases with age, family
+history, and in certain ethnic groups. Screening with PSA test and digital rectal exam is
+recommended starting at age 50 (earlier for high-risk groups). Symptoms of prostate
+problems include difficulty urinating, frequent urination (especially at night), blood in
+urine, and pelvic pain.
+
+8.2 Testicular Health
+
+Testicular cancer is most common in men ages 15-35. Monthly self-exams can help detect
+changes early. Seek medical attention for: lumps or swelling in either testicle, feeling
+of heaviness, dull ache in lower abdomen or groin, or sudden fluid collection in the scrotum.
+
+
+SECTION 9: CHILDREN'S HEALTH
+==============================
+
+9.1 Childhood Vaccinations
+
+Follow the recommended immunization schedule from birth through 18 years. Key vaccines
+include: Hepatitis B (birth), DTaP, IPV (polio), Hib, PCV13 (pneumococcal), rotavirus,
+MMR, varicella, Hepatitis A, and influenza (annual from 6 months).
+
+9.2 Childhood Nutrition
+
+Breastfeeding is recommended exclusively for the first 6 months, continuing alongside
+complementary foods until at least 12 months. Introduce solid foods at around 6 months,
+starting with iron-fortified cereals and pureed foods. Avoid honey before age 1 (risk of
+botulism). Limit added sugars and sodium. Ensure adequate calcium, iron, and vitamin D intake.
+
+9.3 Common Childhood Illnesses
+
+Ear Infections: Very common in children under 5. Symptoms include ear pain, fever, irritability,
+and pulling at the ear. Most resolve on their own within 2-3 days. Antibiotics may be needed
+for severe or persistent cases.
+
+Hand, Foot, and Mouth Disease: Viral illness causing sores in mouth and rash on hands and
+feet. Most common in children under 5. Usually resolves within 7-10 days. Treatment is
+symptomatic — pain relief and adequate hydration.

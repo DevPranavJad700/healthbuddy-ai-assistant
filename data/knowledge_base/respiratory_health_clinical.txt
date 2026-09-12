@@ -1,0 +1,109 @@
+TOPIC: Respiratory Health — Asthma, COPD, Infections
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Pulmonology / Respiratory Medicine
+
+=== ASTHMA ===
+Chronic inflammatory airway disease; episodic, reversible bronchoconstriction
+
+Classic symptoms: Wheeze, shortness of breath, chest tightness, cough (often worse at night/early morning)
+Triggers: Allergens (dust mites, pollen, pets), exercise, cold air, smoke, infections (viral URTIs), NSAIDs (aspirin-exacerbated), stress, strong smells
+
+Severity classification:
+- Intermittent: Symptoms ≤2 days/week; nighttime ≤2x/month; no activity limitation
+- Mild persistent: >2 days/week but not daily; nighttime 3–4x/month
+- Moderate persistent: Daily symptoms; nighttime >1x/week
+- Severe persistent: Continuous symptoms; frequent nighttime symptoms
+
+Treatment (step-up approach):
+Step 1: SABA (salbutamol/albuterol) PRN only — mild intermittent
+Step 2: Add low-dose ICS (inhaled corticosteroid — budesonide, fluticasone)
+Step 3: Add LABA (long-acting beta agonist — salmeterol, formoterol) to ICS
+Step 4: Increase ICS dose; add LTRA (montelukast) or LAMA (tiotropium)
+Step 5: Add biologic (mepolizumab, dupilumab) for severe eosinophilic asthma
+
+Inhaler technique:
+- MDI: Shake, exhale fully, seal lips around mouthpiece, inhale slowly over 5 sec while pressing, hold breath 10 sec, wait 30–60 sec between puffs
+- Spacer device greatly improves lung deposition (especially in children)
+- Dry powder inhalers (DPI): Breathe in quickly and deeply
+
+Asthma attack management:
+Mild: SABA 2–4 puffs every 20 min for 3 doses
+Moderate: SABA + oral prednisolone 40mg
+Severe: SABA + ipratropium + IV magnesium; call emergency services if: unable to speak, SpO2 <92%, silent chest
+
+Control assessment: ACQ or ACT score; aim for symptom-free days, no reliever use, normal lung function
+
+=== COPD (CHRONIC OBSTRUCTIVE PULMONARY DISEASE) ===
+Progressive, largely irreversible airflow limitation; caused by prolonged exposure to noxious particles/gases
+Smoking cause: >85% of cases; biomass fuel exposure (developing world); occupational dusts
+
+Symptoms: Progressive exertional dyspnoea, chronic cough (productive), frequent chest infections
+Emphysema: Alveolar destruction → hyperinflation, air trapping, barrel chest
+Chronic bronchitis: Productive cough ≥3 months/year for ≥2 consecutive years
+
+Diagnosis: Spirometry — FEV1/FVC <0.70 post-bronchodilator
+GOLD staging (by FEV1% predicted): Stage I (Mild, ≥80%) → II (Moderate, 50–79%) → III (Severe, 30–49%) → IV (Very Severe, <30%)
+
+Treatment:
+- Smoking cessation: Single most effective intervention; slows decline from 60mL/year to 30mL/year FEV1 loss
+- Bronchodilators: SABA (salbutamol), SAMA (ipratropium), LABA (indacaterol), LAMA (tiotropium)
+- ICS: For eosinophil count >300/µL or frequent exacerbations
+- Pulmonary rehabilitation: Mandatory for MRC dyspnoea grade ≥3; improves exercise capacity, QoL
+- Oxygen therapy: If PaO2 <55 mmHg or SpO2 <88% at rest → 15h/day LTOT
+- Vaccination: Annual influenza, pneumococcal, COVID-19, RSV vaccine (≥60 years)
+
+COPD exacerbation: Acute worsening of dyspnoea, cough, sputum production
+- Managed with: SABA, SAMA, systemic steroids (prednisolone 30–40mg x5 days), antibiotics if purulent sputum
+
+=== PNEUMONIA ===
+Infection of lung parenchyma (alveoli); bacterial, viral, or fungal
+
+Community-acquired pneumonia (CAP) causes:
+- Streptococcus pneumoniae (most common bacterial)
+- Atypical: Mycoplasma pneumoniae, Chlamydophila, Legionella
+- Viral: Influenza, SARS-CoV-2, RSV
+
+Symptoms: Fever, productive cough, pleuritic chest pain, dyspnoea, tachypnoea
+Consolidation on CXR (may be patchy in atypical pneumonia)
+
+Severity (CURB-65 score — 1 point each):
+- Confusion, Urea >7 mmol/L, Respiratory rate ≥30, BP <90/60, Age ≥65
+- Score 0–1: Treat at home
+- Score 2: Hospital admission
+- Score 3+: ICU consideration
+
+Treatment:
+- Low severity CAP: Amoxicillin 500mg TDS x5 days
+- Atypical/penicillin allergy: Doxycycline or clarithromycin
+- Hospitalised: Co-amoxiclav + macrolide or cefuroxime + doxycycline
+
+=== UPPER RESPIRATORY TRACT INFECTIONS ===
+
+Common Cold (rhinovirus, typically):
+- Duration: 7–10 days; contagious days 1–3
+- Treatment: Symptomatic only (saline nasal rinse, paracetamol, zinc lozenges may reduce duration by 1 day)
+- Antibiotics: NOT indicated (viral); prescribing = antibiotic resistance
+
+Influenza:
+- Sudden onset high fever, severe myalgia, headache, dry cough; prostration (feeling "knocked down") distinguishes from cold
+- Complications: Pneumonia, myocarditis, encephalitis; most serious in elderly, immunocompromised, pregnant
+- Treatment: Oseltamivir (Tamiflu) — start within 48h; reduces duration by 1–2 days; most benefit in high-risk
+- Prevention: Annual vaccination — 40–70% effective (varies by strain match)
+
+COVID-19:
+- Variants ongoing; current vaccines provide good protection against severe disease
+- Symptoms range: Asymptomatic → fever, cough, fatigue, dyspnoea → severe pneumonia, ARDS
+- Antivirals: Nirmatrelvir/ritonavir (Paxlovid) — high-risk patients within 5 days of symptom onset
+- Long COVID: Symptoms persisting >4 weeks; fatigue, brain fog, dyspnoea common; multidisciplinary management
+
+=== PULMONARY EMBOLISM (PE) — URGENT ===
+Blood clot in pulmonary artery — medical emergency
+
+Risk factors: DVT, immobilisation, surgery, cancer, OCP/HRT, long flights, pregnancy
+Symptoms: Sudden pleuritic chest pain, dyspnoea, tachycardia, haemoptysis, syncope
+Massive PE: Haemodynamic instability (shock, hypotension) → immediate thrombolysis
+
+Diagnosis: D-dimer (sensitive, not specific), CT pulmonary angiography (gold standard)
+Treatment: Anticoagulation (DOAC or heparin bridge to warfarin); massive PE → thrombolysis
+
+Any sudden severe unexplained dyspnoea or pleuritic chest pain → emergency evaluation

@@ -1,0 +1,137 @@
+TOPIC: Exercise, Fitness, and Sports Medicine
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Sports Medicine / Exercise Physiology / Preventive Health
+
+=== PHYSICAL ACTIVITY GUIDELINES (WHO 2020) ===
+
+Adults (18–64 years):
+- 150–300 min/week moderate-intensity aerobic activity, OR
+- 75–150 min/week vigorous-intensity aerobic activity, OR
+- Equivalent combination
+- Muscle-strengthening activities: ≥2 days/week (all major muscle groups)
+
+Older adults (≥65 years):
+- Same aerobic recommendations as adults
+- Add: Balance and coordination exercises ≥3 days/week to prevent falls
+- Multicomponent exercise (aerobic + strength + balance) most beneficial
+
+Children (5–17 years):
+- ≥60 min/day moderate-to-vigorous intensity physical activity
+- Vigorous and muscle-strengthening: ≥3 days/week
+
+Benefits of meeting guidelines:
+- All-cause mortality ↓30%
+- CVD mortality ↓35%
+- Hypertension incidence ↓27%
+- T2DM incidence ↓25%
+- Breast and colon cancer risk ↓20%
+- Depression and anxiety ↓30%
+- Cognitive decline ↓35%
+- Fall-related injuries in elderly ↓30%
+
+=== TYPES OF EXERCISE ===
+
+Aerobic (Cardiovascular) Exercise:
+- Definition: Rhythmic, sustained activities using large muscle groups; increases heart rate
+- Examples: walking, running, cycling, swimming, dancing, rowing
+- Moderate intensity: 50–70% max HR; able to speak in sentences (brisk walk)
+- Vigorous intensity: 70–85% max HR; can only speak a few words (jogging, cycling fast)
+- Maximum heart rate (estimated): 220 – age
+- Benefits: Improved cardiac output, reduced BP, better insulin sensitivity, weight management, mental health
+
+Resistance/Strength Training:
+- Stimulates muscle hypertrophy and strength via progressive overload
+- Recommendations: 2–3 sets, 8–12 repetitions, 60–80% 1-rep max; 48h rest between same muscle groups
+- Benefits: Preserves muscle mass (critical after age 30: lose 3–8% per decade without training), increases metabolic rate, improves insulin sensitivity, bone density, joint stability
+- Older adults: resistance training most critical intervention to prevent sarcopenia
+
+High-Intensity Interval Training (HIIT):
+- Alternating max-effort bursts (20–40 sec) with brief recovery
+- Superior time efficiency; similar or better outcomes than MICT for cardiovascular health
+- Not suitable for beginners or those with joint problems; requires proper warm-up
+- Caution: Stop if chest pain, dizziness, severe shortness of breath
+
+Flexibility & Mobility:
+- Static stretching: Hold 15–60 sec; best after workout when muscles are warm
+- Dynamic stretching: Controlled movements through range of motion; best as warm-up
+- Yoga/Pilates: Combine flexibility, strength, balance; evidence for low back pain, stress, BP
+
+Balance Training:
+- Critical for fall prevention in elderly
+- Examples: Single-leg stand, heel-toe walking, Tai Chi
+- Tai Chi: RCT evidence for fall prevention (40% reduction in frequent fallers)
+
+=== EXERCISE PRESCRIPTION BY CONDITION ===
+
+Hypertension:
+- Aerobic exercise is antihypertensive: reduces SBP by 4–9 mmHg
+- Resistance training: additional 2–3 mmHg reduction
+- Isometric exercise (wall sits, plank): emerging evidence for BP reduction
+
+Type 2 Diabetes:
+- Aerobic + resistance training combined most effective for HbA1c reduction
+- Post-meal walks (10 min) significantly blunt postprandial glucose spikes
+- HbA1c reduction: ~0.7% with structured exercise programme
+
+Heart Disease (Stable):
+- Cardiac rehabilitation: supervised exercise programme post-MI or revascularisation
+- Start low, progress gradually; ECG monitoring initially
+- Absolute contraindications to exercise: unstable angina, decompensated HF, severe aortic stenosis
+
+Osteoporosis:
+- Weight-bearing aerobic exercise (walking, dancing, not swimming/cycling) stimulates bone formation
+- Resistance training: essential for bone density maintenance
+- Avoid high-impact exercise in severe osteoporosis (fracture risk)
+
+Depression:
+- Exercise as effective as antidepressants for mild-moderate depression (Blumenthal JAMA 1999, Kvam 2016)
+- 30 min moderate aerobic exercise 3x/week demonstrably reduces depressive symptoms
+- Mechanism: Endorphins, BDNF (brain-derived neurotrophic factor), normalises HPA axis
+
+Chronic Low Back Pain:
+- Exercise IS the treatment (not rest) — bed rest worsens outcomes
+- Core stabilisation, walking, swimming most beneficial
+- Yoga and Pilates: RCT evidence for pain reduction
+
+=== SPORTS INJURIES — COMMON PRESENTATIONS ===
+
+RICE Protocol (acute soft tissue injuries):
+- Rest: Avoid activities that worsen pain (24–48h, not prolonged)
+- Ice: 20 min every 2–3h for first 48h; wrap in cloth (never apply direct to skin)
+- Compression: Elastic bandage to reduce swelling
+- Elevation: Raise injured limb above heart level
+(PEACE & LOVE framework now preferred: Protection, Elevation, Avoid anti-inflammatories, Compression, Education; Load, Optimism, Vascularisation, Exercise)
+
+Ankle sprains (most common sports injury):
+- Lateral (inversion): most common; involves ATFL
+- Grade I (stretch), II (partial tear), III (complete tear)
+- Treatment: Early mobilisation, physiotherapy; surgery rarely needed even for Grade III
+
+Anterior Cruciate Ligament (ACL) Injury:
+- Non-contact mechanism (sudden change of direction, landing)
+- "Pop" heard/felt, immediate swelling, instability
+- MRI confirms diagnosis; surgical reconstruction for active individuals
+
+Stress fractures:
+- Overuse injury; common in runners (tibia, metatarsals)
+- Gradual onset, localised bone pain, worse with activity
+- Bone scan/MRI most sensitive; rest 6–8 weeks, then graduated return
+
+Runner's Knee (Patellofemoral Pain Syndrome):
+- Anterior knee pain aggravated by stairs, squatting, prolonged sitting
+- Treatment: Quadriceps strengthening, hip abductor strengthening, activity modification
+
+=== EXERCISE AND HYDRATION ===
+- Thirst = already mildly dehydrated; drink proactively during exercise >60 min
+- 500mL water 2h before exercise; 150–250mL every 15–20 min during
+- Sports drinks (electrolytes): beneficial for exercise >60–90 min; not needed for shorter sessions
+- Heat illness: heat cramps → heat exhaustion → heat stroke (medical emergency)
+  - Heat stroke: core temp >40°C, confusion, no sweating → call emergency services, cool rapidly
+
+=== SAFE RETURN TO SPORT AFTER ILLNESS ===
+Myocarditis (inflammation of heart muscle): Can follow viral illness (including COVID-19)
+- Complete cardiac rest until cleared by cardiologist
+- Premature return = risk of fatal arrhythmia
+- Symptoms to watch: chest pain, palpitations, excessive dyspnoea after mild exercise → urgent evaluation
+
+General illness: Rest during fever; gradual return (50% effort day 1, 75% day 2, full day 3 if no symptoms)

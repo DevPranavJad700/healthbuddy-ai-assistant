@@ -1,0 +1,1639 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HealthBuddy AI - An intelligent health assistant powered by RAG and custom transformer models."
+    />
+    <title>HealthBuddy AI — Your Intelligent Health Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css?v=44" />
+    <link rel="manifest" href="/static/manifest.json" />
+    <meta name="theme-color" content="#8b5cf6" />
+    <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/static/sw.js", { scope: "/" }).catch(() => {});
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="theme-toolbar" id="themeToolbar">
+      <button class="theme-menu-toggle" id="themeMenuToggle" type="button">
+        Theme
+      </button>
+
+      <div class="theme-menu" id="themeMenu">
+        <button class="theme-reset-btn" id="classicModeBtn" type="button">
+          Classic
+        </button>
+        <button
+          class="toggle-adjuster-btn"
+          id="toggleAdjusterBtn"
+          type="button"
+        >
+          Adjust Theme
+        </button>
+
+        <div class="color-controls" id="colorControls">
+          <button class="color-btn active" data-scheme="1">Calm</button>
+          <button class="color-btn" data-scheme="2">Focus</button>
+          <button class="color-btn" data-scheme="3">Vital</button>
+          <button class="color-btn" data-scheme="4">Recovery</button>
+          <button class="color-btn" data-scheme="5">Night</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-adjuster-panel" id="colorAdjusterPanel">
+      <div class="color-adjuster-header">
+        <h3 class="color-adjuster-title">Theme Adjuster</h3>
+        <button
+          class="color-adjuster-close"
+          id="closeAdjusterBtn"
+          type="button"
+          aria-label="Close theme adjuster"
+        >
+          x
+        </button>
+      </div>
+
+      <div class="color-picker-group">
+        <div class="color-picker-label"><span>Color 1</span></div>
+        <div class="color-picker-wrapper">
+          <input
+            type="color"
+            class="color-picker-input"
+            id="colorPicker1"
+            data-color="1"
+          />
+          <input
+            type="text"
+            class="color-value-display"
+            id="colorValue1"
+            readonly
+          />
+          <button class="copy-btn" data-copy="1" type="button">Copy</button>
+        </div>
+      </div>
+
+      <div class="color-picker-group">
+        <div class="color-picker-label"><span>Color 2</span></div>
+        <div class="color-picker-wrapper">
+          <input
+            type="color"
+            class="color-picker-input"
+            id="colorPicker2"
+            data-color="2"
+          />
+          <input
+            type="text"
+            class="color-value-display"
+            id="colorValue2"
+            readonly
+          />
+          <button class="copy-btn" data-copy="2" type="button">Copy</button>
+        </div>
+      </div>
+
+      <div class="color-picker-group">
+        <div class="color-picker-label"><span>Color 3</span></div>
+        <div class="color-picker-wrapper">
+          <input
+            type="color"
+            class="color-picker-input"
+            id="colorPicker3"
+            data-color="3"
+          />
+          <input
+            type="text"
+            class="color-value-display"
+            id="colorValue3"
+            readonly
+          />
+          <button class="copy-btn" data-copy="3" type="button">Copy</button>
+        </div>
+      </div>
+
+      <div class="color-picker-group">
+        <div class="color-picker-label"><span>Color 4</span></div>
+        <div class="color-picker-wrapper">
+          <input
+            type="color"
+            class="color-picker-input"
+            id="colorPicker4"
+            data-color="4"
+          />
+          <input
+            type="text"
+            class="color-value-display"
+            id="colorValue4"
+            readonly
+          />
+          <button class="copy-btn" data-copy="4" type="button">Copy</button>
+        </div>
+      </div>
+
+      <div class="color-picker-group">
+        <div class="color-picker-label"><span>Color 5</span></div>
+        <div class="color-picker-wrapper">
+          <input
+            type="color"
+            class="color-picker-input"
+            id="colorPicker5"
+            data-color="5"
+          />
+          <input
+            type="text"
+            class="color-value-display"
+            id="colorValue5"
+            readonly
+          />
+          <button class="copy-btn" data-copy="5" type="button">Copy</button>
+        </div>
+      </div>
+
+      <div class="color-picker-group">
+        <div class="color-picker-label"><span>Color 6</span></div>
+        <div class="color-picker-wrapper">
+          <input
+            type="color"
+            class="color-picker-input"
+            id="colorPicker6"
+            data-color="6"
+          />
+          <input
+            type="text"
+            class="color-value-display"
+            id="colorValue6"
+            readonly
+          />
+          <button class="copy-btn" data-copy="6" type="button">Copy</button>
+        </div>
+      </div>
+
+      <div class="color-adjuster-actions">
+        <button class="export-btn" id="exportAllBtn" type="button">
+          Export All Colors
+        </button>
+      </div>
+    </div>
+
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <div class="bg-gradient"></div>
+    <div class="bg-particles" id="particles"></div>
+
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div
+            class="logo"
+            id="mainLogo"
+            style="cursor: pointer"
+            onclick="location.reload()"
+          >
+            <div class="logo-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <div class="logo-text">
+              <h1>HealthBuddy</h1>
+              <div class="logo-status-row">
+                <span class="logo-subtitle">AI Health Assistant</span>
+                <div class="server-status" id="serverStatus">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Navigation — Primary -->
+        <div class="sidebar-tabs">
+          <button class="tab-btn active" data-tab="chat-tab" id="chatTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Chat
+          </button>
+          <button class="tab-btn" data-tab="symptom-tab" id="symptomTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+            Symptoms
+          </button>
+          <!-- More toggle -->
+          <button class="tab-btn tab-btn--more" id="sidebarMoreToggle" aria-expanded="false" aria-controls="sidebarMorePanel" type="button">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
+            More
+          </button>
+        </div>
+
+        <!-- Collapsible More Panel -->
+        <div class="sidebar-more-panel" id="sidebarMorePanel" aria-hidden="true">
+          <button class="tab-btn" data-tab="history-tab" id="historyTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            History
+          </button>
+          <button class="tab-btn" data-tab="docs-tab" id="docsTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            Docs
+          </button>
+          <button class="tab-btn" data-tab="analytics-tab" id="analyticsTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            Analytics
+          </button>
+          <button class="tab-btn" data-tab="goals-tab" id="goalsTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 12l2.5 2.5L16 9"></path>
+            </svg>
+            Goals
+          </button>
+          <button class="tab-btn" data-tab="clinician-tab" id="clinicianTabBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            Clinician
+          </button>
+        </div>
+        <!-- Sidebar Sign-In Nudge (shown when logged out) -->
+        <div class="sidebar-signin-nudge" id="sidebarSignInNudge">
+          <div class="ssn-avatar">
+            <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="ssn-text">
+            <span class="ssn-title">Sign in to unlock</span>
+            <span class="ssn-desc">History, goals &amp; personalization</span>
+          </div>
+          <button class="ssn-btn" id="sidebarSignInBtn" type="button">Sign In</button>
+        </div>
+
+        <div class="sidebar-section" id="accountAccessCard">
+          <div class="sidebar-acct" id="sidebarAcctBlock">
+            <!-- Hidden elements kept for JS compatibility -->
+            <span id="signedInBadge" class="hidden"></span>
+            <span id="adminBadge" class="hidden"></span>
+            <span id="acctLabel" class="hidden"></span>
+
+            <div class="sidebar-acct-actions">
+              <button id="authLogoutBtn" class="sidebar-acct-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                <span>Sign Out</span>
+              </button>
+              <button id="openConsentCenterBtn" class="sidebar-acct-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Consent</span>
+              </button>
+              <button id="openPrivacyCenterBtn" class="sidebar-acct-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Privacy</span>
+              </button>
+              <button id="dangerZoneToggleBtn" class="sidebar-acct-btn sidebar-acct-btn--warn" type="button" aria-expanded="false" aria-controls="dangerZonePanel">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>Danger</span>
+              </button>
+            </div>
+
+            <div id="dangerZonePanel" class="danger-zone-panel hidden">
+              <p class="section-desc danger-zone-note" style="margin-bottom:0">
+                Permanently erase your account and linked records.
+              </p>
+              <button id="exportMyDataBtn" class="sidebar-acct-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Export Data</span>
+              </button>
+              <button id="deleteMyDataBtn" class="sidebar-acct-btn sidebar-acct-btn--danger" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <span>Delete Account</span>
+              </button>
+            </div>
+            <p id="authStatus" class="auth-status"></p>
+          </div>
+        </div>
+
+        <!-- Chat Tab Content -->
+        <div class="tab-content active" id="chat-tab">
+          <div class="sidebar-section">
+            <div class="product-onboarding" id="onboardingCard">
+              <div class="product-onboarding-header">
+                <h4 id="onboardingTitle">Get Started</h4>
+                <button
+                  id="dismissOnboardingBtn"
+                  class="dismiss-onboarding-btn"
+                  type="button"
+                  aria-label="Dismiss onboarding"
+                >
+                  x
+                </button>
+              </div>
+              <p class="product-onboarding-subtitle" id="onboardingSubtitle">
+                Complete these quick steps to personalize your care experience.
+              </p>
+              <div class="onboarding-intent-grid" id="onboardingIntentGrid">
+                <button
+                  class="onboarding-intent-btn active"
+                  type="button"
+                  data-intent="symptom"
+                >
+                  Symptom Check Now
+                </button>
+                <button
+                  class="onboarding-intent-btn"
+                  type="button"
+                  data-intent="chronic"
+                >
+                  Chronic Support
+                </button>
+                <button
+                  class="onboarding-intent-btn"
+                  type="button"
+                  data-intent="medication"
+                >
+                  Medication & Adherence
+                </button>
+                <button
+                  class="onboarding-intent-btn"
+                  type="button"
+                  data-intent="clinician"
+                >
+                  Clinician Queue (Admin)
+                </button>
+              </div>
+              <p class="onboarding-intent-hint" id="onboardingIntentHint">
+                Choose your primary workflow to see the right setup checklist.
+              </p>
+              <div class="onboarding-progress" aria-hidden="true">
+                <div
+                  id="onboardingProgressBar"
+                  class="onboarding-progress-bar"
+                ></div>
+              </div>
+              <p class="onboarding-progress-text" id="onboardingProgressText">
+                0 of 4 completed
+              </p>
+              <ul class="onboarding-checklist" id="onboardingChecklist">
+                <li id="onboardingStepAuth">Create or log into your account</li>
+                <li id="onboardingStepGoal">Set your first health goal</li>
+                <li id="onboardingStepDoc">Upload one document for context</li>
+                <li id="onboardingStepChat">Ask your first question</li>
+              </ul>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                width="16"
+                height="16"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              Start New Chat
+            </button>
+          </div>
+        </div>
+
+        <!-- History Tab Content -->
+        <div class="tab-content" id="history-tab">
+          <div class="sidebar-section">
+            <h3 class="section-title">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" class="title-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Recent Conversations
+            </h3>
+            <div id="historySignInGate" class="history-gate hidden">
+              <p class="section-desc">Sign in to see your conversation history.</p>
+              <button class="check-symptoms-btn" id="historySignInBtn" type="button">Sign In</button>
+            </div>
+            <div id="sessionList" class="session-list"></div>
+            <div id="historyEmpty" class="history-empty hidden">
+              <svg width="32" height="32" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" style="opacity:0.3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <p>No conversations yet</p>
+              <span>Start chatting to build your history</span>
+            </div>
+            <div id="historyLoading" class="history-loading">
+              <div class="history-skeleton"></div>
+              <div class="history-skeleton"></div>
+              <div class="history-skeleton"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Symptom Checker Tab -->
+        <div class="tab-content" id="symptom-tab">
+          <div class="sidebar-section">
+            <h3 class="section-title">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                class="title-icon"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+              Symptom Checker
+            </h3>
+            <p class="section-desc">
+              Select your symptoms below to get possible condition predictions.
+            </p>
+            <p class="med-review">
+              Last medically reviewed:
+              <span id="symptomReviewedAt">April 18, 2026</span>
+            </p>
+            <div class="symptom-input-group">
+              <select id="symptomInput" class="symptom-search">
+                <option value="">Select a symptom...</option>
+              </select>
+              <button class="add-symptom-btn" id="addSymptomBtn">+</button>
+            </div>
+            <div class="symptom-tags" id="selectedSymptoms"></div>
+            <button class="check-symptoms-btn" id="checkSymptomsBtn" disabled>
+              Analyze Symptoms
+            </button>
+          </div>
+        </div>
+
+        <!-- Analytics Tab Content -->
+        <div class="tab-content" id="analytics-tab">
+          <div class="sidebar-section">
+            <h3 class="section-title">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                class="title-icon"
+              >
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              System Metrics
+            </h3>
+            <div id="analyticsDashboard">
+              <div class="session-loading">Loading analytics...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Goals Tab Content -->
+        <div class="tab-content" id="goals-tab">
+          <div class="sidebar-section">
+            <h3 class="section-title">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" class="title-icon"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+              Health Goals
+            </h3>
+            <div id="goalsSignInGate" class="history-gate">
+              <p class="section-desc">Sign in to track your personal health goals.</p>
+              <button class="check-symptoms-btn" id="goalsSignInBtn" type="button">Sign In</button>
+            </div>
+            <div id="goalsAuthed" class="hidden">
+              <!-- Preset goal chips -->
+              <div class="goal-presets" id="goalPresets">
+                <button class="goal-preset-chip" data-goal="Sleep 7-8 hours daily">😴 Sleep</button>
+                <button class="goal-preset-chip" data-goal="Drink 8 glasses of water">💧 Hydrate</button>
+                <button class="goal-preset-chip" data-goal="Walk 10,000 steps daily">🚶 Steps</button>
+                <button class="goal-preset-chip" data-goal="Exercise 30 min, 5x/week">🏋️ Exercise</button>
+                <button class="goal-preset-chip" data-goal="Eat 5 servings of vegetables">🥦 Nutrition</button>
+                <button class="goal-preset-chip" data-goal="Meditate 10 minutes daily">🧘 Mindfulness</button>
+              </div>
+              <!-- Custom goal input -->
+              <div class="goal-add-row">
+                <input id="goalInput" class="symptom-search" placeholder="Or type a custom goal…" />
+                <select id="goalPriority" class="symptom-search goal-priority-select">
+                  <option value="high">🔴 High</option>
+                  <option value="medium" selected>🟡 Medium</option>
+                  <option value="low">🟢 Low</option>
+                </select>
+                <button id="addGoalBtn" class="add-symptom-btn" title="Add goal">+</button>
+              </div>
+              <!-- Goal list -->
+              <div id="goalList" class="goal-card-list"></div>
+              <div id="goalsEmpty" class="history-empty hidden">
+                <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" style="opacity:0.3"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+                <p>No goals yet</p>
+                <span>Tap a chip above to add your first goal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinician Queue Tab Content -->
+        <div class="tab-content" id="clinician-tab">
+          <div class="sidebar-section">
+            <h3 class="section-title">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                class="title-icon"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+              Clinician Queue
+            </h3>
+            <p class="section-desc">
+              Admin-only workflow for high-risk review follow-up.
+            </p>
+            <div class="queue-stats-grid" id="queueStatsGrid">
+              <div class="queue-stat-card">
+                <span class="queue-stat-label">Pending</span>
+                <strong id="queuePendingCount">-</strong>
+              </div>
+              <div class="queue-stat-card">
+                <span class="queue-stat-label">Reviewed</span>
+                <strong id="queueReviewedCount">-</strong>
+              </div>
+              <div class="queue-stat-card">
+                <span class="queue-stat-label">Resolved</span>
+                <strong id="queueResolvedCount">-</strong>
+              </div>
+            </div>
+            <p class="queue-sla-note" id="queueSlaNote">
+              SLA target: pending reviews should be addressed within 24 hours.
+            </p>
+            <div
+              class="goal-input-group"
+              style="margin-bottom: 10px; grid-template-columns: 1fr 1fr"
+            >
+              <select id="reviewStatusFilter" class="symptom-search">
+                <option value="pending">Pending</option>
+                <option value="reviewed">Reviewed</option>
+                <option value="resolved">Resolved</option>
+              </select>
+              <select id="reviewSortFilter" class="symptom-search">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+              </select>
+            </div>
+            <div
+              class="goal-input-group"
+              style="margin-bottom: 10px; grid-template-columns: 1fr auto"
+            >
+              <input
+                id="reviewSearchInput"
+                class="symptom-search"
+                placeholder="Search by question, response, or session"
+              />
+              <button
+                id="refreshQueueBtn"
+                class="check-symptoms-btn"
+                style="width: auto; padding: 8px 12px"
+              >
+                Refresh
+              </button>
+            </div>
+            <div class="admin-delete-row">
+              <input
+                id="adminDeleteUserIdInput"
+                class="symptom-search"
+                type="number"
+                min="1"
+                placeholder="User ID to delete"
+              />
+              <button
+                id="adminDeleteUserBtn"
+                class="auth-btn auth-btn-danger"
+                type="button"
+              >
+                Delete User Data
+              </button>
+            </div>
+            <p id="adminDeleteStatus" class="admin-delete-status"></p>
+            <div id="clinicianQueue" class="document-list"></div>
+          </div>
+        </div>
+
+        <!-- Documents Tab -->
+        <div class="tab-content" id="docs-tab">
+          <div class="sidebar-section">
+            <h3 class="section-title">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                class="title-icon"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+              Knowledge Base
+            </h3>
+            <div class="upload-zone" id="uploadZone">
+              <div class="upload-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+              </div>
+              <p class="upload-text">Drop PDF/TXT files here</p>
+              <p class="upload-subtext">or click to browse</p>
+              <input type="file" id="fileInput" accept=".pdf,.txt,.md" hidden />
+            </div>
+            <div class="upload-progress" id="uploadProgress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+              <span class="progress-text" id="progressText">Uploading...</span>
+            </div>
+            <div class="document-list" id="documentList"></div>
+          </div>
+        </div>
+
+        <!-- Status Footer -->
+        <div class="sidebar-footer">
+          <div class="status-indicator" id="statusIndicator">
+            <div class="status-dot"></div>
+            <span id="statusText">Connecting...</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Chat Area -->
+      <main class="chat-area">
+        <header class="chat-header">
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle sidebar"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+          <div class="header-info">
+            <h2 id="headerTitle">HealthBuddy</h2>
+            <span class="header-safety-dot" id="headerSubtitle" title="Safety guardrails active"></span>
+          </div>
+          <div class="header-spacer"></div>
+          <button id="openAuthModalBtn" class="auth-header-btn" type="button">
+            Sign In
+          </button>
+          <!-- Settings dropdown -->
+          <div class="header-settings-wrap">
+            <button class="header-settings-btn" id="headerSettingsBtn" type="button" title="Settings" aria-label="Settings" aria-expanded="false" aria-controls="headerSettingsMenu">
+              <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </button>
+            <div class="header-settings-menu hidden" id="headerSettingsMenu" role="menu">
+              <div class="hsm-group">
+                <label class="hsm-label" for="uiLanguageSelect">Language</label>
+                <select id="uiLanguageSelect" class="hsm-select" aria-label="Select language">
+                  <option value="en">English</option>
+                  <option value="hi">Hindi</option>
+                  <option value="es">Spanish</option>
+                  <option value="ar">Arabic</option>
+                </select>
+              </div>
+              <div class="hsm-divider"></div>
+              <button class="hsm-item" id="clearChat" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                Clear Chat
+              </button>
+              <button class="hsm-item" id="shortcutsBtn" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                Keyboard Shortcuts
+              </button>
+              <button class="hsm-item" id="accessibilityBtn" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Accessibility
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div
+          class="connection-banner hidden"
+          id="connectionBanner"
+          role="status"
+          aria-live="polite"
+        >
+          <div>
+            <strong id="connectionBannerTitle">Connection lost</strong>
+            <span id="connectionBannerText"
+              >You are offline. You can continue drafting and retry when back
+              online.</span
+            >
+          </div>
+          <button id="retryLastBtn" class="feedback-btn" type="button" disabled>
+            Retry last send
+          </button>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+          <!-- Welcome Screen -->
+          <div class="welcome-screen" id="welcomeScreen">
+            <div class="info-ribbon" id="infoRibbon" role="alert">
+              <div class="info-ribbon-emergency">
+                <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <strong id="emergencyHelpLabel">Emergency:</strong>
+                <span id="emergencyNumberText">US/Canada: 911</span>
+                <select id="emergencyCountrySelect" class="ribbon-country-select" aria-label="Select country">
+                  <option value="us" selected>US/Canada</option>
+                  <option value="eu">EU</option>
+                  <option value="uk">UK</option>
+                  <option value="au">Australia</option>
+                  <option value="in">India</option>
+                </select>
+              </div>
+              <span class="info-ribbon-sep">·</span>
+              <span class="info-ribbon-privacy">
+                <svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span id="privacyPromiseCopy">Your data stays private. We never sell it.</span>
+              </span>
+              <button class="info-ribbon-close" id="infoRibbonClose" aria-label="Dismiss" type="button">
+                <svg width="12" height="12" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+
+            <div class="welcome-icon welcome-icon--pulse">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h2 class="welcome-heading">How can I help you today?</h2>
+            <p class="welcome-sub">
+              Ask me anything about health, nutrition, exercise, or wellness.
+            </p>
+
+            <div class="suggestion-chips">
+              <button
+                class="chip"
+                data-query="What are the benefits of regular exercise?"
+              >
+                🏃 Exercise benefits
+              </button>
+              <button
+                class="chip"
+                data-query="How can I improve my sleep quality?"
+              >
+                😴 Better sleep
+              </button>
+              <button
+                class="chip"
+                data-query="How do I manage stress effectively?"
+              >
+                🧘 Stress management
+              </button>
+              <button class="chip" data-query="What is a balanced diet?">
+                🥗 Balanced diet
+              </button>
+            </div>
+            <div class="disclaimer">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                width="14"
+                height="14"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              <span id="safetyDisclaimerText"
+                >For informational purposes only. Not a substitute for
+                professional medical advice.</span
+              >
+            </div>
+          </div>
+          <div
+            id="messagesList"
+            role="log"
+            aria-live="polite"
+            aria-relevant="additions text"
+            aria-atomic="false"
+            tabindex="0"
+          ></div>
+          <div
+            id="screenReaderLiveRegion"
+            class="sr-only"
+            aria-live="polite"
+          ></div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+          <div class="input-container">
+            <button class="voice-btn" id="voiceBtn" title="Voice input">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+            </button>
+            <textarea
+              id="messageInput"
+              placeholder="Ask a health question..."
+              rows="1"
+              maxlength="2000"
+              aria-label="Type your health question"
+            ></textarea>
+            <button
+              class="send-button"
+              id="sendButton"
+              title="Send message"
+              disabled
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </div>
+          <p class="input-hint">
+            Press Enter to send · Shift+Enter for new line · 🎙️ Click mic for
+            voice
+          </p>
+          <p class="input-hint">
+            Tip: Ctrl/Cmd+K focus input · Type /help for command list
+          </p>
+          <p class="input-hint">
+            Use /retry after reconnecting to resend your last failed message
+          </p>
+          <p class="input-hint" style="margin-top: 6px">
+            <a href="/privacy" target="_blank" rel="noopener">Privacy</a>
+            ·
+            <a href="/terms" target="_blank" rel="noopener">Terms</a>
+            ·
+            <button
+              id="openConsentCenterChatBtn"
+              type="button"
+              class="inline-consent-btn"
+            >
+              Consent center
+            </button>
+            ·
+            <button
+              id="openPrivacyCenterChatBtn"
+              type="button"
+              class="inline-consent-btn"
+            >
+              My data & privacy
+            </button>
+          </p>
+        </div>
+        <!-- Site Footer -->
+        <footer class="site-footer" id="siteFooter">
+          <div class="site-footer-inner">
+            <div class="site-footer-brand">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <span>HealthBuddy AI</span>
+            </div>
+            <div class="site-footer-links">
+              <a href="/privacy" target="_blank">Privacy Policy</a>
+              <a href="/terms" target="_blank">Terms of Use</a>
+              <a href="mailto:support@healthbuddy.ai">Contact</a>
+              <span class="site-footer-divider">|</span>
+              <span>Not a substitute for professional medical advice</span>
+            </div>
+            <div class="site-footer-copy">&copy; 2026 HealthBuddy AI. All rights reserved.</div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Health Profile Wizard Modal -->
+    <div class="shortcuts-modal hidden" id="profileWizardModal" role="dialog" aria-modal="true" aria-labelledby="wizardTitle" aria-hidden="true">
+      <div class="shortcuts-card profile-wizard-card">
+        <!-- Progress bar -->
+        <div class="wizard-progress">
+          <div class="wizard-step-bar">
+            <div class="wizard-step-dot active" data-step="1"><span>1</span></div>
+            <div class="wizard-step-line"></div>
+            <div class="wizard-step-dot" data-step="2"><span>2</span></div>
+            <div class="wizard-step-line"></div>
+            <div class="wizard-step-dot" data-step="3"><span>3</span></div>
+          </div>
+          <p class="wizard-step-label" id="wizardStepLabel">Personal Info</p>
+        </div>
+
+        <!-- Step 1: Personal Info -->
+        <div class="wizard-step" id="wizardStep1">
+          <h3 id="wizardTitle">👋 Let's personalize your experience</h3>
+          <p class="wizard-desc">Tell us a bit about yourself so HealthBuddy can give you better answers.</p>
+          <div class="wizard-form">
+            <div class="wizard-field">
+              <label for="wizardFullName">Full Name</label>
+              <input id="wizardFullName" type="text" class="symptom-search" placeholder="e.g. Alex Johnson" />
+            </div>
+            <div class="wizard-field-row">
+              <div class="wizard-field">
+                <label for="wizardAge">Age</label>
+                <input id="wizardAge" type="number" min="1" max="120" class="symptom-search" placeholder="e.g. 34" />
+              </div>
+              <div class="wizard-field">
+                <label for="wizardGender">Biological Sex</label>
+                <select id="wizardGender" class="symptom-search">
+                  <option value="">Prefer not to say</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Health Conditions -->
+        <div class="wizard-step hidden" id="wizardStep2">
+          <h3>🏥 Health Background</h3>
+          <p class="wizard-desc">Optional — this helps personalize medical advice. You can update this anytime.</p>
+          <div class="wizard-form">
+            <div class="wizard-field">
+              <label>Known Conditions <span class="wizard-optional">(optional)</span></label>
+              <div class="tag-input-wrapper" id="conditionsWrapper">
+                <div class="tag-list" id="conditionTagList"></div>
+                <input id="conditionsInput" class="tag-input-field" placeholder="Type condition + Enter (e.g. Diabetes)" />
+              </div>
+            </div>
+            <div class="wizard-field">
+              <label>Allergies <span class="wizard-optional">(optional)</span></label>
+              <div class="tag-input-wrapper" id="allergiesWrapper">
+                <div class="tag-list" id="allergyTagList"></div>
+                <input id="allergiesInput" class="tag-input-field" placeholder="Type allergy + Enter (e.g. Penicillin)" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Goals -->
+        <div class="wizard-step hidden" id="wizardStep3">
+          <h3>🎯 Your Health Goals</h3>
+          <p class="wizard-desc">Pick a few goals to start — HealthBuddy will track and tailor advice around them.</p>
+          <div class="wizard-goal-chips">
+            <button class="wizard-goal-chip" data-goal="Sleep 7-8 hours daily">😴 Sleep better</button>
+            <button class="wizard-goal-chip" data-goal="Drink 8 glasses of water">💧 Stay hydrated</button>
+            <button class="wizard-goal-chip" data-goal="Walk 10,000 steps daily">🚶 Be more active</button>
+            <button class="wizard-goal-chip" data-goal="Exercise 30 min, 5x/week">🏋️ Exercise regularly</button>
+            <button class="wizard-goal-chip" data-goal="Eat 5 servings of vegetables">🥦 Eat healthier</button>
+            <button class="wizard-goal-chip" data-goal="Manage stress better">🧘 Reduce stress</button>
+            <button class="wizard-goal-chip" data-goal="Monitor blood pressure">❤️ Heart health</button>
+            <button class="wizard-goal-chip" data-goal="Lose weight gradually">⚖️ Weight management</button>
+          </div>
+          <div class="wizard-selected-goals" id="wizardSelectedGoals"></div>
+        </div>
+
+        <!-- Footer nav -->
+        <div class="wizard-footer">
+          <button class="auth-btn" id="wizardSkipBtn" type="button">Skip for now</button>
+          <div class="wizard-nav-btns">
+            <button class="auth-btn" id="wizardBackBtn" type="button" style="display:none">← Back</button>
+            <button class="auth-btn auth-btn--primary" id="wizardNextBtn" type="button">Next →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="shortcuts-modal hidden"
+      id="authModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="authModalTitle"
+      aria-hidden="true"
+    >
+      <div class="shortcuts-card auth-modal-card">
+        <div class="shortcuts-card-header">
+          <h3 id="authModalTitle">Sign In</h3>
+          <button
+            id="closeAuthModalBtn"
+            class="dismiss-onboarding-btn"
+            type="button"
+            aria-label="Close sign in dialog"
+          >
+            x
+          </button>
+        </div>
+
+        <p class="auth-modal-subtext" id="authModalSubtext">
+          Sign in to personalize your care experience.
+        </p>
+
+        <!-- Google Sign In (Primary CTA) -->
+        <button id="authGoogleBtn" class="auth-google-btn auth-google-btn--primary" type="button">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="#EA4335" d="M12 10.2v3.9h5.5c-.2 1.2-1.5 3.6-5.5 3.6-3.3 0-6.1-2.8-6.1-6.2S8.7 5.3 12 5.3c1.9 0 3.1.8 3.8 1.5l2.6-2.5C16.8 2.8 14.6 2 12 2 6.9 2 2.8 6.2 2.8 11.5S6.9 21 12 21c6.9 0 9.1-4.9 9.1-7.4 0-.5 0-.9-.1-1.3H12z"/>
+            <path fill="#34A853" d="M2.8 6.8l3.2 2.4C6.8 7.4 9.2 5.3 12 5.3c1.9 0 3.1.8 3.8 1.5l2.6-2.5C16.8 2.8 14.6 2 12 2 8.1 2 4.8 4.3 2.8 6.8z"/>
+            <path fill="#4A90E2" d="M12 21c2.5 0 4.7-.8 6.3-2.3l-2.9-2.4c-.8.6-1.9 1-3.4 1-3.9 0-5.2-2.6-5.4-3.9l-3.3 2.5C5.3 18.6 8.4 21 12 21z"/>
+            <path fill="#FBBC05" d="M2.8 16.1l3.3-2.5c-.1-.4-.2-.8-.2-1.2 0-.4.1-.8.2-1.2L2.8 8.7c-.7 1.4-1.1 2.9-1.1 4.5 0 1.6.4 3.1 1.1 4.5z"/>
+          </svg>
+          Continue with Google
+        </button>
+
+        <div class="auth-divider"><span>or sign in with email</span></div>
+
+        <div class="auth-modal-mode-row">
+          <button id="authModeSignInBtn" class="feedback-btn" type="button">Log in</button>
+          <button id="authModeCreateBtn" class="feedback-btn" type="button">Create account</button>
+        </div>
+
+        <div class="auth-helper auth-modal-form">
+          <div id="authRegisterFields" class="auth-register-grid hidden">
+            <input
+              id="authFirstNameInput"
+              class="symptom-search"
+              placeholder="First name"
+              autocomplete="given-name"
+            />
+            <input
+              id="authLastNameInput"
+              class="symptom-search"
+              placeholder="Last name"
+              autocomplete="family-name"
+            />
+          </div>
+          <input
+            id="authUsernameInput"
+            class="symptom-search"
+            placeholder="Email or username"
+            autocomplete="username"
+          />
+          <input
+            id="authEmailInput"
+            class="symptom-search"
+            placeholder="Email (required for account creation)"
+            autocomplete="email"
+          />
+          <div class="auth-password-row">
+            <input
+              id="authPasswordInput"
+              class="symptom-search"
+              type="password"
+              placeholder="Password"
+              autocomplete="current-password"
+            />
+            <button
+              id="authPasswordToggleBtn"
+              class="auth-btn auth-icon-btn"
+              type="button"
+              aria-label="Show password"
+              title="Show or hide password"
+            >
+              Show
+            </button>
+          </div>
+          <div class="auth-forgot-row">
+            <button id="authForgotBtn" class="auth-link-btn" type="button">Forgot password?</button>
+          </div>
+          <label class="auth-remember-row" for="authRememberMe">
+            <input id="authRememberMe" type="checkbox" />
+            <span>Remember this account for 30 days</span>
+          </label>
+          <label
+            class="auth-remember-row hidden"
+            id="authTermsRow"
+            for="authTermsCheckbox"
+          >
+            <input id="authTermsCheckbox" type="checkbox" />
+            <span>I agree to the <a href="/terms" target="_blank" class="auth-link">Terms</a> &amp; <a href="/privacy" target="_blank" class="auth-link">Privacy Policy</a></span>
+          </label>
+          <div class="auth-actions auth-actions-primary">
+            <button id="authLoginBtn" class="auth-btn auth-btn--primary" type="button">
+              <span class="auth-btn-text">Sign In</span>
+              <span class="auth-btn-spinner hidden" aria-hidden="true"></span>
+            </button>
+            <button id="authRegisterBtn" class="auth-btn" type="button">
+              <span class="auth-btn-text">Create Account</span>
+              <span class="auth-btn-spinner hidden" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="auth-security-note">
+            <svg width="10" height="10" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            256-bit encrypted &middot; HIPAA-aware &middot; We never share your health data
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="shortcuts-modal hidden"
+      id="consentCenterModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="consentCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="shortcuts-card consent-center-card">
+        <div class="shortcuts-card-header">
+          <h3 id="consentCenterTitle">Consent and Policy Center</h3>
+          <button
+            id="closeConsentCenterBtn"
+            class="dismiss-onboarding-btn"
+            type="button"
+            aria-label="Close consent center"
+          >
+            x
+          </button>
+        </div>
+        <p class="shortcuts-commands" id="consentCenterSummaryText">
+          Manage consent for sensitive actions before chat guidance and
+          personalization.
+        </p>
+        <div class="consent-policy-meta">
+          Active policy version:
+          <strong id="consentPolicyVersionLabel">2026.04</strong>
+        </div>
+        <div class="consent-list" id="consentList">
+          <article
+            class="consent-item"
+            data-consent-type="ai_guidance"
+            data-scope="chat"
+          >
+            <div>
+              <h4>AI Health Guidance</h4>
+              <p>
+                Allows HealthBuddy to provide personalized health guidance in
+                chat.
+              </p>
+              <span class="consent-pill" id="consentStatus-ai_guidance"
+                >Unknown</span
+              >
+            </div>
+            <div class="consent-item-actions">
+              <button
+                class="feedback-btn"
+                type="button"
+                data-consent-action="grant"
+              >
+                Grant
+              </button>
+              <button
+                class="feedback-btn"
+                type="button"
+                data-consent-action="revoke"
+              >
+                Revoke
+              </button>
+            </div>
+          </article>
+          <article
+            class="consent-item"
+            data-consent-type="terms_of_use"
+            data-scope="chat"
+          >
+            <div>
+              <h4>Terms of Use</h4>
+              <p>
+                Required to continue authenticated chat guidance and safety
+                workflows.
+              </p>
+              <span class="consent-pill" id="consentStatus-terms_of_use"
+                >Unknown</span
+              >
+            </div>
+            <div class="consent-item-actions">
+              <button
+                class="feedback-btn"
+                type="button"
+                data-consent-action="grant"
+              >
+                Accept
+              </button>
+              <button
+                class="feedback-btn"
+                type="button"
+                data-consent-action="revoke"
+              >
+                Revoke
+              </button>
+            </div>
+          </article>
+          <article
+            class="consent-item"
+            data-consent-type="personalization"
+            data-scope="personalization"
+          >
+            <div>
+              <h4>Personalization</h4>
+              <p>
+                Allows storing and using your goals to tailor recommendations.
+              </p>
+              <span class="consent-pill" id="consentStatus-personalization"
+                >Unknown</span
+              >
+            </div>
+            <div class="consent-item-actions">
+              <button
+                class="feedback-btn"
+                type="button"
+                data-consent-action="grant"
+              >
+                Grant
+              </button>
+              <button
+                class="feedback-btn"
+                type="button"
+                data-consent-action="revoke"
+              >
+                Revoke
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="consent-center-footer">
+          <span id="consentCenterActionStatus">Sign in to manage consent.</span>
+          <button
+            id="refreshConsentCenterBtn"
+            class="feedback-btn"
+            type="button"
+          >
+            Refresh
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="shortcuts-modal hidden"
+      id="onboardingModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="onboardingModalTitle"
+      aria-hidden="true"
+    >
+      <div class="shortcuts-card onboarding-modal-card">
+        <div class="shortcuts-card-header">
+          <h3 id="onboardingModalTitle">Complete Your Health Profile</h3>
+          <button
+            id="closeOnboardingModalBtn"
+            class="dismiss-onboarding-btn"
+            type="button"
+            aria-label="Close onboarding"
+          >
+            x
+          </button>
+        </div>
+        <p class="auth-modal-subtext">
+          Add key context to personalize guidance and improve safety relevance.
+        </p>
+        <form id="onboardingProfileForm" class="onboarding-profile-form">
+          <div class="onboarding-profile-grid">
+            <label>
+              Age
+              <input
+                id="onboardingAgeInput"
+                class="symptom-search"
+                type="number"
+                min="1"
+                max="120"
+                placeholder="Age"
+                required
+              />
+            </label>
+            <label>
+              Gender
+              <select
+                id="onboardingGenderSelect"
+                class="symptom-search"
+                required
+              >
+                <option value="">Select</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="non-binary">Non-binary</option>
+                <option value="prefer_not_to_say">Prefer not to say</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Medical history (comma separated)
+            <input
+              id="onboardingMedicalHistoryInput"
+              class="symptom-search"
+              type="text"
+              placeholder="e.g. Asthma, Hypertension"
+            />
+          </label>
+          <label>
+            Allergies (comma separated)
+            <input
+              id="onboardingAllergiesInput"
+              class="symptom-search"
+              type="text"
+              placeholder="e.g. Penicillin, Peanuts"
+            />
+          </label>
+          <div class="consent-center-footer">
+            <span id="onboardingProfileStatus" class="consent-status-text"
+              >Required for personalized context.</span
+            >
+            <div class="onboarding-profile-actions">
+              <button id="onboardingSkipBtn" class="feedback-btn" type="button">
+                Skip
+              </button>
+              <button id="onboardingSaveBtn" class="auth-btn" type="submit">
+                Save Profile
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="shortcuts-modal hidden"
+      id="privacyCenterModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacyCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="shortcuts-card privacy-center-card">
+        <div class="shortcuts-card-header">
+          <h3 id="privacyCenterTitle">My Data and Privacy</h3>
+          <button
+            id="closePrivacyCenterBtn"
+            class="dismiss-onboarding-btn"
+            type="button"
+            aria-label="Close privacy center"
+          >
+            x
+          </button>
+        </div>
+
+        <section class="privacy-section">
+          <h4>Export Status</h4>
+          <p id="privacyExportStatus" class="privacy-meta-text">
+            Sign in to export your account data.
+          </p>
+          <p id="privacyLastExportTime" class="privacy-meta-text"></p>
+          <button id="runPrivacyExportBtn" class="feedback-btn" type="button">
+            Export My Data (JSON)
+          </button>
+        </section>
+
+        <section class="privacy-section">
+          <h4>Active Session Visibility</h4>
+          <div id="privacySessionList" class="privacy-session-list">
+            <p class="privacy-meta-text">Session details unavailable.</p>
+          </div>
+        </section>
+
+        <section class="privacy-section">
+          <h4>Consent History Timeline</h4>
+          <div id="privacyConsentTimeline" class="privacy-consent-timeline">
+            <p class="privacy-meta-text">No consent timeline available.</p>
+          </div>
+        </section>
+
+        <section class="privacy-section">
+          <h4>Privacy Action Audit Trail</h4>
+          <p class="privacy-meta-text">
+            Recent privacy actions taken from this device are listed below.
+          </p>
+          <div id="privacyAuditTrail" class="privacy-audit-list">
+            <p class="privacy-meta-text">No privacy actions recorded yet.</p>
+          </div>
+        </section>
+
+        <section class="privacy-section danger">
+          <h4>Delete Account Impact</h4>
+          <p class="privacy-meta-text">
+            Deleting your account removes profile, goals, chat records, symptom
+            checks, and linked review history. Aggregated analytics without
+            direct identifiers may remain.
+          </p>
+          <button
+            id="runPrivacyDeleteBtn"
+            class="auth-btn auth-btn-danger"
+            type="button"
+          >
+            Delete My Data
+          </button>
+        </section>
+
+        <div class="consent-center-footer">
+          <span id="privacyCenterStatus" class="consent-status-text"
+            >Ready.</span
+          >
+          <button
+            id="refreshPrivacyCenterBtn"
+            class="feedback-btn"
+            type="button"
+          >
+            Refresh
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="shortcuts-modal hidden"
+      id="shortcutsModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="shortcutsTitle"
+      aria-hidden="true"
+    >
+      <div class="shortcuts-card">
+        <div class="shortcuts-card-header">
+          <h3 id="shortcutsTitle">Keyboard Shortcuts</h3>
+          <button
+            id="closeShortcutsBtn"
+            class="dismiss-onboarding-btn"
+            type="button"
+            aria-label="Close keyboard shortcuts"
+          >
+            x
+          </button>
+        </div>
+        <ul class="shortcuts-list">
+          <li>
+            <span>Focus message input</span><kbd>Ctrl/Cmd</kbd><kbd>K</kbd>
+          </li>
+          <li><span>Open shortcuts</span><kbd>Ctrl/Cmd</kbd><kbd>/</kbd></li>
+          <li><span>Switch tabs</span><kbd>Alt</kbd><kbd>1-7</kbd></li>
+          <li><span>Send message</span><kbd>Enter</kbd></li>
+          <li><span>New line</span><kbd>Shift</kbd><kbd>Enter</kbd></li>
+        </ul>
+        <h4 class="shortcuts-subtitle">Slash Commands</h4>
+        <p class="shortcuts-commands">
+          /help · /new · /clear · /history · /symptoms · /docs · /goals ·
+          /analytics · /clinician · /retry · /a11y
+        </p>
+        <h4 class="shortcuts-subtitle">Keyboard Navigation Map</h4>
+        <p class="shortcuts-commands">
+          Tab: header actions → trust banner controls → message list → input
+          area → sidebar tabs → active panel actions.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="shortcuts-modal hidden"
+      id="accessibilityModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="accessibilityTitle"
+      aria-hidden="true"
+    >
+      <div class="shortcuts-card accessibility-card">
+        <div class="shortcuts-card-header">
+          <h3 id="accessibilityTitle">Accessibility Settings</h3>
+          <button
+            id="closeAccessibilityBtn"
+            class="dismiss-onboarding-btn"
+            type="button"
+            aria-label="Close accessibility settings"
+          >
+            x
+          </button>
+        </div>
+        <p class="shortcuts-commands">
+          Customize readability and motion preferences. These settings are saved
+          on this device.
+        </p>
+        <div class="a11y-options">
+          <label class="a11y-option">
+            <input type="checkbox" id="a11yReduceMotion" />
+            <span>Reduce motion and animation</span>
+          </label>
+          <label class="a11y-option">
+            <input type="checkbox" id="a11yLargeText" />
+            <span>Use larger chat text</span>
+          </label>
+          <label class="a11y-option">
+            <input type="checkbox" id="a11yHighContrast" />
+            <span>Enable high contrast mode</span>
+          </label>
+        </div>
+        <div class="a11y-footer">
+          <span id="a11yStatusText">Default display settings</span>
+          <button id="a11yResetBtn" class="feedback-btn" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- ONBOARDING HEALTH PROFILE MODAL                  -->
+    <!-- ================================================ -->
+    <div id="onboardingModal" class="onboarding-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="onboardingTitle">
+      <div class="onboarding-card">
+        <div class="onboarding-header">
+          <div class="onboarding-icon">🏥</div>
+          <h2 class="onboarding-title" id="onboardingTitle">Personalise Your Experience</h2>
+          <p class="onboarding-subtitle">Help HealthBuddy give you tailored, relevant health information. This takes 30 seconds and stays private.</p>
+        </div>
+        <form id="onboardingForm" class="onboarding-form" novalidate>
+          <div class="onboarding-row">
+            <div class="onboarding-field">
+              <label class="onboarding-label" for="ob_age">Your Age</label>
+              <input type="number" id="ob_age" name="age" class="onboarding-input" min="1" max="120" placeholder="e.g. 35" />
+            </div>
+            <div class="onboarding-field">
+              <label class="onboarding-label" for="ob_gender">Gender</label>
+              <select id="ob_gender" name="gender" class="onboarding-input">
+                <option value="">Prefer not to say</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">Non-binary</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="onboarding-field">
+            <label class="onboarding-label" for="ob_conditions">Known Medical Conditions <span class="onboarding-hint">(optional — comma separated)</span></label>
+            <input type="text" id="ob_conditions" name="conditions" class="onboarding-input" placeholder="e.g. diabetes, hypertension, asthma" />
+          </div>
+          <div class="onboarding-field">
+            <label class="onboarding-label" for="ob_allergies">Allergies <span class="onboarding-hint">(optional — comma separated)</span></label>
+            <input type="text" id="ob_allergies" name="allergies" class="onboarding-input" placeholder="e.g. penicillin, peanuts, latex" />
+          </div>
+          <div id="onboardingStatus" class="onboarding-status" style="display:none;"></div>
+          <div class="onboarding-actions">
+            <button type="submit" id="onboardingSubmitBtn" class="onboarding-submit-btn">
+              <span id="onboardingBtnText">Save & Start Chatting</span>
+            </button>
+            <button type="button" id="onboardingSkipBtn" class="onboarding-skip-btn">Skip for now</button>
+          </div>
+        </form>
+        <p class="onboarding-privacy">🔒 Your profile is stored securely and used only to personalise your health answers. Never shared.</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/static/liquid-theme.js?v=3"></script>
+    <script type="module" src="/static/app.js?v=45"></script>
+  </body>
+</html>

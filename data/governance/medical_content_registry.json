@@ -1,0 +1,31 @@
+{
+  "registry_version": "1.0",
+  "assets": [
+    {
+      "content_id": "clinical_protocols_source_versioned_v2",
+      "title": "Clinical Protocols Source Versioned V2",
+      "author": "HealthBuddy Clinical Team",
+      "reviewer": "External Clinician Board",
+      "effective_date": "2026-04-19",
+      "expiry_date": "2027-04-19",
+      "status": "active",
+      "source_version": "v2.0",
+      "guideline_refs": [
+        "WHO Emergency Guidance",
+        "NICE Guidance",
+        "CDC Clinical References"
+      ]
+    },
+    {
+      "content_id": "clinical_protocol_quickref_v1",
+      "title": "Clinical Protocol Quick Reference V1",
+      "author": "HealthBuddy Medical Ops",
+      "reviewer": "Clinical Chair",
+      "effective_date": "2026-04-18",
+      "expiry_date": "2027-04-18",
+      "status": "active",
+      "source_version": "v1.0",
+      "guideline_refs": ["CDC", "NICE"]
+    }
+  ]
+}

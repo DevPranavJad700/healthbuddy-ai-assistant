@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Environment files (keep examples tracked)
+.env
+.env.local
+.env.production
+.env.staging
+.env.*.local
+
+# Databases & Vector Stores
+*.db
+*.sqlite3
+data/*.db
+data/chroma_db/
+data/checkpoints/*
+!data/checkpoints/.gitkeep
+
+# Uploaded User Documents
+data/pdfs/*
+!data/pdfs/.gitkeep
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+logs/
+
+# Backups
+backups/

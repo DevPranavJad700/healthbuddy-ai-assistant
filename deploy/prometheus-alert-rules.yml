@@ -1,0 +1,39 @@
+groups:
+  - name: healthbuddy-service
+    rules:
+      - alert: HealthBuddyHighErrorRate
+        expr: |
+          (
+            sum(rate(healthbuddy_http_requests_total{status=~"5.."}[5m]))
+            /
+            clamp_min(sum(rate(healthbuddy_http_requests_total[5m])), 0.001)
+          ) > 0.05
+        for: 10m
+        labels:
+          severity: critical
+        annotations:
+          summary: "HealthBuddy 5xx error rate is above 5%"
+
+      - alert: HealthBuddyApiDown
+        expr: up{job="healthbuddy"} == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "HealthBuddy target is down"
+
+      - alert: HealthBuddyProviderFailuresHigh
+        expr: increase(healthbuddy_chat_provider_failures_total[10m]) > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Provider failures spiking in HealthBuddy"
+
+      - alert: HealthBuddyAuthFailuresHigh
+        expr: increase(healthbuddy_auth_login_total{outcome=~"failure|blocked"}[10m]) > 20
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Auth failures/blocks elevated in HealthBuddy"

@@ -1,0 +1,183 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "description": "HealthBuddy AI — Production Monitoring Dashboard",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "title": "Request Rate (req/min)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "expr": "sum(rate(healthbuddy_request_total[1m])) * 60",
+          "legendFormat": "Total Requests/min"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "unit": "reqpm"
+        }
+      }
+    },
+    {
+      "title": "Response Latency (p50 / p95 / p99)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, rate(healthbuddy_request_latency_seconds_bucket[5m]))",
+          "legendFormat": "p50"
+        },
+        {
+          "expr": "histogram_quantile(0.95, rate(healthbuddy_request_latency_seconds_bucket[5m]))",
+          "legendFormat": "p95"
+        },
+        {
+          "expr": "histogram_quantile(0.99, rate(healthbuddy_request_latency_seconds_bucket[5m]))",
+          "legendFormat": "p99"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "title": "Error Rate (%)",
+      "type": "gauge",
+      "gridPos": { "h": 6, "w": 6, "x": 0, "y": 8 },
+      "targets": [
+        {
+          "expr": "sum(rate(healthbuddy_request_total{status=~\"5..\"}[5m])) / sum(rate(healthbuddy_request_total[5m])) * 100",
+          "legendFormat": "Error %"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "yellow", "value": 1 },
+              { "color": "red", "value": 5 }
+            ]
+          },
+          "max": 100,
+          "min": 0
+        }
+      }
+    },
+    {
+      "title": "Auth Events",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 6, "y": 8 },
+      "targets": [
+        {
+          "expr": "sum(healthbuddy_auth_login_total{outcome=\"success\"})",
+          "legendFormat": "Successful Logins"
+        },
+        {
+          "expr": "sum(healthbuddy_auth_login_total{outcome=\"failure\"})",
+          "legendFormat": "Failed Logins"
+        },
+        {
+          "expr": "sum(healthbuddy_auth_login_total{outcome=\"blocked\"})",
+          "legendFormat": "Blocked (Brute Force)"
+        }
+      ]
+    },
+    {
+      "title": "Emergency Detections",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 12, "y": 8 },
+      "targets": [
+        {
+          "expr": "sum(healthbuddy_request_total{path=~\"/api/v1/chat.*\",status=\"200\"}) - sum(healthbuddy_request_total{path=~\"/api/v1/chat.*\",status=~\"4..|5..\"})",
+          "legendFormat": "Chat Requests"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 1 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "title": "Clinician Review Queue",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 18, "y": 8 },
+      "targets": [
+        {
+          "expr": "sum(healthbuddy_clinician_review_events_total{action=\"requested\"})",
+          "legendFormat": "Pending Reviews"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "orange", "value": 5 },
+              { "color": "red", "value": 20 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "title": "Request Volume by Endpoint",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 14 },
+      "targets": [
+        {
+          "expr": "sum by (path) (rate(healthbuddy_request_total[5m])) * 60",
+          "legendFormat": "{{path}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqpm"
+        }
+      }
+    },
+    {
+      "title": "Token Refresh Rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 14 },
+      "targets": [
+        {
+          "expr": "sum by (outcome) (rate(healthbuddy_auth_token_refresh_total[5m])) * 60",
+          "legendFormat": "{{outcome}}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["healthbuddy", "monitoring", "production"],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "title": "HealthBuddy AI — Production Dashboard",
+  "uid": "healthbuddy-prod",
+  "version": 1
+}

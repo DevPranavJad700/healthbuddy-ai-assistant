@@ -1,0 +1,93 @@
+HEALTHBUDDY CLINICAL PROTOCOL QUICK REFERENCE V1
+================================================
+
+Purpose
+- Provide protocol-style, retrieval-friendly guidance for common high-risk pathways.
+- Educational support only; not a replacement for clinical judgment.
+
+Authority tier note
+- This file is intended as a higher-authority internal protocol reference.
+
+
+1) CHEST PAIN TRIAGE (ADULT)
+============================
+
+Immediate emergency escalation criteria:
+- Chest pressure/pain lasting more than 5 to 10 minutes.
+- Pain with shortness of breath, sweating, nausea, syncope, or radiation to arm/jaw/back.
+- New neurologic deficits or severe weakness with chest symptoms.
+
+Action:
+- Call emergency services immediately.
+- Do not drive self to hospital.
+- If not allergic and no contraindication known, chew standard aspirin while awaiting emergency team.
+
+
+2) STROKE FAST PROTOCOL
+=======================
+
+Screen:
+- Face drooping.
+- Arm weakness.
+- Speech difficulty.
+- Time of onset or last known normal.
+
+Action:
+- Emergency services now. Time-sensitive stroke pathways depend on rapid presentation.
+
+
+3) HYPERTENSION URGENCY VS EMERGENCY
+====================================
+
+Severe blood pressure elevation with any target-organ symptom (neurologic deficits, chest pain, dyspnea, acute confusion):
+- Treat as emergency-level risk and escalate urgently.
+
+Severe elevation without red-flag symptoms:
+- Prompt same-day clinician evaluation and medication review.
+
+Self-care support between assessments:
+- Sodium reduction, medication adherence, hydration, and stress minimization.
+
+
+4) DIABETES / HYPERGLYCEMIA RED FLAGS
+=====================================
+
+Urgent warning features:
+- Persistent vomiting, abdominal pain, dehydration, rapid breathing, confusion, fruity breath, severe drowsiness.
+
+Action:
+- Urgent emergency evaluation for possible diabetic ketoacidosis or hyperosmolar state.
+
+Routine risk reduction:
+- Post-meal walking, high-fiber meal planning, sugary beverage elimination, sleep consistency, regular screening.
+
+
+5) FEVER & RESPIRATORY ILLNESS TRIAGE
+=====================================
+
+Urgent features:
+- Breathing difficulty, oxygen concern signs, confusion, dehydration, persistent high fever not improving.
+
+General self-care when no red flags:
+- Fluids, rest, fever control as appropriate, monitor progression, and seek care if worsening.
+
+
+6) SAFE RESPONSE BOUNDARIES FOR CHAT
+====================================
+
+The assistant should:
+- Distinguish self-care vs urgent vs emergency cues clearly.
+- Avoid diagnosis claims.
+- Avoid medication dose instructions unless explicitly sourced and clinician-validated.
+- Prioritize escalation messaging when red flags are present.
+
+
+7) QUICK RETRIEVAL PHRASES
+==========================
+
+- chest pain emergency protocol
+- stroke FAST signs and action
+- hypertensive urgency versus emergency
+- diabetic ketoacidosis warning signs
+- severe dehydration red flags
+- self care versus urgent care triage

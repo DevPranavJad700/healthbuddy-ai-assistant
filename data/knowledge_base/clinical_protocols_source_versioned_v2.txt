@@ -1,0 +1,184 @@
+HEALTHBUDDY CLINICAL PROTOCOLS SOURCE VERSIONED V2
+=================================================
+
+Protocol metadata
+- Corpus version: hb-clinical-protocols-v2.0
+- Clinical validation status: internal clinician-reviewed draft
+- Source policy: each protocol block includes source family and version tag
+- Scope: triage and first-line educational guidance only
+
+SAFETY DISCLAIMER
+- Educational support only. Not a diagnosis.
+- Red-flag symptoms require in-person care.
+
+
+PROTOCOL 1: ACUTE CHEST PAIN AND DYSPNEA
+========================================
+source_family: cardio_emergency_pathway
+source_version: CEP-2026.1
+
+Red flags:
+- chest pain/pressure longer than 5 to 10 minutes
+- shortness of breath, cold sweats, nausea, syncope, radiation to arm/jaw/back
+
+Triage:
+- emergency
+
+Immediate guidance:
+- call emergency services now
+- avoid self-driving
+- rest in seated position while awaiting help
+
+
+PROTOCOL 2: ACUTE STROKE FAST SCREEN
+====================================
+source_family: neuro_emergency_pathway
+source_version: NEP-2026.1
+
+Red flags:
+- face droop, arm weakness, speech difficulty, sudden focal neurologic deficit
+
+Triage:
+- emergency
+
+Immediate guidance:
+- call emergency services immediately
+- document last-known-well time
+
+
+PROTOCOL 3: HYPERTENSIVE CRISIS SCREEN
+======================================
+source_family: hypertension_pathway
+source_version: HTP-2026.2
+
+Red flags:
+- blood pressure >= 180/120 with chest pain, neurologic signs, dyspnea, or confusion
+
+Triage:
+- emergency when target-organ symptoms are present
+- urgent if severe elevation without target-organ symptoms
+
+Immediate guidance:
+- emergency pathway if red flags present
+- same-day clinician assessment if no red flags but very high readings persist
+
+
+PROTOCOL 4: DIABETIC CRISIS RED FLAGS
+=====================================
+source_family: diabetes_acute_pathway
+source_version: DAP-2026.2
+
+Red flags:
+- persistent vomiting, abdominal pain, dehydration, fruity breath, rapid breathing, confusion
+
+Triage:
+- emergency
+
+Immediate guidance:
+- emergency evaluation for suspected DKA/HHS
+
+
+PROTOCOL 5: SEVERE DEHYDRATION / GI LOSS
+========================================
+source_family: hydration_gastro_pathway
+source_version: HGP-2026.1
+
+Red flags:
+- markedly reduced urination, confusion, persistent vomiting, inability to keep fluids, blood in stool
+
+Triage:
+- urgent to emergency depending on symptom severity
+
+Immediate guidance:
+- urgent in-person evaluation if persistent symptoms
+- emergency services if confusion, collapse, or severe weakness
+
+
+PROTOCOL 6: ASTHMA OR ALLERGIC RESPIRATORY FLARE
+=================================================
+source_family: respiratory_acute_pathway
+source_version: RAP-2026.1
+
+Red flags:
+- severe breathlessness, wheeze not improving, inability to speak full sentences, cyanosis, anaphylaxis signs
+
+Triage:
+- emergency
+
+Immediate guidance:
+- emergency services if severe breathing compromise
+- use prescribed rescue treatment if available while awaiting care
+
+
+PROTOCOL 7: FEVER WITH HIGH-RISK FEATURES
+==========================================
+source_family: infectious_risk_pathway
+source_version: IRP-2026.1
+
+Red flags:
+- fever with confusion, severe headache, neck stiffness, persistent vomiting, breathing difficulty
+
+Triage:
+- urgent or emergency based on neurologic/respiratory compromise
+
+Immediate guidance:
+- urgent same-day evaluation
+- emergency pathway if severe neurologic or breathing signs
+
+
+PROTOCOL 8: POSTPARTUM OR PREGNANCY RED FLAGS
+==============================================
+source_family: maternal_safety_pathway
+source_version: MSP-2026.1
+
+Red flags:
+- heavy bleeding, severe headache with visual symptoms, shortness of breath, chest pain, unilateral leg swelling, severe abdominal pain
+
+Triage:
+- urgent to emergency based on severity
+
+Immediate guidance:
+- do not delay in-person care
+- emergency services for severe bleeding, chest pain, breathing issues, neurologic symptoms
+
+
+PROTOCOL 9: MENTAL HEALTH CRISIS
+================================
+source_family: mental_health_crisis_pathway
+source_version: MHCP-2026.1
+
+Red flags:
+- active self-harm intent, suicidal thoughts with plan, severe agitation with safety risk
+
+Triage:
+- emergency/crisis intervention
+
+Immediate guidance:
+- contact emergency/crisis service immediately
+- avoid staying alone during acute crisis
+
+
+PROTOCOL 10: SELF-CARE ELIGIBLE COMMON SYMPTOMS
+================================================
+source_family: self_care_screen
+source_version: SCS-2026.1
+
+Examples:
+- mild common cold symptoms without red flags
+- mild stress symptoms without safety concerns
+- routine sleep hygiene and nutrition questions
+
+Triage:
+- self_care
+
+Guidance:
+- brief practical recommendations
+- escalation instructions if symptoms worsen or red flags appear
+
+
+RETRIEVAL TAGS
+==============
+- protocol versioned source family
+- emergency triage red flags
+- urgent versus self care decision support
+- clinician reviewed pathway draft

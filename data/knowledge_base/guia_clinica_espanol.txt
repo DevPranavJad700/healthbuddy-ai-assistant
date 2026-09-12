@@ -1,0 +1,112 @@
+===================================================================
+HEALTHBUDDY AI — GUÍA CLÍNICA EN ESPAÑOL
+Versión: 1.0 | Fecha: Abril 2026
+===================================================================
+
+## DIABETES TIPO 2
+
+La diabetes tipo 2 es una condición crónica donde el cuerpo no usa la insulina correctamente.
+
+### Síntomas Principales
+- Sed excesiva (polidipsia)
+- Micción frecuente (poliuria)
+- Fatiga constante
+- Visión borrosa
+- Heridas que tardan en sanar
+- Hormigueo en manos o pies
+
+### Valores de Referencia
+- Glucosa en ayunas normal: menos de 100 mg/dL
+- Prediabetes: 100-125 mg/dL
+- Diabetes: 126 mg/dL o más
+- HbA1c objetivo: menos de 7.0%
+
+### Tratamiento
+- Cambios en estilo de vida: dieta balanceada, ejercicio regular (150 min/semana)
+- Medicamentos orales: Metformina es el tratamiento de primera línea
+- Monitoreo regular de glucosa en sangre
+- Consulta con endocrinólogo cada 3-6 meses
+
+---
+
+## HIPERTENSIÓN ARTERIAL
+
+La presión arterial alta afecta al 30% de los adultos en países hispanohablantes.
+
+### Clasificación
+- Normal: menos de 120/80 mmHg
+- Elevada: 120-129 / menos de 80 mmHg
+- Hipertensión Etapa 1: 130-139 / 80-89 mmHg
+- Hipertensión Etapa 2: 140+ / 90+ mmHg
+- Crisis hipertensiva: más de 180/120 mmHg — EMERGENCIA
+
+### Recomendaciones Dietéticas
+- Dieta DASH: rica en frutas, verduras, granos integrales
+- Reducir sodio a menos de 2,300 mg/día (ideal: 1,500 mg)
+- Limitar alcohol: máximo 1 copa/día mujeres, 2 copas/día hombres
+- Aumentar consumo de potasio (plátanos, espinacas, frijoles)
+
+---
+
+## SALUD MENTAL
+
+### Depresión
+- Tristeza persistente por más de 2 semanas requiere evaluación profesional
+- Síntomas: pérdida de interés, cambios en apetito, insomnio o exceso de sueño
+- Tratamiento: terapia cognitivo-conductual (TCC) + medicación si es necesario
+- Líneas de ayuda en español:
+  - México: Línea de la Vida 800-911-2000
+  - España: Teléfono de la Esperanza 717 003 717
+  - Argentina: Centro de Asistencia al Suicida 135
+
+### Ansiedad
+- El trastorno de ansiedad generalizada afecta al 5% de la población
+- Técnicas de manejo: respiración diafragmática, mindfulness, ejercicio regular
+- Buscar ayuda profesional si interfiere con actividades diarias
+
+---
+
+## NUTRICIÓN
+
+### Pirámide Alimenticia Recomendada
+- Base: agua (8 vasos/día), actividad física
+- Nivel 1: granos integrales, pan integral, arroz integral
+- Nivel 2: frutas (3-4 porciones) y verduras (4-5 porciones)
+- Nivel 3: proteínas magras (pescado, pollo, legumbres)
+- Nivel 4: lácteos bajos en grasa
+- Punta: azúcares y grasas saturadas (limitar)
+
+### Deficiencias Comunes en Latinoamérica
+- Hierro: prevalente en mujeres en edad reproductiva
+- Vitamina D: común en zonas con poca exposición solar
+- Ácido fólico: esencial antes y durante el embarazo
+- Zinc: importante para el sistema inmunológico
+
+---
+
+## PRIMEROS AUXILIOS — EMERGENCIAS
+
+### Ataque al Corazón
+- Síntomas: dolor en el pecho, brazo izquierdo, mandíbula, dificultad para respirar
+- LLAME AL NÚMERO DE EMERGENCIAS INMEDIATAMENTE
+- Si no es alérgico, mastique una aspirina mientras espera ayuda
+
+### Accidente Cerebrovascular (ACV)
+- Recuerde RÁPIDO:
+  - R: Rostro caído
+  - Á: Brazos débiles
+  - P: Problemas al hablar
+  - I: Ir al hospital inmediatamente
+  - D: Decisivo es el tiempo
+  - O: Observe la hora de inicio de síntomas
+
+### Reacción Alérgica Grave (Anafilaxia)
+- Administrar epinefrina (EpiPen) si está disponible
+- Llamar a emergencias
+- Acostar a la persona con piernas elevadas
+- No dar nada por boca si tiene dificultad para tragar
+
+===================================================================
+AVISO: Esta información es solo educativa. Siempre consulte a un
+profesional de salud para diagnóstico y tratamiento personalizado.
+===================================================================

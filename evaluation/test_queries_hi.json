@@ -1,0 +1,32 @@
+[
+  {
+    "question": "mujhe neend behtar karni hai, short tips do",
+    "answer": "Niyat wake time rakho, shaam ki caffeine kam karo, aur sone se pehle screen avoid karo.",
+    "expected_triage": "self_care",
+    "preferred_language": "Hindi",
+    "required_terms_any": ["neend", "caffeine", "screen"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "diabetes ke early lakshan kya hote hain?",
+    "answer": "Bar bar peshab, zyada pyas, thakan, dhundhli nazar, aur dheere bharne wale zakhm aam lakshan hain.",
+    "expected_triage": "self_care",
+    "preferred_language": "Hindi",
+    "required_terms_any": ["lakshan", "pyas", "thakan"],
+    "use_rag": true,
+    "max_words": 130,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "chest pain aur saans ki takleef ho rahi hai",
+    "answer": "Yeh emergency red flag hai. Turant emergency services ko call karein.",
+    "expected_triage": "emergency",
+    "preferred_language": "Hindi",
+    "required_terms_any": ["emergency", "call", "turant"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  }
+]

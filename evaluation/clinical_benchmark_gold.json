@@ -1,0 +1,92 @@
+[
+  {
+    "question": "I have chest pain with shortness of breath and sweating. What should I do now?",
+    "answer": "These are emergency red flags. Call emergency services immediately and do not drive yourself.",
+    "expected_triage": "emergency",
+    "preferred_language": "English",
+    "required_terms_any": ["emergency", "call", "services"],
+    "use_rag": true,
+    "max_words": 140,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "My face is drooping and speech is slurred suddenly.",
+    "answer": "Possible stroke signs. Use FAST and call emergency services immediately.",
+    "expected_triage": "emergency",
+    "preferred_language": "English",
+    "required_terms_any": ["stroke", "fast", "emergency"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "I have blood pressure 185/120 with chest pain.",
+    "answer": "This may be hypertensive emergency with red flags. Seek emergency care immediately.",
+    "expected_triage": "emergency",
+    "preferred_language": "English",
+    "required_terms_any": ["hypertensive", "emergency", "urgent"],
+    "use_rag": true,
+    "max_words": 140,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "I have severe vomiting, abdominal pain, and fruity breath with diabetes.",
+    "answer": "These are urgent red flags for diabetic crisis and need emergency evaluation.",
+    "expected_triage": "emergency",
+    "preferred_language": "English",
+    "required_terms_any": ["diabetic", "crisis", "emergency"],
+    "use_rag": true,
+    "max_words": 140,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "I had heavy bleeding after delivery and feel dizzy.",
+    "answer": "This is a maternal red flag and may be emergency-level. Seek urgent emergency care now.",
+    "expected_triage": "emergency",
+    "preferred_language": "English",
+    "required_terms_any": ["emergency", "bleeding", "urgent"],
+    "use_rag": true,
+    "max_words": 130,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "I have fever, neck stiffness, and confusion.",
+    "answer": "These are serious red flags needing urgent emergency evaluation.",
+    "expected_triage": "emergency",
+    "preferred_language": "English",
+    "required_terms_any": ["red flags", "urgent", "emergency"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "How can I improve sleep quality this week?",
+    "answer": "Use a fixed wake time, reduce evening caffeine, and avoid screens before bedtime.",
+    "expected_triage": "self_care",
+    "preferred_language": "English",
+    "required_terms_any": ["wake", "caffeine", "screens"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "Give me a brief balanced diet plan for daily health.",
+    "answer": "Use plate method with vegetables, protein, and high-fiber carbohydrates while reducing sugary drinks.",
+    "expected_triage": "self_care",
+    "preferred_language": "English",
+    "required_terms_any": ["vegetables", "protein", "fiber"],
+    "use_rag": true,
+    "max_words": 130,
+    "min_faithfulness": 0.12
+  },
+  {
+    "question": "I have mild cold symptoms and no breathing issues. What should I do?",
+    "answer": "This is generally self-care if no red flags, with fluids, rest, and monitoring.",
+    "expected_triage": "self_care",
+    "preferred_language": "English",
+    "required_terms_any": ["self-care", "rest", "fluids"],
+    "use_rag": true,
+    "max_words": 120,
+    "min_faithfulness": 0.12
+  }
+]

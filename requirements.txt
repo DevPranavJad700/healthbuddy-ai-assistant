@@ -1,0 +1,67 @@
+# ==========================================
+# Healthbuddy-AI Chatbot — Dependencies
+# ==========================================
+
+# --- Core Framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+gunicorn==23.0.0
+python-multipart==0.0.18
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+prometheus-client==0.22.1
+
+# --- LLM & NLP ---
+torch==2.11.0
+transformers==5.5.4
+accelerate==1.13.0
+sentencepiece==0.2.1
+protobuf==6.33.6
+
+# --- LangChain RAG Pipeline ---
+langchain==0.3.17
+langchain-community==0.3.16
+langchain-chroma==1.1.0
+langchain-huggingface==0.1.2
+langchain-openai==0.3.35
+langchain-groq==0.3.8
+langchain-text-splitters==0.3.11
+
+# --- Vector Store ---
+chromadb==1.5.7
+
+# --- Embeddings ---
+sentence-transformers==5.4.1
+
+# --- Document Processing ---
+pypdf==6.10.1
+
+# --- Evaluation ---
+nltk==3.9.4
+rouge-score==0.1.2
+
+# --- Utilities ---
+aiofiles==25.1.0
+jinja2==3.1.6
+passlib[bcrypt]==1.7.4
+PyJWT==2.12.1
+redis==6.4.0
+
+# --- Database ---
+sqlalchemy==2.0.49
+psycopg[binary]==3.2.12
+pgvector>=0.3.0
+alembic==1.16.5
+
+# --- Testing ---
+pytest==9.0.3
+pytest-asyncio==1.3.0
+httpx==0.28.1
+playwright==1.54.0
+
+# --- Background Tasks (ARQ = async task queue via Redis) ---
+arq==0.26.1
+
+# --- Error Tracking ---
+sentry-sdk[fastapi]==2.20.0
+

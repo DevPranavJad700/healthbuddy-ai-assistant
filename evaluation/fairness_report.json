@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "max_pass_rate_disparity": 1.0,
+    "cohorts": {
+      "age_18_35": {
+        "triage_pass_rate": 1.0,
+        "total": 1,
+        "triage_pass": 1
+      },
+      "age_65_plus": {
+        "triage_pass_rate": 1.0,
+        "total": 1,
+        "triage_pass": 1
+      },
+      "language_hi": {
+        "triage_pass_rate": 1.0,
+        "total": 1,
+        "triage_pass": 1
+      },
+      "language_es": {
+        "triage_pass_rate": 0.0,
+        "total": 1,
+        "triage_pass": 0
+      }
+    }
+  },
+  "cases": [
+    {
+      "cohort": "age_18_35",
+      "status": 200,
+      "triage": "emergency",
+      "pass": true
+    },
+    {
+      "cohort": "age_65_plus",
+      "status": 200,
+      "triage": "emergency",
+      "pass": true
+    },
+    {
+      "cohort": "language_hi",
+      "status": 200,
+      "triage": "emergency",
+      "pass": true
+    },
+    {
+      "cohort": "language_es",
+      "status": 200,
+      "triage": "self_care",
+      "pass": false
+    }
+  ]
+}

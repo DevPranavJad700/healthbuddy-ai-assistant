@@ -1,0 +1,144 @@
+TOPIC: Women's Health — Reproductive Health, Hormones, Pregnancy
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Gynaecology / Women's Health / Obstetrics
+
+=== MENSTRUAL HEALTH ===
+
+Normal menstrual cycle:
+- Cycle length: 21–35 days (average 28)
+- Menstruation duration: 2–7 days
+- Flow: 20–80 mL total; 6–8 pads/tampons per day = normal max
+- Menarche: typically 11–15 years
+- Menopause: average age 51 (range 45–55)
+
+Abnormal uterine bleeding definitions:
+- Heavy Menstrual Bleeding (HMB): >80 mL/cycle, soaking pad in <1 hour, passage of clots >2.5cm
+- Dysmenorrhoea: Painful periods. Primary (no structural cause) — prostaglandin-mediated. Secondary — endometriosis, fibroids, adenomyosis
+- Amenorrhoea: Absent periods. Primary (never started by age 15) or secondary (absent for ≥3 months in previously regular cycles)
+- Oligomenorrhoea: Infrequent cycles (>35 days between periods)
+- Intermenstrual bleeding: Bleeding between periods — always warrants evaluation
+
+Management of dysmenorrhoea:
+- First-line: NSAIDs (ibuprofen 400mg TDS starting day before period), heat therapy
+- Second-line: Hormonal contraception (suppresses prostaglandins)
+- Refractory: Consider laparoscopy to rule out endometriosis
+
+=== POLYCYSTIC OVARY SYNDROME (PCOS) ===
+Most common endocrine disorder in women of reproductive age (6–12% prevalence)
+
+Rotterdam criteria (2/3 required):
+1. Oligo/anovulation (irregular or absent periods)
+2. Clinical or biochemical hyperandrogenism (acne, hirsutism, elevated testosterone)
+3. Polycystic ovaries on ultrasound (≥12 follicles, ovarian volume >10mL)
+
+Associated features:
+- Insulin resistance (70–80% of women with PCOS)
+- Obesity (50–80%)
+- Increased risk of T2DM, endometrial cancer, cardiovascular disease
+- Infertility (anovulation is the most common cause of infertility in PCOS)
+
+Management:
+- Lifestyle: Weight loss of 5–10% can restore ovulation and improve all features
+- Irregular periods/contraception: Combined oral contraceptive pill (COCP)
+- Hirsutism: Anti-androgens (spironolactone), laser hair removal
+- Fertility: Clomiphene or letrozole for ovulation induction; metformin adjunct
+- Metabolic: Metformin improves insulin sensitivity
+- Mental health: Higher rates of anxiety and depression in PCOS — screen and treat
+
+=== ENDOMETRIOSIS ===
+Endometrial tissue grows outside the uterus → inflammation, adhesions, pain
+
+Symptoms:
+- Severe dysmenorrhoea (often out of proportion to period)
+- Deep dyspareunia (pain during/after sex)
+- Chronic pelvic pain
+- Painful bowel/bladder symptoms (especially during period)
+- Subfertility
+
+Average diagnosis delay: 7–10 years (often dismissed as "normal period pain")
+
+Management:
+- Medical: NSAIDs, hormonal suppression (COCP, progesterone, GnRH agonists)
+- Surgical: Laparoscopic excision/ablation for severe cases
+- Fertility treatment when needed (IVF often effective)
+
+=== CONTRACEPTION ===
+
+Hormonal methods:
+- Combined oral contraceptive pill (COCP): 99% effective with perfect use; reduces dysmenorrhoea and HMB; avoid in migraine with aura, smoking >35yrs, DVT history
+- Progestogen-only pill (mini-pill): Safe in breastfeeding, hypertension; must take at same time daily
+- Implant (Nexplanon): 99.9% effective, 3-year duration; most reliable reversible method
+- Injectable (Depo-Provera): 3-monthly; may delay return of fertility by 12–18 months
+- IUS (Mirena/Kyleena): 99.9% effective, 3–8 years; reduces menstrual flow significantly
+
+Non-hormonal methods:
+- Copper IUD: 99.9% effective, 5–10 years; may worsen menorrhagia initially; emergency contraception within 5 days of unprotected sex
+- Condoms (male): 98% perfect use, 85% typical use; only method preventing STIs
+
+Emergency contraception:
+- Levonorgestrel (Plan B): Within 72 hours (up to 120h); less effective >72h, in overweight women
+- Ulipristal acetate (EllaOne): Within 120 hours; more effective than levonorgestrel
+- Copper IUD: Most effective EC (>99%), can be left in for ongoing contraception
+
+=== PREGNANCY BASICS ===
+
+Antenatal care schedule:
+- First visit: 8–10 weeks — confirm pregnancy, dating scan, blood tests (blood group, rubella, STIs, FBC)
+- 12 weeks: Nuchal translucency scan + combined first trimester screening (trisomies)
+- 20 weeks: Anomaly scan (detailed fetal anatomy)
+- 28 weeks: GDM screening (OGTT), anti-D if Rh-negative
+- 36–40 weeks: Group B Strep swab, birth planning
+
+Key supplements in pregnancy:
+- Folic acid 400–800 mcg/day: from preconception to 12 weeks (400mcg; 5mg if high risk)
+- Vitamin D 1,000–2,000 IU/day
+- Iron only if deficient (test at first visit)
+- Iodine 150mcg/day
+
+Dangerous in pregnancy (avoid):
+- Raw fish, unpasteurised cheese, deli meats (Listeria risk)
+- Vitamin A supplements (>3,000 IU/day: teratogenic)
+- Alcohol (no safe amount established)
+- Caffeine (limit to <200mg/day)
+- NSAIDs (especially third trimester)
+- ACE inhibitors, ARBs, statins, methotrexate, warfarin (first trimester)
+
+Common pregnancy symptoms:
+- Nausea: peaks 6–12 weeks; ginger, small frequent meals, vitamin B6 help; severe vomiting (hyperemesis gravidarum) needs IV fluids
+- Round ligament pain: stretching of uterine ligaments — normal
+- Heartburn: common in third trimester (antacids safe; PPI if severe)
+- Pelvic girdle pain: physiotherapy, supportive belt
+
+When to seek urgent care in pregnancy:
+- Vaginal bleeding at any stage
+- Severe abdominal pain
+- Decreased fetal movement after 24 weeks
+- Severe headache, visual changes, oedema (pre-eclampsia signs)
+- Signs of DVT (leg pain, redness, swelling)
+- Rupture of membranes (fluid leaking)
+- Fever >38°C
+
+=== MENOPAUSE ===
+Menopause = 12 consecutive months without menstruation
+Perimenopause: 4–10 years before menopause; irregular cycles, symptoms begin
+
+Symptoms:
+- Vasomotor: Hot flushes (most common), night sweats
+- Genitourinary: Vaginal dryness, dyspareunia, urinary urgency, recurrent UTIs
+- Sleep: Insomnia
+- Mood: Irritability, low mood, anxiety
+- Cognitive: Brain fog, memory difficulties
+- Long-term: Accelerated bone loss (osteoporosis risk), cardiovascular risk increase
+
+Hormone Replacement Therapy (HRT):
+- Most effective treatment for vasomotor symptoms
+- Types: Combined (oestrogen + progestogen for women with uterus), oestrogen-only (post-hysterectomy)
+- Benefits vs risks: Reduces fractures, symptoms; small increase in breast cancer risk with combined HRT (roughly 1 extra case per 200 women over 10 years)
+- Absolute contraindications: oestrogen-sensitive cancer, unexplained vaginal bleeding, active DVT/PE
+- Local oestrogen (vaginal cream/pessary): effective for genitourinary symptoms; minimal systemic absorption
+
+Non-hormonal options:
+- SSRIs/SNRIs: Reduce hot flushes ~50%
+- Gabapentin: Effective for hot flushes
+- Cognitive behavioural therapy: Effective for sleep and mood
+- Lifestyle: Layered clothing, cool environment, reduce triggers (alcohol, caffeine, spicy food)

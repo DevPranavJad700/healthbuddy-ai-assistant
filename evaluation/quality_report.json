@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-04-18T18:09:29Z",
+  "summary": {
+    "num_cases": 10,
+    "num_passed_http": 10,
+    "quality": {
+      "correctness_proxy_avg": 0.663,
+      "brevity_pass_rate": 1.0,
+      "safety_pass_rate": 1.0,
+      "grounding_pass_rate": 1.0,
+      "hallucination_pass_rate": 1.0
+    },
+    "latency_ms": {
+      "p50": 3911.57,
+      "avg": 5141.46,
+      "max": 12426.24
+    }
+  },
+  "cases": [
+    {
+      "question": "What are the main macronutrients?",
+      "status": 200,
+      "latency_ms": 533.94,
+      "correctness_proxy": 0.389,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.308,
+      "citation_quality": "high",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "How much water should a person drink daily?",
+      "status": 200,
+      "latency_ms": 624.36,
+      "correctness_proxy": 1.0,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.396,
+      "citation_quality": "medium",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "What exercise is recommended for adults?",
+      "status": 200,
+      "latency_ms": 478.17,
+      "correctness_proxy": 0.923,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.724,
+      "citation_quality": "high",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "What are the symptoms of high blood pressure?",
+      "status": 200,
+      "latency_ms": 830.33,
+      "correctness_proxy": 0.294,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.137,
+      "citation_quality": "low",
+      "triage_level": "urgent"
+    },
+    {
+      "question": "How can someone improve their sleep?",
+      "status": 200,
+      "latency_ms": 697.89,
+      "correctness_proxy": 0.842,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.452,
+      "citation_quality": "high",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "What is the RICE method?",
+      "status": 200,
+      "latency_ms": 9124.38,
+      "correctness_proxy": 0.062,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.128,
+      "citation_quality": "low",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "Why is Vitamin D important?",
+      "status": 200,
+      "latency_ms": 12426.24,
+      "correctness_proxy": 0.421,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.3,
+      "citation_quality": "high",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "What is the Mediterranean diet?",
+      "status": 200,
+      "latency_ms": 6992.8,
+      "correctness_proxy": 0.8,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.41,
+      "citation_quality": "high",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "How do you perform the Heimlich maneuver?",
+      "status": 200,
+      "latency_ms": 10896.98,
+      "correctness_proxy": 0.95,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.588,
+      "citation_quality": "medium",
+      "triage_level": "self_care"
+    },
+    {
+      "question": "What are the warning signs of a heart attack?",
+      "status": 200,
+      "latency_ms": 8809.52,
+      "correctness_proxy": 0.947,
+      "brevity_pass": true,
+      "safety_pass": true,
+      "grounding_pass": true,
+      "hallucination_pass": true,
+      "faithfulness_score": 0.645,
+      "citation_quality": "medium",
+      "triage_level": "emergency"
+    }
+  ]
+}

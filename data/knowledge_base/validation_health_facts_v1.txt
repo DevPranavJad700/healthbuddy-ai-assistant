@@ -1,0 +1,32 @@
+HealthBuddy Validation Document v1
+
+Section 1: Blood Pressure Basics
+- Normal adult resting blood pressure is generally around 120/80 mmHg.
+- Stage 1 hypertension is commonly defined as systolic 130-139 mmHg or diastolic 80-89 mmHg.
+- Stage 2 hypertension is commonly defined as systolic at least 140 mmHg or diastolic at least 90 mmHg.
+- A hypertensive crisis often refers to blood pressure above 180/120 mmHg and requires urgent medical evaluation.
+
+Section 2: Diabetes Markers
+- A fasting plasma glucose value of 126 mg/dL or higher on more than one test supports diabetes diagnosis.
+- A fasting plasma glucose value between 100 and 125 mg/dL is typically considered prediabetes.
+- An HbA1c value of 6.5% or higher supports diabetes diagnosis.
+- Typical HbA1c target for many non-pregnant adults with diabetes is around 7%, but goals must be individualized by clinicians.
+
+Section 3: Oral Rehydration and Diarrhea
+- Oral Rehydration Solution (ORS) helps replace fluids and electrolytes lost during diarrhea.
+- For mild dehydration, frequent small sips are usually better tolerated than large volumes at once.
+- Warning signs that need urgent care include persistent vomiting, blood in stool, confusion, and reduced urination.
+
+Section 4: Respiratory Infections and Antibiotics
+- Most common colds are viral and do not improve with antibiotics.
+- Unnecessary antibiotic use increases side effects and antimicrobial resistance.
+- For common viral respiratory illness, supportive care often includes hydration, rest, and fever control when needed.
+
+Section 5: Sleep Hygiene
+- Adults generally need about 7 to 9 hours of sleep per night.
+- Consistent sleep and wake times support better sleep quality.
+- Caffeine late in the day can delay sleep onset in sensitive individuals.
+
+Section 6: Safety Notes
+- This document is educational and not a substitute for diagnosis or treatment.
+- Any chest pain with shortness of breath should be treated as an emergency and evaluated immediately.

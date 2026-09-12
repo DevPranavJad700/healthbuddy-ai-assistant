@@ -1,0 +1,73 @@
+TOPIC: Type 2 Diabetes — Clinical Overview
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Endocrinology / Chronic Disease Management
+
+=== DEFINITION & PATHOPHYSIOLOGY ===
+Type 2 diabetes mellitus (T2DM) is a chronic metabolic condition characterised by insulin resistance and progressive beta-cell dysfunction. Unlike Type 1, the pancreas still produces insulin, but cells fail to respond effectively, causing blood glucose to accumulate.
+
+Key driver: visceral adiposity increases free fatty acid flux, promoting hepatic glucose production and impairing peripheral glucose uptake.
+
+=== DIAGNOSTIC CRITERIA (ADA 2024) ===
+- Fasting plasma glucose ≥ 126 mg/dL (7.0 mmol/L) on two occasions
+- 2-hour plasma glucose ≥ 200 mg/dL during 75g OGTT
+- HbA1c ≥ 6.5% (confirmed on repeat)
+- Random plasma glucose ≥ 200 mg/dL with classic symptoms (polyuria, polydipsia, unexplained weight loss)
+
+Pre-diabetes: FPG 100–125 mg/dL or HbA1c 5.7–6.4%
+
+=== RISK FACTORS ===
+- BMI ≥ 25 (≥23 in Asian populations)
+- Physical inactivity
+- Family history in first-degree relative
+- History of gestational diabetes
+- Hypertension (≥140/90 mmHg)
+- HDL < 35 mg/dL or triglycerides > 250 mg/dL
+- Polycystic ovary syndrome (PCOS)
+- Age ≥ 45 years
+- Prior impaired fasting glucose or impaired glucose tolerance
+- Ethnicity: South Asian, African American, Hispanic, Native American
+
+=== SYMPTOMS ===
+Early: Often asymptomatic. May have fatigue, blurred vision, slow wound healing.
+Classic triad: Polyuria, polydipsia, polyphagia
+Advanced: Numbness/tingling in feet (peripheral neuropathy), recurrent infections, erectile dysfunction
+
+=== MANAGEMENT ===
+First-line: Metformin + lifestyle intervention (unless contraindicated)
+Lifestyle targets:
+  - ≥150 min/week moderate aerobic activity
+  - Weight loss of 5–10% improves glycaemic control significantly
+  - Dietary: Low glycaemic index, Mediterranean or DASH pattern, reduce refined carbohydrates
+
+Medication classes:
+- Metformin: reduces hepatic glucose output, weight-neutral, very safe
+- SGLT2 inhibitors (empagliflozin, dapagliflozin): renal glucose excretion, cardioprotective, weight loss benefit
+- GLP-1 receptor agonists (semaglutide, liraglutide): powerful HbA1c reduction, weight loss, CV benefit
+- DPP-4 inhibitors (sitagliptin): glucose-dependent insulin release, weight-neutral
+- Sulfonylureas (glipizide, glyburide): effective but risk of hypoglycaemia and weight gain
+- Insulin therapy: required when HbA1c remains above target despite oral agents
+
+HbA1c targets:
+- General population: < 7.0%
+- Older adults with comorbidities: < 8.0%
+- Young, otherwise healthy: < 6.5%
+
+=== MONITORING ===
+- HbA1c: every 3 months until stable, then every 6 months
+- Annual: lipid panel, urine albumin-to-creatinine ratio, eye exam (retinopathy), foot exam
+- Blood pressure target: < 130/80 mmHg
+- eGFR monitoring for kidney disease
+
+=== COMPLICATIONS ===
+Microvascular: Diabetic retinopathy (leading cause of adult blindness), nephropathy, peripheral neuropathy
+Macrovascular: Coronary artery disease, stroke, peripheral artery disease
+Acute: Hyperosmolar hyperglycaemic state (HHS), hypoglycaemia
+
+=== HYPOGLYCAEMIA MANAGEMENT ===
+Mild: 15-15 rule — 15g fast-acting carbohydrates (glucose tablets, juice), recheck in 15 min
+Severe (unconscious): Glucagon injection or IV dextrose (emergency care)
+Threshold for hypoglycaemia: BG < 70 mg/dL
+
+=== FOOT CARE ===
+Daily inspection, no walking barefoot, proper footwear, annual podiatry assessment
+Any foot ulcer, numbness, or colour change requires urgent medical evaluation

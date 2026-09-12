@@ -1,0 +1,9 @@
+{
+  "correctness_proxy_avg": 0.15,
+  "brevity_pass_rate": 0.65,
+  "safety_pass_rate": 1.0,
+  "grounding_pass_rate": 0.9,
+  "hallucination_pass_rate": 0.8,
+  "triage_pass_rate": 0.9,
+  "required_terms_pass_rate": 0.6
+}

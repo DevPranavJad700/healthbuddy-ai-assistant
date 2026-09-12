@@ -1,0 +1,131 @@
+TOPIC: Gastroenterology — Digestive Health and GI Conditions
+SOURCE: HealthBuddy Clinical Knowledge Base v3.0
+CATEGORY: Gastroenterology / Digestive Medicine
+
+=== GUT MICROBIOME ===
+The human gut contains ~100 trillion microorganisms (microbiome); 1.5–2kg by weight
+Functions: Digestion of complex carbohydrates, vitamin synthesis (K, B12, folate), immune modulation, gut-brain axis signalling
+Dysbiosis: Imbalance linked to IBD, IBS, obesity, depression, autoimmune disease
+
+Promoting microbiome diversity:
+- Eat 30+ different plant foods/week (vegetables, fruits, legumes, whole grains, nuts, seeds)
+- Fermented foods: yoghurt, kefir, kimchi, sauerkraut, miso — add beneficial bacteria
+- Prebiotic fibre (food for bacteria): garlic, onion, leeks, asparagus, oats, bananas
+- Avoid unnecessary antibiotics; they deplete microbiome diversity for up to 12 months
+- Probiotic supplements: evidence strongest for: antibiotic-associated diarrhoea, C. diff prevention, IBS, acute infectious diarrhoea
+
+=== IRRITABLE BOWEL SYNDROME (IBS) ===
+Functional GI disorder — altered bowel habits + abdominal pain, no structural pathology
+Affects 10–15% of population; twice as common in women; often associated with anxiety/depression
+
+Rome IV criteria: Recurrent abdominal pain ≥1 day/week for ≥3 months, associated with ≥2 of:
+1. Related to defecation
+2. Change in stool frequency
+3. Change in stool form (appearance)
+
+Subtypes:
+- IBS-D (diarrhoea predominant): loose/watery stools, urgency, frequency
+- IBS-C (constipation predominant): hard/lumpy stools, straining, incomplete evacuation
+- IBS-M (mixed): alternates between D and C
+
+Triggers: Stress, specific foods (high-FODMAP), hormonal changes, gut infections (post-infectious IBS)
+
+Management:
+- Low-FODMAP diet: Elimination then reintroduction phase; reduces symptoms in 70% (requires dietitian guidance)
+  FODMAPs = Fermentable Oligosaccharides, Disaccharides, Monosaccharides And Polyols (lactose, fructose, wheat, onion, garlic, legumes)
+- Fibre: Soluble fibre (psyllium) helps both IBS-C and IBS-D; insoluble fibre may worsen IBS-D
+- Medications: Antispasmodics (buscopan) for pain; loperamide for IBS-D; laxatives for IBS-C; low-dose TCAs or SSRIs for gut-brain targeting
+- Gut-directed hypnotherapy: 70% response rate in trials
+- Stress management and CBT: Significant benefit
+
+=== ACID REFLUX & GORD/GERD ===
+Gastroesophageal Reflux Disease: Stomach acid backs up into oesophagus repeatedly
+
+Symptoms:
+- Heartburn: Burning sensation in chest, worse after meals, lying down, bending
+- Regurgitation: Acid taste in mouth
+- Non-cardiac chest pain, chronic cough (nocturnal), hoarse voice, laryngitis, dental erosion
+
+Alarm symptoms (require urgent endoscopy): Dysphagia (difficulty swallowing), unintentional weight loss, GI bleeding, persistent vomiting, iron-deficiency anaemia
+
+Lifestyle modifications:
+- Elevate head of bed 15–20cm (wedge pillow)
+- Avoid large meals, eat ≥3h before lying down
+- Avoid: coffee, alcohol, chocolate, fatty foods, citrus, mint (relax LOS)
+- Weight loss: BMI reduction of 3.5 improves GERD significantly
+- Stop smoking (reduces LOS pressure)
+
+Treatment:
+- Antacids (calcium carbonate, Gaviscon): Rapid but short-lived relief
+- H2 blockers (famotidine, ranitidine): Reduces acid production; good for mild-moderate GERD
+- Proton Pump Inhibitors (omeprazole, lansoprazole, pantoprazole): Most effective; take 30 min before breakfast for best effect; use lowest effective dose; do not use indefinitely without review
+- PPI risks with long-term use: B12 deficiency, hypomagnesaemia, C. diff risk, possible fracture risk (minimal)
+
+Complications: Oesophagitis, Barrett's oesophagus (precancerous metaplasia) → regular endoscopic surveillance
+
+=== PEPTIC ULCER DISEASE ===
+Ulcers in gastric or duodenal mucosa
+Causes: H. pylori infection (80% of duodenal ulcers, 60% of gastric ulcers), NSAID use
+
+Symptoms: Epigastric pain; duodenal ulcer pain relieved by food; gastric ulcer pain may worsen with eating
+
+H. pylori eradication (triple therapy 7–14 days):
+- PPI + Clarithromycin + Amoxicillin (or metronidazole)
+- Confirm eradication with urea breath test 4 weeks after completing antibiotics
+
+Alarm features requiring urgent endoscopy: Haematemesis (vomiting blood), melaena (black tarry stool), severe sudden-onset epigastric pain, syncope
+
+=== INFLAMMATORY BOWEL DISEASE (IBD) ===
+
+Crohn's Disease:
+- Affects any part of GI tract (mouth to anus); transmural inflammation; skip lesions
+- Symptoms: Diarrhoea, abdominal pain (often right lower quadrant), weight loss, fatigue, fever
+- Perianal disease: fistulae, abscesses (pathognomonic for Crohn's)
+- Extraintestinal: Arthritis, uveitis, erythema nodosum, primary sclerosing cholangitis
+
+Ulcerative Colitis:
+- Confined to colon; continuous mucosal inflammation from rectum proximally
+- Symptoms: Bloody diarrhoea, mucus, urgency, tenesmus (feeling of incomplete evacuation)
+- Risk of colorectal cancer with long-standing pan-colitis: colonoscopy surveillance essential
+
+IBD Treatment:
+- Induction: Corticosteroids (prednisolone) for flares — not for maintenance
+- Maintenance: Aminosalicylates (5-ASA) for UC; immunomodulators (azathioprine, mercaptopurine) for Crohn's
+- Biologics: Anti-TNF (infliximab, adalimumab), anti-integrin (vedolizumab), anti-IL-12/23 (ustekinumab)
+- Surgery: 20–30% of Crohn's patients, 10–30% of UC patients require surgery
+
+=== CONSTIPATION ===
+Infrequent bowel movements (<3/week), hard/difficult stools, straining, incomplete evacuation
+Chronic constipation: affects 15% of population
+
+Causes: Inadequate fibre/fluid, physical inactivity, medications (opioids, iron, antacids, anticholinergics), hypothyroidism, bowel dysmotility
+
+Management (stepwise):
+1. Lifestyle: Increase fibre (25–35g/day), 2L water/day, regular exercise, do not ignore defecation urge, consistent morning routine (gastrocolic reflex)
+2. Bulk-forming laxatives (psyllium, methylcellulose): safest; take with plenty of water
+3. Osmotic laxatives (macrogol/polyethylene glycol, lactulose): draw water into bowel; first-line for chronic constipation
+4. Stimulant laxatives (senna, bisacodyl): for acute relief; not for daily long-term use
+5. Stool softeners (docusate): modest effect; useful when straining harmful (post-surgery, cardiac)
+6. Enemas/suppositories: For impaction or acute severe constipation
+
+Red flags requiring colonoscopy: New onset constipation >50 years, rectal bleeding, weight loss, family history of CRC, iron-deficiency anaemia
+
+=== DIARRHOEA ===
+
+Acute (<2 weeks): Usually infectious (viral, bacterial, parasitic)
+- Gastroenteritis: Norovirus most common; self-limiting 24–72h; MAIN RISK = dehydration
+- Oral rehydration solution (ORS): 1L water + 6 tsp sugar + 0.5 tsp salt, or WHO ORS sachets
+- Antibiotics for: bloody diarrhoea (suspected Shigella, Campylobacter, E. coli O157 — but NOT metronidazole for E. coli O157), confirmed Clostridioides difficile (oral vancomycin or fidaxomicin), traveller's diarrhoea (azithromycin)
+- AVOID: antidiarrhoeal medications if bloody stool or high fever (may worsen bacterial colitis)
+
+Chronic (>4 weeks): Warrants investigation — IBD, IBS, malabsorption (coeliac, lactose intolerance), microscopic colitis, medications
+
+=== COELIAC DISEASE ===
+Autoimmune response to gluten (wheat, barley, rye) damaging small intestinal villi
+
+Symptoms: Variable — diarrhoea, steatorrhoea, bloating, weight loss, anaemia, mouth ulcers, dermatitis herpetiformis, osteoporosis, infertility
+Silent coeliac: Common (1% of population); diagnosed incidentally
+
+Diagnosis: Anti-TTG IgA antibody (first-line); confirmed by duodenal biopsy (Marsh classification)
+Treatment: Strict lifelong gluten-free diet; even small amounts cause damage
+Monitor: Annual review, DEXA scan, check for other autoimmune conditions (thyroid, T1DM)

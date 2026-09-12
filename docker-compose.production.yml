@@ -1,0 +1,144 @@
+# HealthBuddy AI — Production Deployment
+# Usage: docker-compose -f docker-compose.production.yml up -d
+
+version: "3.9"
+
+services:
+  # ==========================================
+  # PostgreSQL Database
+  # ==========================================
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: healthbuddy
+      POSTGRES_USER: healthbuddy_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_in_production}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U healthbuddy_user -d healthbuddy"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==========================================
+  # Redis — Shared State (OTP, rate limit, cache, quota)
+  # ==========================================
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --appendonly yes
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==========================================
+  # HealthBuddy AI Backend
+  # ==========================================
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://healthbuddy_user:${POSTGRES_PASSWORD:-change_me_in_production}@db:5432/healthbuddy
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=${SECRET_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ENVIRONMENT=production
+      - CORS_ORIGINS=https://${DOMAIN:-localhost}
+      - VECTOR_STORE_TYPE=${VECTOR_STORE_TYPE:-pgvector}
+      - PRELOAD_VECTOR_STORE_ON_STARTUP=true
+      - PRELOAD_MODELS_ON_STARTUP=true
+      - EMAIL_VERIFICATION_REQUIRED=${EMAIL_VERIFICATION_REQUIRED:-false}
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:-}
+      - SENTRY_DSN=${SENTRY_DSN:-}
+      - DAILY_FREE_QUERY_LIMIT=${DAILY_FREE_QUERY_LIMIT:-50}
+      - QUOTA_ENABLED=${QUOTA_ENABLED:-true}
+      - MIN_USER_AGE=${MIN_USER_AGE:-18}
+      - REQUIRE_TOS_ACCEPTANCE=${REQUIRE_TOS_ACCEPTANCE:-true}
+      - USE_ARQ_FOR_EMAILS=${USE_ARQ_FOR_EMAILS:-false}
+    volumes:
+      - app_data:/app/data
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ==========================================
+  # ARQ Email Worker (Background Tasks)
+  # ==========================================
+  email_worker:
+    build: .
+    restart: unless-stopped
+    command: arq app.workers.email_worker.WorkerSettings
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:-}
+      - SMTP_FROM_EMAIL=${SMTP_FROM_EMAIL:-noreply@healthbuddy.ai}
+      - ENVIRONMENT=production
+    volumes:
+      - app_data:/app/data
+
+  # ==========================================
+  # nginx Reverse Proxy with TLS
+  # ==========================================
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - certbot_data:/etc/letsencrypt:ro
+      - certbot_www:/var/www/certbot:ro
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ==========================================
+  # Certbot (Let's Encrypt TLS Auto-Renewal)
+  # ==========================================
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - certbot_data:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+volumes:
+  pgdata:
+    driver: local
+  redisdata:
+    driver: local
+  app_data:
+    driver: local
+  certbot_data:
+    driver: local
+  certbot_www:
+    driver: local
