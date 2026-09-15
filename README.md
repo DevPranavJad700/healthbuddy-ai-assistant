@@ -5,7 +5,7 @@
 <h1 align="center">HealthBuddy AI Assistant</h1>
 
 <p align="center">
-  <strong>Production-Grade AI Health Assistant with Clinical Safety Guardrails, Multimodal RAG, pgvector & Multilingual Support</strong>
+  <strong>AI Health Assistant with Clinical Safety Guardrails, RAG, pgvector &amp; Multilingual Support</strong>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/LLM-Groq%20%2F%20Claude-8A2BE2" alt="LLM Engine" />
   <img src="https://img.shields.io/badge/Vector%20DB-pgvector%20%2B%20Chroma-336791?logo=postgresql&logoColor=white" alt="Vector DB" />
-  <img src="https://img.shields.io/badge/Tests-113%20Passing-success" alt="Tests" />
+  <img src="https://img.shields.io/badge/Tests-113%20Collected-success" alt="Tests" />
   <img src="https://img.shields.io/badge/Frontend-Vanilla%20ES%20Modules-F7DF1E?logo=javascript&logoColor=black" alt="ES Modules" />
   <img src="https://img.shields.io/badge/PWA-Offline%20Ready-5A0FC8" alt="PWA Ready" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
@@ -23,6 +23,7 @@
 ---
 
 ## 📑 Table of Contents
+- [Screenshots / Demo](#-screenshots--demo)
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
@@ -33,46 +34,62 @@
 - [Production Deployment (Docker + pgvector)](#-production-deployment-docker--pgvector)
 - [API Reference](#-api-reference)
 - [Automated Testing Suite](#-automated-testing-suite)
-- [Security & Compliance (GDPR)](#-security--compliance-gdpr)
+- [Security & Privacy](#-security--privacy)
 - [Observability & Monitoring](#-observability--monitoring)
+- [Design Decisions](#-design-decisions)
 - [License](#-license)
+
+---
+
+## 📸 Screenshots / Demo
+
+> Screenshots will be placed in `docs/screenshots/` — see [`docs/screenshots/README.md`](docs/screenshots/README.md) for capture instructions.
+
+| Chat + RAG Citations | Emergency Overlay | Symptom Checker |
+|:---:|:---:|:---:|
+| *(run locally and screenshot the chat interface with a RAG response)* | *(trigger by typing "I have chest pain" — screenshot the overlay)* | *(screenshot the symptom checker results card)* |
+
+**To run locally and capture screenshots:** follow the [Quick Start](#-quick-start-local-development) below.
 
 ---
 
 ## 🩺 Overview
 
-**HealthBuddy AI Assistant** is a real-world, clinically-aware digital healthcare companion built to enterprise standards. Combining high-throughput Retrieval-Augmented Generation (RAG) with a deterministic clinical triage system, multi-tier safety moderation, and GDPR compliance, HealthBuddy assists users with symptom guidance, condition education, and care-seeking navigation.
+**HealthBuddy AI Assistant** is a clinically-aware digital healthcare companion structured for
+deployment with Docker, PostgreSQL, Redis, and NGINX. It combines Retrieval-Augmented Generation
+(RAG) with a deterministic clinical triage engine, multi-layer safety moderation, and
+GDPR-oriented data controls.
 
-> ⚠️ **Clinical Disclaimer**: HealthBuddy AI is engineered strictly for educational guidance and informational triage. It does not replace licensed medical diagnosis, physical examinations, or emergency medical interventions. In life-threatening emergencies, immediate care must be sought via regional emergency numbers (e.g., 911, 112, 999).
+> ⚠️ **Clinical Disclaimer**: HealthBuddy AI is intended strictly for educational guidance and informational triage. It does not replace licensed medical diagnosis, physical examinations, or emergency medical interventions. In life-threatening emergencies, seek care immediately via your regional emergency number (e.g., 911, 112, 999).
 
 ---
 
 ## ✨ Key Features
 
-### 🧠 Advanced RAG & Dual Vector Storage
-- **Unified Vector Storage**: Supports **PostgreSQL 16 + pgvector** for enterprise deployments alongside **ChromaDB** for local development.
-- **SSE Streaming Responses**: Real-time Server-Sent Events stream tokens smoothly with Markdown rendering and explainability cards.
-- **Multilingual Knowledge Grounding**: 22 curated clinical guideline files spanning English, Hindi, and Spanish with language-priority chunk retrieval.
-- **Source Traceability**: Every generated answer cites relevant clinical protocols, confidence scores, and excerpt snippets.
+### 🧠 RAG & Dual Vector Storage
+- **Dual Vector Storage**: Supports **PostgreSQL 16 + pgvector** for PostgreSQL deployments alongside **ChromaDB** for local development. The store type is selected at startup based on `VECTOR_STORE_TYPE` and `DATABASE_URL`.
+- **SSE Streaming Responses**: Real-time Server-Sent Events stream tokens with Markdown rendering and source citation cards.
+- **Multilingual Knowledge Grounding**: 22 curated clinical guide files spanning English, Hindi, and Spanish with language-priority chunk retrieval.
+- **Source Traceability**: Generated answers include retrieved document metadata (source, relevance score, excerpt) returned alongside the response.
 
 ### 🛡️ Multi-Layer Medical Safety
-- **Emergency Detection**: Scans for 6 life-threatening emergency archetypes (cardiac arrest, stroke, respiratory failure, mental health/suicide crisis, acute poisoning, severe bleeding) and triggers immediate emergency overlays.
-- **Deterministic Triage Ruleset (`v1.1`)**: Assigns urgency levels (`emergency`, `urgent`, `self_care`) with actionable next steps and SLA thresholds.
-- **Bidirectional Moderation**: Analyzes user input queries and filters model output for harmful dosage advice, unauthorized prescribing, or diagnostic overreach.
-- **Clinician Oversight Queue**: Flags borderline and escalated cases for licensed clinical review with note attachments and status tracking (`pending`, `reviewed`, `resolved`).
+- **Emergency Detection**: Scans for 6 life-threatening emergency archetypes (cardiac arrest, stroke, respiratory failure, mental health/suicide crisis, acute poisoning, severe bleeding) and returns an immediate emergency message before any LLM call is made.
+- **Deterministic Triage Ruleset (`v1.1`)**: Assigns urgency levels (`emergency`, `urgent`, `self_care`) with actionable next steps. Rules are versioned, readable, and auditable without ML tooling.
+- **Bidirectional Moderation**: `check_user_input()` scans user queries for emergency patterns; `check_model_output()` scans LLM responses for harmful dosage advice, unauthorized prescribing, or diagnostic overreach, and replaces flagged responses with a safe refusal.
+- **Clinician Oversight Queue**: Escalated cases are stored in a `clinician_reviews` table with status tracking (`pending`, `reviewed`, `resolved`), accessible via the admin dashboard and API.
 
-### 📱 Premium Native Modular Frontend
-- **Zero Build Complexity**: Built using pure modern ES Modules without requiring Webpack, Vite, or external bundlers.
-- **Fluid WebGL Aesthetics**: Three.js liquid background theme, sleek dark glassmorphism, responsive down to 320px screens.
+### 📱 Modular Frontend
+- **Zero Build Complexity**: Pure modern ES Modules — no Webpack, Vite, or bundler required.
+- **WebGL Background**: Three.js liquid shader background, dark glassmorphism UI, responsive down to 320px.
 - **PWA & Offline Capability**: Service Worker caching allows offline load with connectivity banner and auto-retry.
-- **Accessibility First (WCAG Compliant)**: Full keyboard tab trapping, screen reader announcements (`aria-live`), high-contrast mode, reduced motion, and large text options.
-- **Multi-Modal Input**: Integrated Web Speech API for voice-driven query dictation and drag-and-drop clinical document uploads (PDF, TXT, MD).
+- **Accessibility (WCAG-targeted)**: Keyboard tab trapping, screen reader announcements (`aria-live`), high-contrast mode, reduced motion, and large text options.
+- **Voice & Document Input**: Web Speech API for voice dictation and drag-and-drop document uploads (PDF, TXT, MD) for per-user RAG indexing.
 
-### 🔒 Enterprise Security & Privacy
-- **JWT + Refresh Token Rotation**: Secure session lifecycle with brute-force lockout protections and in-memory/Redis tracking.
-- **Email OTP Verification**: Registration email verification and password reset flows with configurable SMTP or dev-log delivery.
-- **GDPR & HIPAA Readiness**: Single-click encrypted user data export and permanent account deletion cascades with auditable logs.
-- **Granular Consent Center**: Explicit policy tracking for AI Guidance, Terms of Use, and Personalization.
+### 🔒 Security & Privacy
+- **JWT + Refresh Token Rotation**: Access tokens and refresh tokens use distinct `typ` claims and unique `jti` IDs. On `/refresh`, the incoming refresh token's JTI is revoked in the `RevokedToken` table before a new token pair is issued.
+- **Email OTP Verification**: 6-digit OTP, 15-minute expiry, 5-attempt brute-force lockout; stored in Redis with an in-memory fallback for environments without Redis.
+- **GDPR-Oriented Features**: Single-click user data export (right to portability, Art. 20) and permanent account deletion cascade across all user-associated tables (right to erasure, Art. 17). Both endpoints are authenticated and audit-logged.
+- **Privacy Consent Acknowledgment**: Consent timestamp is recorded on registration.
 
 ---
 
@@ -85,15 +102,15 @@ graph TD
     
     subgraph "Core Security & Middleware"
         FastAPI --> RateLimiter[Rate Limiter]
-        FastAPI --> AuthGuard[JWT / OTP Auth Protection]
-        FastAPI --> SafetyLayer[Safety Guardrails & Emergency Detector]
+        FastAPI --> AuthGuard[JWT / OTP Auth]
+        FastAPI --> SafetyLayer[Safety Layer & Emergency Detector]
     end
     
     subgraph "Services & Execution"
         SafetyLayer --> Triage[Triage Engine v1.1]
         FastAPI --> RAG[RAG & Citation Engine]
         FastAPI --> ClinicianQueue[Clinician Review Queue]
-        FastAPI --> SymptomChecker[Symptom Classifier]
+        FastAPI --> SymptomChecker[Symptom Checker]
     end
     
     subgraph "Storage & Intelligence"
@@ -108,13 +125,10 @@ graph TD
 
 ## 📂 Modular Frontend Structure
 
-The user interface is completely organized into native ES modules served directly by FastAPI under `/static`:
-
 ```
 frontend/
-├── index.html                  # Main SPA container (<script type="module" src="/static/app.js?v=45">)
+├── index.html                  # Main SPA container (<script type="module" src="/static/app.js">)
 ├── app.js                      # Primary orchestrator & global DOM event bindings
-├── ARCHITECTURE.js             # Architecture and module loading reference
 ├── styles.css                  # Unified design system and responsive dark mode CSS
 ├── liquid-theme.js             # Three.js WebGL shader background
 ├── manifest.json               # Progressive Web App manifest
@@ -124,7 +138,7 @@ frontend/
     ├── config.js               # API endpoints, SVG icons, emergency numbers, I18N
     ├── state.js                # Reactive client state and auth token accessors
     ├── utils.js                # HTML escaping, toast popups, a11y focus manager
-    ├── auth.js                 # Authentication, OAuth, profile onboarding, GDPR export/delete
+    ├── auth.js                 # Authentication, profile onboarding, GDPR export/delete
     ├── chat.js                 # SSE streaming reader, bubble renderer, session history
     ├── symptoms.js             # Interactive symptom tag selector & triage cards
     ├── analytics.js            # Chart.js operational dashboard & clinician review queue
@@ -138,17 +152,20 @@ frontend/
 
 ## 📚 Clinical Knowledge Base & RAG
 
-The repository includes **22 evidence-based clinical guide files** located in `data/knowledge_base/`:
+The repository includes **22 clinical guide files** located in `data/knowledge_base/`:
 - **Cardiovascular Health**: Acute coronary syndromes, hypertension protocols, heart failure management.
 - **Endocrine & Metabolic**: Type-2 diabetes regimens, glycemic monitoring, lifestyle intervention.
 - **Respiratory Medicine**: Asthma triggers, COPD action plans, acute bronchitis protocols.
 - **Mental Health**: Crisis intervention protocols, anxiety & depression triage, stress reduction.
-- **Specialized Fields**: Pediatrics, Women's Health, Dermatology, Gastroenterology, Sleep Medicine, Sports Medicine, Pharmacology.
-- **Multilingual Support**: Hindi (`naidanik_margdarshika_hindi.txt`) and Spanish (`guia_clinica_espanol.txt`) specialized guidelines.
+- **Specialized Fields**: Pediatrics, Women's Health, Dermatology, Gastroenterology, Sleep Medicine, Sports Medicine, Pharmacology, Nutrition.
+- **Multilingual Support**: Hindi (`naidanik_margdarshika_hindi.txt`) and Spanish (`guia_clinica_espanol.txt`) guidelines.
 
 ---
 
 ## 🚀 Quick Start (Local Development)
+
+**Prerequisites:** Python 3.11+, a [Groq API key](https://console.groq.com) (free tier works).  
+**Expected time:** ~5 minutes (plus ~2 minutes on first run for the embedding model to download).
 
 ### 1. Clone the Repository
 ```bash
@@ -175,31 +192,50 @@ pip install -r requirements.txt
 ### 4. Configure Environment Variables
 ```bash
 cp .env.development.example .env
-# Edit .env and configure at least your GROQ_API_KEY (obtainable at console.groq.com)
 ```
 
-### 5. Start Development Server
+Open `.env` and set **at minimum**:
+```env
+GROQ_API_KEY=your_groq_key_here
+SECRET_KEY=any_random_string_at_least_32_characters_long
+```
+
+Everything else in `.env.development.example` works as-is for local development (SQLite database, ChromaDB vector store, no Redis required).
+
+### 5. (First run only) Index the Knowledge Base
+```bash
+python scripts/ingest_knowledge_base.py
+```
+
+> **Note:** This downloads the embedding model (`all-MiniLM-L6-v2`, ~90 MB) on first run and indexes the 22 knowledge files into ChromaDB. Subsequent starts skip this step.
+
+### 6. Start Development Server
 ```bash
 uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-Open **http://127.0.0.1:8000** in your browser. Interactive Swagger docs are available at **http://127.0.0.1:8000/api/docs**.
+
+Open **http://127.0.0.1:8000** in your browser.  
+Swagger/OpenAPI docs: **http://127.0.0.1:8000/api/docs**
 
 ---
 
 ## 🐳 Production Deployment (Docker + pgvector)
 
-The production configuration unifies application services, PostgreSQL 16 with the `pgvector` extension, Redis caching, NGINX reverse proxy, and Let's Encrypt SSL:
+The production configuration runs the application, PostgreSQL 16 with `pgvector`, Redis, and NGINX in Docker Compose:
 
 ```bash
-# 1. Copy production template
+# 1. Copy production template and fill in secrets
 cp .env.production.example .env
 
-# 2. Launch containerized stack
+# 2. Launch containerised stack
 docker compose -f docker-compose.production.yml up -d --build
 
-# 3. Check health and running status
+# 3. Check health
 docker compose -f docker-compose.production.yml ps
+curl http://localhost/api/health
 ```
+
+See `docs/OPERATOR_RUNBOOK.md` for configuration details, backup/restore, and upgrade procedures.
 
 ---
 
@@ -208,61 +244,85 @@ docker compose -f docker-compose.production.yml ps
 | Method | Endpoint | Description | Auth Required |
 | :--- | :--- | :--- | :---: |
 | `GET` | `/api/health` | Service health status & vector store ready state | No |
-| `GET` | `/api/live` | Kubernetes / Docker liveness probe | No |
-| `GET` | `/api/ready` | Kubernetes / Docker readiness check | No |
+| `GET` | `/api/live` | Docker/Kubernetes liveness probe | No |
+| `GET` | `/api/ready` | Docker/Kubernetes readiness check | No |
 | `POST` | `/api/v1/auth/register` | User account registration | No |
-| `POST` | `/api/v1/auth/login` | User login (returns access & refresh tokens) | No |
-| `POST` | `/api/v1/auth/refresh` | Refresh expired access token | Refresh Token |
+| `POST` | `/api/v1/auth/login` | Login — returns access & refresh tokens | No |
+| `POST` | `/api/v1/auth/refresh` | Exchange refresh token for rotated token pair | Refresh Token |
 | `POST` | `/api/v1/auth/verify-email` | Verify email with 6-digit OTP | No |
 | `POST` | `/api/v1/auth/forgot-password` | Send password reset OTP | No |
-| `POST` | `/api/v1/auth/export-my-data` | GDPR complete data export | Bearer Token |
-| `POST` | `/api/v1/auth/delete-my-data` | GDPR permanent account deletion | Bearer Token |
+| `POST` | `/api/v1/auth/export-my-data` | GDPR data export (Art. 20) | Bearer Token |
+| `POST` | `/api/v1/auth/delete-my-data` | GDPR permanent account deletion (Art. 17) | Bearer Token |
 | `POST` | `/api/v1/chat` | Non-streaming conversational RAG endpoint | Optional |
-| `POST` | `/api/v1/chat/stream` | Real-time SSE streaming RAG answer generation | Optional |
-| `POST` | `/api/v1/chat/feedback` | User feedback rating on assistant response | Optional |
+| `POST` | `/api/v1/chat/stream` | Real-time SSE streaming RAG response | Optional |
+| `POST` | `/api/v1/chat/feedback` | Submit feedback rating on a response | Optional |
 | `POST` | `/api/v1/chat/clinician-review` | Escalate case to clinician queue | Bearer Token |
 | `POST` | `/api/v1/symptoms/check` | Triage classification and condition matching | No |
-| `GET` | `/api/v1/symptoms/list` | List of supported diagnostic symptoms | No |
-| `GET` | `/api/v1/documents` | List uploaded user medical documents | Bearer Token |
+| `GET` | `/api/v1/symptoms/list` | List of supported symptom keywords | No |
+| `GET` | `/api/v1/documents` | List uploaded user documents | Bearer Token |
 | `POST` | `/api/v1/documents/upload` | Upload PDF/TXT/MD document for RAG indexing | Bearer Token |
 | `GET` | `/api/v1/personalization/goals` | List personal health goals | Bearer Token |
 | `POST` | `/api/v1/personalization/goals` | Create a new health goal | Bearer Token |
-| `GET` | `/api/v1/analytics/dashboard` | Performance & usage metrics dashboard | Admin |
-| `GET` | `/api/v1/analytics/clinician-reviews`| Clinician triage review queue | Admin |
+| `GET` | `/api/v1/analytics/dashboard` | Usage metrics dashboard | Admin |
+| `GET` | `/api/v1/analytics/clinician-reviews` | Clinician triage review queue | Admin |
 
 ---
 
 ## 🧪 Automated Testing Suite
 
-The repository features comprehensive automated test coverage across safety guardrails, emergency detection, email OTP authentication, triage algorithms, and API endpoints:
-
 ```bash
-# Run all unit tests (safety, triage, symptom checker, email verification)
+# Unit tests — safety, triage, symptom checker, email OTP
 pytest tests/test_safety_layer.py tests/test_triage_rules.py tests/test_symptom_checker.py tests/test_email_verification.py -v
 
-# Run full API endpoint integration test suite
+# API integration tests
 pytest tests/test_api.py -v
 
-# Run browser End-to-End tests (Playwright)
+# Browser end-to-end tests (requires Playwright)
 pytest tests/test_e2e_browser.py -v
 ```
 
-### Verified Test Matrix
-- **`test_safety_layer.py`**: 23/23 passing (cardiac, stroke, respiratory, poisoning, bleeding, mental health, output moderation)
-- **`test_triage_rules.py`**: 13/13 passing (deterministic ruleset validation)
-- **`test_symptom_checker.py`**: 16/16 passing (severity ranking, match percentage)
-- **`test_email_verification.py`**: 17/17 passing (OTP generation, expiration, brute-force lockout)
-- **`test_api.py`**: 44/44 passing (FastAPI HTTP routing, CSRF, rate-limiting, GDPR deletion)
+### Test Matrix (113 tests collected)
+
+| File | Count | Covers |
+|---|---|---|
+| `test_safety_layer.py` | 23 | Cardiac, stroke, respiratory, poisoning, bleeding, mental health detection; output moderation |
+| `test_triage_rules.py` | 13 | Deterministic ruleset validation for all rule IDs and levels |
+| `test_symptom_checker.py` | 16 | Severity ranking, condition match percentage |
+| `test_email_verification.py` | 17 | OTP generation, expiration, brute-force lockout |
+| `test_api.py` | 44 | HTTP routing, CSRF, rate-limiting, GDPR export/deletion, auth lockout |
+
+> Test counts were verified with `pytest --collect-only`. The badge reflects collected tests; CI run results are in the GitHub Actions workflow linked at the top.
 
 ---
 
 ## 📊 Observability & Monitoring
 
-HealthBuddy AI exposes production-grade metrics and logging hooks:
-- **Prometheus Metrics Endpoint**: Available at `/api/metrics` tracking request latency, status codes, token usage, and safety blocks.
-- **Grafana Dashboard**: Pre-configured dashboard available at `deploy/grafana-dashboard.json`.
-- **Prometheus Alert Rules**: Included at `deploy/prometheus-alert-rules.yml`.
-- **Structured JSON Logging**: Includes unique `X-Request-ID` correlation across requests.
+- **Prometheus Metrics Endpoint**: `/api/metrics` — tracks request counts, latency histograms, LLM provider failures, fallback responses, and token refresh outcomes.
+- **Grafana Dashboard**: Pre-configured dashboard at `deploy/grafana-dashboard.json`.
+- **Prometheus Alert Rules**: Template at `deploy/prometheus-alert-rules.yml`.
+- **Structured JSON Logging**: Every request logged with a unique `X-Request-ID` correlation header, subject identifier, session ID, method, path, status, and latency.
+
+---
+
+## 🔐 Security & Privacy
+
+- **Rate Limiting**: Sliding-window rate limiter with Redis backend (in-memory fallback). Per-route overrides — auth endpoints have tighter limits than chat endpoints.
+- **Brute-Force Lockout**: Per-username and per-IP failed login tracking with configurable lockout duration.
+- **CSRF Protection**: Origin/Referer validation for browser-initiated state-mutating requests; Bearer-token API clients are exempt.
+- **Security Headers**: CSP, X-Frame-Options, X-Content-Type-Options, HSTS injected on every response.
+- **Password Policy**: Minimum length, uppercase, lowercase, and digit requirements enforced at registration.
+- **Audit Log**: Key auth and data-access actions are written to an `audit_log` table.
+
+---
+
+## 📐 Design Decisions
+
+See [`DESIGN_DECISIONS.md`](DESIGN_DECISIONS.md) for first-person reasoning on:
+
+- Why a deterministic triage ruleset instead of an ML classifier
+- How the 6 emergency archetypes were selected (WHO/NIH preventable-death categories)
+- Why pgvector vs ChromaDB and when each is used
+- What the moderation layer checks on input vs output, and what it does not cover
 
 ---
 
