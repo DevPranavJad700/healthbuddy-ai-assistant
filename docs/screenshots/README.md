@@ -15,23 +15,30 @@ Add 2–3 screenshots of the application here for the README demo section.
 3. **`symptom_checker_results.png`** — The symptom checker card showing matched conditions,
    confidence scores, severity badge, and recommendations panel.
 
+4. **`clinician_review_queue.png`** — The admin clinician queue interface showing escalated cases with urgency tiers, timestamps, and status tracking.
+ 
 ## How to capture them
-
+ 
+### Automated Capture (Recommended)
+Run the automated Playwright capture script from the project root:
+```bash
+python scripts/capture_screenshots.py
+```
+This boots the app on an isolated port, steps through the four key user flows, captures retina-sharp PNGs (1280x800, 2x device scale factor), and saves them directly to this directory.
+ 
+### Manual Capture
 Run the development server locally:
 ```bash
 uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-
-Open `http://127.0.0.1:8000` and use the browser's built-in screenshot tool
-(Firefox: Ctrl+Shift+S full-page; Chrome: DevTools → Capture screenshot).
-
-Save each file in this directory (`docs/screenshots/`) as a `.png`.
-Then update the Screenshots section in `README.md` to point to them.
-
+ 
+Open `http://127.0.0.1:8000` and use your browser's screenshot tool.
+ 
 ## Filename convention
-
+ 
 ```
 docs/screenshots/chat_rag_flow.png
 docs/screenshots/triage_emergency_overlay.png
 docs/screenshots/symptom_checker_results.png
+docs/screenshots/clinician_review_queue.png
 ```

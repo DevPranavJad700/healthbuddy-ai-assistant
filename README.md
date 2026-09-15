@@ -43,13 +43,17 @@
 
 ## 📸 Screenshots / Demo
 
-> Screenshots will be placed in `docs/screenshots/` — see [`docs/screenshots/README.md`](docs/screenshots/README.md) for capture instructions.
+| **Conversational RAG & Source Citations** | **Emergency Safety Triage Overlay** |
+|:---:|:---:|
+| <img src="docs/screenshots/chat_rag_flow.png" alt="Chat RAG Flow with Source Citations" width="100%"/> | <img src="docs/screenshots/triage_emergency_overlay.png" alt="Emergency Triage Overlay" width="100%"/> |
+| *Real-time SSE streaming with verified clinical citations & confidence scoring* | *Deterministic emergency intercept before any LLM inference occurs* |
 
-| Chat + RAG Citations | Emergency Overlay | Symptom Checker |
-|:---:|:---:|:---:|
-| *(run locally and screenshot the chat interface with a RAG response)* | *(trigger by typing "I have chest pain" — screenshot the overlay)* | *(screenshot the symptom checker results card)* |
+| **Symptom Checker & Urgency Assessment** | **Clinician Review Queue (Admin)** |
+|:---:|:---:|
+| <img src="docs/screenshots/symptom_checker_results.png" alt="Symptom Checker Results" width="100%"/> | <img src="docs/screenshots/clinician_review_queue.png" alt="Clinician Review Queue" width="100%"/> |
+| *Multi-symptom condition matching with severity tiering & recommendations* | *Audit-tracked review queue for clinical safety escalation* |
 
-**To run locally and capture screenshots:** follow the [Quick Start](#-quick-start-local-development) below.
+> Automated high-resolution captures generated via Playwright (`python scripts/capture_screenshots.py`). See [`docs/screenshots/README.md`](docs/screenshots/README.md) for details.
 
 ---
 
