@@ -47,6 +47,7 @@ def e2e_server():
     env["PRELOAD_VECTOR_STORE_ON_STARTUP"] = "false"
     env["ENVIRONMENT"] = "development"
     env["ADMIN_USERNAMES"] = "admin"
+    env["CORS_ORIGINS"] = "http://localhost:8010,http://127.0.0.1:8010,http://localhost:8000,http://127.0.0.1:8000"
 
     python_exe = Path(sys.executable)
     proc = subprocess.Popen(
@@ -106,7 +107,11 @@ def _login_or_register(page, username: str, password: str):
         page.check("#authTermsCheckbox")
     page.click("#authRegisterBtn")
     page.wait_for_selector("#signedInBadge", timeout=10000)
-    page.wait_for_timeout(600)
+    page.wait_for_timeout(1000)
+    skip_btn = page.locator("#wizardSkipBtn")
+    if skip_btn.count() > 0 and skip_btn.is_visible():
+        skip_btn.click()
+        page.wait_for_timeout(300)
 
 
 def _grant_personalization_consent(page):
@@ -139,6 +144,9 @@ def test_auth_and_goals_flow(page):
     expect_text.wait_for(state="visible")
     assert "signed in" in expect_text.inner_text().lower()
 
+    if page.locator("#sidebarMoreToggle").is_visible():
+        page.click("#sidebarMoreToggle")
+        page.wait_for_timeout(300)
     page.click("#goalsTabBtn")
     page.fill("#goalInput", "Walk 30 minutes daily")
     page.select_option("#goalPriority", "high")
@@ -193,6 +201,9 @@ def test_clinician_queue_admin_flow(page):
     page.locator(".feedback-box button[data-review='true']").first.click()
     page.wait_for_timeout(1000)
 
+    if page.locator("#sidebarMoreToggle").is_visible():
+        page.click("#sidebarMoreToggle")
+        page.wait_for_timeout(300)
     page.click("#clinicianTabBtn")
     page.click("#refreshQueueBtn")
     page.wait_for_timeout(1200)

@@ -24,6 +24,8 @@ import {
   clearAuthTokens,
 } from "./state.js";
 
+export { getAuthToken };
+
 import {
   esc,
   showToast,
@@ -289,7 +291,7 @@ export function renderAuthBadges(isSignedIn, isAdmin, username) {
 
   if (signedInBadge) {
     if (isSignedIn) {
-      signedInBadge.textContent = "Online";
+      signedInBadge.textContent = "Signed in";
       signedInBadge.className = "acct-status-dot signed-in";
       if (acctLabel) acctLabel.textContent = username || "Signed In";
     } else {
@@ -856,3 +858,101 @@ export async function adminDeleteUserData() {
     showToast(err.message || "Admin deletion failed", "error");
   }
 }
+
+export function setPrivacyCenterOpen(isOpen) {
+  const modal = document.getElementById("privacyCenterModal");
+  setModalOpenWithFocus(modal, isOpen);
+}
+
+export function addPrivacyAuditEvent(action, level = "info", details = "") {
+  try {
+    const raw = localStorage.getItem(PRIVACY_AUDIT_TRAIL_KEY);
+    const trail = raw ? JSON.parse(raw) : [];
+    const event = {
+      action,
+      level,
+      details,
+      timestamp: new Date().toISOString(),
+    };
+    trail.unshift(event);
+    if (trail.length > 50) trail.length = 50;
+    localStorage.setItem(PRIVACY_AUDIT_TRAIL_KEY, JSON.stringify(trail));
+    state.privacyAuditTrail = trail;
+  } catch (_) {}
+}
+
+export async function loadPrivacyCenterData() {
+  const exportStatusEl = document.getElementById("privacyExportStatus");
+  const lastExportTimeEl = document.getElementById("privacyLastExportTime");
+  const sessionListEl = document.getElementById("privacySessionList");
+  const timelineEl = document.getElementById("privacyConsentTimeline");
+  const auditTrailEl = document.getElementById("privacyAuditTrail");
+  const statusEl = document.getElementById("privacyCenterStatus");
+
+  const hasToken = Boolean(getAuthToken());
+
+  if (exportStatusEl) {
+    if (!hasToken) {
+      exportStatusEl.textContent = "Sign in to export your account data.";
+    } else {
+      const metaRaw = localStorage.getItem(PRIVACY_EXPORT_META_KEY);
+      if (metaRaw) {
+        try {
+          const meta = JSON.parse(metaRaw);
+          exportStatusEl.textContent = `Last export: ${meta.filename || "Downloaded"}`;
+          if (lastExportTimeEl && meta.exportedAt) {
+            lastExportTimeEl.textContent = `Exported on ${new Date(meta.exportedAt).toLocaleString()}`;
+          }
+        } catch (_) {
+          exportStatusEl.textContent = "Ready to export.";
+        }
+      } else {
+        exportStatusEl.textContent = "Ready to export your account data.";
+      }
+    }
+  }
+
+  if (sessionListEl) {
+    if (state.currentSessionId) {
+      sessionListEl.innerHTML = `<p class="privacy-meta-text">Active session: <code>${esc(state.currentSessionId)}</code></p>`;
+    } else {
+      sessionListEl.innerHTML = `<p class="privacy-meta-text">No active session.</p>`;
+    }
+  }
+
+  if (timelineEl) {
+    if (state.consent && Array.isArray(state.consent.records) && state.consent.records.length > 0) {
+      timelineEl.innerHTML = state.consent.records
+        .map(
+          (r) =>
+            `<div class="privacy-meta-item"><strong>${esc(r.consent_type || "Consent")}</strong>: ${r.granted ? "Granted" : "Revoked"} (${new Date(r.created_at || Date.now()).toLocaleDateString()})</div>`
+        )
+        .join("");
+    } else {
+      timelineEl.innerHTML = `<p class="privacy-meta-text">No consent records yet.</p>`;
+    }
+  }
+
+  if (auditTrailEl) {
+    try {
+      const raw = localStorage.getItem(PRIVACY_AUDIT_TRAIL_KEY);
+      const trail = raw ? JSON.parse(raw) : [];
+      if (trail.length > 0) {
+        auditTrailEl.innerHTML = trail
+          .slice(0, 10)
+          .map(
+            (ev) =>
+              `<div class="privacy-meta-item"><strong>${esc(ev.action)}</strong> <span class="dim">(${new Date(ev.timestamp).toLocaleTimeString()})</span> - ${esc(ev.details || "")}</div>`
+          )
+          .join("");
+      } else {
+        auditTrailEl.innerHTML = `<p class="privacy-meta-text">No privacy actions recorded yet.</p>`;
+      }
+    } catch (_) {
+      auditTrailEl.innerHTML = `<p class="privacy-meta-text">No privacy actions recorded yet.</p>`;
+    }
+  }
+
+  if (statusEl) statusEl.textContent = "Ready.";
+}
+

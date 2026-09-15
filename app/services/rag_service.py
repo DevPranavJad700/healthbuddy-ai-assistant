@@ -1234,8 +1234,12 @@ class RAGService:
 
         except Exception as e:
             logger.error(f"Streaming error: {e}", exc_info=True)
-            yield {"event": "error", "data": "Connection to AI provider interrupted."}
-            return
+            analytics_service.increment_counter("provider_failures")
+            CHAT_PROVIDER_FAILURES.inc()
+            fallback_text = self._build_safe_fallback_response(question)
+            for word in fallback_text.split(" "):
+                yield {"event": "token", "data": word + " "}
+            full_response = fallback_text
 
         # 2. Post-generation safety checks
         output_check = safety_layer.check_model_output(full_response)

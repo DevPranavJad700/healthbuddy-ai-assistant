@@ -12,6 +12,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
+from app.core.config import settings
 from app.core.logging_config import logger
 from app.core.metrics import REQUEST_COUNT, REQUEST_LATENCY_SECONDS
 
@@ -306,9 +307,12 @@ class CSRFProtectionMiddleware(BaseHTTPMiddleware):
         # Check Origin header (preferred) or Referer
         origin = request.headers.get("origin", "").strip().rstrip("/").lower()
         referer = request.headers.get("referer", "").strip().lower()
+        host = request.headers.get("host", "").strip().lower()
 
         if origin:
-            if origin not in self.allowed_origins:
+            from urllib.parse import urlparse
+            origin_netloc = urlparse(origin).netloc.lower()
+            if origin not in self.allowed_origins and origin_netloc != host:
                 logger.warning("CSRF: rejected origin=%s path=%s", origin, request.url.path)
                 return JSONResponse(
                     status_code=403,
@@ -319,7 +323,7 @@ class CSRFProtectionMiddleware(BaseHTTPMiddleware):
             from urllib.parse import urlparse
             parsed = urlparse(referer)
             ref_origin = f"{parsed.scheme}://{parsed.netloc}".lower()
-            if ref_origin not in self.allowed_origins:
+            if ref_origin not in self.allowed_origins and parsed.netloc.lower() != host:
                 logger.warning("CSRF: rejected referer=%s path=%s", ref_origin, request.url.path)
                 return JSONResponse(
                     status_code=403,
@@ -361,7 +365,16 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next):
         response = await call_next(request)
-        response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;"
+        script_src = "'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com"
+        if not settings.is_production:
+            script_src += " 'unsafe-eval'"
+        response.headers["Content-Security-Policy"] = (
+            f"default-src 'self'; "
+            f"script-src {script_src}; "
+            f"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+            f"font-src 'self' https://fonts.gstatic.com; "
+            f"img-src 'self' data:;"
+        )
         response.headers["X-Content-Type-Options"] = "nosniff"
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["X-XSS-Protection"] = "1; mode=block"

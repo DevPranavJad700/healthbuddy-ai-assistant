@@ -12,7 +12,7 @@ import {
   MESSAGE_DRAFT_KEY,
 } from "./config.js";
 
-import { state } from "./state.js";
+import { state, getAuthToken } from "./state.js";
 
 import {
   esc,
@@ -27,7 +27,6 @@ import {
 
 import {
   authHeaders,
-  getAuthToken,
   attemptTokenRefresh,
   clearAuthToken,
   openConsentCenterWithContext,

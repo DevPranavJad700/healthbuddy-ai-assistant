@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/LLM-Groq%20%2F%20Claude-8A2BE2" alt="LLM Engine" />
   <img src="https://img.shields.io/badge/Vector%20DB-pgvector%20%2B%20Chroma-336791?logo=postgresql&logoColor=white" alt="Vector DB" />
-  <img src="https://img.shields.io/badge/Tests-113%20Collected-success" alt="Tests" />
+  <img src="https://img.shields.io/badge/Tests-118%20Passed-success" alt="Tests" />
   <img src="https://img.shields.io/badge/Frontend-Vanilla%20ES%20Modules-F7DF1E?logo=javascript&logoColor=black" alt="ES Modules" />
   <img src="https://img.shields.io/badge/PWA-Offline%20Ready-5A0FC8" alt="PWA Ready" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
@@ -282,17 +282,18 @@ pytest tests/test_api.py -v
 pytest tests/test_e2e_browser.py -v
 ```
 
-### Test Matrix (113 tests collected)
+### Verified Test Matrix (118/118 Passed)
 
-| File | Count | Covers |
-|---|---|---|
-| `test_safety_layer.py` | 23 | Cardiac, stroke, respiratory, poisoning, bleeding, mental health detection; output moderation |
-| `test_triage_rules.py` | 13 | Deterministic ruleset validation for all rule IDs and levels |
-| `test_symptom_checker.py` | 16 | Severity ranking, condition match percentage |
-| `test_email_verification.py` | 17 | OTP generation, expiration, brute-force lockout |
-| `test_api.py` | 44 | HTTP routing, CSRF, rate-limiting, GDPR export/deletion, auth lockout |
+| File | Count | Status | Covers |
+|---|---|---|---|
+| `test_safety_layer.py` | 20 | Passed | Cardiac, stroke, respiratory, poisoning, bleeding, mental health crisis detection; bidirectional output moderation |
+| `test_triage_rules.py` | 15 | Passed | Deterministic ruleset validation across rule IDs, urgency tiers (`emergency`, `urgent`, `self_care`), versioning |
+| `test_symptom_checker.py` | 16 | Passed | Severity ranking, condition match percentages, emergency detection in symptom descriptions |
+| `test_email_verification.py` | 18 | Passed | 6-digit OTP generation, expiry, brute-force lockout, password reset flows |
+| `test_api.py` | 44 | Passed | HTTP routing, CSRF protection, sliding-window rate-limiting, GDPR export/deletion, session isolation, auth lockout |
+| `test_e2e_browser.py` | 5 | Passed | Full browser flows: auth & health goals, chat & feedback, SSE streaming completion, clinician triage queue, GDPR account deletion |
 
-> Test counts were verified with `pytest --collect-only`. The badge reflects collected tests; CI run results are in the GitHub Actions workflow linked at the top.
+> All 118 tests verified passing locally via `pytest` (including Playwright E2E browser tests).
 
 ---
 

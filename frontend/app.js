@@ -244,6 +244,13 @@ export function setActiveTab(tabId) {
   document.querySelectorAll(".tab-content").forEach((content) => {
     content.classList.toggle("active", content.id === tabId);
   });
+  const morePanel = document.getElementById("sidebarMorePanel");
+  const moreToggle = document.getElementById("sidebarMoreToggle");
+  if (morePanel && morePanel.querySelector(`.tab-btn[data-tab="${tabId}"]`)) {
+    morePanel.classList.add("open");
+    morePanel.setAttribute("aria-hidden", "false");
+    if (moreToggle) moreToggle.setAttribute("aria-expanded", "true");
+  }
 }
 
 // ── Particles Background ─────────────────────────────────────────
@@ -403,6 +410,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (btn.dataset.tab === "history-tab") loadChatHistory();
     });
   });
+
+  const sidebarMoreToggle = document.getElementById("sidebarMoreToggle");
+  const sidebarMorePanel = document.getElementById("sidebarMorePanel");
+  if (sidebarMoreToggle && sidebarMorePanel) {
+    sidebarMoreToggle.addEventListener("click", () => {
+      const isOpen = sidebarMorePanel.classList.toggle("open");
+      sidebarMoreToggle.setAttribute("aria-expanded", String(isOpen));
+      sidebarMorePanel.setAttribute("aria-hidden", String(!isOpen));
+    });
+  }
 
   // Symptom checker
   const addSymptomBtn = document.getElementById("addSymptomBtn");

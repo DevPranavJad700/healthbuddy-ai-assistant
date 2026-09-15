@@ -228,6 +228,25 @@ export function initOnboardingModal() {
       hideOnboardingModal();
     }
   });
+
+  const wizardSkipBtn = document.getElementById("wizardSkipBtn");
+  const wizardNextBtn = document.getElementById("wizardNextBtn");
+  const wizardBackBtn = document.getElementById("wizardBackBtn");
+  const wizardOverlay = document.getElementById("profileWizardModal");
+
+  if (wizardSkipBtn) wizardSkipBtn.addEventListener("click", hideProfileWizard);
+  if (wizardBackBtn) wizardBackBtn.addEventListener("click", () => renderWizardStep(_wizardStep - 1));
+  if (wizardNextBtn) {
+    wizardNextBtn.addEventListener("click", () => {
+      if (_wizardStep < 3) renderWizardStep(_wizardStep + 1);
+      else wizardFinish();
+    });
+  }
+  if (wizardOverlay) {
+    wizardOverlay.addEventListener("click", (e) => {
+      if (e.target === wizardOverlay) hideProfileWizard();
+    });
+  }
 }
 
 // ── Multi-Step Profile Wizard ─────────────────────────────────────
