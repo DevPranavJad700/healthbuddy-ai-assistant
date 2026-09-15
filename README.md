@@ -204,10 +204,11 @@ Everything else in `.env.development.example` works as-is for local development 
 
 ### 5. (First run only) Index the Knowledge Base
 ```bash
-python scripts/ingest_knowledge_base.py
+python scripts/reindex_knowledge_base.py
 ```
 
-> **Note:** This downloads the embedding model (`all-MiniLM-L6-v2`, ~90 MB) on first run and indexes the 22 knowledge files into ChromaDB. Subsequent starts skip this step.
+> **Note:** On first run this downloads the embedding model (`all-MiniLM-L6-v2`, ~90 MB) and indexes the 22 knowledge files into ChromaDB. Subsequent starts skip this step because the vectors are persisted in `data/chroma_db/`. If you add new knowledge files later, re-run this script to update the index.
+
 
 ### 6. Start Development Server
 ```bash
