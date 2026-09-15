@@ -12,58 +12,65 @@ The triage engine (`app/services/triage_rules.py`) is a set of versioned regex p
 assign an urgency level — `emergency`, `urgent`, or `self_care` — to every conversation turn.
 It runs in under a millisecond. A trained classifier could not.
 
-The core reason I went deterministic here is that **a safety-critical path cannot tolerate
-hallucinated decisions**. If I handed triage to an LLM or a probabilistic classifier, I would
-have no guarantee that a query containing "chest pain" would ever be classified as an emergency.
-The model might weight context, tone, or surrounding text in ways that suppress the flag. For a
-cardiac event, that kind of false negative isn't a degraded user experience — it's a potentially
-fatal latency. I was not willing to accept that.
+The first reason I went deterministic is straightforward: **I had no labeled clinical triage
+dataset to train a classifier on**. Building a reliable ML triage model requires annotated
+examples of real patient queries with ground-truth severity labels — ideally reviewed by
+clinicians. I didn't have that, and I wasn't willing to train on a proxy dataset and claim
+clinical validity I couldn't demonstrate. A rule-based system with clearly stated coverage limits
+is more honest than a model whose failure modes are opaque.
 
-The secondary reason is interpretability. A clinician or a legal reviewer can read the ruleset in
-`triage_rules.py` and understand exactly what triggers an escalation, what the escalation action
-is, and which ruleset version produced it. Every response carries the version string
-`clinician-v1.1`. You cannot hand that document to a clinician and ask them to audit a neural
-network.
+The second reason is that in a safety-critical context, **auditable and explainable matters more
+than raw accuracy**. A clinician or a legal reviewer can open `triage_rules.py` and read exactly
+which pattern triggered an escalation, what the prescribed action is, and which ruleset version
+produced the result. Every response carries the version string `clinician-v1.1`. You cannot hand
+that transparency to a neural network — if a classifier fires on a false positive or misses a
+cardiac alert, the only explanation is "the model assigned a low probability." That is not a
+defensible answer in a health context.
 
-I'm aware of the tradeoffs. Regex patterns miss paraphrases — someone describing a cardiac
-emergency as "my left arm feels like it's been run over by a truck and I can't catch my breath"
-will not trigger `EMERG_CARDIO_RESP`. The safety layer (`safety_layer.py`) partially mitigates
-this with a broader and overlapping keyword set that runs in parallel. But I would not claim the
-coverage is complete. A production medical system would layer this with a fine-tuned intent
-classifier trained on actual crisis conversation datasets; for a portfolio application where I had
-neither the dataset nor the clinical validation infrastructure, a transparent, auditable ruleset
-was the responsible choice.
+The third reason is determinism itself: for any given input, the triage result is always the
+same. An LLM or probabilistic classifier can weight surrounding context, phrasing, and tone in
+ways that suppress a safety flag. For a cardiac event, a false negative isn't a degraded user
+experience — it's potentially fatal latency. I was not willing to trade that guarantee for
+higher F1 on a benchmark.
+
+I'm aware of the coverage tradeoff. Regex patterns miss paraphrases — someone describing a
+cardiac emergency as "my left arm feels like it's been run over by a truck and I can't catch my
+breath" will not trigger `EMERG_CARDIO_RESP`. The safety layer (`safety_layer.py`) partially
+mitigates this with a broader overlapping keyword set. But I would not claim the coverage is
+complete. A production medical system would layer this with a fine-tuned intent classifier
+trained on real crisis conversation datasets; the deterministic ruleset would still run first as
+a guaranteed floor.
 
 ---
 
 ## 2. How the Emergency Archetypes Were Chosen
 
 The six archetypes in `safety_layer.py` — cardiac arrest, stroke, respiratory failure, mental
-health/suicide crisis, acute poisoning, and severe bleeding — are not arbitrary. I started from
-the WHO and NIH literature on the top causes of preventable death where **time-to-intervention is
-the primary determinant of outcome**. These categories map directly to the "golden hour" and
-"chain of survival" concepts in emergency medicine: each one has a well-established window within
-which calling emergency services changes the outcome from death or permanent disability to
-survival.
+health/suicide crisis, acute poisoning, and severe bleeding — evolved from WHO and NIH emergency
+categorisation guidelines, adapted to this project's scope. They were not invented from scratch;
+they represent the categories where time-to-intervention is the primary determinant of outcome
+and where a layperson is most likely to mishandle the situation as a "Google it" problem rather
+than calling emergency services immediately.
 
-For cardiac events, that window is minutes — the evidence on bystander CPR and defibrillation
-response times is clear. For stroke, the tPA treatment window is 3–4.5 hours from symptom onset,
-which means the moment a user types "face drooping and slurred speech," the clock is already
-running. For poisoning, Poison Control's advice changes depending on the substance and time since
-ingestion — but the first action is always to call, not to wait and see.
+These categories map directly to the "golden hour" and "chain of survival" concepts in emergency
+medicine. For cardiac events, the intervention window is minutes — the evidence on bystander CPR
+and defibrillation response times is unambiguous. For stroke, the tPA treatment window is
+3–4.5 hours from symptom onset, which means the moment a user types "face drooping and slurred
+speech," the clock is already running. For poisoning, Poison Control's advice varies by substance
+and time since ingestion — but the first action is always to call, not to wait and see.
 
-Mental health crisis was treated as equally critical. Early chatbot safety research (before
+Mental health crisis was treated as equally time-sensitive. Early chatbot safety research (before
 ChatGPT-era systems) documented cases where conversational AI engaged with suicidal ideation as
 though it were a general-topic query. I did not want to build another system that does that. The
-crisis archetype fires before any RAG or LLM call is made; the user gets the Suicide Prevention
-Lifeline numbers immediately, not as an afterthought at the bottom of a generated response.
+crisis archetype fires before any RAG or LLM call is made; the user receives the Suicide
+Prevention Lifeline numbers immediately, not as an afterthought appended to a generated response.
 
-The set is deliberately narrow — six archetypes instead of twenty — because I wanted high
-precision on the patterns I included rather than noisy recall across a long list. A false positive
-(showing an emergency overlay for a non-emergency) erodes trust and trains users to dismiss the
-overlay; a false negative can cost a life. I biased toward precision with the understanding that
-the broader safety layer keyword set (`HARMFUL_PATTERNS`, `NON_DIAGNOSTIC_BOUNDARY_PATTERNS`)
-catches a wider range of concerning content without triggering the full emergency overlay.
+The set is deliberately narrow — six archetypes rather than twenty — because I prioritised
+precision over recall on the patterns I included. A false positive (showing an emergency overlay
+for a non-emergency query) erodes user trust and trains people to dismiss the overlay; a false
+negative can cost a life. I biased toward precision with the understanding that the broader safety
+layer keyword sets (`HARMFUL_PATTERNS`, `NON_DIAGNOSTIC_BOUNDARY_PATTERNS`) catch a wider range
+of concerning content without triggering the full emergency overlay.
 
 ---
 
