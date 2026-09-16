@@ -188,7 +188,7 @@ export function setAuthModalOpen(isOpen) {
 }
 
 export function setProfileOnboardingOpen(isOpen) {
-  const modal = document.getElementById("onboardingModal");
+  const modal = document.getElementById("profileOnboardingModal") || document.getElementById("onboardingModal");
   setModalOpenWithFocus(modal, isOpen);
 }
 

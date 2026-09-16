@@ -279,6 +279,22 @@ export function initOnboardingModal() {
       if (e.target === wizardOverlay) hideProfileWizard();
     });
   }
+
+  // Goal chips selection in wizard
+  document.querySelectorAll(".wizard-goal-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      chip.classList.toggle("active");
+      const goal = chip.dataset.goal || chip.textContent.trim();
+      if (chip.classList.contains("active")) {
+        if (!_wizardGoals.includes(goal)) _wizardGoals.push(goal);
+      } else {
+        _wizardGoals = _wizardGoals.filter((g) => g !== goal);
+      }
+    });
+  });
+
+  makeTagInput("wizardConditionInput", "wizardConditionsList", _wizardConditions);
+  makeTagInput("wizardAllergyInput", "wizardAllergiesList", _wizardAllergies);
 }
 
 // ── Multi-Step Profile Wizard ─────────────────────────────────────

@@ -5,7 +5,10 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 from datetime import datetime
+
+sys.path.insert(0, ".")
 
 import requests
 
@@ -128,7 +131,9 @@ test(f"Profile: username={d.get('username')}", d.get("username") == username)
 test(f"Profile: age={d.get('age')}", d.get("age") == 25)
 
 # 8. Analytics
-r = safe_request("GET", "/api/v1/analytics/dashboard")
+from app.core.security import create_access_token
+admin_token = create_access_token({"sub": "admin", "role": "admin"})
+r = safe_request("GET", "/api/v1/analytics/dashboard", headers={"Authorization": f"Bearer {admin_token}"})
 if r is None:
     raise SystemExit(1)
 d = safe_json(r)

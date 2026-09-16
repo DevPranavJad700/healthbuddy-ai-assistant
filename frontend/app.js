@@ -30,6 +30,7 @@ import {
   setAuthMode,
   setAuthModalOpen,
   setProfileOnboardingOpen,
+  submitProfileOnboarding,
   setDangerZoneOpen,
   loadAuthFormPreferences,
   saveAuthFormPreferences,
@@ -588,7 +589,46 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (e.target === authModal) setAuthModalOpen(false);
     });
   }
-  if (authLogoutBtn) authLogoutBtn.addEventListener("click", handleLogout);
+  const openSignInModal = () => {
+    setAuthMode("login");
+    setAuthModalOpen(true);
+    authUsernameInput?.focus();
+  };
+
+  const sidebarSignInBtn = document.getElementById("sidebarSignInBtn");
+  const sidebarSignInNudge = document.getElementById("sidebarSignInNudge");
+  const historySignInBtn = document.getElementById("historySignInBtn");
+  const goalsSignInBtn = document.getElementById("goalsSignInBtn");
+
+  if (sidebarSignInBtn) {
+    sidebarSignInBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openSignInModal();
+    });
+  }
+  if (sidebarSignInNudge) sidebarSignInNudge.addEventListener("click", openSignInModal);
+  if (historySignInBtn) historySignInBtn.addEventListener("click", openSignInModal);
+  if (goalsSignInBtn) goalsSignInBtn.addEventListener("click", openSignInModal);
+
+  const authGoogleBtn = document.getElementById("authGoogleBtn");
+  if (authGoogleBtn) {
+    authGoogleBtn.addEventListener("click", () => {
+      window.location.href = API.authGoogleStart;
+    });
+  }
+
+  const authForgotBtn = document.getElementById("authForgotBtn");
+  if (authForgotBtn) {
+    authForgotBtn.addEventListener("click", () => {
+      const email = prompt("Enter your account email to receive a password reset link:", authEmailInput?.value || "");
+      if (email && email.includes("@")) {
+        showToast("Password reset instructions sent to " + email, "info");
+      } else if (email !== null) {
+        showToast("Please enter a valid email address.", "error");
+      }
+    });
+  }
+
   if (authModeSignInBtn) {
     authModeSignInBtn.addEventListener("click", () => {
       setAuthMode("login");
@@ -611,6 +651,125 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (authRememberMe) authRememberMe.addEventListener("change", saveAuthFormPreferences);
   if (authUsernameInput) authUsernameInput.addEventListener("input", saveAuthFormPreferences);
   if (authEmailInput) authEmailInput.addEventListener("input", saveAuthFormPreferences);
+
+  // Header Settings Dropdown Menu
+  const headerSettingsBtn = document.getElementById("headerSettingsBtn");
+  const headerSettingsMenu = document.getElementById("headerSettingsMenu");
+  if (headerSettingsBtn && headerSettingsMenu) {
+    headerSettingsBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isHidden = headerSettingsMenu.classList.toggle("hidden");
+      headerSettingsBtn.setAttribute("aria-expanded", String(!isHidden));
+    });
+    document.addEventListener("click", (e) => {
+      if (!headerSettingsMenu.contains(e.target) && !headerSettingsBtn.contains(e.target)) {
+        headerSettingsMenu.classList.add("hidden");
+        headerSettingsBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+    headerSettingsMenu.addEventListener("click", (e) => {
+      if (e.target.closest(".hsm-item")) {
+        headerSettingsMenu.classList.add("hidden");
+        headerSettingsBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // Emergency Help Banner, Calling & Dismissal
+  const infoRibbon = document.getElementById("infoRibbon");
+  const infoRibbonClose = document.getElementById("infoRibbonClose");
+  const emergencyCallBtn = document.getElementById("emergencyCallBtn");
+
+  if (infoRibbon && sessionStorage.getItem("healthbuddy.infoRibbonDismissed") === "true") {
+    infoRibbon.classList.add("hidden");
+  }
+
+  if (infoRibbonClose && infoRibbon) {
+    infoRibbonClose.addEventListener("click", (e) => {
+      e.stopPropagation();
+      infoRibbon.classList.add("hidden");
+      sessionStorage.setItem("healthbuddy.infoRibbonDismissed", "true");
+      showToast("Emergency ribbon dismissed for this session.", "info");
+    });
+  }
+
+  const handleEmergencyCall = (e) => {
+    e?.preventDefault?.();
+    const country = document.getElementById("emergencyCountrySelect")?.value || "us";
+    const emergencyMap = { us: "911", eu: "112", uk: "999", au: "000", in: "112" };
+    const num = emergencyMap[country] || "911";
+    showToast(`Connecting to emergency services (${num}). If in severe distress, dial ${num} immediately.`, "warning", 6000);
+    window.location.href = `tel:${num}`;
+  };
+
+  if (emergencyCallBtn) emergencyCallBtn.addEventListener("click", handleEmergencyCall);
+  const emergencyHelpLabel = document.getElementById("emergencyHelpLabel");
+  const emergencyNumberText = document.getElementById("emergencyNumberText");
+  if (emergencyHelpLabel) emergencyHelpLabel.addEventListener("click", handleEmergencyCall);
+  if (emergencyNumberText) emergencyNumberText.addEventListener("click", handleEmergencyCall);
+
+  // Chat Hint Row (Consent & My Data)
+  const openConsentCenterChatBtn = document.getElementById("openConsentCenterChatBtn");
+  if (openConsentCenterChatBtn) {
+    openConsentCenterChatBtn.addEventListener("click", () => {
+      setConsentCenterOpen(true);
+      loadConsentCenterState();
+    });
+  }
+  const openPrivacyCenterChatBtn = document.getElementById("openPrivacyCenterChatBtn");
+  if (openPrivacyCenterChatBtn) {
+    openPrivacyCenterChatBtn.addEventListener("click", () => {
+      setPrivacyCenterOpen(true);
+      addPrivacyAuditEvent("Privacy center opened", "info", "From chat hint row");
+      loadPrivacyCenterData();
+    });
+  }
+
+  // Connection Banner Retry Button
+  const retryLastBtn = document.getElementById("retryLastBtn");
+  if (retryLastBtn) {
+    retryLastBtn.addEventListener("click", () => {
+      sendMessage();
+    });
+  }
+
+  // Care Setup Path Dismiss Button
+  const dismissOnboardingBtn = document.getElementById("dismissOnboardingBtn");
+  if (dismissOnboardingBtn) {
+    dismissOnboardingBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card = document.getElementById("onboardingCard");
+      if (card) card.classList.add("hidden");
+      localStorage.setItem("healthbuddy.onboardingDismissed", "1");
+      showToast("Care Setup Path dismissed.", "info");
+    });
+  }
+
+  // Profile Onboarding Modal Controls
+  const closeOnboardingModalBtn = document.getElementById("closeOnboardingModalBtn");
+  if (closeOnboardingModalBtn) {
+    closeOnboardingModalBtn.addEventListener("click", () => {
+      setProfileOnboardingOpen(false);
+    });
+  }
+  const onboardingProfileForm = document.getElementById("onboardingProfileForm");
+  if (onboardingProfileForm) {
+    onboardingProfileForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      submitProfileOnboarding();
+    });
+  }
+  const onboardingSaveBtn = document.getElementById("onboardingSaveBtn");
+  if (onboardingSaveBtn && onboardingProfileForm) {
+    onboardingSaveBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      submitProfileOnboarding();
+    });
+  }
+
+  document.querySelectorAll("#authLogoutBtn, .auth-logout-btn, .sidebar-acct-btn[title='Sign Out']").forEach((btn) => {
+    btn.addEventListener("click", handleLogout);
+  });
 
   // Danger Zone & GDPR
   const dangerZoneToggleBtn = document.getElementById("dangerZoneToggleBtn");

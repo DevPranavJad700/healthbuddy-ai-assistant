@@ -5277,12 +5277,41 @@ body.hb-reduce-motion *::after {
   flex-shrink: 0;
 }
 
-.info-ribbon-emergency svg {
-  opacity: 0.75;
+.emergency-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.32);
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: #fecaca;
+  font-size: 0.72rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.emergency-call-btn:hover {
+  background: rgba(239, 68, 68, 0.26);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+}
+
+.emergency-call-btn:active {
+  transform: translateY(0);
+}
+
+.emergency-call-btn svg {
+  color: #f87171;
   flex-shrink: 0;
 }
 
-.info-ribbon-emergency strong {
+.emergency-call-btn strong {
   color: #fecaca;
   font-weight: 600;
 }
@@ -5445,7 +5474,7 @@ body.hb-reduce-motion *::after {
   border-radius: 12px;
   transition: border-color 0.2s ease;
 }
-.sidebar-signin-nudge:hover { border-color: rgba(99,102,241,0.3); }
+.sidebar-signin-nudge:hover { border-color: rgba(99,102,241,0.3); cursor: pointer; }
 .ssn-avatar {
   width: 36px; height: 36px; border-radius: 10px;
   background: rgba(99,102,241,0.1);

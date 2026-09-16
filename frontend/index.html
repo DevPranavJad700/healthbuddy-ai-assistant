@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/static/styles.css?v=48" />
+    <link rel="stylesheet" href="/static/styles.css?v=49" />
     <link rel="manifest" href="/static/manifest.json" />
     <meta name="theme-color" content="#8b5cf6" />
     <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
@@ -852,9 +852,11 @@
           <!-- Emergency and privacy banner -->
           <div class="info-ribbon" id="infoRibbon" role="alert">
             <div class="info-ribbon-emergency">
-              <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-              <strong id="emergencyHelpLabel">Emergency:</strong>
-              <span id="emergencyNumberText">US/Canada: 911</span>
+              <button class="emergency-call-btn" id="emergencyCallBtn" type="button" title="Call Emergency Services Immediately" aria-label="Call emergency services immediately">
+                <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <strong id="emergencyHelpLabel">Emergency:</strong>
+                <span id="emergencyNumberText">US/Canada: 911</span>
+              </button>
               <select id="emergencyCountrySelect" class="ribbon-country-select" aria-label="Select country">
                 <option value="us" selected>US/Canada</option>
                 <option value="eu">EU</option>
@@ -868,7 +870,7 @@
               <svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               <span id="privacyPromiseCopy">Your data stays private. We never sell it.</span>
             </span>
-            <button class="info-ribbon-close" id="infoRibbonClose" aria-label="Dismiss" type="button">
+            <button class="info-ribbon-close" id="infoRibbonClose" aria-label="Dismiss emergency banner" title="Dismiss emergency ribbon" type="button">
               <svg width="12" height="12" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
           </div>
@@ -1445,7 +1447,7 @@
 
     <div
       class="shortcuts-modal hidden"
-      id="onboardingModal"
+      id="profileOnboardingModal"
       role="dialog"
       aria-modal="true"
       aria-labelledby="onboardingModalTitle"
@@ -1755,7 +1757,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="/static/liquid-theme.js?v=3"></script>
-    <script type="module" src="/static/app.js?v=48"></script>
+    <script type="module" src="/static/app.js?v=49"></script>
 
     <!-- GSAP Animation Layer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
