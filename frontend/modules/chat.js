@@ -53,7 +53,7 @@ export function writeLocalHistory(sessions) {
   localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify(trimmed));
 }
 
-export function saveLocalConversation(sessionId, userMessage, botData) {
+export function saveLocalConversation(sessionId, userMessage, botData, imageData = null, imageType = null) {
   const now = new Date().toISOString();
   const sessions = readLocalHistory();
   let session = sessions.find((item) => item.session_id === sessionId);
@@ -70,7 +70,13 @@ export function saveLocalConversation(sessionId, userMessage, botData) {
 
   session.title = session.title || userMessage.slice(0, 40);
   session.timestamp = botData.timestamp || now;
-  session.messages.push({ role: "user", content: userMessage, timestamp: now });
+  session.messages.push({
+    role: "user",
+    content: userMessage,
+    timestamp: now,
+    image_data: imageData || null,
+    image_type: imageType || null,
+  });
   session.messages.push({
     role: "assistant",
     content: botData.response,
@@ -301,7 +307,9 @@ export async function appendMessage(
   stream = true,
   parseMarkdown = true,
   trustData = null,
-  fallbackState = null
+  fallbackState = null,
+  imageData = null,
+  imageType = null
 ) {
   const messagesList = document.getElementById("messagesList");
   const messagesContainer = document.getElementById("messagesContainer");
@@ -388,7 +396,15 @@ export async function appendMessage(
     </div>`;
   }
 
-  div.innerHTML = `<div class="message-avatar">${avatar}</div><div class="message-content"><div class="message-bubble"></div>${actionBar}${extra}<div class="message-time">${time}</div></div>`;
+  let imageHtml = "";
+  if (role === "user" && imageData) {
+    const badge = imageType
+      ? `<span class="msg-attached-badge">${esc(imageType.replace(/_/g, " ").toUpperCase())}</span>`
+      : "";
+    imageHtml = `<div class="msg-attached-image"><img src="${imageData}" alt="Attached clinical image" />${badge}</div>`;
+  }
+
+  div.innerHTML = `<div class="message-avatar">${avatar}</div><div class="message-content">${imageHtml}<div class="message-bubble"></div>${actionBar}${extra}<div class="message-time">${time}</div></div>`;
   messagesList.appendChild(div);
 
   const feedbackBox = div.querySelector(".feedback-box");
@@ -470,18 +486,40 @@ export async function sendMessage(msgOverride = null) {
   const messagesContainer = document.getElementById("messagesContainer");
 
   const msg = (msgOverride !== null ? msgOverride : messageInput?.value || "").trim();
-  if (!msg || state.isLoading) return;
+  const attachedImage = window.__attachedImageData || state.attachedImage?.data || null;
+  const attachedImageType = window.__attachedImageType || state.attachedImage?.type || "general";
+
+  if ((!msg && !attachedImage) || state.isLoading) return;
+
+  const effectiveMsg = msg || (attachedImageType === "rash"
+    ? "Please analyze this skin lesion / rash photo."
+    : attachedImageType === "medication_label"
+    ? "Please read and explain this medication label."
+    : attachedImageType === "lab_report"
+    ? "Please interpret this lab report / blood test."
+    : "Please analyze this medical image.");
 
   let sendAsGuest = false;
 
   if (welcomeScreen) welcomeScreen.classList.add("hidden");
-  appendMessage("user", msg);
+  appendMessage("user", effectiveMsg, [], null, null, null, false, true, null, null, attachedImage, attachedImageType);
+
   if (messageInput) {
     messageInput.value = "";
     messageInput.disabled = true;
     localStorage.removeItem(MESSAGE_DRAFT_KEY);
     autoResize(messageInput);
   }
+
+  // Clear attached image state
+  window.__attachedImageData = null;
+  window.__attachedImageType = null;
+  if (state.attachedImage) state.attachedImage = null;
+  const preview = document.getElementById("imagePreviewContainer");
+  if (preview) preview.classList.add("hidden");
+  const fileInput = document.getElementById("imageInput");
+  if (fileInput) fileInput.value = "";
+
   if (sendButton) sendButton.disabled = true;
 
   const typing = showTyping();
@@ -489,13 +527,17 @@ export async function sendMessage(msgOverride = null) {
 
   try {
     const payload = {
-      message: msg,
+      message: effectiveMsg,
       use_rag: true,
       temperature: 0.7,
       preferred_language: state.uiLanguage || "en",
     };
     if (state.currentSessionId) {
       payload.session_id = state.currentSessionId;
+    }
+    if (attachedImage) {
+      payload.image_data = attachedImage;
+      payload.image_type = attachedImageType;
     }
 
     let r = await fetch(API.chatStream, {
@@ -627,8 +669,10 @@ export async function sendMessage(msgOverride = null) {
 
     saveLocalConversation(
       state.currentSessionId || data.session_id || "default",
-      msg,
-      data
+      effectiveMsg,
+      data,
+      attachedImage,
+      attachedImageType
     );
     loadSessions();
 
@@ -704,6 +748,13 @@ export function startNewChat() {
   const welcomeScreen = document.getElementById("welcomeScreen");
   if (messagesList) messagesList.innerHTML = "";
   if (welcomeScreen) welcomeScreen.classList.remove("hidden");
+  window.__attachedImageData = null;
+  window.__attachedImageType = null;
+  if (state.attachedImage) state.attachedImage = null;
+  const preview = document.getElementById("imagePreviewContainer");
+  if (preview) preview.classList.add("hidden");
+  const fileInput = document.getElementById("imageInput");
+  if (fileInput) fileInput.value = "";
 }
 
 export async function loadSessions() {
@@ -779,7 +830,10 @@ export async function loadSession(sessionId) {
           next_actions: Array.isArray(msg.next_actions) ? msg.next_actions : [],
           citation_quality: msg.citation_quality || null,
           escalation_action: msg.escalation_action || null,
-        }
+        },
+        null,
+        msg.image_data || null,
+        msg.image_type || null
       );
     }
   } catch (err) {

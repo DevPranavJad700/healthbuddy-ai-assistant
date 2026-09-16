@@ -40,6 +40,7 @@ from app.services.vector_store import vector_store_service
 from app.services.rag_service import rag_service
 from app.services.document_processor import DocumentProcessor
 from app.services.llm_provider import check_provider_connectivity
+from app.services.redis_client import get_redis_status
 
 
 # ==========================================
@@ -462,6 +463,7 @@ async def health_check() -> HealthCheckResponse:
         llm_model=settings.llm_model,
         documents_loaded=vector_store_service.get_total_chunks(),
         vector_store_ready=vector_store_service.is_ready(),
+        redis_status=get_redis_status(),
     )
 
 

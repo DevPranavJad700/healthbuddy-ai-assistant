@@ -4187,6 +4187,130 @@ body.hb-reduce-motion *::after {
 }
 
 /* ==========================================
+   NEW: Image Upload & Multimodal Vision
+   ========================================== */
+.image-upload-btn {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.image-upload-btn:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.image-upload-btn.has-image {
+  color: #a78bfa;
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.image-preview-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: rgba(18, 24, 38, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-preview-container.hidden {
+  display: none !important;
+}
+
+.image-preview-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.image-preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.image-preview-name {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.image-category-select {
+  font-size: 0.68rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.image-remove-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.image-remove-btn:hover {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.msg-attached-image {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.msg-attached-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.msg-attached-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(139, 92, 246, 0.25);
+  color: #c4b5fd;
+  margin-top: 4px;
+}
+
+/* ==========================================
    NEW: Emergency Alert
    ========================================== */
 .emergency-alert {

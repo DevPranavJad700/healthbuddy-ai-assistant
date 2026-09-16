@@ -119,6 +119,54 @@ async def chat_stream(
             request.preferred_language,
         )
 
+        if request.image_data:
+            async def vision_event_generator():
+                import json
+                from app.services.vision_service import vision_service
+                full_text = ""
+                try:
+                    async for token in vision_service.stream_medical_image_analysis(
+                        image_data=request.image_data,
+                        user_query=request.message,
+                        image_type=request.image_type or "general",
+                    ):
+                        full_text += token
+                        yield f"event: token\ndata: {json.dumps(token)}\n\n"
+
+                    elapsed_ms = (time.time() - start_time) * 1000
+                    model_name = "llama-3.2-11b-vision" if settings.groq_api_key else ("gpt-4o-mini" if settings.openai_api_key else "clinical-vision-heuristic")
+
+                    analytics_service.log_chat(
+                        db=db,
+                        session_id=session_id,
+                        question=f"[Attached {request.image_type or 'medical image'}] {request.message}",
+                        response=full_text,
+                        model_used=model_name,
+                        provider=settings.llm_provider,
+                        rag_enabled=False,
+                        response_time_ms=elapsed_ms,
+                        user_id=user.get("user_id") if user else None,
+                    )
+
+                    done_payload = {
+                        "model_used": model_name,
+                        "provider": settings.llm_provider,
+                        "session_id": session_id,
+                        "triage_level": "self_care",
+                        "triage_rule_id": "MULTIMODAL_VISION_SCREENING",
+                        "urgency_explanation": "Multimodal medical image evaluation completed with clinical safety advisory.",
+                        "next_actions": [
+                            "Review findings with a licensed healthcare practitioner or dermatologist.",
+                            "Seek immediate emergency care if acute symptoms or swelling worsen.",
+                        ],
+                    }
+                    yield f"event: done\ndata: {json.dumps(done_payload)}\n\n"
+                except Exception as e:
+                    logger.error(f"Vision streaming error: {e}", exc_info=True)
+                    yield f"event: error\ndata: {json.dumps(str(e))}\n\n"
+
+            return StreamingResponse(vision_event_generator(), media_type="text/event-stream")
+
         async def event_generator():
             try:
                 import json
@@ -208,6 +256,43 @@ async def chat(
             request.personalization_overrides,
             request.preferred_language,
         )
+
+        if request.image_data:
+            from app.services.vision_service import vision_service
+            analysis = await vision_service.analyze_medical_image(
+                image_data=request.image_data,
+                user_query=request.message,
+                image_type=request.image_type or "general",
+            )
+            elapsed_ms = (time.time() - start_time) * 1000
+            model_name = "llama-3.2-11b-vision" if settings.groq_api_key else ("gpt-4o-mini" if settings.openai_api_key else "clinical-vision-heuristic")
+
+            analytics_service.log_chat(
+                db=db,
+                session_id=session_id,
+                question=f"[Attached {request.image_type or 'medical image'}] {request.message}",
+                response=analysis,
+                model_used=model_name,
+                provider=settings.llm_provider,
+                rag_enabled=False,
+                response_time_ms=elapsed_ms,
+                user_id=user.get("user_id") if user else None,
+            )
+
+            return ChatResponse(
+                response=analysis,
+                sources=[],
+                model_used=model_name,
+                provider=settings.llm_provider,
+                session_id=session_id,
+                triage_level="self_care",
+                triage_rule_id="MULTIMODAL_VISION_SCREENING",
+                urgency_explanation="Multimodal medical image evaluation completed with clinical safety advisory.",
+                next_actions=[
+                    "Review detailed findings with a licensed healthcare practitioner.",
+                    "Seek immediate emergency care if acute symptoms worsen.",
+                ],
+            )
 
         response = await rag_service.query(
             question=request.message,

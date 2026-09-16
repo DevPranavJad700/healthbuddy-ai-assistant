@@ -22,6 +22,7 @@ import {
   esc,
   showToast,
   autoResize,
+  parseApiError,
 } from "./modules/utils.js";
 
 import {
@@ -49,6 +50,7 @@ import {
   setPrivacyCenterOpen,
   addPrivacyAuditEvent,
   onAuthChange,
+  attemptTokenRefresh,
 } from "./modules/auth.js";
 
 import {
@@ -130,6 +132,53 @@ window.maybeShowOnboardingModal = maybeShowOnboardingModal;
 window.maybeShowProfileWizard = maybeShowProfileWizard;
 window.updateOnboardingChecklist = updateOnboardingChecklist;
 window.openConsentCenterWithContext = openConsentCenterWithContext;
+
+export async function exportFhirRecord() {
+  const token = getAuthToken();
+  if (!token) {
+    showToast("Please sign in to export your verified HL7 FHIR R4 clinical record.", "info");
+    setAuthModalOpen(true);
+    return false;
+  }
+
+  try {
+    showToast("Generating HL7 FHIR R4 Bundle for EHR...", "info");
+    const endpoint = API.fhirExport
+      ? `${API.fhirExport}?download=true`
+      : `${API_BASE}/integrations/fhir/export-care-summary?download=true`;
+
+    const r = await fetch(endpoint, {
+      method: "GET",
+      headers: authHeaders(),
+    });
+
+    if (r.status === 401 && (await attemptTokenRefresh())) {
+      return exportFhirRecord();
+    }
+
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      throw new Error(parseApiError(err, "Failed to export FHIR care summary"));
+    }
+
+    const blob = await r.blob();
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "healthbuddy-fhir-r4-bundle.json";
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+
+    showToast("HL7 FHIR R4 Care Summary downloaded! (Epic & Cerner compatible)", "success");
+    return true;
+  } catch (err) {
+    showToast(err.message || "FHIR export failed", "error");
+    return false;
+  }
+}
+window.exportFhirRecord = exportFhirRecord;
 
 // ── Localization ──────────────────────────────────────────────────
 function getLanguageBundle(lang) {
@@ -390,6 +439,63 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Multimodal Medical Image Attachment
+  const imageUploadBtn = document.getElementById("imageUploadBtn");
+  const imageInput = document.getElementById("imageInput");
+  const imagePreviewContainer = document.getElementById("imagePreviewContainer");
+  const imagePreviewThumb = document.getElementById("imagePreviewThumb");
+  const imagePreviewName = document.getElementById("imagePreviewName");
+  const imageCategorySelect = document.getElementById("imageCategorySelect");
+  const imageRemoveBtn = document.getElementById("imageRemoveBtn");
+
+  if (imageUploadBtn && imageInput) {
+    imageUploadBtn.addEventListener("click", () => imageInput.click());
+    imageInput.addEventListener("change", (e) => {
+      const imgFile = e.target.files && e.target.files[0];
+      if (!imgFile) return;
+      if (imgFile.size > 5 * 1024 * 1024) {
+        showToast("Medical image must be under 5MB", "error");
+        e.target.value = "";
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (re) => {
+        const b64 = re.target.result;
+        const cat = imageCategorySelect ? imageCategorySelect.value : "general";
+        window.__attachedImageData = b64;
+        window.__attachedImageType = cat;
+        if (imagePreviewThumb) imagePreviewThumb.src = b64;
+        if (imagePreviewName) {
+          imagePreviewName.textContent =
+            imgFile.name.length > 20
+              ? imgFile.name.slice(0, 17) + "..."
+              : imgFile.name;
+        }
+        if (imagePreviewContainer) imagePreviewContainer.classList.remove("hidden");
+        if (sendBtn) sendBtn.disabled = false;
+        showToast("Medical image attached for AI vision triage.", "info");
+      };
+      reader.readAsDataURL(imgFile);
+    });
+  }
+
+  if (imageCategorySelect) {
+    imageCategorySelect.addEventListener("change", (e) => {
+      window.__attachedImageType = e.target.value;
+    });
+  }
+
+  if (imageRemoveBtn) {
+    imageRemoveBtn.addEventListener("click", () => {
+      window.__attachedImageData = null;
+      window.__attachedImageType = null;
+      if (imageInput) imageInput.value = "";
+      if (imagePreviewContainer) imagePreviewContainer.classList.add("hidden");
+      if (imagePreviewThumb) imagePreviewThumb.src = "";
+      if (sendBtn) sendBtn.disabled = !msgInput?.value.trim();
+    });
+  }
+
   // Suggestion chips
   document.querySelectorAll(".chip").forEach((chip) => {
     chip.addEventListener("click", () => {
@@ -521,6 +627,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   if (deleteMyDataBtn) deleteMyDataBtn.addEventListener("click", handleDeleteMyData);
   if (exportMyDataBtn) exportMyDataBtn.addEventListener("click", handleExportMyData);
+  const exportFhirSidebarBtn = document.getElementById("exportFhirSidebarBtn");
+  if (exportFhirSidebarBtn) exportFhirSidebarBtn.addEventListener("click", exportFhirRecord);
+  const exportFhirBtn = document.getElementById("exportFhirBtn");
+  if (exportFhirBtn) exportFhirBtn.addEventListener("click", exportFhirRecord);
   if (adminDeleteUserBtn) adminDeleteUserBtn.addEventListener("click", adminDeleteUserData);
 
   // Consent Center

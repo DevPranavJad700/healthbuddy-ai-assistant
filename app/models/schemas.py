@@ -36,6 +36,14 @@ class ChatRequest(BaseModel):
         default=None,
         description="Optional response language preference (for localization)",
     )
+    image_data: Optional[str] = Field(
+        default=None,
+        description="Base64 data URL or encoded string of medical image/document for multimodal clinical review",
+    )
+    image_type: Optional[str] = Field(
+        default=None,
+        description="Category of medical image: 'general', 'rash', 'medication_label', 'lab_report'",
+    )
 
 
 class SourceDocument(BaseModel):
@@ -153,3 +161,4 @@ class HealthCheckResponse(BaseModel):
     llm_model: str
     documents_loaded: int
     vector_store_ready: bool
+    redis_status: Optional[dict] = None

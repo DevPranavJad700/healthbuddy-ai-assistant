@@ -31,6 +31,7 @@ export const API = {
   complianceConsentMe: `${API_BASE}/compliance/consent/me`,
   complianceConsentRevoke: `${API_BASE}/compliance/consent/revoke`,
   clinicianQueue: `${API_BASE}/analytics/clinician-reviews`,
+  fhirExport: `${API_BASE}/integrations/fhir/export-care-summary`,
   health: "/api/health",
 };
 
