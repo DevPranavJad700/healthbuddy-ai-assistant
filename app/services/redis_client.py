@@ -43,8 +43,8 @@ def _get_pool():
         _redis_pool = ConnectionPool.from_url(
             settings.redis_url,
             decode_responses=True,
-            socket_connect_timeout=0.75,
-            socket_timeout=0.75,
+            socket_connect_timeout=0.3,
+            socket_timeout=0.3,
             retry_on_timeout=False,
             health_check_interval=30,
             max_connections=50,
@@ -55,12 +55,14 @@ def _get_pool():
         return None
 
 
-def get_redis():
+def get_redis(ping: bool = True):
     """Return the singleton Redis client, or None if unavailable."""
     global _redis_client, _last_connect_fail_time
     if redis is None or not settings.redis_url:
         return None
     if _redis_client is not None:
+        if not ping:
+            return _redis_client
         try:
             _redis_client.ping()
             return _redis_client
@@ -79,7 +81,8 @@ def get_redis():
 
     try:
         client = redis.Redis(connection_pool=pool)
-        client.ping()
+        if ping:
+            client.ping()
         _redis_client = client
         _last_connect_fail_time = 0.0
         logger.info("Redis connected: %s", settings.redis_url.split("@")[-1])  # hide credentials
@@ -92,7 +95,8 @@ def get_redis():
 
 
 def get_redis_status() -> dict:
-    """Return detailed health and connectivity metrics for Redis."""
+    """Return detailed health and connectivity metrics for Redis without redundant pings."""
+    global _redis_client, _last_connect_fail_time
     if redis is None or not settings.redis_url:
         return {
             "configured": False,
@@ -101,7 +105,17 @@ def get_redis_status() -> dict:
             "latency_ms": None,
         }
 
-    client = get_redis()
+    # Fast path: if already in circuit breaker cooldown, return immediately without socket wait
+    if _redis_client is None and (time.time() - _last_connect_fail_time < CONNECT_COOLDOWN_SECONDS):
+        return {
+            "configured": True,
+            "connected": False,
+            "mode": "memory_fallback",
+            "latency_ms": None,
+        }
+
+    # Fetch client without pre-ping to eliminate double-ping latency
+    client = get_redis(ping=False)
     if client is None:
         return {
             "configured": True,
@@ -130,6 +144,8 @@ def get_redis_status() -> dict:
             "latency_ms": latency_ms,
         }
     except Exception as e:
+        _redis_client = None
+        _last_connect_fail_time = time.time()
         logger.warning("Redis health check ping failed: %s", e)
         return {
             "configured": True,

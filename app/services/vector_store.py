@@ -95,6 +95,14 @@ class VectorStoreService:
             f"path: {db_path})"
         )
 
+    def reload(self):
+        """Force re-initialization of vector store and Chroma collection handle."""
+        logger.info("Reloading vector store connection...")
+        self._vectorstore = None
+        self._client = None
+        self._initialized = False
+        self.initialize()
+
     @property
     def vectorstore(self) -> Chroma:
         """Get the vector store instance."""
@@ -148,7 +156,16 @@ class VectorStoreService:
             k = settings.max_retrieval_results
 
         # Use distance scores and convert to bounded relevance to avoid model-specific warnings.
-        results = self.vectorstore.similarity_search_with_score(query, k=k)
+        try:
+            results = self.vectorstore.similarity_search_with_score(query, k=k)
+        except Exception as e:
+            err_msg = str(e).lower()
+            if "not found" in err_msg or "does not exist" in err_msg or "collection" in err_msg:
+                logger.warning("Chroma collection missing or stale (%s). Reloading vector store...", e)
+                self.reload()
+                results = self.vectorstore.similarity_search_with_score(query, k=k)
+            else:
+                raise
 
         filtered = []
         for doc, distance in results:
@@ -209,15 +226,30 @@ class VectorStoreService:
                 k=k,
                 filter={"language": language},
             )
-            lang_results = []
-            for doc, distance in lang_results_raw:
-                relevance = 1.0 / (1.0 + max(distance, 0.0))
-                if relevance >= score_threshold:
-                    doc.metadata["relevance"] = round(relevance, 4)
-                    lang_results.append(doc)
         except Exception as e:
-            logger.warning("Language-filtered search failed (%s), falling back: %s", language, e)
-            lang_results = []
+            err_msg = str(e).lower()
+            if "not found" in err_msg or "does not exist" in err_msg or "collection" in err_msg:
+                logger.warning("Chroma collection missing or stale during lang search (%s). Reloading...", e)
+                self.reload()
+                try:
+                    lang_results_raw = self.vectorstore.similarity_search_with_score(
+                        query,
+                        k=k,
+                        filter={"language": language},
+                    )
+                except Exception as inner_e:
+                    logger.warning("Language-filtered search failed after reload: %s", inner_e)
+                    lang_results_raw = []
+            else:
+                logger.warning("Language-filtered search failed (%s), falling back: %s", language, e)
+                lang_results_raw = []
+
+        lang_results = []
+        for doc, distance in lang_results_raw:
+            relevance = 1.0 / (1.0 + max(distance, 0.0))
+            if relevance >= score_threshold:
+                doc.metadata["relevance"] = round(relevance, 4)
+                lang_results.append(doc)
 
         MIN_HITS = 2
         if len(lang_results) >= MIN_HITS:
@@ -316,22 +348,32 @@ class VectorStoreService:
         try:
             collection = self._client.get_collection(settings.chroma_collection_name)
             all_docs = collection.get(include=["metadatas"])
+        except Exception as e:
+            err_msg = str(e).lower()
+            if "not found" in err_msg or "does not exist" in err_msg or "collection" in err_msg:
+                try:
+                    logger.warning("Chroma collection missing/stale in get_document_list (%s). Reloading...", e)
+                    self.reload()
+                    collection = self._client.get_collection(settings.chroma_collection_name)
+                    all_docs = collection.get(include=["metadatas"])
+                except Exception:
+                    return []
+            else:
+                return []
 
-            # Group by doc_id
-            doc_map = {}
-            for metadata in all_docs["metadatas"]:
-                doc_id = metadata.get("doc_id", "unknown")
-                if doc_id not in doc_map:
-                    doc_map[doc_id] = {
-                        "doc_id": doc_id,
-                        "filename": metadata.get("original_filename") or metadata.get("filename", "unknown"),
-                        "num_chunks": 0,
-                    }
-                doc_map[doc_id]["num_chunks"] += 1
+        # Group by doc_id
+        doc_map = {}
+        for metadata in all_docs["metadatas"]:
+            doc_id = metadata.get("doc_id", "unknown")
+            if doc_id not in doc_map:
+                doc_map[doc_id] = {
+                    "doc_id": doc_id,
+                    "filename": metadata.get("original_filename") or metadata.get("filename", "unknown"),
+                    "num_chunks": 0,
+                }
+            doc_map[doc_id]["num_chunks"] += 1
 
-            return list(doc_map.values())
-        except Exception:
-            return []
+        return list(doc_map.values())
 
     def get_total_chunks(self) -> int:
         """Get total number of chunks in the vector store."""
@@ -349,7 +391,16 @@ class VectorStoreService:
         try:
             collection = self._client.get_collection(settings.chroma_collection_name)
             return collection.count()
-        except Exception:
+        except Exception as e:
+            err_msg = str(e).lower()
+            if "not found" in err_msg or "does not exist" in err_msg or "collection" in err_msg:
+                try:
+                    logger.warning("Chroma collection missing/stale in get_total_chunks (%s). Reloading...", e)
+                    self.reload()
+                    collection = self._client.get_collection(settings.chroma_collection_name)
+                    return collection.count()
+                except Exception:
+                    return 0
             return 0
 
     def is_ready(self) -> bool:

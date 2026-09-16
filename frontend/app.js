@@ -752,6 +752,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       setProfileOnboardingOpen(false);
     });
   }
+  const profileOnboardingSkipBtn = document.getElementById("profileOnboardingSkipBtn");
+  if (profileOnboardingSkipBtn) {
+    profileOnboardingSkipBtn.addEventListener("click", () => {
+      setProfileOnboardingOpen(false);
+    });
+  }
   const onboardingProfileForm = document.getElementById("onboardingProfileForm");
   if (onboardingProfileForm) {
     onboardingProfileForm.addEventListener("submit", (e) => {

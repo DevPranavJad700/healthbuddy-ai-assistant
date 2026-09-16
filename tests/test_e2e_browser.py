@@ -89,7 +89,7 @@ def page(e2e_server):
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(viewport={"width": 1280, "height": 900})
         page = context.new_page()
-        page.goto(e2e_server, wait_until="domcontentloaded")
+        page.goto(e2e_server, wait_until="networkidle")
         page.wait_for_selector("#messageInput")
         yield page
         context.close()
@@ -108,10 +108,15 @@ def _login_or_register(page, username: str, password: str):
     page.click("#authRegisterBtn")
     page.wait_for_selector("#signedInBadge", timeout=10000)
     page.wait_for_timeout(1000)
-    skip_btn = page.locator("#wizardSkipBtn")
-    if skip_btn.count() > 0 and skip_btn.is_visible():
-        skip_btn.click()
-        page.wait_for_timeout(300)
+    page.evaluate("""() => {
+        const ob = document.getElementById("onboardingModal");
+        if (ob) { ob.style.display = "none"; ob.classList.add("hidden"); }
+        const pw = document.getElementById("profileWizardModal");
+        if (pw) { pw.classList.add("hidden"); pw.setAttribute("aria-hidden", "true"); }
+        const po = document.getElementById("profileOnboardingModal");
+        if (po) { po.classList.add("hidden"); po.setAttribute("aria-hidden", "true"); }
+    }""")
+    page.wait_for_timeout(300)
 
 
 def _grant_personalization_consent(page):

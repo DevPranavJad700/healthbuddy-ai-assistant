@@ -9,23 +9,12 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import func, desc
 
-from app.core.security import get_current_user_required
+from app.core.security import get_current_admin_required
 from app.core.database import get_db, User, ChatLog
 from app.core.logging_config import logger
 from app.services.usage_service import reset_quota, get_quota_status
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
-
-
-# ==========================================
-# Admin Auth Guard
-# ==========================================
-
-def _require_admin(user: dict = Depends(get_current_user_required)) -> dict:
-    """Dependency: raises 403 if the caller is not an admin."""
-    if user.get("role") != "admin":
-        raise HTTPException(status_code=403, detail="Admin access required.")
-    return user
 
 
 # ==========================================
@@ -37,7 +26,7 @@ async def list_users(
     page: int = Query(1, ge=1),
     page_size: int = Query(25, ge=1, le=100),
     db: Session = Depends(get_db),
-    _admin: dict = Depends(_require_admin),
+    _admin: dict = Depends(get_current_admin_required),
 ):
     """Return paginated list of all registered users."""
     offset = (page - 1) * page_size
@@ -73,7 +62,7 @@ async def list_users(
 async def suspend_user(
     user_id: int,
     db: Session = Depends(get_db),
-    admin: dict = Depends(_require_admin),
+    admin: dict = Depends(get_current_admin_required),
 ):
     """Disable a user account. The user cannot log in until reinstated."""
     user = db.query(User).filter(User.id == user_id).first()
@@ -91,7 +80,7 @@ async def suspend_user(
 async def reinstate_user(
     user_id: int,
     db: Session = Depends(get_db),
-    admin: dict = Depends(_require_admin),
+    admin: dict = Depends(get_current_admin_required),
 ):
     """Re-enable a suspended user account."""
     user = db.query(User).filter(User.id == user_id).first()
@@ -106,7 +95,7 @@ async def reinstate_user(
 @router.post("/users/{user_id}/reset-quota", summary="Reset a user's daily query quota")
 async def reset_user_quota(
     user_id: int,
-    admin: dict = Depends(_require_admin),
+    admin: dict = Depends(get_current_admin_required),
 ):
     """Manually reset a specific user's daily query count to 0."""
     reset_quota(user_id)
@@ -117,7 +106,7 @@ async def reset_user_quota(
 @router.get("/users/{user_id}/quota", summary="Check a user's current quota")
 async def get_user_quota(
     user_id: int,
-    _admin: dict = Depends(_require_admin),
+    _admin: dict = Depends(get_current_admin_required),
 ):
     return get_quota_status(user_id=user_id, is_admin=False)
 
@@ -129,7 +118,7 @@ async def get_user_quota(
 @router.get("/stats", summary="Platform-wide statistics")
 async def platform_stats(
     db: Session = Depends(get_db),
-    _admin: dict = Depends(_require_admin),
+    _admin: dict = Depends(get_current_admin_required),
 ):
     """Return high-level platform statistics."""
     total_users = db.query(func.count(User.id)).scalar() or 0
@@ -163,7 +152,7 @@ async def clinician_review_queue(
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
-    _admin: dict = Depends(_require_admin),
+    _admin: dict = Depends(get_current_admin_required),
 ):
     """Return chat logs that were flagged for clinician review."""
     offset = (page - 1) * page_size

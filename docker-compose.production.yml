@@ -68,7 +68,6 @@ services:
       - QUOTA_ENABLED=${QUOTA_ENABLED:-true}
       - MIN_USER_AGE=${MIN_USER_AGE:-18}
       - REQUIRE_TOS_ACCEPTANCE=${REQUIRE_TOS_ACCEPTANCE:-true}
-      - USE_ARQ_FOR_EMAILS=${USE_ARQ_FOR_EMAILS:-false}
     volumes:
       - app_data:/app/data
     expose:
@@ -78,27 +77,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-
-  # ==========================================
-  # ARQ Email Worker (Background Tasks)
-  # ==========================================
-  email_worker:
-    build: .
-    restart: unless-stopped
-    command: arq app.workers.email_worker.WorkerSettings
-    depends_on:
-      redis:
-        condition: service_healthy
-    environment:
-      - REDIS_URL=redis://redis:6379/0
-      - SMTP_HOST=${SMTP_HOST:-}
-      - SMTP_PORT=${SMTP_PORT:-587}
-      - SMTP_USER=${SMTP_USER:-}
-      - SMTP_PASSWORD=${SMTP_PASSWORD:-}
-      - SMTP_FROM_EMAIL=${SMTP_FROM_EMAIL:-noreply@healthbuddy.ai}
-      - ENVIRONMENT=production
-    volumes:
-      - app_data:/app/data
 
   # ==========================================
   # nginx Reverse Proxy with TLS

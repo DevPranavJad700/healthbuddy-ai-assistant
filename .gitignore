@@ -52,3 +52,7 @@ logs/
 # Backups
 backups/
 scratch/
+
+# Evaluation run outputs
+evaluation/*_results.json
+evaluation/results_live.json

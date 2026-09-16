@@ -860,20 +860,24 @@ class RAGService:
                     filename = doc.metadata.get("filename", "Unknown")
                     logger.debug(f"Chunk {i+1}: Source={filename}, Relevance={relevance}, Content Preview='{doc.page_content[:100]}...'")
 
-                sources = [
-                    SourceDocument(
-                        content=doc.page_content[:200],
-                        source=doc.metadata.get("filename", "Unknown"),
-                        page=doc.metadata.get("page"),
-                        score=doc.metadata.get("relevance"),
-                        relevance=doc.metadata.get("relevance"),
-                        authority=self._authority_from_source(doc.metadata.get("filename", "Unknown")),
-                        guideline_ref=resolve_traceability(doc.metadata.get("filename", "Unknown")).get("guideline_ref"),
-                        guideline_url=resolve_traceability(doc.metadata.get("filename", "Unknown")).get("guideline_url"),
-                        source_version=resolve_traceability(doc.metadata.get("filename", "Unknown")).get("source_version"),
+                sources = []
+                for doc in source_docs:
+                    fn = doc.metadata.get("filename", "Unknown")
+                    rel = doc.metadata.get("relevance")
+                    trace = resolve_traceability(fn)
+                    sources.append(
+                        SourceDocument(
+                            content=doc.page_content[:200],
+                            source=fn,
+                            page=doc.metadata.get("page"),
+                            score=rel,
+                            relevance=rel,
+                            authority=self._authority_from_source(fn),
+                            guideline_ref=trace.get("guideline_ref"),
+                            guideline_url=trace.get("guideline_url"),
+                            source_version=trace.get("source_version"),
+                        )
                     )
-                    for doc in source_docs
-                ]
                 sources.sort(key=lambda s: (s.relevance or 0.0), reverse=True)
 
                 # Simulate the prompt for explainability UI
