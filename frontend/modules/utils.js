@@ -16,17 +16,102 @@ export function esc(t) {
   return d.innerHTML;
 }
 
-/** Basic markdown formatting for messages */
+/** Rich clinical markdown formatting for messages */
 export function formatMsg(t) {
   if (!t) return "";
-  return t
+
+  // 1. Escape raw HTML entities
+  let s = String(t)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.*?)\*/g, "<em>$1</em>")
-    .replace(/`(.*?)`/g, "<code>$1</code>")
-    .replace(/\n/g, "<br>");
+    .replace(/>/g, "&gt;");
+
+  // 2. Fenced code blocks
+  s = s.replace(/```([a-zA-Z0-9_-]*)\n?([\s\S]*?)```/g, (_m, _lang, code) => {
+    return `<pre class="chat-code-block"><code>${code.trim()}</code></pre>`;
+  });
+
+  // 3. Inline code
+  s = s.replace(/`([^`]+)`/g, '<code class="chat-inline-code">$1</code>');
+
+  // 4. Bold text
+  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+
+  // 5. Italic text (careful not to match standalone bullet asterisks)
+  s = s.replace(/(^|[^\*])\*([^\*\s][^*]*?[^\*\s]|[^\*\s])\*(?!\*)/g, "$1<em>$2</em>");
+
+  // 6. Clinical metric highlights (e.g. 180/120 mmHg, 100.4°F, 72 bpm)
+  s = s.replace(/\b(\d{2,3}\/\d{2,3}\s*(?:mmHg|mm\s*Hg)?)\b/gi, '<span class="clinical-metric-pill">$1</span>');
+  s = s.replace(/\b(\d{2,3}(?:\.\d)?\s*°\s*[FC])\b/g, '<span class="clinical-metric-pill">$1</span>');
+  s = s.replace(/\b(\d{2,3}\s*(?:bpm|BPM))\b/g, '<span class="clinical-metric-pill">$1</span>');
+
+  // 7. Clinical urgency terms
+  s = s.replace(/\b(hypertensive emergency|seek immediate emergency care|call 911|emergency room|immediate medical attention)\b/gi, '<span class="clinical-urgency-badge">$1</span>');
+
+  // 8. Line-by-line block structure (headings, lists, callouts, paragraphs)
+  const lines = s.split("\n");
+  const out = [];
+  let inUl = false;
+  let inOl = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i].trim();
+    if (!raw) {
+      if (inUl) { out.push("</ul>"); inUl = false; }
+      if (inOl) { out.push("</ol>"); inOl = false; }
+      continue;
+    }
+
+    // Bullet list item (*, -, •)
+    const ulMatch = raw.match(/^[\*\-\•]\s+(.*)/);
+    if (ulMatch) {
+      if (!inUl) {
+        if (inOl) { out.push("</ol>"); inOl = false; }
+        out.push('<ul class="chat-bullet-list">');
+        inUl = true;
+      }
+      out.push(`<li>${ulMatch[1]}</li>`);
+      continue;
+    }
+
+    // Numbered list item (1., 2.)
+    const olMatch = raw.match(/^\d+\.\s+(.*)/);
+    if (olMatch) {
+      if (!inOl) {
+        if (inUl) { out.push("</ul>"); inUl = false; }
+        out.push('<ol class="chat-numbered-list">');
+        inOl = true;
+      }
+      out.push(`<li>${olMatch[1]}</li>`);
+      continue;
+    }
+
+    // Close any open list
+    if (inUl) { out.push("</ul>"); inUl = false; }
+    if (inOl) { out.push("</ol>"); inOl = false; }
+
+    // Headings
+    if (raw.startsWith("### ")) {
+      out.push(`<h4 class="chat-h4">${raw.slice(4)}</h4>`);
+    } else if (raw.startsWith("## ")) {
+      out.push(`<h3 class="chat-h3">${raw.slice(3)}</h3>`);
+    } else if (raw.startsWith("# ")) {
+      out.push(`<h2 class="chat-h2">${raw.slice(2)}</h2>`);
+    } else if (raw.startsWith("&gt; ") || raw.startsWith("<strong>Warning:</strong>") || raw.startsWith("<strong>Emergency:</strong>") || raw.startsWith("<strong>Red Flag")) {
+      const isDanger = raw.toLowerCase().includes("emergency") || raw.toLowerCase().includes("red flag");
+      const calloutClass = isDanger ? "danger" : "warning";
+      const icon = isDanger ? "🚨" : "⚠️";
+      const cleanText = raw.replace(/^&gt;\s*/, "");
+      out.push(`<div class="clinical-callout ${calloutClass}"><span class="callout-icon">${icon}</span><div class="callout-text">${cleanText}</div></div>`);
+    } else {
+      out.push(`<p class="chat-p">${raw}</p>`);
+    }
+  }
+
+  if (inUl) out.push("</ul>");
+  if (inOl) out.push("</ol>");
+
+  return out.join("");
 }
 
 /** Announce message to screen reader live region */

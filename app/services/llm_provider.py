@@ -232,7 +232,7 @@ def get_groq_llm():
 
     logger.info(f"Connecting to Groq API Model: {settings.llm_model}")
     llm = ChatGroq(
-        model_name=settings.llm_model if settings.llm_model not in ("gpt2", "llama3-8b-8192") else "llama-3.1-8b-instant",
+        model_name=settings.llm_model if settings.llm_model not in ("gpt2", "llama3-8b-8192", "llama-3.1-8b-instant") else "qwen/qwen3.8-27b",
         api_key=settings.groq_api_key,
         temperature=0.7
     )

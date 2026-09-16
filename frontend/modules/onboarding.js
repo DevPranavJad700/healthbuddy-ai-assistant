@@ -94,6 +94,9 @@ export function updateOnboardingChecklist() {
   if (progressBar) progressBar.style.width = `${percent}%`;
   if (progressText) progressText.textContent = `${completed} of ${total} completed`;
 
+  const pill = document.getElementById("onboardingProgressPill");
+  if (pill) pill.textContent = `${completed}/${total}`;
+
   if (completed === total) {
     card.classList.add("complete");
     if (progressText) progressText.textContent = "All setup steps completed";
@@ -102,6 +105,35 @@ export function updateOnboardingChecklist() {
   }
 
   card.classList.toggle("hidden", state.onboardingDismissed && completed < total);
+}
+
+const ONBOARDING_COLLAPSED_KEY = "healthbuddy.onboardingCollapsed";
+
+export function initOnboardingAccordion() {
+  const card = document.getElementById("onboardingCard");
+  const header = document.getElementById("onboardingAccordionHeader");
+  if (!card || !header) return;
+
+  // Default to collapsed unless explicitly uncollapsed by user
+  const isCollapsed = localStorage.getItem(ONBOARDING_COLLAPSED_KEY) !== "0";
+  card.classList.toggle("collapsed", isCollapsed);
+  header.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+
+  const toggleAccordion = (e) => {
+    if (e.target.closest("#dismissOnboardingBtn")) return;
+    const nowCollapsed = !card.classList.contains("collapsed");
+    card.classList.toggle("collapsed", nowCollapsed);
+    header.setAttribute("aria-expanded", nowCollapsed ? "false" : "true");
+    localStorage.setItem(ONBOARDING_COLLAPSED_KEY, nowCollapsed ? "1" : "0");
+  };
+
+  header.addEventListener("click", toggleAccordion);
+  header.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleAccordion(e);
+    }
+  });
 }
 
 // ── Onboarding Modal V2 ───────────────────────────────────────────

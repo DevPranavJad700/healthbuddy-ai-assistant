@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/static/styles.css?v=44" />
+    <link rel="stylesheet" href="/static/styles.css?v=47" />
     <link rel="manifest" href="/static/manifest.json" />
     <meta name="theme-color" content="#8b5cf6" />
     <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
@@ -28,33 +28,6 @@
     </script>
   </head>
   <body>
-    <div class="theme-toolbar" id="themeToolbar">
-      <button class="theme-menu-toggle" id="themeMenuToggle" type="button">
-        Theme
-      </button>
-
-      <div class="theme-menu" id="themeMenu">
-        <button class="theme-reset-btn" id="classicModeBtn" type="button">
-          Classic
-        </button>
-        <button
-          class="toggle-adjuster-btn"
-          id="toggleAdjusterBtn"
-          type="button"
-        >
-          Adjust Theme
-        </button>
-
-        <div class="color-controls" id="colorControls">
-          <button class="color-btn active" data-scheme="1">Calm</button>
-          <button class="color-btn" data-scheme="2">Focus</button>
-          <button class="color-btn" data-scheme="3">Vital</button>
-          <button class="color-btn" data-scheme="4">Recovery</button>
-          <button class="color-btn" data-scheme="5">Night</button>
-        </div>
-      </div>
-    </div>
-
     <div class="color-adjuster-panel" id="colorAdjusterPanel">
       <div class="color-adjuster-header">
         <h3 class="color-adjuster-title">Theme Adjuster</h3>
@@ -288,173 +261,154 @@
             Clinician
           </button>
         </div>
-        <!-- Sidebar Sign-In Nudge (shown when logged out) -->
-        <div class="sidebar-signin-nudge" id="sidebarSignInNudge">
-          <div class="ssn-avatar">
-            <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <div class="ssn-text">
-            <span class="ssn-title">Sign in to unlock</span>
-            <span class="ssn-desc">History, goals &amp; personalization</span>
-          </div>
-          <button class="ssn-btn" id="sidebarSignInBtn" type="button">Sign In</button>
-        </div>
 
-        <div class="sidebar-section" id="accountAccessCard">
-          <div class="sidebar-acct" id="sidebarAcctBlock">
-            <!-- Hidden elements kept for JS compatibility -->
-            <span id="signedInBadge" class="hidden"></span>
-            <span id="adminBadge" class="hidden"></span>
-            <span id="acctLabel" class="hidden"></span>
+        <!-- Scrollable Tab Content Area -->
+        <div class="sidebar-scrollable-area" id="sidebarScrollArea">
 
-            <div class="sidebar-acct-actions">
-              <button id="authLogoutBtn" class="sidebar-acct-btn" type="button">
-                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-                <span>Sign Out</span>
+          <!-- Chat Tab Content -->
+          <div class="tab-content active" id="chat-tab">
+            <div class="sidebar-section">
+              <!-- Primary New Chat CTA -->
+              <button class="new-chat-btn" id="newChatBtn" type="button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  width="16"
+                  height="16"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                <span>Start New Chat</span>
+                <span class="new-chat-badge">⌘N</span>
               </button>
-              <button id="openConsentCenterBtn" class="sidebar-acct-btn" type="button">
-                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>Consent</span>
-              </button>
-              <button id="openPrivacyCenterBtn" class="sidebar-acct-btn" type="button">
-                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                <span>Privacy</span>
-              </button>
-              <button id="dangerZoneToggleBtn" class="sidebar-acct-btn sidebar-acct-btn--warn" type="button" aria-expanded="false" aria-controls="dangerZonePanel">
-                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                <span>Danger</span>
-              </button>
-            </div>
 
-            <div id="dangerZonePanel" class="danger-zone-panel hidden">
-              <p class="section-desc danger-zone-note" style="margin-bottom:0">
-                Permanently erase your account and linked records.
-              </p>
-              <button id="exportMyDataBtn" class="sidebar-acct-btn" type="button">
-                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Export Data</span>
-              </button>
-              <button id="deleteMyDataBtn" class="sidebar-acct-btn sidebar-acct-btn--danger" type="button">
-                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-                <span>Delete Account</span>
-              </button>
-            </div>
-            <p id="authStatus" class="auth-status"></p>
-          </div>
-        </div>
-
-        <!-- Chat Tab Content -->
-        <div class="tab-content active" id="chat-tab">
-          <div class="sidebar-section">
-            <div class="product-onboarding" id="onboardingCard">
-              <div class="product-onboarding-header">
-                <h4 id="onboardingTitle">Get Started</h4>
-                <button
-                  id="dismissOnboardingBtn"
-                  class="dismiss-onboarding-btn"
-                  type="button"
-                  aria-label="Dismiss onboarding"
-                >
-                  x
-                </button>
-              </div>
-              <p class="product-onboarding-subtitle" id="onboardingSubtitle">
-                Complete these quick steps to personalize your care experience.
-              </p>
-              <div class="onboarding-intent-grid" id="onboardingIntentGrid">
-                <button
-                  class="onboarding-intent-btn active"
-                  type="button"
-                  data-intent="symptom"
-                >
-                  Symptom Check Now
-                </button>
-                <button
-                  class="onboarding-intent-btn"
-                  type="button"
-                  data-intent="chronic"
-                >
-                  Chronic Support
-                </button>
-                <button
-                  class="onboarding-intent-btn"
-                  type="button"
-                  data-intent="medication"
-                >
-                  Medication & Adherence
-                </button>
-                <button
-                  class="onboarding-intent-btn"
-                  type="button"
-                  data-intent="clinician"
-                >
-                  Clinician Queue (Admin)
-                </button>
-              </div>
-              <p class="onboarding-intent-hint" id="onboardingIntentHint">
-                Choose your primary workflow to see the right setup checklist.
-              </p>
-              <div class="onboarding-progress" aria-hidden="true">
+              <!-- Collapsible Care Setup Path Accordion -->
+              <div class="product-onboarding collapsed" id="onboardingCard">
                 <div
-                  id="onboardingProgressBar"
-                  class="onboarding-progress-bar"
-                ></div>
+                  class="product-onboarding-header"
+                  id="onboardingAccordionHeader"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="onboardingAccordionBody"
+                  title="Click to toggle Care Setup Path"
+                >
+                  <div class="onboarding-header-left">
+                    <span class="onboarding-sparkle-icon">✦</span>
+                    <h4 id="onboardingTitle">Care Setup Path</h4>
+                  </div>
+                  <div class="onboarding-header-right">
+                    <span class="onboarding-pill" id="onboardingProgressPill">0/4</span>
+                    <span class="onboarding-chevron" id="onboardingAccordionToggle">
+                      <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                    <button
+                      id="dismissOnboardingBtn"
+                      class="dismiss-onboarding-btn"
+                      type="button"
+                      aria-label="Dismiss onboarding"
+                      title="Dismiss setup"
+                    >
+                      ×
+                    </button>
+                  </div>
+                </div>
+
+                <div class="onboarding-accordion-body" id="onboardingAccordionBody">
+                  <p class="product-onboarding-subtitle" id="onboardingSubtitle">
+                    Complete these quick steps to personalize your care experience.
+                  </p>
+                  <div class="onboarding-intent-grid" id="onboardingIntentGrid">
+                    <button
+                      class="onboarding-intent-btn active"
+                      type="button"
+                      data-intent="symptom"
+                    >
+                      Symptom Check Now
+                    </button>
+                    <button
+                      class="onboarding-intent-btn"
+                      type="button"
+                      data-intent="chronic"
+                    >
+                      Chronic Support
+                    </button>
+                    <button
+                      class="onboarding-intent-btn"
+                      type="button"
+                      data-intent="medication"
+                    >
+                      Medication &amp; Adherence
+                    </button>
+                    <button
+                      class="onboarding-intent-btn"
+                      type="button"
+                      data-intent="clinician"
+                    >
+                      Clinician Queue (Admin)
+                    </button>
+                  </div>
+                  <p class="onboarding-intent-hint" id="onboardingIntentHint">
+                    Choose your primary workflow to see the right setup checklist.
+                  </p>
+                  <div class="onboarding-progress" aria-hidden="true">
+                    <div
+                      id="onboardingProgressBar"
+                      class="onboarding-progress-bar"
+                    ></div>
+                  </div>
+                  <p class="onboarding-progress-text" id="onboardingProgressText">
+                    0 of 4 completed
+                  </p>
+                  <ul class="onboarding-checklist" id="onboardingChecklist">
+                    <li id="onboardingStepAuth">Create or log into your account</li>
+                    <li id="onboardingStepGoal">Set your first health goal</li>
+                    <li id="onboardingStepDoc">Upload one document for context</li>
+                    <li id="onboardingStepChat">Ask your first question</li>
+                  </ul>
+                </div>
               </div>
-              <p class="onboarding-progress-text" id="onboardingProgressText">
-                0 of 4 completed
-              </p>
-              <ul class="onboarding-checklist" id="onboardingChecklist">
-                <li id="onboardingStepAuth">Create or log into your account</li>
-                <li id="onboardingStepGoal">Set your first health goal</li>
-                <li id="onboardingStepDoc">Upload one document for context</li>
-                <li id="onboardingStepChat">Ask your first question</li>
-              </ul>
-            </div>
 
-            <button class="new-chat-btn" id="newChatBtn">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                width="16"
-                height="16"
-              >
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-              </svg>
-              Start New Chat
-            </button>
-          </div>
-        </div>
-
-        <!-- History Tab Content -->
-        <div class="tab-content" id="history-tab">
-          <div class="sidebar-section">
-            <h3 class="section-title">
-              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" class="title-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Recent Conversations
-            </h3>
-            <div id="historySignInGate" class="history-gate hidden">
-              <p class="section-desc">Sign in to see your conversation history.</p>
-              <button class="check-symptoms-btn" id="historySignInBtn" type="button">Sign In</button>
-            </div>
-            <div id="sessionList" class="session-list"></div>
-            <div id="historyEmpty" class="history-empty hidden">
-              <svg width="32" height="32" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" style="opacity:0.3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <p>No conversations yet</p>
-              <span>Start chatting to build your history</span>
-            </div>
-            <div id="historyLoading" class="history-loading">
-              <div class="history-skeleton"></div>
-              <div class="history-skeleton"></div>
-              <div class="history-skeleton"></div>
+              <!-- Integrated Recent Conversations -->
+              <div class="chat-recent-section">
+                <div class="recent-threads-header">
+                  <span class="recent-threads-label">Recent Conversations</span>
+                </div>
+                <div id="sessionList" class="session-list"></div>
+                <div id="historyEmpty" class="history-empty hidden">
+                  <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" style="opacity:0.35"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <p>No conversations yet</p>
+                  <span>Start chatting to build your history</span>
+                </div>
+                <div id="historyLoading" class="history-loading hidden">
+                  <div class="history-skeleton"></div>
+                  <div class="history-skeleton"></div>
+                  <div class="history-skeleton"></div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Symptom Checker Tab -->
-        <div class="tab-content" id="symptom-tab">
+          <!-- History Tab Content (Extended Archive View) -->
+          <div class="tab-content" id="history-tab">
+            <div class="sidebar-section">
+              <h3 class="section-title">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" class="title-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Full History Archive
+              </h3>
+              <div id="historySignInGate" class="history-gate hidden">
+                <p class="section-desc">Sign in to see your conversation history.</p>
+                <button class="check-symptoms-btn" id="historySignInBtn" type="button">Sign In</button>
+              </div>
+              <div id="historySessionList" class="session-list"></div>
+            </div>
+          </div>
+
+          <!-- Symptom Checker Tab -->
+          <div class="tab-content" id="symptom-tab">
           <div class="sidebar-section">
             <h3 class="section-title">
               <svg
@@ -692,18 +646,88 @@
             <div class="document-list" id="documentList"></div>
           </div>
         </div>
+      </div>
 
-        <!-- Status Footer -->
-        <div class="sidebar-footer">
-          <div class="status-indicator" id="statusIndicator">
-            <div class="status-dot"></div>
-            <span id="statusText">Connecting...</span>
+      <!-- Pinned User Profile / Sign-in Dock -->
+      <div class="sidebar-footer-user" id="sidebarFooterUser">
+        <!-- Sidebar Sign-In Nudge (shown when logged out) -->
+        <div class="sidebar-signin-nudge" id="sidebarSignInNudge">
+          <div class="ssn-avatar">
+            <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="ssn-text">
+            <span class="ssn-title">Sign in to unlock</span>
+            <span class="ssn-desc">History &amp; health goals</span>
+          </div>
+          <button class="ssn-btn" id="sidebarSignInBtn" type="button">Sign In</button>
+        </div>
+
+        <div class="sidebar-section hidden" id="accountAccessCard">
+          <div class="sidebar-acct" id="sidebarAcctBlock">
+            <!-- Hidden elements kept for JS compatibility & E2E tests -->
+            <span id="signedInBadge" class="hidden"></span>
+            <span id="adminBadge" class="hidden"></span>
+            <span id="acctLabel" class="hidden"></span>
+
+            <div class="sidebar-acct-actions">
+              <button id="authLogoutBtn" class="sidebar-acct-btn" type="button" title="Sign Out">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                <span>Sign Out</span>
+              </button>
+              <button id="openConsentCenterBtn" class="sidebar-acct-btn" type="button" title="Consent Center">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Consent</span>
+              </button>
+              <button id="openPrivacyCenterBtn" class="sidebar-acct-btn" type="button" title="Privacy Settings">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Privacy</span>
+              </button>
+              <button id="dangerZoneToggleBtn" class="sidebar-acct-btn sidebar-acct-btn--warn" type="button" aria-expanded="false" aria-controls="dangerZonePanel" title="Danger Zone">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>Danger</span>
+              </button>
+            </div>
+
+            <div id="dangerZonePanel" class="danger-zone-panel hidden">
+              <p class="section-desc danger-zone-note" style="margin-bottom:0">
+                Permanently erase your account and linked records.
+              </p>
+              <button id="exportMyDataBtn" class="sidebar-acct-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Export Data</span>
+              </button>
+              <button id="deleteMyDataBtn" class="sidebar-acct-btn sidebar-acct-btn--danger" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <span>Delete Account</span>
+              </button>
+            </div>
+            <p id="authStatus" class="auth-status"></p>
           </div>
         </div>
+      </div>
+
+      <!-- Status Footer -->
+      <div class="sidebar-footer">
+        <div class="status-indicator" id="statusIndicator">
+          <div class="status-dot"></div>
+          <span id="statusText">Connecting...</span>
+        </div>
+      </div>
       </aside>
 
       <!-- Main Chat Area -->
       <main class="chat-area">
+
+        <!-- ─── AMBIENT ATMOSPHERE & BACKGROUND WATERMARK ─── -->
+        <div class="ambient-backdrop" aria-hidden="true">
+          <div class="wave-glow"></div>
+          <div class="wave-glow b"></div>
+          <div class="wave-wrap" id="wave">
+            <img src="https://cdn.shopify.com/s/files/1/0185/5999/1872/files/blue_strand_transparent.png?v=1778949964" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="bg-text">HEALTH&nbsp;AI</div>
+        </div>
+
         <header class="chat-header">
           <button
             class="menu-toggle"
@@ -726,6 +750,41 @@
             <span class="header-safety-dot" id="headerSubtitle" title="Safety guardrails active"></span>
           </div>
           <div class="header-spacer"></div>
+
+          <!-- Theme & Palette Toolbar (Integrated in Header) -->
+          <div class="theme-toolbar" id="themeToolbar">
+            <button class="theme-menu-toggle header-settings-btn" id="themeMenuToggle" type="button" title="Theme & Color Palette" aria-label="Theme & Color Palette">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+              </svg>
+            </button>
+
+            <div class="theme-menu" id="themeMenu">
+              <button class="theme-reset-btn" id="classicModeBtn" type="button">
+                Classic
+              </button>
+              <button
+                class="toggle-adjuster-btn"
+                id="toggleAdjusterBtn"
+                type="button"
+              >
+                Adjust Theme
+              </button>
+
+              <div class="color-controls" id="colorControls">
+                <button class="color-btn active" data-scheme="1">Calm</button>
+                <button class="color-btn" data-scheme="2">Focus</button>
+                <button class="color-btn" data-scheme="3">Vital</button>
+                <button class="color-btn" data-scheme="4">Recovery</button>
+                <button class="color-btn" data-scheme="5">Night</button>
+              </div>
+            </div>
+          </div>
+
           <button id="openAuthModalBtn" class="auth-header-btn" type="button">
             Sign In
           </button>
@@ -780,42 +839,78 @@
         </div>
 
         <div class="messages-container" id="messagesContainer">
+
+          <!-- Emergency and privacy banner -->
+          <div class="info-ribbon" id="infoRibbon" role="alert">
+            <div class="info-ribbon-emergency">
+              <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <strong id="emergencyHelpLabel">Emergency:</strong>
+              <span id="emergencyNumberText">US/Canada: 911</span>
+              <select id="emergencyCountrySelect" class="ribbon-country-select" aria-label="Select country">
+                <option value="us" selected>US/Canada</option>
+                <option value="eu">EU</option>
+                <option value="uk">UK</option>
+                <option value="au">Australia</option>
+                <option value="in">India</option>
+              </select>
+            </div>
+            <span class="info-ribbon-sep">·</span>
+            <span class="info-ribbon-privacy">
+              <svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span id="privacyPromiseCopy">Your data stays private. We never sell it.</span>
+            </span>
+            <button class="info-ribbon-close" id="infoRibbonClose" aria-label="Dismiss" type="button">
+              <svg width="12" height="12" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+
           <!-- Welcome Screen -->
           <div class="welcome-screen" id="welcomeScreen">
-            <div class="info-ribbon" id="infoRibbon" role="alert">
-              <div class="info-ribbon-emergency">
-                <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                <strong id="emergencyHelpLabel">Emergency:</strong>
-                <span id="emergencyNumberText">US/Canada: 911</span>
-                <select id="emergencyCountrySelect" class="ribbon-country-select" aria-label="Select country">
-                  <option value="us" selected>US/Canada</option>
-                  <option value="eu">EU</option>
-                  <option value="uk">UK</option>
-                  <option value="au">Australia</option>
-                  <option value="in">India</option>
-                </select>
+
+            <!-- Hero Top Row: Avatars + Eyebrow -->
+            <div class="hero-top-row">
+              <div class="avatar-group" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="28" height="28" style="border-radius:50%;border:2px solid rgba(255,255,255,0.15);background:#6366f1">
+                  <circle cx="20" cy="15" r="7" fill="#a5b4fc"/>
+                  <ellipse cx="20" cy="35" rx="11" ry="9" fill="#a5b4fc"/>
+                </svg>
+                <svg viewBox="0 0 40 40" width="28" height="28" style="border-radius:50%;border:2px solid rgba(255,255,255,0.15);background:#10b981">
+                  <circle cx="20" cy="15" r="7" fill="#6ee7b7"/>
+                  <ellipse cx="20" cy="35" rx="11" ry="9" fill="#6ee7b7"/>
+                </svg>
+                <svg viewBox="0 0 40 40" width="28" height="28" style="border-radius:50%;border:2px solid rgba(255,255,255,0.15);background:#f59e0b">
+                  <circle cx="20" cy="15" r="7" fill="#fcd34d"/>
+                  <ellipse cx="20" cy="35" rx="11" ry="9" fill="#fcd34d"/>
+                </svg>
               </div>
-              <span class="info-ribbon-sep">·</span>
-              <span class="info-ribbon-privacy">
-                <svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span id="privacyPromiseCopy">Your data stays private. We never sell it.</span>
-              </span>
-              <button class="info-ribbon-close" id="infoRibbonClose" aria-label="Dismiss" type="button">
-                <svg width="12" height="12" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              </button>
+              <span class="eyebrow">AI-Powered Health Assistant</span>
             </div>
 
-            <div class="welcome-icon welcome-icon--pulse">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            <!-- Circular spinning trust badge (Centerpiece) -->
+            <div class="badge hero-badge" aria-hidden="true">
+              <svg class="ring" viewBox="0 0 100 100" width="100" height="100">
+                <defs>
+                  <path id="badge-path" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                </defs>
+                <text font-family="'Inter', sans-serif" font-size="8.8" font-weight="600" fill="rgba(148,163,184,0.75)" letter-spacing="2.6">
+                  <textPath href="#badge-path">✦ AI CLINICAL CARE ✦ SAFETY FIRST ✦</textPath>
+                </text>
               </svg>
+              <span class="badge-center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </span>
             </div>
-            <h2 class="welcome-heading">How can I help you today?</h2>
+
+            <h2 class="welcome-heading">
+              <span class="word">How</span>
+              <span class="word">can</span>
+              <span class="word">I</span>
+              <span class="word">help</span>
+              <span class="word">you</span>
+              <span class="word">today?</span>
+            </h2>
             <p class="welcome-sub">
               Ask me anything about health, nutrition, exercise, or wellness.
             </p>
@@ -919,37 +1014,30 @@
               </svg>
             </button>
           </div>
-          <p class="input-hint">
-            Press Enter to send · Shift+Enter for new line · 🎙️ Click mic for
-            voice
-          </p>
-          <p class="input-hint">
-            Tip: Ctrl/Cmd+K focus input · Type /help for command list
-          </p>
-          <p class="input-hint">
-            Use /retry after reconnecting to resend your last failed message
-          </p>
-          <p class="input-hint" style="margin-top: 6px">
-            <a href="/privacy" target="_blank" rel="noopener">Privacy</a>
-            ·
-            <a href="/terms" target="_blank" rel="noopener">Terms</a>
-            ·
+          <div class="input-hint-row">
+            <span class="hint-pill">↵ Enter to send</span>
+            <span class="hint-pill">🎙️ Mic for voice</span>
+            <span class="hint-pill">⌘K focus</span>
+            <span class="hint-sep">·</span>
+            <span class="hint-disclaimer">Not a substitute for medical advice.</span>
+            <span class="hint-sep">·</span>
+            <a href="/privacy" target="_blank" rel="noopener" class="hint-link">Privacy</a>
+            <a href="/terms" target="_blank" rel="noopener" class="hint-link">Terms</a>
             <button
               id="openConsentCenterChatBtn"
               type="button"
               class="inline-consent-btn"
             >
-              Consent center
+              Consent
             </button>
-            ·
             <button
               id="openPrivacyCenterChatBtn"
               type="button"
               class="inline-consent-btn"
             >
-              My data & privacy
+              My Data
             </button>
-          </p>
+          </div>
         </div>
         <!-- Site Footer -->
         <footer class="site-footer" id="siteFooter">
@@ -1129,7 +1217,7 @@
           />
           <input
             id="authEmailInput"
-            class="symptom-search"
+            class="symptom-search hidden"
             placeholder="Email (required for account creation)"
             autocomplete="email"
           />
@@ -1634,6 +1722,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="/static/liquid-theme.js?v=3"></script>
-    <script type="module" src="/static/app.js?v=45"></script>
+    <script type="module" src="/static/app.js?v=47"></script>
+
+    <!-- GSAP Animation Layer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/static/gsap-animations.js?v=3" defer></script>
   </body>
 </html>

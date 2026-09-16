@@ -376,7 +376,19 @@ export async function appendMessage(
     </div>`;
   }
 
-  div.innerHTML = `<div class="message-avatar">${avatar}</div><div class="message-content"><div class="message-bubble"></div>${extra}<div class="message-time">${time}</div></div>`;
+  let actionBar = "";
+  if (role === "bot") {
+    actionBar = `<div class="message-action-bar">
+      <button class="msg-action-btn copy-btn" type="button" aria-label="Copy response" title="Copy response">
+        <svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy
+      </button>
+      <button class="msg-action-btn tts-btn" type="button" aria-label="Read response aloud" title="Read response aloud">
+        <svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> Listen
+      </button>
+    </div>`;
+  }
+
+  div.innerHTML = `<div class="message-avatar">${avatar}</div><div class="message-content"><div class="message-bubble"></div>${actionBar}${extra}<div class="message-time">${time}</div></div>`;
   messagesList.appendChild(div);
 
   const feedbackBox = div.querySelector(".feedback-box");
@@ -384,27 +396,46 @@ export async function appendMessage(
     wireFeedbackBox(feedbackBox);
   }
 
-  // Copy button
+  // Wire Action Bar
   if (role === "bot") {
     const bubble = div.querySelector(".message-bubble");
-    if (bubble) {
-      const copyBtn = document.createElement("button");
-      copyBtn.className = "msg-copy-btn";
-      copyBtn.setAttribute("type", "button");
-      copyBtn.setAttribute("aria-label", "Copy response");
-      copyBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy`;
+    const copyBtn = div.querySelector(".msg-action-btn.copy-btn");
+    const ttsBtn = div.querySelector(".msg-action-btn.tts-btn");
+
+    if (copyBtn && bubble) {
       copyBtn.addEventListener("click", () => {
         const text = bubble.innerText || bubble.textContent || "";
-        navigator.clipboard.writeText(text.replace("Copy", "").trim()).then(() => {
-          copyBtn.textContent = "✓ Copied!";
-          copyBtn.classList.add("copied");
+        navigator.clipboard.writeText(text.trim()).then(() => {
+          copyBtn.innerHTML = `✓ Copied!`;
+          copyBtn.classList.add("active");
           setTimeout(() => {
             copyBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy`;
-            copyBtn.classList.remove("copied");
+            copyBtn.classList.remove("active");
           }, 2000);
         }).catch(() => {});
       });
-      bubble.appendChild(copyBtn);
+    }
+
+    if (ttsBtn && bubble) {
+      ttsBtn.addEventListener("click", () => {
+        if (!("speechSynthesis" in window)) return;
+        if (window.speechSynthesis.speaking) {
+          window.speechSynthesis.cancel();
+          ttsBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> Listen`;
+          ttsBtn.classList.remove("active");
+        } else {
+          const text = bubble.innerText || bubble.textContent || "";
+          const u = new SpeechSynthesisUtterance(text.trim());
+          u.rate = 1.0;
+          u.onend = () => {
+            ttsBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> Listen`;
+            ttsBtn.classList.remove("active");
+          };
+          ttsBtn.innerHTML = `⏹ Stop`;
+          ttsBtn.classList.add("active");
+          window.speechSynthesis.speak(u);
+        }
+      });
     }
   }
 
@@ -606,15 +637,6 @@ export async function sendMessage(msgOverride = null) {
     botMsgDiv.style.opacity = "0";
     await sleep(150);
 
-    const tempContainer = document.createElement("div");
-    tempContainer.style.display = "none";
-    document.body.appendChild(tempContainer);
-
-    const savedList = messagesList;
-    // Format message into temp
-    const oldAppend = messagesList;
-    tempContainer.innerHTML = "";
-    
     // Transplant formatted message
     await appendMessage(
       "bot",
@@ -636,9 +658,7 @@ export async function sendMessage(msgOverride = null) {
       }
     );
 
-    // The appended message is in messagesList; remove botMsgDiv
     botMsgDiv.remove();
-    tempContainer.remove();
 
     ensureFeedbackControlsAfterStream(
       state.currentSessionId || data.session_id,
@@ -688,19 +708,25 @@ export function startNewChat() {
 
 export async function loadSessions() {
   const sessionList = document.getElementById("sessionList");
-  if (!sessionList) return;
+  const historySessionList = document.getElementById("historySessionList");
+  const targets = [sessionList, historySessionList].filter(Boolean);
+  if (!targets.length) return;
   const sessions = readLocalHistory();
   state.hasChatHistory = sessions.length > 0;
 
   if (!sessions || sessions.length === 0) {
-    sessionList.innerHTML = '<div class="empty-state-card"><p>No conversation history yet</p></div>';
+    targets.forEach((el) => {
+      el.innerHTML = '<div class="empty-state-card"><p>No conversation history yet</p></div>';
+    });
     return;
   }
 
-  sessionList.innerHTML = sessions
+  const html = sessions
     .map(
-      (s) => `
-        <div class="document-item history-item" style="cursor:pointer" onclick="window.loadSession('${s.session_id}')">
+      (s) => {
+        const isActive = s.session_id === state.currentSessionId ? " active" : "";
+        return `
+        <div class="document-item history-item${isActive}" style="cursor:pointer" onclick="window.loadSession('${s.session_id}')">
             <div class="doc-icon">${USER_AVATAR_SVG}</div>
             <div class="doc-info">
                 <div class="doc-name" title="${esc(s.title)}">${esc(s.title)}</div>
@@ -712,9 +738,14 @@ export async function loadSessions() {
             <button class="delete-history-btn" title="Delete conversation" onclick="window.deleteHistorySession(event, '${s.session_id}')">
               <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
             </button>
-        </div>`
+        </div>`;
+      }
     )
     .join("");
+
+  targets.forEach((el) => {
+    el.innerHTML = html;
+  });
 }
 
 export async function loadSession(sessionId) {
@@ -823,10 +854,12 @@ export function exportSession(event, sessionId) {
 
 export async function loadChatHistory() {
   const sessionList = document.getElementById("sessionList");
+  const historySessionList = document.getElementById("historySessionList");
+  const targets = [sessionList, historySessionList].filter(Boolean);
   const gate = document.getElementById("historySignInGate");
   const emptyEl = document.getElementById("historyEmpty");
   const loadingEl = document.getElementById("historyLoading");
-  if (!sessionList) return;
+  if (!targets.length) return;
 
   const token = getAuthToken();
   if (!token) {
@@ -849,14 +882,18 @@ export async function loadChatHistory() {
 
     if (!sessions.length) {
       if (emptyEl) emptyEl.classList.remove("hidden");
+      targets.forEach((el) => {
+        el.innerHTML = '<div class="empty-state-card"><p>No conversation history yet</p></div>';
+      });
       return;
     }
 
-    sessionList.innerHTML = sessions
+    const html = sessions
       .map((s) => {
         const icon = s.emergency_detected ? "🚨" : "💬";
         const cls = s.emergency_detected ? "session-card emergency" : "session-card";
-        return `<div class="${cls}" data-session="${esc(s.session_id)}" onclick="window.loadSession('${s.session_id}')">
+        const isActive = s.session_id === state.currentSessionId ? " active" : "";
+        return `<div class="${cls}${isActive}" data-session="${esc(s.session_id)}" onclick="window.loadSession('${s.session_id}')">
           <div class="session-card-icon">${icon}</div>
           <div class="session-card-body">
             <div class="session-card-preview">${esc(s.preview)}</div>
@@ -868,8 +905,14 @@ export async function loadChatHistory() {
         </div>`;
       })
       .join("");
+
+    targets.forEach((el) => {
+      el.innerHTML = html;
+    });
   } catch (err) {
     if (loadingEl) loadingEl.classList.add("hidden");
-    sessionList.innerHTML = `<p style="font-size:0.72rem;color:var(--danger);padding:8px">Could not load history. Try again later.</p>`;
+    targets.forEach((el) => {
+      el.innerHTML = `<p style="font-size:0.72rem;color:var(--danger);padding:8px">Could not load history. Try again later.</p>`;
+    });
   }
 }

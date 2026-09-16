@@ -226,9 +226,10 @@ export function setAuthMode(mode = "login") {
 
   const emailInput = document.getElementById("authEmailInput");
   if (emailInput) {
+    emailInput.classList.toggle("hidden", !isRegister);
     emailInput.placeholder = isRegister
       ? "Email (required for account creation)"
-      : "Email (optional for login)";
+      : "Email";
   }
 }
 

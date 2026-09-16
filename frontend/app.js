@@ -94,6 +94,7 @@ import { initVoiceInput } from "./modules/voice.js";
 
 import {
   initOnboardingModal,
+  initOnboardingAccordion,
   showProfileWizard,
   hideProfileWizard,
   renderWizardStep,
@@ -642,7 +643,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Cmd+N / Ctrl+N to Start New Chat
+  window.addEventListener("keydown", (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "n") {
+      e.preventDefault();
+      startNewChat();
+      const input = document.getElementById("messageInput");
+      if (input) input.focus();
+    }
+  });
+
   // Initial data loading
+  initOnboardingAccordion();
   checkHealth();
   loadDocuments();
   loadSymptomSuggestions();
