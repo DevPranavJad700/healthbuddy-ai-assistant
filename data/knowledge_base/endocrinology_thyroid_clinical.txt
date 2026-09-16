@@ -1,0 +1,96 @@
+TOPIC: Endocrinology & Thyroid Disorders — Clinical Management Guide
+SOURCE: HealthBuddy Clinical Knowledge Base v3.5
+CATEGORY: Endocrinology / Metabolic Medicine / Hormone Health
+
+=== 1. THYROID DISORDERS OVERVIEW ===
+The thyroid gland regulates basal metabolic rate, thermogenesis, cardiac chronotropy, and protein synthesis via thyroxine (T4) and triiodothyronine (T3).
+Diagnostic Reference Ranges (Adults):
+- Serum TSH (Thyroid Stimulating Hormone): 0.45 – 4.5 mIU/L (Primary screening marker)
+- Free T4 (Thyroxine): 0.8 – 1.8 ng/dL (10 – 23 pmol/L)
+- Free T3 (Triiodothyronine): 2.3 – 4.2 pg/mL (3.5 – 6.5 pmol/L)
+- Anti-TPO Antibodies: < 35 IU/mL (positive in autoimmune Hashimoto's)
+- Anti-Tg (Thyroglobulin) Antibodies: < 20 IU/mL
+
+=== 2. HYPOTHYROIDISM (UNDERACTIVE THYROID) ===
+Etiology:
+- Hashimoto's Thyroiditis (autoimmune lymphocytic destruction of follicles; most common in iodine-sufficient regions)
+- Post-ablative (radioactive iodine I-131, thyroidectomy)
+- Drug-induced: Amiodarone, Lithium, Checkpoint inhibitors (immunotherapy)
+- Iodine deficiency (globally) or congenital dyshormonogenesis
+
+Clinical Presentation:
+- Constitutional: Unexplained weight gain, profound fatigue, cold intolerance, hypothermia
+- Neurological & Mental: Brain fog, memory sluggishness, depression, slow relaxation phase of deep tendon reflexes (Woltman's sign)
+- Dermatological: Coarse dry skin, brittle nails, diffuse alopecia, non-pitting myxedema (periorbital and pretibial)
+- Cardiovascular: Bradycardia (< 60 bpm), diastolic hypertension, pericardial effusion
+- Gastrointestinal: Chronic constipation, gastric hypomotility
+- Reproductive: Menorrhagia, oligomenorrhea, subfertility
+
+Medical Management:
+- Levothyroxine (synthetic T4) is the gold-standard monotherapy.
+- Initial replacement dose: 1.6 mcg/kg/day ideal body weight in young healthy adults.
+- Elderly or coronary artery disease patients: Start low (25–50 mcg/day) to prevent cardiac arrhythmias or angina exacerbation.
+- Crucial Administration Guidelines:
+  * Take on an empty stomach with a full glass of water, 30–60 minutes before breakfast, or at bedtime (at least 3–4 hours after dinner).
+  * Avoid co-administration: Calcium carbonate, ferrous sulfate (iron), aluminum antacids, and soy supplements bind levothyroxine and must be spaced at least 4 hours apart.
+- Monitoring: Retest serum TSH 6–8 weeks after any dose adjustment. Once normalized, monitor annually.
+
+=== 3. HYPERTHYROIDISM & THYROTOXICOSIS ===
+Etiology:
+- Graves' Disease (TSH receptor-stimulating autoantibodies / TRAb; 70-80% of cases)
+- Toxic Multinodular Goiter (Plummer's disease; autonomous nodules)
+- Toxic Adenoma (single hyperfunctioning nodule)
+- Subacute (de Quervain's) Thyroiditis (painful post-viral destructive release of preformed hormone)
+
+Clinical Presentation:
+- Tachycardia (resting HR > 100 bpm), palpitations, atrial fibrillation in the elderly
+- Heat intolerance, diaphoresis, warm moist skin, fine resting hand tremor
+- Unintentional weight loss despite increased appetite (hyperphagia)
+- Hyperdefecation, frequent loose stools
+- Anxiety, emotional lability, insomnia, fine hair thinning
+- Graves' Specific Features: Exophthalmos/proptosis, lid lag, pretibial myxedema (peau d'orange dermopathy)
+
+Management:
+- Symptom Control: Beta-blockers (Propranolol 20-40 mg TID or Atenolol 25-50 mg daily) block adrenergic overdrive and reduce peripheral T4-to-T3 conversion.
+- Antithyroid Drugs (Thionamides):
+  * Methimazole (preferred due to lower hepatotoxicity and once-daily dosing; starting 10-30 mg daily).
+  * Propylthiouracil (PTU; preferred in first trimester of pregnancy and thyroid storm due to peripheral T4 conversion block).
+  * Warning: Monitor for agranulocytosis (sore throat, fever) requiring immediate CBC with differential.
+- Definitive: Radioactive Iodine (I-131) ablation or total thyroidectomy.
+
+=== 4. ADRENAL DISORDERS & CORTISOL REGULATION ===
+Adrenal Insufficiency (Addison's Disease):
+- Primary: Autoimmune destruction of adrenal cortex; deficiency of cortisol, aldosterone, and androgens.
+- Secondary: Pituitary ACTH deficiency or abrupt cessation of chronic exogenous corticosteroid therapy.
+- Symptoms: Hyperpigmentation (palmar creases, buccal mucosa in primary), orthostatic hypotension, salt craving, hyperkalemia, hyponatremia, hypoglycemia.
+- Maintenance: Oral Hydrocortisone (15-25 mg daily divided TID) + Fludrocortisone (0.05-0.1 mg daily).
+- "Sick-Day Rules": Double or triple the hydrocortisone dose during acute illness, trauma, or high fever to prevent crisis.
+
+Cushing's Syndrome (Hypercortisolemia):
+- Etiology: Exogenous steroid use (most common), Pituitary ACTH adenoma (Cushing's disease), Ectopic ACTH (small cell lung carcinoma), Adrenal adenoma.
+- Features: Central adiposity, "moon facies", "buffalo hump" (dorsocervical fat pad), violaceous abdominal striae (> 1 cm wide), proximal muscle weakness, osteoporosis, fragile skin with easy bruising, hypertension, glucose intolerance.
+
+=== 5. METABOLIC SYNDROME & HORMONAL HEALTH (PCOS) ===
+Metabolic Syndrome Diagnostic Criteria (NCEP ATP III - Any 3 of 5):
+1. Waist circumference: > 102 cm (men), > 88 cm (women)
+2. Triglycerides: ≥ 150 mg/dL (1.7 mmol/L)
+3. HDL Cholesterol: < 40 mg/dL (men), < 50 mg/dL (women)
+4. Blood Pressure: ≥ 130/85 mmHg or receiving antihypertensives
+5. Fasting Blood Glucose: ≥ 100 mg/dL (5.6 mmol/L) or receiving therapy
+
+Polycystic Ovary Syndrome (Rotterdam Criteria - 2 of 3):
+1. Oligo- or anovulation (irregular or absent menses)
+2. Hyperandrogenism (clinical hirsutism, cystic acne, androgenic alopecia, or elevated free testosterone)
+3. Polycystic ovaries on pelvic ultrasound (≥ 12 follicles per ovary 2-9 mm, or ovarian volume > 10 mL)
+- Management: Weight loss (5-10% body weight restores ovulatory cycles), Metformin for insulin resistance, combined oral contraceptives for cycle regulation and hirsutism.
+
+=== 6. CRITICAL RED FLAGS & EMERGENCY PROTOCOLS ===
+1. Myxedema Coma (Severe Hypothyroid Emergency):
+   - Triad: Hypothermia (< 35°C / 95°F), altered mental status/coma, bradycardia/hypotension.
+   - Action: Dial 911 immediately. Requires intensive care, IV hydrocortisone followed by IV levothyroxine, passive rewarming.
+2. Thyroid Storm (Life-Threatening Hyperthyroidism):
+   - Presentation: Hyperpyrexia (> 40°C / 104°F), marked tachycardia (> 140 bpm), delirium/psychosis, high-output heart failure, jaundice, nausea/vomiting.
+   - Action: Emergency resuscitation, IV beta-blockade, PTU/methimazole, potassium iodide, IV corticosteroids.
+3. Acute Adrenal Crisis:
+   - Presentation: Severe refractory hypotension/shock, intractable vomiting, abdominal pain, severe lethargy, hypoglycemia.
+   - Action: Immediate IM or IV Hydrocortisone (100 mg stat) + 0.9% Normal Saline fluid resuscitation.

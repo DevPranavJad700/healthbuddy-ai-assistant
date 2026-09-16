@@ -1,0 +1,84 @@
+TOPIC: Allergies, Anaphylaxis & Asthma Action Protocols
+SOURCE: HealthBuddy Clinical Knowledge Base v3.5
+CATEGORY: Allergy & Immunology / Pulmonology / Emergency Medicine
+
+=== 1. ANAPHYLAXIS: EMERGENCY CLINICAL PROTOCOL ===
+Definition: An acute, potentially fatal, systemic hypersensitivity allergic reaction characterized by rapid onset of life-threatening airway, breathing, or circulatory problems.
+
+Diagnostic Criteria (NIAID / FAAN Clinical Consensus — Any 1 of 3 Scenarios):
+1. Acute onset (minutes to several hours) of skin/mucosal involvement (hives, pruritus, flushing, swollen lips/tongue/uvula) PLUS AT LEAST ONE of:
+   - Respiratory compromise (dyspnea, wheeze, stridor, hypoxemia, peak flow reduction).
+   - Reduced blood pressure or signs of end-organ hypoperfusion (syncope, collapse, incontinence, hypotonia).
+2. Two or more of the following occurring rapidly after exposure to a LIKELY allergen for that patient:
+   - Skin / mucosal tissue involvement
+   - Respiratory compromise
+   - Reduced blood pressure or associated symptoms
+   - Persistent gastrointestinal cramps, abdominal pain, or vomiting
+3. Reduced blood pressure after exposure to a KNOWN allergen for that patient:
+   - Adults: Systolic BP < 90 mmHg or > 30% decrease from baseline.
+   - Children: Age-specific low systolic BP or > 30% decrease.
+
+Immediate Treatment Protocol:
+- STEP 1: EPINEPHRINE IS THE FIRST-LINE, LIFE-SAVING MEDICATION. There are NO absolute contraindications to epinephrine in anaphylaxis.
+  * Dose: 0.01 mg/kg of 1:1,000 (1 mg/mL) solution, maximum 0.5 mg in adults (0.3 mg auto-injector for adults ≥ 30 kg; 0.15 mg auto-injector for children 15–30 kg).
+  * Route: INTRAMUSCULAR (IM) in the anterolateral aspect of the middle third of the thigh (vastus lateralis). IM absorption is vastly superior to subcutaneous injection.
+  * Timing: Administer IMMEDIATELY. Delay in epinephrine administration is the primary factor in fatal anaphylaxis.
+  * Repeat dose: If no improvement within 5 to 15 minutes, repeat a second dose of IM epinephrine in the opposite thigh.
+- STEP 2: Position patient recumbent (flat on back) with legs elevated. DO NOT allow the patient to suddenly stand or sit upright (risk of "empty heart syndrome" / pulseless electrical activity from acute vena cava pooling). If dyspneic or vomiting, position semi-reclined or on their side.
+- STEP 3: Dial 911 immediately. State clearly: "Patient experiencing severe anaphylaxis, epinephrine administered."
+- STEP 4: High-flow supplemental oxygen (10–15 L/min via non-rebreather mask).
+- STEP 5: Rapid intravenous normal saline crystalloid fluid bolus (1–2 liters in adults, 20 mL/kg in children) for distributive shock.
+
+Second-Line Medications (NEVER replace or delay Epinephrine):
+- H1 Antihistamines (Diphenhydramine 25-50 mg IV/IM, Cetirizine 10 mg oral): Relieve cutaneous itch and hives only; do NOT reverse airway edema or cardiovascular shock.
+- H2 Antihistamines (Famotidine 20 mg IV/oral): Synergistic skin relief.
+- Corticosteroids (Methylprednisolone 1-2 mg/kg IV or Prednisone 50 mg oral): May prevent late-phase biphasic reactions (which occur in up to 20% of patients 4–12 hours later).
+- Inhaled Beta-2 Agonist (Albuterol / Salbutamol 2.5-5 mg nebulized): Adjunct for persistent lower airway bronchospasm.
+- Glucagon (1-5 mg IV over 5 min): Indicated for patients taking Beta-Blockers who are refractory to epinephrine.
+
+=== 2. ALLERGIC RHINITIS & ENVIRONMENTAL ALLERGIES ===
+Pathophysiology: Type I IgE-mediated hypersensitivity reaction to airborne environmental allergens (pollen, house dust mites, animal dander, molds). Degranulation of sensitized mast cells releases histamine, leukotrienes, and prostaglandins.
+
+Clinical Classification:
+- Intermittent (< 4 days/week OR < 4 consecutive weeks) vs Persistent (≥ 4 days/week AND ≥ 4 consecutive weeks).
+- Mild (normal sleep, normal work/school, non-troublesome) vs Moderate-to-Severe (sleep disturbance, impairment of daily activities, fatigue).
+
+Evidence-Based Pharmacotherapy Hierarchy:
+1. First-Line for Moderate-to-Severe or Persistent Rhinitis: Intranasal Corticosteroid Sprays (INCS — Fluticasone propionate, Mometasone furoate, Budesonide).
+   - Most effective single monotherapy; suppresses mucosal cellular inflammation.
+   - Technique: Head tilted slightly forward, aim nozzle toward the ipsilateral ear (away from nasal septum to prevent epistaxis and septal perforation). Consistent daily use for 1-2 weeks is required for maximal efficacy.
+2. Second-Line or Intermittent Symptoms: Second-Generation Oral Antihistamines (Cetirizine 10 mg, Loratadine 10 mg, Fexofenadine 180 mg, Levocetirizine 5 mg).
+   - Rapid onset (< 1-2 hours); non-sedating; avoid first-generation agents (Diphenhydramine) due to cognitive impairment and anticholinergic side effects.
+3. Intranasal Antihistamines (Azelastine spray): Fast onset (15 min), highly effective for acute breakthrough sneezing and congestion. Available in combination with fluticasone (Dymista).
+4. Caution: Topical Nasal Decongestants (Oxymetazoline / Afrin spray). Limit use strictly to ≤ 3 to 5 consecutive days to prevent Rhinitis Medicamentosa (rebound severe mucosal hypervascularization and congestion).
+
+=== 3. ASTHMA MANAGEMENT & THE ASTHMA ACTION PLAN ===
+Pathophysiology: Chronic inflammatory airway disease characterized by bronchial hyperresponsiveness, airway wall remodeling, and variable, reversible expiratory airflow limitation.
+
+Global Initiative for Asthma (GINA) Track 1 Guidelines:
+- Inhaled Corticosteroid (ICS) + Formoterol (fast-acting, long-acting beta-2 agonist) is the preferred reliever at all severity steps (reduces severe exacerbation and mortality risk compared to short-acting SABA monotherapy).
+
+Asthma Action Plan (Zone-Based Self-Management):
+1. GREEN ZONE — Doing Well:
+   - Symptoms: No cough, no wheeze, no chest tightness; sleep through the night; normal activity.
+   - Peak Expiratory Flow (PEF): 80% to 100% of personal best.
+   - Action: Continue daily maintenance controller inhaler as prescribed.
+2. YELLOW ZONE — Caution / Worsening Symptoms:
+   - Symptoms: Cough, wheeze, mild chest tightness, nocturnal waking, feeling "a cold coming on", shortness of breath with mild exertion.
+   - PEF: 50% to 79% of personal best.
+   - Action: Increase reliever inhaler (e.g., Budesonide/Formoterol or Albuterol 2-4 puffs every 4 hours as needed). If peak flow does not return to Green Zone within 48 hours, contact physician or initiate short course of oral corticosteroids (Prednisone 40-50 mg daily x 5 days).
+3. RED ZONE — Medical Alert / Severe Flare:
+   - Symptoms: Very short of breath, gasping, trouble walking or talking in complete sentences, chest and neck retractions, fingernails or lips turning blue/pale.
+   - PEF: Less than 50% of personal best.
+   - Action: Take 4 to 8 puffs of quick-relief inhaler immediately. CALL 911 or proceed to the nearest Emergency Department. DO NOT wait.
+
+=== 4. FOOD & DRUG HYPERSENSITIVITY ===
+1. Food Allergies:
+   - "Big 9" Allergens: Peanut, tree nuts, milk, egg, wheat, soy, fish, crustacean shellfish, sesame.
+   - Mechanism: IgE-mediated reactions occur within minutes up to 2 hours of ingestion. Non-IgE (Food Protein-Induced Enterocolitis Syndrome / FPIES) presents with delayed repetitive vomiting and dehydration 2-4 hours later.
+   - Management: Strict allergen avoidance, mandatory carriage of dual epinephrine auto-injectors at all times, emergency medical identification bracelet.
+
+2. Beta-Lactam / Penicillin Allergy De-labeling:
+   - ~10% of the population reports a penicillin allergy, but > 90% are not truly allergic when formally evaluated with skin testing or direct oral challenge.
+   - Cross-reactivity between penicillins and 3rd/4th generation cephalosporins (Ceftriaxone, Cefepime) is extremely low (< 1-2%) because cross-reactivity is determined by R1 side-chain homology rather than the shared beta-lactam ring.
+   - True anaphylaxis or severe cutaneous adverse reactions (SCAR / Stevens-Johnson syndrome / DRESS) contraindicate rechallenge with related beta-lactams.

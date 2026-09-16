@@ -1,0 +1,76 @@
+=== CLINICAL PRACTICE GUIDE: RENAL & NEPHROLOGY HEALTH ===
+Category: Nephrology / Kidney Health
+Target Audience: Clinical Triage, Primary Care Clinicians, Patient Health Guidance
+Evidence Base: KDIGO (Kidney Disease: Improving Global Outcomes), KDOQI, American Society of Nephrology (ASN)
+
+1. OVERVIEW OF RENAL PHYSIOLOGY & FUNCTION
+The kidneys filter approximately 120 to 150 quarts of blood daily, eliminating metabolic waste products (urea, creatinine, uric acid), regulating extracellular fluid volume, maintaining acid-base and electrolyte equilibrium (potassium, sodium, bicarbonate, phosphate, calcium), and producing vital hormones (erythropoietin for red cell production, calcitriol [active vitamin D] for calcium balance, and renin for systemic blood pressure regulation).
+
+2. CHRONIC KIDNEY DISEASE (CKD) STAGING & MONITORING
+Chronic Kidney Disease is defined as abnormalities of kidney structure or function present for > 3 months with health implications.
+Diagnosis requires evidence of kidney damage (typically persistent albuminuria) or decreased glomerular filtration rate (GFR < 60 mL/min/1.73 m2).
+
+CKD Staging by Glomerular Filtration Rate (eGFR, mL/min/1.73 m2):
+- Stage G1: Normal or high (eGFR >= 90) with confirmed kidney damage (proteinuria/hematuria).
+- Stage G2: Mildly decreased (eGFR 60 - 89) with confirmed kidney damage.
+- Stage G3a: Mildly to moderately decreased (eGFR 45 - 59).
+- Stage G3b: Moderately to severely decreased (eGFR 30 - 44).
+- Stage G4: Severely decreased (eGFR 15 - 29). Preparation for renal replacement therapy/transplant.
+- Stage G5: Kidney Failure / End-Stage Renal Disease (ESRD) (eGFR < 15). Dialysis or kidney transplantation required.
+
+Albuminuria Staging (Urinary Albumin-to-Creatinine Ratio, UACR):
+- Category A1 (Normal to mildly increased): UACR < 30 mg/g (< 3 mg/mmol).
+- Category A2 (Moderately increased / Microalbuminuria): UACR 30 - 300 mg/g (3 - 30 mg/mmol). Early marker of vascular and renal injury.
+- Category A3 (Severely increased / Macroalbuminuria): UACR > 300 mg/g (> 30 mg/mmol). High risk of CKD progression and cardiovascular mortality.
+
+3. DIABETIC NEPHROPATHY & HYPERTENSIVE NEPHROSCLEROSIS
+Diabetes and hypertension account for over 70% of end-stage renal disease cases globally.
+Guideline-Directed Medical Therapy (GDMT):
+- Renin-Angiotensin System Inhibitors: First-line therapy for patients with hypertension and albuminuria (UACR >= 30 mg/g). ACE inhibitors (e.g., Lisinopril 10-40 mg daily) or Angiotensin Receptor Blockers (ARBs, e.g., Losartan 50-100 mg daily). Monitor serum creatinine and potassium 1-2 weeks after initiation; up to a 30% rise in creatinine is acceptable and reflects intraglomerular hemodynamic changes.
+- SGLT2 Inhibitors (Dapagliflozin, Empagliflozin): Class 1A recommendation for patients with CKD and type 2 diabetes or nondiabetic CKD with eGFR >= 20 mL/min/1.73 m2. Dramatically slows eGFR decline, reduces proteinuria, and lowers heart failure hospitalization.
+- Non-steroidal Mineralocorticoid Receptor Antagonists (Finerenone): Indicated for persistent albuminuria despite maximally tolerated ACEi/ARB therapy in type 2 diabetes. Reduces renal and cardiovascular endpoints while monitoring serum potassium closely.
+- Blood Pressure Targets: Target systolic blood pressure < 120 mmHg when tolerated, measured using standardized office BP techniques (KDIGO 2021).
+
+4. ACUTE KIDNEY INJURY (AKI) KDIGO DEFINITIONS & PHASES
+AKI is characterized by an abrupt decline in renal function occurring over hours to days.
+KDIGO Staging Criteria:
+- Stage 1: Serum creatinine 1.5 - 1.9 times baseline OR increase >= 0.3 mg/dL (>= 26.5 umol/L) within 48 hours; urine output < 0.5 mL/kg/h for 6 - 12 hours.
+- Stage 2: Serum creatinine 2.0 - 2.9 times baseline; urine output < 0.5 mL/kg/h for >= 12 hours.
+- Stage 3: Serum creatinine 3.0 times baseline OR increase >= 4.0 mg/dL (>= 353.6 umol/L) OR initiation of renal replacement therapy; urine output < 0.3 mL/kg/h for >= 24 hours or anuria for >= 12 hours.
+
+Etiological Classification:
+- Prerenal Azotemia: Volume depletion, dehydration, sepsis, hemorrhage, cardiac failure, bilateral renal artery stenosis. BUN:Creatinine ratio often > 20:1, fractional excretion of sodium (FeNa) < 1%. Responds rapidly to volume restoration.
+- Intrinsic Renal AKI: Acute tubular necrosis (ATN, ischemic or nephrotoxic), acute interstitial nephritis (AIN, drug-induced: PPIs, NSAIDs, antibiotics), glomerulonephritis, vascular occlusion. FeNa > 2%, urine sediment contains "muddy brown" granular casts in ATN.
+- Postrenal Azotemia: Urinary tract obstruction (benign prostatic hyperplasia, bilateral urolithiasis, pelvic mass, blocked Foley catheter). Renal ultrasound is mandatory to assess for hydronephrosis.
+
+5. NEPHROLITHIASIS (KIDNEY STONES) & COLIC
+Types of Renal Calculi:
+- Calcium Oxalate (75 - 80%): Most common. Formed in alkaline-to-neutral urine. Avoid excessive dietary oxalates (spinach, rhubarb, almonds, chocolate). Do NOT restrict dietary calcium; normal calcium intake binds oxalate in the gut, reducing urinary excretion.
+- Uric Acid (5 - 10%): Radiolucent on plain X-rays, visualized on non-contrast CT. Associated with acidic urine (pH < 5.5), high purine intake, gout, metabolic syndrome. Alkalinization of urine with potassium citrate is curative.
+- Struvite (Magnesium Ammonium Phosphate, 10%): "Infection stones" associated with urease-producing bacteria (Proteus mirabilis, Klebsiella). Can form large staghorn calculi requiring surgical nephrolithotomy.
+- Cystine (1 - 2%): Genetic cystinuria defect.
+
+Acute Renal Colic Management:
+- Analgesia: First-line therapy is IV or oral NSAIDs (Ketorolac, Ibuprofen) which reduce ureteral spasm and intrarenal pressure, superior to opioids for acute colic unless renal failure is present.
+- Medical Expulsive Therapy: Alpha-1 adrenergic antagonists (Tamsulosin 0.4 mg once daily) facilitate expulsion of distal ureteral stones 5 - 10 mm in diameter.
+- Emergency Red Flags for Stone Intervention: Obstructing stone with concurrent urinary tract infection (urosepsis risk—requires emergent nephrostomy tube or JJ stent), intractable pain/vomiting, bilateral obstruction, or obstruction of a solitary kidney.
+
+6. ELECTROLYTE EMERGENCIES IN NEPHROLOGY
+Hyperkalemia (Serum Potassium > 5.0 mEq/L, Critical >= 6.0 mEq/L):
+- Etiologies: Decreased renal excretion (CKD/AKI), hypoaldosteronism, potassium-sparing diuretics, ACEi/ARBs, tissue breakdown (rhabdomyolysis, tumor lysis).
+- ECG Progression: Tall peaked T waves -> PR prolongation -> P wave flattening -> QRS widening -> "sine wave" pattern -> Ventricular fibrillation or asystole.
+- Emergent Treatment Protocol:
+  1. Membrane Stabilization: IV Calcium Gluconate 10% (10 mL over 2-3 minutes) or Calcium Chloride. Does NOT lower serum potassium; prevents cardiac arrest.
+  2. Intracellular Shift: Regular Insulin 10 units IV with 25-50g 50% Dextrose (D50) over 15-30 minutes; nebulized Albuterol (10-20 mg).
+  3. Elimination: Sodium zirconium cyclosilicate (Lokelma), Patiromer, loop diuretics (Furosemide), or emergent Hemodialysis.
+
+Hyponatremia (Serum Sodium < 135 mEq/L, Critical < 120 mEq/L):
+- Assess volume status (hypovolemic, euvolemic, hypervolemic) and urine osmolality.
+- Severe symptoms (seizures, coma, herniation): Hypertonic Saline (3% NaCl) 100 mL bolus over 10 minutes, repeated up to 3 times to raise sodium by 4-6 mEq/L.
+- Safety Caution: Correction rate MUST NOT exceed 8 mEq/L in 24 hours to prevent Central Pontine Myelinolysis (Osmotic Demyelination Syndrome).
+
+7. LIFESTYLE & NUTRITIONAL PRINCIPLES FOR KIDNEY LONGEVITY
+- Dietary Sodium Restriction: < 2,000 mg/day (equivalent to < 5g table salt) to decrease proteinuria and enhance antihypertensive drug efficacy.
+- Protein Intake Optimization: In non-dialysis CKD Stages 3-5, target moderate protein intake 0.6 - 0.8 g/kg/day to reduce nitrogenous waste accumulation. Avoid ultra-high protein diets (> 1.5 g/kg/day) which induce glomerular hyperfiltration.
+- Nephrotoxic Medication Vigilance: Eliminate unnecessary nonsteroidal anti-inflammatory drugs (NSAIDs like Ibuprofen, Naproxen), aminoglycosides, and unverified herbal remedies containing aristolochic acid.
+- Hydration Maintenance: Ensure daily fluid intake of 2.5 to 3.0 liters unless fluid-restricted due to advanced CKD Stage 4-5, heart failure, or severe hypoalbuminemia.

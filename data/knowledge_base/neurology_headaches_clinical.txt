@@ -1,0 +1,94 @@
+TOPIC: Neurology, Headaches & Acute Cerebrovascular Protocols
+SOURCE: HealthBuddy Clinical Knowledge Base v3.5
+CATEGORY: Neurology / Acute Care / Emergency Triage
+
+=== 1. HEADACHE TRIAGE & PRIMARY CLASSIFICATION ===
+Headaches represent one of the top reasons for emergency and ambulatory consultations. Differential diagnosis separates benign primary headaches from life-threatening secondary causes.
+
+A. Tension-Type Headache (TTH) — Most Common (80% prevalence):
+- Characteristics: Dull, non-pulsatile, bilateral "band-like" tightness around forehead or occiput.
+- Severity: Mild to moderate; does NOT worsen with routine physical activity (walking, climbing stairs).
+- Associated symptoms: No significant nausea/vomiting; mild photophobia OR phonophobia may occur (never both).
+- Acute Therapy: First-line Acetaminophen (Paracetamol 500-1000 mg) or NSAIDs (Ibuprofen 400-800 mg, Naproxen 500 mg). Limit acute use to < 10-15 days/month to avoid Medication Overuse Headache (MOH).
+- Non-Pharmacologic: Trigger point massage, biofeedback, stress reduction, hydration, sleep consistency.
+
+B. Migraine (With or Without Aura):
+- Diagnostic Criteria (ICHD-3): At least 5 attacks lasting 4–72 hours untreated, with ≥ 2 features:
+  * Unilateral location (60-70%)
+  * Pulsating / throbbing quality
+  * Moderate to severe intensity (inhibits or prohibits daily activity)
+  * Aggravated by or causing avoidance of routine physical activity
+  PLUS ≥ 1 of:
+  * Nausea and/or vomiting
+  * Photophobia and phonophobia
+- Migraine Aura: Reversible focal neurological symptoms developing gradually over 5–20 minutes and lasting < 60 minutes. Usually visual (scintillating scotoma, zig-zag fortification spectra, phosphenes), sensory (unilateral paresthesias), or dysphasic speech disturbance.
+- Acute Abortive Therapy:
+  * Mild-to-moderate: High-dose NSAIDs (Naproxen sodium 500-550 mg) or Aspirin 900 mg + antiemetic (Metoclopramide 10 mg).
+  * Moderate-to-severe / Failure of NSAIDs: 5-HT1B/1D Receptor Agonists (Triptans — Sumatriptan 50-100 mg oral, Zolmitriptan 2.5-5 mg, Rizatriptan 10 mg). Take at earliest onset of headache phase (not aura).
+  * Contraindications for Triptans: Coronary artery disease, peripheral vascular disease, uncontrolled hypertension, history of stroke/TIA, basilar or hemiplegic migraine.
+  * Newer Non-Vasoconstricting Options: CGRP Receptor Antagonists ("Gepants" — Rimegepant, Ubrogepant) or 5-HT1F agonist (Lasmiditan).
+- Preventive Indications (≥ 4 headache days/month or debilitating attacks):
+  * Beta-blockers: Propranolol (40-160 mg/day) or Metoprolol
+  * Anticonvulsants: Topiramate (25-100 mg/day; weight loss side effect, teratogenic) or Divalproex sodium
+  * Antidepressants: Amitriptyline (10-75 mg at bedtime)
+  * Monoclonal CGRP Antibodies: Erenumab, Fremanezumab, Galcanezumab (monthly subcutaneous)
+  * OnabotulinumtoxinA (Botox): Approved for chronic migraine (≥ 15 headache days/month).
+
+C. Cluster Headache ("Suicide Headache"):
+- Features: Strictly unilateral, excruciating periorbital / retro-orbital pain lasting 15–180 minutes.
+- Autonomic Signs: Ipsilateral conjunctival injection, lacrimation, nasal congestion, rhinorrhea, forehead sweating, miosis, ptosis.
+- Patient Behavior: Extreme restlessness, pacing, rocking (unlike migraineurs who lie quietly in the dark).
+- Acute Treatment: 100% Normobaric High-Flow Oxygen (12–15 L/min via non-rebreather mask for 15 minutes; Response rate ~75% within 15 min). Subcutaneous Sumatriptan 6 mg or Intranasal Zolmitriptan 5 mg.
+- Prophylaxis: Verapamil (high dose, requires baseline and titrated ECG monitoring).
+
+=== 2. SNOOP4: RED FLAG CRITERIA FOR SECONDARY HEADACHES ===
+If ANY of the following "SNOOP4" warning signs are present, urgent neuroimaging (non-contrast head CT or brain MRI) and clinical escalation are mandatory:
+- S — Systemic symptoms: Fever, weight loss, night sweats, chills (concern for meningitis, brain abscess, temporal arteritis).
+- N — Neurologic symptoms or abnormal signs: Confusion, personality change, seizures, focal motor weakness, Horner's syndrome, papilledema on fundoscopy.
+- O — Onset sudden / "Thunderclap": Reaches maximal excruciating intensity in < 1 minute ("worst headache of my life" → rule out subarachnoid hemorrhage / aneurysmal rupture).
+- O — Older age at onset: New headache beginning after age 50 (concern for Giant Cell / Temporal Arteritis; check ESR and CRP immediately to prevent irreversible ischemic blindness; intracranial mass lesion).
+- P — Pattern change or Progression: Acceleration in attack frequency, change in character, failure to respond to usual therapies.
+- P — Positional exacerbation: Marked worsening when upright (low CSF pressure / leak) or marked worsening when lying flat / coughing / straining / Valsalva (elevated intracranial pressure / mass effect / idiopathic intracranial hypertension).
+- P — Papilledema: Swelling of optic disc indicates intracranial hypertension.
+
+=== 3. ACUTE STROKE & TIA PROTOCOLS ===
+Time is Brain: 1.9 million neurons die every minute an ischemic stroke is untreated.
+Clinical Identification (BE-FAST Protocol):
+- B — Balance: Sudden loss of balance, ataxia, vertigo, clumsiness.
+- E — Eyes: Sudden loss of vision in one or both eyes, diplopia, visual field cut (hemianopia).
+- F — Face: Sudden unilateral facial droop or asymmetrical smile.
+- A — Arms: Sudden arm or leg weakness, numbness, or drift when held outstretched.
+- S — Speech: Slurred speech (dysarthria), inappropriate word salad, inability to speak or comprehend (aphasia).
+- T — Time: Record the exact "Last Known Well" (LKW) time and call 911 immediately.
+
+Therapeutic Windows:
+- Intravenous Thrombolysis (Alteplase / Tenecteplase): Within 4.5 hours of Last Known Well in eligible patients without intracranial hemorrhage or bleeding diathesis.
+- Endovascular Mechanical Thrombectomy (EVT): Large vessel occlusions (internal carotid, MCA M1) within 6 to 24 hours under perfusion imaging criteria (DAWN / DEFUSE-3 trials).
+- Strict Rule: NEVER administer aspirin, clopidogrel, or anticoagulation until emergency non-contrast brain CT has definitively ruled out hemorrhage.
+
+=== 4. CONCUSSION & MILD TRAUMATIC BRAIN INJURY (mTBI) ===
+Definition: Biomechanically induced transient disturbance of neurological function. Loss of consciousness is NOT required (< 10% of concussions involve LOC).
+Acute Symptoms:
+- Cognitive: Sluggish processing, feeling "in a fog", amnesia of the event (retrograde or anterograde), difficulty concentrating.
+- Somatic: Headache, dizziness, nausea, balance instability, light and noise sensitivity.
+- Emotional / Sleep: Irritability, mood swings, drowsiness, sleeping more or less than usual.
+
+Canadian CT Head Injury Rules (Indications for emergency CT):
+- GCS < 15 at 2 hours post-injury
+- Suspected open or depressed skull fracture
+- Any sign of basal skull fracture (Battle's sign / mastoid ecchymosis, raccoon eyes / periorbital ecchymosis, CSF rhinorrhea/otorrhea, hemotympanum)
+- ≥ 2 episodes of vomiting
+- Age ≥ 65 years
+- Retrograde amnesia > 30 minutes before impact
+- Dangerous mechanism (pedestrian struck by vehicle, ejection from vehicle, fall from > 3 feet / 5 stairs).
+
+Concussion Recovery (Graduated Return to Activity):
+- 24–48 hours of relative rest (light activities of daily living; avoid complete dark-room isolation which worsens depression).
+- Stepwise progression (minimum 24 hours per stage):
+  1. Symptom-limited activity (daily tasks, light reading).
+  2. Light aerobic exercise (stationary cycling, brisk walking; no resistance training).
+  3. Sport-specific / task-specific training without head impact.
+  4. Non-contact training drills (resuming resistance training).
+  5. Full contact practice (post medical clearance).
+  6. Normal return to competition/work.
+- Rule: If symptoms flare at any stage, drop back to the prior symptom-free stage for 24 hours.

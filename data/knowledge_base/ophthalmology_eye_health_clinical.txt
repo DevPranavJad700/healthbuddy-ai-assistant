@@ -1,0 +1,67 @@
+=== CLINICAL PRACTICE GUIDE: OPHTHALMOLOGY & OCULAR HEALTH ===
+Category: Ophthalmology / Vision & Eye Health
+Target Audience: Primary Care, Emergency Triage, Optometry Referral, Patient Guidance
+Evidence Base: American Academy of Ophthalmology (AAO) Preferred Practice Patterns (PPP), WHO Vision 2020
+
+1. OCULAR ANATOMY & PHYSIOLOGIC PATHWAYS
+The human eye captures light through the transparent cornea, transmits it through the anterior chamber fluid (aqueous humor), pupillary aperture, crystalline lens, and vitreous humor onto the retina. Photoreceptors (rods for low-light monochromatic vision, cones for color and high-acuity central vision) convert light photons into electrochemical impulses transmitted via the optic nerve (Cranial Nerve II) through the optic chiasm to the visual cortex in the occipital lobe.
+
+2. OCULAR EMERGENCIES: RED FLAGS & IMMEDIATE ESCALATION
+Ocular emergencies can cause irreversible visual loss within hours. The following presentations mandate same-day emergency ophthalmologic evaluation:
+
+- Acute Angle-Closure Glaucoma (AACG):
+  * Clinical Presentation: Severe unilateral peri-orbital pain, frontal headache, nausea and vomiting, blurred vision, colored halos around light sources.
+  * Physical Signs: Injected ciliary conjunctiva (ciliary flush), steamy or cloudy cornea, shallow anterior chamber, mid-dilated non-reactive pupil, markedly elevated intraocular pressure (IOP 40 - 70 mmHg; normal is 10 - 21 mmHg).
+  * Immediate Medical Intervention: Topical beta-blocker (Timolol 0.5%), alpha-2 agonist (Brimonidine 0.15%), carbonic anhydrase inhibitor (Dorzolamide 2% or IV/oral Acetazolamide 500 mg), topical Pilocarpine 2% (once IOP < 40 mmHg to induce miosis), and emergent laser peripheral iridotomy (LPI).
+
+- Retinal Detachment (RD):
+  * Clinical Presentation: Sudden onset of photopsia (flashes of light), rapid increase in floaters ("cobwebs" or dark specks), or a progressive dark shadow or "curtain" dropping over the visual field.
+  * Mechanism: Full-thickness tear in the neurosensory retina allowing liquefied vitreous fluid to dissect into the subretinal space.
+  * Action: Strict patient rest, avoid eye rubbing, urgent surgical repair (pneumatic retinopexy, scleral buckle, or pars plana vitrectomy) within 24 to 48 hours to preserve macula function.
+
+- Central Retinal Artery Occlusion (CRAO):
+  * Clinical Presentation: Sudden, painless, profound, monocular visual loss ("eye stroke").
+  * Physical Signs: Relative afferent pupillary defect (RAPD / Marcus Gunn pupil), pale retina with an ischemic "cherry-red spot" at the fovea.
+  * Etiology: Embolic occlusion (carotid atherosclerosis, cardiac source). Immediate emergency stroke protocol, ocular massage, anterior chamber paracentesis, and urgent workup for stroke risk factors (carotid ultrasound, echocardiography).
+
+- Chemical Ocular Burns:
+  * Alkali burns (lye, drain cleaners, lime, cement) cause rapid liquefactive necrosis and penetrate deeper than acid burns (coagulative necrosis).
+  * Immediate Treatment: Immediate, continuous, copious irrigation with water or normal saline for at least 15 to 30 minutes before any exam or transfer. Check ocular pH using litmus paper; continue irrigation until neutral pH (7.0 - 7.2) is achieved.
+
+3. RED EYE DIFFERENTIAL DIAGNOSIS
+- Viral Conjunctivitis ("Pink Eye"):
+  * Etiology: Most commonly Adenovirus. Highly contagious.
+  * Signs: Watery discharge, foreign body sensation, prominent follicular reaction, tender preauricular lymphadenopathy.
+  * Management: Cold compresses, artificial tears, strict hand hygiene. Self-limiting over 7-14 days. Do NOT prescribe topical antibiotics or steroids.
+- Bacterial Conjunctivitis:
+  * Etiology: Streptococcus pneumoniae, Staphylococcus aureus, Haemophilus influenzae.
+  * Signs: Copious mucopurulent discharge with glued eyelids upon waking.
+  * Management: Topical fluoroquinolone (Ofloxacin/Ciprofloxacin) or Polymyxin B/Trimethoprim drops for 5-7 days. Contact lens wearers must be treated for Pseudomonas aeruginosa coverage (Fluoroquinolone drops) and discontinue lens use immediately.
+- Allergic Conjunctivitis:
+  * Signs: Bilateral intense ocular itching (hallmark symptom), stringy mucoid discharge, conjunctival chemosis (edema), eyelid swelling.
+  * Management: Dual-action topical mast cell stabilizer / antihistamines (Olopatadine 0.2%, Ketotifen 0.025%), cold compresses. Avoid eye rubbing.
+- Corneal Abrasion & Microbial Keratitis:
+  * Signs: Severe ocular pain, intense photophobia, sensation of an eyelash trapped under eyelid.
+  * Diagnosis: Fluorescein staining under cobalt blue light reveals epithelial defect.
+  * Caution: Never patch an eye in contact lens wearers (high pseudomonas risk). Avoid topical anesthetic prescriptions as repeated use causes corneal melting and toxic keratitis.
+
+4. CHRONIC OCULAR CONDITIONS & RETINAL DISEASE
+- Diabetic Retinopathy (DR):
+  * Non-Proliferative Diabetic Retinopathy (NPDR): Microaneurysms, dot-and-blot retinal hemorrhages, hard lipid exudates, cotton-wool spots (nerve fiber layer infarcts).
+  * Proliferative Diabetic Retinopathy (PDR): Retinal ischemia stimulates vascular endothelial growth factor (VEGF), causing fragile neovascularization on the optic disc (NVD) or elsewhere (NVE). Complications include vitreous hemorrhage and tractional retinal detachment.
+  * Clinical Screening: Annual dilated eye examination for all individuals with Type 2 diabetes from time of diagnosis, and within 5 years of diagnosis for Type 1 diabetes.
+  * Therapeutic Interventions: Intravitreal anti-VEGF injections (Aflibercept, Ranibizumab, Faricimab), panretinal photocoagulation (PRP), and strict glycemic/BP optimization.
+
+- Age-Related Macular Degeneration (AMD):
+  * Leading cause of irreversible central blindness in adults > 65 years.
+  * Dry AMD (85-90%): Gradual atrophy of retinal pigment epithelium (RPE) and photoreceptors with accumulation of drusen (yellow extracellular deposits). Monitored with daily Amsler grid self-tests (straight lines appearing wavy or distorted: metamorphopsia).
+  * Wet AMD (10-15%): Choroidal neovascular membranes penetrate Bruch's membrane, causing rapid subretinal fluid, hemorrhage, and scarring. Treated with ongoing intravitreal anti-VEGF therapy.
+  * AREDS2 Nutritional Supplementation: Proved to reduce progression to advanced AMD by 25%. Formulation: Vitamin C (500 mg), Vitamin E (400 IU), Lutein (10 mg), Zeaxanthin (2 mg), Zinc (80 mg zinc oxide), Copper (2 mg cupric oxide). Beta-carotene is omitted to prevent lung cancer risk in current or former smokers.
+
+5. DIGITAL EYE STRAIN & PREVENTIVE OCULAR HYGIENE
+- Computer Vision Syndrome:
+  * Blink rate drops by up to 66% during screen reading, leading to accelerated tear film evaporation and dry eye disease.
+  * 20-20-20 Rule: Every 20 minutes, gaze at an object at least 20 feet away for at least 20 seconds to relax ciliary muscle accommodation.
+  * Ocular Lubrication: Preservative-free artificial tears (Carboxymethylcellulose 0.5% or Sodium Hyaluronate) 3 to 4 times daily.
+  * Screen Ergonomics: Position monitors 20-28 inches away, center of screen 4-5 inches below eye level to minimize exposed ocular surface area.
+  * Ultraviolet Protection: Ensure sunglasses provide 99-100% UV-A and UV-B blockage to protect against premature cataracts, pterygium, and photokeratitis.

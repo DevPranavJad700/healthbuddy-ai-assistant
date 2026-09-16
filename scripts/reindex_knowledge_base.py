@@ -84,6 +84,11 @@ def main():
             embedding_function=embeddings,
         )
 
+        try:
+            sys.stdout.reconfigure(encoding='utf-8')
+        except Exception:
+            pass
+
         print("\nStep 3: Processing and indexing documents...")
         total_chunks = 0
         for file_path, lang in file_info:
@@ -92,11 +97,11 @@ def main():
                 if chunks:
                     vectorstore.add_documents(chunks)
                     total_chunks += len(chunks)
-                    print(f"  ✓ [{lang.upper()}] {file_path.name} → {len(chunks)} chunks")
+                    print(f"  [OK] [{lang.upper()}] {file_path.name} -> {len(chunks)} chunks")
                 else:
-                    print(f"  ⚠ [{lang.upper()}] {file_path.name} → 0 chunks (skipped)")
+                    print(f"  [WARN] [{lang.upper()}] {file_path.name} -> 0 chunks (skipped)")
             except Exception as e:
-                print(f"  ✗ [{lang.upper()}] {file_path.name} → ERROR: {e}")
+                print(f"  [ERROR] [{lang.upper()}] {file_path.name} -> ERROR: {e}")
 
         print(f"\n{'='*60}")
         print(f"Re-index complete! {total_chunks} total chunks indexed.")

@@ -1,0 +1,99 @@
+TOPIC: Preventive Health, Cancer Screenings & Diagnostic Biomarkers
+SOURCE: HealthBuddy Clinical Knowledge Base v3.5
+CATEGORY: Preventive Medicine / Primary Care / Pathology & Diagnostics
+
+=== 1. EVIDENCE-BASED CANCER SCREENING GUIDELINES (USPSTF) ===
+Routine cancer screening detects premalignant lesions and asymptomatic early-stage malignancies, drastically reducing disease-specific mortality.
+
+A. Colorectal Cancer (CRC) Screening:
+- Population: Average-risk adults aged 45 to 75 years (Grade A recommendation; USPSTF lowered age from 50 to 45 in 2021). Selectively screen ages 76 to 85 based on health status and prior screening history.
+- Screening Modalities & Intervals:
+  * Colonoscopy: Every 10 years (Gold standard; visualizes whole colon, allows concurrent polypectomy).
+  * Fecal Immunochemical Test (FIT): Annually (detects human globin; no dietary restrictions required).
+  * Stool DNA-FIT (Cologuard): Every 3 years.
+  * Flexible Sigmoidoscopy: Every 5 years (or every 10 years if combined with annual FIT).
+  * CT Colonography (Virtual Colonoscopy): Every 5 years.
+- High-Risk Adjustments: Individuals with a first-degree relative diagnosed with CRC before age 60 begin colonoscopy at age 40, or 10 years earlier than the youngest affected relative's age at diagnosis, repeated every 5 years.
+
+B. Breast Cancer Screening:
+- Population: Cisgender women and individuals assigned female at birth aged 40 to 74 years (USPSTF updated in 2024).
+- Modality: Digital Breast Tomosynthesis (3D Mammography) or Digital Mammography every 2 years (biennial).
+- Dense Breasts (Category C or D): Supplemental whole-breast ultrasound or breast MRI should be considered in consultation with physician.
+- High-Risk (BRCA1/2 mutations, lifetime risk > 20% by Tyrer-Cuzick model, history of chest radiation between ages 10-30): Annual contrast-enhanced Breast MRI starting at age 25–30, alternating with annual mammogram.
+
+C. Cervical Cancer Screening:
+- Age 21 to 29: Cervical cytology (Pap smear) alone every 3 years. Routine HPV testing is NOT recommended in this cohort (high prevalence of transient, self-clearing HPV infections).
+- Age 30 to 65 (Any of 3 options):
+  * High-Risk HPV (hrHPV) testing alone every 5 years (preferred modern strategy).
+  * Co-testing (hrHPV + Pap smear) every 5 years.
+  * Pap smear alone every 3 years.
+- Discontinuation: At age 65 if adequate prior negative screening (3 consecutive negative Pap tests or 2 consecutive negative hrHPV tests within prior 10 years, with most recent within 5 years) and no history of CIN2+ in the past 25 years.
+
+D. Lung Cancer Screening:
+- Population: Adults aged 50 to 80 years with a ≥ 20 pack-year smoking history who currently smoke or have quit within the past 15 years.
+- Modality: Annual Low-Dose Computed Tomography (LDCT) of the chest.
+- Discontinue: Once the person has not smoked for 15 years or develops a health problem that substantially limits life expectancy or ability to undergo curative lung surgery.
+
+E. Prostate Cancer Screening:
+- Age 55 to 69: Shared decision-making regarding annual or biennial Prostate-Specific Antigen (PSA) screening (Grade C). Discuss benefits (modest reduction in metastatic prostate cancer) versus harms (false positives, biopsy complications, overdiagnosis, treatment-related erectile dysfunction and urinary incontinence).
+- Age ≥ 70: Routine PSA screening is not recommended (Grade D).
+
+F. Abdominal Aortic Aneurysm (AAA) Screening:
+- Population: Men aged 65 to 75 years who have EVER smoked (≥ 100 cigarettes in lifetime).
+- Modality: One-time screening abdominal ultrasound (detects AAA ≥ 3.0 cm; reduces rupture risk by ~50%).
+
+=== 2. COMPREHENSIVE ANNUAL LABORATORY BIOMARKERS ===
+Reference Intervals & Clinical Significance:
+
+1. Complete Blood Count (CBC) with Differential:
+   - Hemoglobin (Hb): 13.5–17.5 g/dL (men), 12.0–15.5 g/dL (women). Low Hb indicates anemia; check MCV (Mean Corpuscular Volume: 80–100 fL) to classify microcytic (iron deficiency, thalassemia), normocytic (chronic disease, hemolysis), or macrocytic (B12/folate deficiency, alcohol, thyroid).
+   - Platelets: 150,000 – 450,000 /mcL.
+   - White Blood Cell Count (WBC): 4,000 – 11,000 /mcL. Elevated neutrophils indicate bacterial infection; elevated lymphocytes indicate viral infection; elevated eosinophils indicate allergy, asthma, or parasitic infection.
+
+2. Comprehensive Metabolic Panel (CMP):
+   - Fasting Glucose: 70–99 mg/dL (100–125 mg/dL = Impaired fasting glucose / prediabetes; ≥ 126 mg/dL on two occasions = Diabetes Mellitus).
+   - Hemoglobin A1c: < 5.7% (Normal), 5.7% – 6.4% (Prediabetes), ≥ 6.5% (Diabetes).
+   - Renal Function:
+     * Serum Creatinine: 0.7–1.3 mg/dL (men), 0.6–1.1 mg/dL (women).
+     * Estimated Glomerular Filtration Rate (eGFR): > 90 mL/min/1.73m² (Normal), < 60 for > 3 months defines Chronic Kidney Disease (CKD).
+     * Blood Urea Nitrogen (BUN): 7–20 mg/dL.
+   - Liver Function Tests (LFTs):
+     * ALT (Alanine Aminotransferase): 7–56 U/L (liver-specific).
+     * AST (Aspartate Aminotransferase): 10–40 U/L (AST:ALT ratio > 2 suggests alcoholic liver disease; ALT > AST suggests non-alcoholic fatty liver disease / MASLD).
+     * Alkaline Phosphatase (ALP): 44–147 U/L (elevated in biliary obstruction, bone remodeling, Paget's).
+     * Total Bilirubin: 0.1–1.2 mg/dL.
+
+3. Complete Lipid Profile (Fasting or Non-Fasting):
+   - Total Cholesterol: < 200 mg/dL (5.18 mmol/L)
+   - Low-Density Lipoprotein (LDL-C): < 100 mg/dL (2.59 mmol/L) for primary prevention; < 70 mg/dL or < 55 mg/dL for very high-risk established atherosclerotic cardiovascular disease (ASCVD).
+   - High-Density Lipoprotein (HDL-C): > 40 mg/dL (men), > 50 mg/dL (women)
+   - Triglycerides: < 150 mg/dL (1.7 mmol/L). Severe hypertriglyceridemia (≥ 500 mg/dL) carries acute pancreatitis risk.
+   - Non-HDL Cholesterol (Total minus HDL): < 130 mg/dL (superior marker of total atherogenic particle burden).
+   - Apolipoprotein B (ApoB): < 80 mg/dL (optimal secondary target for cardiovascular risk).
+
+4. Specialized Micronutrient & Inflammatory Markers:
+   - Serum Ferritin: 30–300 ng/mL. Ferritin < 30 ng/mL confirms absolute iron deficiency, even if hemoglobin is borderline.
+   - 25-Hydroxyvitamin D: 30–50 ng/mL (75–125 nmol/L) optimal for bone mineralization and immune modulation.
+   - High-Sensitivity C-Reactive Protein (hs-CRP): < 1.0 mg/L (Low cardiovascular risk), 1.0–3.0 mg/L (Average risk), > 3.0 mg/L (High risk).
+
+=== 3. 10-YEAR ASCVD RISK CALCULATION & STATIN THERAPY ===
+The ACC/AHA Pooled Cohort Equations calculate 10-year risk of first hard ASCVD event (non-fatal MI, CHD death, fatal or non-fatal stroke).
+
+Four Primary Statin Benefit Groups:
+1. Secondary Prevention: All patients with established clinical ASCVD (prior MI, angina, coronary revascularization, stroke/TIA, peripheral artery disease) → High-intensity statin (Atorvastatin 40-80 mg or Rosuvastatin 20-40 mg) to lower LDL-C by ≥ 50%.
+2. Severe Hypercholesterolemia: Baseline LDL-C ≥ 190 mg/dL (4.9 mmol/L) → High-intensity statin without needing risk calculation (frequently familial hypercholesterolemia).
+3. Diabetes Mellitus in Adults (Age 40–75 with LDL-C 70–189 mg/dL): At least moderate-intensity statin (Atorvastatin 10-20 mg, Rosuvastatin 5-10 mg); high-intensity if multiple risk factors exist.
+4. Primary Prevention (Age 40–75 with LDL-C 70–189 mg/dL and No Diabetes):
+   - Low risk (< 5%): Lifestyle counseling (DASH/Mediterranean diet, exercise).
+   - Borderline risk (5% to < 7.5%): If risk-enhancing factors present, consider moderate-intensity statin.
+   - Intermediate risk (7.5% to < 20%): Moderate-intensity statin recommended. If decision is uncertain, order a Coronary Artery Calcium (CAC) scan:
+     * CAC = 0: Statin can be withheld/delayed, re-evaluate in 5 years.
+     * CAC = 1–99: Favors statin therapy.
+     * CAC ≥ 100 or ≥ 75th percentile: Strong indication for statin initiation.
+   - High risk (≥ 20%): High-intensity statin recommended.
+
+=== 4. ADULT HEALTH MAINTENANCE TIMELINE ===
+- Age 20s–30s: Annual blood pressure check, baseline lipid panel every 5 years, cervical screening from age 21, annual dental exam, skin check.
+- Age 40s: Diabetes screening (fasting glucose or A1c every 3 years starting age 35 for overweight/obese adults), CRC screening begins at age 45, biennial mammography begins at age 40.
+- Age 50s: Colorectal screening ongoing, annual LDCT for high-risk smokers (age 50-80), Shingrix 2-dose shingles vaccine at age 50, prostate cancer shared decision-making at age 55.
+- Age 65+: Pneumococcal vaccine, bone mineral density DXA scan for women at 65 (and men at 70), one-time AAA ultrasound for male smokers age 65-75, annual cognitive and fall risk appraisal.

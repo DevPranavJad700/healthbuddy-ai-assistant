@@ -1,0 +1,80 @@
+=== CLINICAL PRACTICE GUIDE: HEMATOLOGY & BLOOD DISORDERS ===
+Category: Hematology / Blood & Coagulation Health
+Target Audience: Primary Care, Urgent Care, Hematology Referral, Patient Education
+Evidence Base: American Society of Hematology (ASH), CHEST Guidelines on Antithrombotic Therapy, WHO Hemoglobin Standards
+
+1. HEMATOLOGIC BASICS & COMPLETE BLOOD COUNT (CBC) INTERPRETATION
+The blood system carries oxygen, delivers nutrients, eliminates cellular waste, maintains hemostasis, and conducts immune surveillance.
+CBC Reference Intervals (Adults):
+- Hemoglobin (Hb): Men: 13.5 - 17.5 g/dL; Women: 12.0 - 15.5 g/dL. (Anemia defined as Hb < 13.0 in men, < 12.0 in non-pregnant women, < 11.0 in pregnant women).
+- Mean Corpuscular Volume (MCV): 80 - 100 fL. Indicates average red blood cell size.
+- White Blood Cells (WBC): 4,500 - 11,000 / uL (Neutrophils 40-70%, Lymphocytes 20-40%, Monocytes 2-8%, Eosinophils 1-4%, Basophils 0.5-1%).
+- Platelets: 150,000 - 450,000 / uL. Critical primary hemostatic effectors.
+- Reticulocyte Count: 0.5 - 2.5% (Absolute reticulocytes 25,000 - 100,000 / uL). Distinguishes impaired bone marrow production from active peripheral destruction/bleeding.
+
+2. ANEMIA CLASSIFICATION & WORKUP ALGORITHM
+Anemia is categorized morphologically by Mean Corpuscular Volume (MCV):
+
+A. Microcytic Anemia (MCV < 80 fL):
+- Iron Deficiency Anemia (IDA):
+  * Laboratory Profile: Low serum iron, elevated Total Iron Binding Capacity (TIBC), low iron saturation (< 15%), low serum ferritin (< 30 ng/mL; diagnostic cutoff < 45 ng/mL in inflammatory states).
+  * Clinical Signs: Fatigue, pallor, pica (craving ice, dirt, or starch), spoon-shaped nails (koilonychia), restless legs syndrome.
+  * Investigation: In adult men and postmenopausal women, IDA is gastrointestinal bleeding until proven otherwise. Colonoscopy and upper endoscopy are mandatory.
+  * Treatment: Oral Ferrous Sulfate (325 mg providing 65 mg elemental iron) taken once daily or on ALTERNATE DAYS to reduce hepcidin elevation and minimize gastrointestinal side effects. Co-administer with ascorbic acid (Vitamin C 250-500 mg) on an empty stomach. Intravenous iron (Ferric carboxymaltose, Iron sucrose) indicated if intolerant to oral iron, in active inflammatory bowel disease, or second/third trimester pregnancy.
+- Thalassemia Trait:
+  * Normal or elevated ferritin, normal iron saturation, very low MCV with normal/mildly reduced RBC count. Mentzer Index (MCV / RBC count) < 13 strongly points to Thalassemia (versus > 13 in Iron Deficiency). Confirmed via Hemoglobin Electrophoresis.
+- Anemia of Chronic Disease (ACD) / Inflammation:
+  * Elevated hepcidin inhibits ferroportin, sequestering iron in macrophages. Low iron, low TIBC, normal to elevated ferritin (> 100 ng/mL).
+
+B. Normocytic Anemia (MCV 80 - 100 fL):
+- Calculate Reticulocyte Production Index (RPI):
+  * RPI > 2%: Suggests peripheral destruction (Hemolytic Anemia) or acute blood loss. Workup: Elevated LDH, elevated indirect bilirubin, decreased haptoglobin, positive Direct Antiglobulin Test (Coombs) if autoimmune.
+  * RPI < 2%: Suggests bone marrow suppression, chronic renal disease (lack of erythropoietin), endocrine hypofunction, or early mixed nutritional deficiencies.
+
+C. Macrocytic Anemia (MCV > 100 fL):
+- Megaloblastic (Impaired DNA synthesis, hypersegmented neutrophils on peripheral smear):
+  * Vitamin B12 (Cobalamin) Deficiency: Caused by Pernicious Anemia (anti-intrinsic factor antibodies), ileal resection, vegan diet without supplementation, long-term Metformin or PPI use.
+  * Clinical Risk: Subacute Combined Degeneration of the spinal cord (loss of vibration and position sense, paresthesias, ataxia, dementia). Elevated serum methylmalonic acid (MMA) and homocysteine.
+  * Treatment: Vitamin B12 1,000 mcg IM daily for 1 week, then weekly for 1 month, then monthly; or high-dose oral cyanocobalamin 1,000 - 2,000 mcg daily.
+  * Critical Rule: Always rule out and treat B12 deficiency before supplementing Folate alone, as folate will correct the hematologic picture but allow irreversible neurologic damage to progress!
+  * Folate Deficiency: Caused by poor nutrition, alcoholism, antifolate medications (Methotrexate, Trimethoprim). Normal MMA, elevated homocysteine.
+
+3. VENOUS THROMBOEMBOLISM: DVT & PULMONARY EMBOLISM (PE)
+Venous thromboembolism (VTE) affects over 900,000 Americans annually and is a major cause of preventable hospital death.
+Virchow's Triad of Thrombosis:
+1. Endothelial injury (surgery, trauma, central venous catheter)
+2. Venous stasis (immobilization, prolonged travel > 4 hours, paralysis, congestive heart failure)
+3. Hypercoagulability (malignancy, pregnancy, estrogen therapy, Factor V Leiden mutation, antiphospholipid syndrome).
+
+Deep Vein Thrombosis (DVT):
+- Presentation: Unilateral calf swelling (> 3 cm difference measured 10 cm below tibial tuberosity), warmth, erythema, localized tenderness along deep venous system.
+- Risk Stratification (Wells DVT Criteria): Score >= 2 (DVT likely) -> Perform Compression Duplex Ultrasound. Score < 2 (DVT unlikely) -> Check high-sensitivity D-Dimer. Normal D-dimer safely rules out DVT without imaging.
+
+Pulmonary Embolism (PE):
+- Presentation: Sudden dyspnea, pleuritic chest pain, tachypnea, tachycardia (heart rate > 100 bpm), hemoptysis, syncope.
+- Diagnostic Approach: Compute Wells PE score or PERC rule. For likely PE: Computed Tomography Pulmonary Angiography (CTPA) is the gold standard.
+- Hemodynamic Stratification:
+  * Massive PE (High Risk): SBP < 90 mmHg or vasopressor requirement. Systemic thrombolysis (Alteplase 100 mg IV over 2h) or catheter-directed thrombectomy.
+  * Submassive PE (Intermediate Risk): Normotensive with RV strain on echocardiogram or elevated troponin/BNP. Anticoagulation with close telemetry observation.
+
+Anticoagulation Therapy:
+- Direct Oral Anticoagulants (DOACs): First-line therapy for non-cancer VTE.
+  * Apixaban (Eliquis): 10 mg twice daily for 7 days, then 5 mg twice daily.
+  * Rivaroxaban (Xarelto): 15 mg twice daily with food for 21 days, then 20 mg once daily with evening meal.
+- Warfarin (Coumadin): Target INR 2.0 - 3.0. Requires heparin bridging for at least 5 days until INR >= 2.0 for 2 consecutive days.
+- Treatment Duration: Minimum 3 months for provoked VTE with transient risk factor (e.g., orthopedic surgery); indefinite anticoagulation for unprovoked VTE or active cancer with low bleeding risk.
+
+4. THROMBOCYTOPENIA & BLEEDING SAFETY THRESHOLDS
+Platelet Count Management:
+- > 100,000 / uL: Normal surgical hemostasis; safe for neurosurgery and spinal anesthesia.
+- 50,000 - 100,000 / uL: Safe for most general surgical procedures, dental extractions, and minor operations.
+- 20,000 - 50,000 / uL: Risk of bleeding with minor trauma or operative procedures.
+- < 10,000 - 20,000 / uL: High risk of spontaneous cutaneous and mucosal hemorrhage (petechiae, purpura, epistaxis, gingival bleeding). Prophylactic platelet transfusion recommended at < 10,000 / uL.
+
+Emergency Thrombocytopenic Syndromes:
+- Thrombotic Thrombocytopenic Purpura (TTP):
+  * Deficient ADAMTS13 protease leads to ultra-large von Willebrand factor multimers and microvascular thrombosis.
+  * Classic Pentad: Microangiopathic hemolytic anemia (schistocytes on blood smear), severe thrombocytopenia, neurologic deficits (confusion, stroke-like symptoms), renal insufficiency, fever.
+  * Emergency Intervention: IMMEDIATE therapeutic plasma exchange (PEX) and systemic corticosteroids. Never transfuse platelets in suspected TTP as it worsens microvascular thrombosis!
+- Heparin-Induced Thrombocytopenia (HIT Type II):
+  * 4Ts score calculation. Platelet count falls by > 50% between days 5-10 of heparin exposure. High paradoxical risk of arterial and venous thrombosis. Discontinue ALL heparin formulations and start non-heparin anticoagulants (Argatroban, Fondaparinux).

@@ -1,0 +1,93 @@
+TOPIC: Immunology, Infectious Diseases & Sepsis Recognition
+SOURCE: HealthBuddy Clinical Knowledge Base v3.5
+CATEGORY: Infectious Disease / Immunology / Critical Care Triage
+
+=== 1. ACUTE RESPIRATORY VIRAL INFECTIONS: DIFFERENTIAL MATRIX ===
+Viral respiratory illnesses share overlapping symptomatology but differ significantly in onset kinetics, complication profiles, and antiviral eligibility windows.
+
+Differential Diagnostic Characteristics:
+1. Common Cold (Rhinovirus, Coronaviruses, Adenovirus):
+   - Onset: Gradual over 2–3 days.
+   - Primary features: Sneezing, clear rhinorrhea, nasal congestion, mild scratchy sore throat.
+   - Fever: Rare in adults; mild in young children.
+   - Constitutional symptoms: Mild fatigue; body aches minimal or absent.
+   - Course: Self-limiting within 7–10 days.
+
+2. Influenza (Influenza A & B):
+   - Onset: Sudden, abrupt "hit by a truck" within hours.
+   - Primary features: High fever (38.5–40°C / 101–104°F), shaking chills, profound myalgias/arthralgias, severe retro-orbital headache, dry non-productive cough, extreme exhaustion.
+   - Antiviral window: Neuraminidase inhibitors (Oseltamivir / Tamiflu 75 mg BID x 5 days) or Cap-dependent endonuclease inhibitor (Baloxavir marboxil single dose) are most effective when initiated within 48 hours of symptom onset. Indicated beyond 48 hours in hospitalized, elderly, or severely immunocompromised patients.
+
+3. COVID-19 (SARS-CoV-2):
+   - Onset: Variable, typically 2–5 days post-exposure.
+   - Primary features: Fever, dry or productive cough, shortness of breath, profound fatigue, sore throat, congestion, GI symptoms (nausea, diarrhea ~20%), anosmia/ageusia (loss of smell/taste).
+   - High-Risk Management: Oral antivirals (Nirmatrelvir/Ritonavir / Paxlovid) initiated within 5 days of symptom onset in individuals ≥ 50 years or with underlying comorbidities (diabetes, obesity, CKD, immunosuppression). Note: Paxlovid has significant CYP3A drug-drug interactions (statins, antiarrhythmics, direct oral anticoagulants).
+
+4. Respiratory Syncytial Virus (RSV):
+   - Primary features: Copious rhinorrhea, wheezing, tachypnea, bronchiolitis presentation.
+   - High risk in infants (< 12 months) and older adults (≥ 60 years) with underlying cardiopulmonary disease (COPD, Congestive Heart Failure).
+
+=== 2. URINARY TRACT INFECTIONS (UTIs) ===
+Pathophysiology: Ascending bacterial colonization from periurethral area, primarily uropathogenic Escherichia coli (UPEC; 75-90%), followed by Klebsiella pneumoniae, Proteus mirabilis, and Staphylococcus saprophyticus.
+
+A. Uncomplicated Lower UTI (Acute Cystitis):
+- Clinical Features: Dysuria (burning during micturition), urinary frequency, urinary urgency, suprapubic pain, cloudy foul-smelling urine, microscopic or gross hematuria.
+- Absence of systemic symptoms: No fever, no flank pain, no rigors, no altered mental status.
+- First-Line Empirical Antibiotic Regimens:
+  * Nitrofurantoin monohydrate/macrocrystals: 100 mg orally BID for 5 days (contraindicated if eGFR < 30 mL/min).
+  * Trimethoprim-Sulfamethoxazole (TMP-SMX / Bactrim DS): 1 tablet (160/800 mg) BID for 3 days (avoid if local resistance > 20%).
+  * Fosfomycin trometamol: 3 g single oral sachet in water.
+- Symptomatic Relief: Phenazopyridine 200 mg TID for max 2 days (warn patient about orange-red discoloration of urine/tears).
+
+B. Complicated Upper UTI (Acute Pyelonephritis) — RED FLAG:
+- Clinical Features: Systemic toxicity with high fever (> 38.3°C / 101°F), shaking rigors, flank pain, severe costovertebral angle (CVA) tenderness, nausea, vomiting.
+- Risk of urosepsis: Requires immediate urine culture, complete blood count, blood cultures if septic, and empirical IV or oral fluoroquinolone (Ciprofloxacin 500 mg BID x 7 days) or IV Ceftriaxone (1 g daily).
+
+=== 3. SEPSIS RECOGNITION & EMERGENCY PROTOCOL ===
+Definition: Life-threatening organ dysfunction caused by a dysregulated host response to infection. Mortality increases by 7.6% for every hour antibiotics are delayed in septic shock.
+
+quick Sequential Organ Failure Assessment (qSOFA) Criteria (Any 2 of 3 indicates high mortality risk):
+1. Respiratory Rate: ≥ 22 breaths per minute (Tachypnea)
+2. Altered Mental Status: Glasgow Coma Scale (GCS) < 15 (Confusion, agitation, lethargy, encephalopathy)
+3. Systolic Blood Pressure: ≤ 100 mmHg (Hypotension)
+
+Systemic Signs of Sepsis:
+- Fever (> 38.3°C) OR Hypothermia (< 36.0°C; hypothermia carries worse prognosis)
+- Tachycardia (Heart rate > 90 bpm)
+- Decreased urine output (Oliguria < 0.5 mL/kg/h)
+- Mottled, cool extremities, delayed capillary refill (> 3 seconds)
+- Elevated serum lactate (> 2.0 mmol/L indicates tissue hypoperfusion).
+
+Emergency Sepsis Action:
+Dial 911 immediately. Emphasize "Suspected Sepsis" to emergency dispatch. Prompt resuscitation follows the "Surviving Sepsis Campaign Hour-1 Bundle":
+- Measure blood lactate level
+- Obtain blood cultures prior to administering broad-spectrum antibiotics
+- Administer rapid IV broad-spectrum antimicrobials
+- Rapid administration of 30 mL/kg crystalloid IV fluid for hypotension or lactate ≥ 4 mmol/L.
+
+=== 4. ADULT IMMUNIZATION & VACCINE SCHEDULES ===
+Evidence-Based Recommendations (CDC / ACIP Standards):
+1. Influenza (Annual): All individuals ≥ 6 months. High-dose inactivated (Fluzone High-Dose) or adjuvanted vaccine preferred for adults ≥ 65 years.
+2. Pneumococcal Conjugate (PCV20 or PCV15 followed by PPSV23): All adults ≥ 65 years, or adults 19-64 with risk conditions (chronic lung/heart/liver disease, diabetes, smoking, immunocompromised status).
+3. Herpes Zoster (Shingles — Shingrix): Two-dose recombinant zoster vaccine for all adults ≥ 50 years (given 2 to 6 months apart), regardless of prior history of chickenpox or live shingles vaccine. > 90% efficacy in preventing shingles and postherpetic neuralgia.
+4. Tdap (Tetanus, Diphtheria, Pertussis): Once every 10 years booster for all adults; 1 dose during each pregnancy (27–36 weeks gestation) to confer neonatal pertussis immunity.
+5. Respiratory Syncytial Virus (RSV): Single dose for adults ≥ 75 years, or age 60-74 at increased risk.
+6. COVID-19: Updated annual formulation targeting circulating dominant subvariants for all individuals ≥ 6 months.
+
+=== 5. ACUTE GASTROENTERITIS & ORAL REHYDRATION PROTOCOL ===
+Pathophysiology: Norovirus (most common cause of acute viral gastroenteritis in all ages), Rotavirus (pediatric), or bacterial (Campylobacter, Salmonella, Shigella, enterotoxigenic E. coli).
+
+Clinical Assessment of Dehydration:
+- Mild/Moderate: Dry oral mucosa, increased thirst, slightly sunken eyes, decreased skin turgor, dark concentrated urine.
+- Severe: Extreme lethargy/unresponsiveness, absent tears, tachycardia with weak thready pulse, hypotension, anuria > 8 hours.
+
+Oral Rehydration Therapy (WHO Standard ORS Formulation):
+- Commercial ORS packets dissolved in 1 liter of clean potable water:
+  * Sodium chloride: 2.6 g
+  * Glucose anhydrous: 13.5 g
+  * Potassium chloride: 1.5 g
+  * Trisodium citrate dihydrate: 2.9 g
+  (Osmolarity ~245 mOsm/L; optimal balance for intestinal sodium-glucose cotransporters).
+- Homemade emergency solution: 6 level teaspoons sugar + 1/2 level teaspoon salt dissolved in 1 liter clean water.
+- Administration: Frequent small sips (5–10 mL every 5 minutes) via spoon or cup. Avoid high-sugar carbonated beverages, sports drinks, or fruit juices alone (high osmolarity worsens secretory diarrhea).
+- Red Flags Requiring Emergency Care: Bloody stools (dysentery), persistent high fever (> 38.5°C), intractable vomiting preventing oral fluid retention, severe rebound abdominal tenderness, confusion.

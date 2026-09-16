@@ -172,6 +172,48 @@ async def list_documents() -> DocumentListResponse:
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@router.get(
+    "/{doc_id}",
+    summary="Get document details & content",
+    description="Retrieve document metadata and text content from the knowledge base.",
+)
+async def get_document(doc_id: str):
+    """Retrieve document details and content."""
+    try:
+        from pathlib import Path
+
+        docs = vector_store_service.get_document_list()
+        matching = next((d for d in docs if d["doc_id"] == doc_id), None)
+        if not matching:
+            raise HTTPException(status_code=404, detail=f"Document not found: {doc_id}")
+
+        filename = matching["filename"]
+        content = ""
+
+        kb_path = Path("./data/knowledge_base") / filename
+        pdf_path = Path("./data/pdfs") / filename
+
+        if kb_path.exists():
+            content = kb_path.read_text(encoding="utf-8", errors="ignore")
+        elif pdf_path.exists():
+            try:
+                content = pdf_path.read_text(encoding="utf-8", errors="ignore")
+            except Exception:
+                content = f"[Binary PDF File: {filename}]"
+
+        return {
+            "doc_id": matching["doc_id"],
+            "filename": matching["filename"],
+            "num_chunks": matching["num_chunks"],
+            "content": content,
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error retrieving document: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @router.delete(
     "/{doc_id}",
     summary="Delete a document",

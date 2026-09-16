@@ -1,0 +1,93 @@
+TOPIC: Geriatric Medicine, Healthy Longevity & Fall Prevention
+SOURCE: HealthBuddy Clinical Knowledge Base v3.5
+CATEGORY: Geriatrics / Healthy Aging / Chronic Care Management
+
+=== 1. SARCOPENIA & FUNCTIONAL LONGEVITY ===
+Sarcopenia is the age-related progressive loss of skeletal muscle mass, strength, and physical performance. It is a major independent predictor of functional dependency, hospitalization, disability, and mortality in older adults.
+
+Diagnosis (EWGSOP2 Consensus Criteria):
+- Step 1 (Strength): Grip strength < 27 kg (men), < 16 kg (women), or 5-time chair rise test > 15 seconds.
+- Step 2 (Mass Confirmation): Appendicular lean mass (ALM) by DXA < 20 kg (men), < 15 kg (women), or ALM/height² < 7.0 kg/m² (men), < 5.5 kg/m² (women).
+- Step 3 (Severity): Gait speed ≤ 0.8 m/s over a 4-meter walk indicates severe sarcopenia.
+
+Evidence-Based Countermeasures:
+- Progressive Resistance Training (PRT): 2 to 3 non-consecutive days per week targeting major muscle groups (legs, hips, back, chest, core). PRT stimulates myofibrillar protein synthesis even in nonagenarians (> 90 years).
+- Dietary Protein Optimization:
+  * Recommended intake for healthy older adults: 1.2 to 1.6 g/kg body weight/day (substantially higher than standard RDA of 0.8 g/kg to overcome anabolic resistance).
+  * Distribute protein evenly across 3 meals (25–35 g protein per meal) containing ≥ 2.5–3.0 g of the essential amino acid leucine (whey, eggs, Greek yogurt, lean poultry, fish, tofu).
+- Creatine Monohydrate: 3–5 g daily alongside resistance exercise enhances lean mass gains and cognitive resilience.
+
+=== 2. OSTEOPENIA & OSTEOPOROSIS MANAGEMENT ===
+Dual-Energy X-ray Absorptiometry (DXA) Bone Mineral Density (BMD) Interpretation:
+- Normal BMD: T-score ≥ -1.0 SD
+- Osteopenia (Low Bone Mass): T-score between -1.0 and -2.5 SD
+- Osteoporosis: T-score ≤ -2.5 SD at lumbar spine, femoral neck, or total hip
+- Severe (Established) Osteoporosis: T-score ≤ -2.5 SD plus history of one or more fragility fractures (fracture from standing height or less).
+
+Fracture Risk Assessment (FRAX):
+Calculates 10-year probability of hip fracture and major osteoporotic fracture (spine, forearm, hip, shoulder). Treatment is indicated if 10-year hip fracture risk ≥ 3% or major osteoporotic fracture risk ≥ 20%.
+
+Therapeutic Protocol:
+1. Nutritional Base:
+   - Elemental Calcium: 1,200 mg/day total (dietary sources preferred; if supplementing, calcium citrate is preferred over calcium carbonate in older adults due to reduced gastric acid).
+   - Vitamin D3 (Cholecalciferol): 1,000–2,000 IU/day to maintain serum 25-OH-vitamin D level between 30–50 ng/mL (75–125 nmol/L).
+   - Vitamin K2 (MK-7): 100–200 mcg/day assists osteocalcin carboxylation, directing calcium to bone matrix rather than arterial walls.
+2. Pharmacotherapy:
+   - First-line Antiresorptive: Oral Bisphosphonates (Alendronate 70 mg weekly or Risedronate 35 mg weekly).
+     * Strict administration: Take first thing in the morning with 8 oz plain water, sit/stand upright for ≥ 30 minutes, wait 30 minutes before food/meds to prevent pill-induced erosive esophagitis.
+     * Consider "drug holiday" after 3-5 years in low-to-moderate risk patients to reduce atypical femur fracture (AFF) and osteonecrosis of the jaw (ONJ) risk.
+   - Injectable Alternatives: Zoledronic acid (5 mg IV annually) or Denosumab (RANKL inhibitor 60 mg SC every 6 months; warning: rebound vertebral fractures if discontinued without transition therapy).
+   - Anabolic Bone Builders (for severe T-score < -3.0 or multiple fractures): Teriparatide, Abaloparatide (PTH/PTHrP analogs), or Romosozumab (sclerostin inhibitor).
+
+=== 3. FALL PREVENTION & GAIT STABILITY ===
+Epidemiology: 1 in 3 adults aged 65+ falls each year. Falls are the leading cause of fatal and non-fatal injuries in older adults.
+
+Key Risk Factors:
+- Environmental: Loose throw rugs, inadequate lighting, absence of bathroom grab bars, cluttered pathways.
+- Physiological: Peripheral neuropathy, vestibular hypofunction, macular degeneration, cataracts.
+- Pharmacological: Sedatives, benzodiazepines, anticholinergics, antihypertensives causing orthostatic hypotension.
+
+Orthostatic Hypotension Assessment:
+- Measure BP after 5 minutes supine/seated, then at 1 minute and 3 minutes standing.
+- Positive criterion: Sustained drop in Systolic BP ≥ 20 mmHg or Diastolic BP ≥ 10 mmHg within 3 minutes of standing.
+- Management: Liberalize fluids (1.5-2 L/day), waist-high compression stockings (20-30 mmHg), counter-pressure maneuvers (leg crossing, calf pumping before standing), avoid rapid postural changes.
+
+Fall Prevention Interventions:
+- Balance & Proprioception Training: Tai Chi (reduces fall risk by 43-50% in randomized trials), single-leg stands with counter support, heel-to-toe tandem walking.
+- Home Safety Audit: Remove rugs, install non-skid bath mats, illuminate stairwells with motion-sensor LED nightlights.
+- Annual Vision & Medication Reviews.
+
+=== 4. COGNITIVE WELLNESS & DEMENTIA DIFFERENTIAL ===
+Differential Diagnosis:
+1. Normal Age-Related Cognitive Changes:
+   - Slower processing speed, occasional word-finding pauses ("tip-of-the-tongue"), minor memory slip without functional impairment. Preserved autonomy in Instrumental Activities of Daily Living (IADLs: finances, medication management, cooking, driving).
+2. Mild Cognitive Impairment (MCI):
+   - Measurable objective decline on cognitive testing (MoCA < 26/30), but functional independence in IADLs is largely preserved. Annual progression rate to dementia is 10–15%.
+3. Dementia (Major Neurocognitive Disorder):
+   - Significant cognitive decline in ≥ 1 domain (learning/memory, language, executive function, complex attention, perceptual-motor, social cognition) that impairs independence in daily activities.
+   - Types:
+     * Alzheimer's Disease (60–70%): Insidious episodic memory deficit followed by executive and visuospatial dysfunction.
+     * Vascular Dementia: Stepwise decline with focal neurological deficits, related to strokes or microvascular white matter disease.
+     * Lewy Body Dementia: Triad of visual hallucinations, REM sleep behavior disorder, and parkinsonian motor features, with fluctuating cognition.
+     * Frontotemporal Dementia: Younger onset (50s-60s), prominent early behavioral disinhibition or expressive language loss (aphasia).
+
+Reversible Causes of Cognitive Decline (Always rule out):
+- Vitamin B12 deficiency (target > 400 pg/mL)
+- Hypothyroidism (check TSH)
+- Normal Pressure Hydrocephalus (NPH Triad: "Wet, Wacky, Wobbly" — urinary incontinence, dementia, magnetic/shuffling gait)
+- Chronic subdural hematoma (after mild unwitnessed fall)
+- Obstructive sleep apnea, depression ("pseudodementia"), polypharmacy delirium.
+
+=== 5. POLYPHARMACY & THE BEERS CRITERIA ===
+Polypharmacy Definition: Concurrent use of ≥ 5 medications. Increases risk of adverse drug events (ADEs), drug-drug interactions, delirium, and hospital admissions.
+
+American Geriatrics Society (AGS) Beers Criteria Highlights (High-Risk Drugs to Avoid in Older Adults):
+- First-Generation Antihistamines (Diphenhydramine, Hydroxyzine): Potent anticholinergic effects → urinary retention, severe dry mouth, constipation, cognitive impairment, delirium.
+- Benzodiazepines & Z-Drugs (Diazepam, Lorazepam, Zolpidem, Eszopiclone): Profound fall risk, ataxia, daytime somnolence, motor vehicle crashes.
+- Muscle Relaxants (Carisoprodol, Cyclobenzaprine): Anticholinergic toxicity and sedation.
+- Long-acting Sulfonylureas (Glyburide, Glimepiride): Prolonged, severe, refractory hypoglycemia.
+- Chronic NSAIDs without gastroprotection: Peptic ulcer hemorrhage, acute kidney injury, fluid retention, worsening heart failure and hypertension.
+- Tricyclic Antidepressants (Amitriptyline, Imipramine): Anticholinergic, orthostatic hypotension, cardiac conduction delays.
+
+Deprescribing Protocol:
+Regularly conduct a "Brown Bag Review": Patient brings all active prescription bottles, over-the-counter pills, herbal supplements. Systematically discontinue medications lacking an active indication or where risks exceed clinical benefit.
