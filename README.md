@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/LLM-Groq%20%2F%20Claude-8A2BE2" alt="LLM Engine" />
   <img src="https://img.shields.io/badge/Vector%20DB-pgvector%20%2B%20Chroma-336791?logo=postgresql&logoColor=white" alt="Vector DB" />
-  <img src="https://img.shields.io/badge/Tests-118%20Passed-success" alt="Tests" />
+  <img src="https://img.shields.io/badge/Tests-122%2B%20Passed-success" alt="Tests" />
   <img src="https://img.shields.io/badge/Frontend-Vanilla%20ES%20Modules-F7DF1E?logo=javascript&logoColor=black" alt="ES Modules" />
   <img src="https://img.shields.io/badge/PWA-Offline%20Ready-5A0FC8" alt="PWA Ready" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
@@ -73,7 +73,7 @@ GDPR-oriented data controls.
 ### 🧠 RAG & Dual Vector Storage
 - **Dual Vector Storage**: Supports **PostgreSQL 16 + pgvector** for PostgreSQL deployments alongside **ChromaDB** for local development. The store type is selected at startup based on `VECTOR_STORE_TYPE` and `DATABASE_URL`.
 - **SSE Streaming Responses**: Real-time Server-Sent Events stream tokens with Markdown rendering and source citation cards.
-- **Multilingual Knowledge Grounding**: 22 curated clinical guide files spanning English, Hindi, and Spanish with language-priority chunk retrieval.
+- **Multilingual Knowledge Grounding**: 32 curated clinical guide files spanning English, Hindi, and Spanish with language-priority chunk retrieval.
 - **Source Traceability**: Generated answers include retrieved document metadata (source, relevance score, excerpt) returned alongside the response.
 
 ### 🛡️ Multi-Layer Medical Safety
@@ -156,7 +156,7 @@ frontend/
 
 ## 📚 Clinical Knowledge Base & RAG
 
-The repository includes **22 clinical guide files** located in `data/knowledge_base/`:
+The repository includes **32 clinical guide files** located in `data/knowledge_base/`:
 - **Cardiovascular Health**: Acute coronary syndromes, hypertension protocols, heart failure management.
 - **Endocrine & Metabolic**: Type-2 diabetes regimens, glycemic monitoring, lifestyle intervention.
 - **Respiratory Medicine**: Asthma triggers, COPD action plans, acute bronchitis protocols.
@@ -211,7 +211,7 @@ Everything else in `.env.development.example` works as-is for local development 
 python scripts/reindex_knowledge_base.py
 ```
 
-> **Note:** On first run this downloads the embedding model (`all-MiniLM-L6-v2`, ~90 MB) and indexes the 22 knowledge files into ChromaDB. Subsequent starts skip this step because the vectors are persisted in `data/chroma_db/`. If you add new knowledge files later, re-run this script to update the index.
+> **Note:** On first run this downloads the embedding model (`all-MiniLM-L6-v2`, ~90 MB) and indexes the 32 knowledge files into ChromaDB. Subsequent starts skip this step because the vectors are persisted in `data/chroma_db/`. If you add new knowledge files later, re-run this script to update the index.
 
 
 ### 6. Start Development Server
@@ -286,18 +286,21 @@ pytest tests/test_api.py -v
 pytest tests/test_e2e_browser.py -v
 ```
 
-### Verified Test Matrix (118/118 Passed)
+### Verified Test Matrix (122/122 Passed)
 
 | File | Count | Status | Covers |
 |---|---|---|---|
-| `test_safety_layer.py` | 20 | Passed | Cardiac, stroke, respiratory, poisoning, bleeding, mental health crisis detection; bidirectional output moderation |
-| `test_triage_rules.py` | 15 | Passed | Deterministic ruleset validation across rule IDs, urgency tiers (`emergency`, `urgent`, `self_care`), versioning |
+| `test_safety_layer.py` | 23 | Passed | Cardiac, stroke, respiratory, poisoning, bleeding, mental health crisis detection; bidirectional output moderation |
+| `test_triage_rules.py` | 13 | Passed | Deterministic ruleset validation across rule IDs, urgency tiers (`emergency`, `urgent`, `self_care`), versioning |
 | `test_symptom_checker.py` | 16 | Passed | Severity ranking, condition match percentages, emergency detection in symptom descriptions |
-| `test_email_verification.py` | 18 | Passed | 6-digit OTP generation, expiry, brute-force lockout, password reset flows |
+| `test_email_verification.py` | 17 | Passed | 6-digit OTP generation, expiry, brute-force lockout, password reset flows |
 | `test_api.py` | 44 | Passed | HTTP routing, CSRF protection, sliding-window rate-limiting, GDPR export/deletion, session isolation, auth lockout |
+| `test_fhir_service.py` | 2 | Passed | FHIR R4 bundle structure and patient resource generation |
+| `test_redis_client.py` | 2 | Passed | Redis connection pool and graceful in-memory fallback |
+| `test_vision_service.py` | 4 | Passed | Medical image analysis and heuristic fallback |
 | `test_e2e_browser.py` | 5 | Passed | Full browser flows: auth & health goals, chat & feedback, SSE streaming completion, clinician triage queue, GDPR account deletion |
 
-> All 118 tests verified passing locally via `pytest` (including Playwright E2E browser tests).
+> All 117 unit/integration tests verified passing via `pytest`. E2E Playwright tests (`test_e2e_browser.py`) run against a live local server (`RUN_E2E=1`).
 
 ---
 
